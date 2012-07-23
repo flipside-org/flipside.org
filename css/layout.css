@@ -95,6 +95,11 @@ div.main {
 }
 
 .projects li.project img {
+    border: 1px #fff solid;
+    
+    -moz-box-shadow: 0 0 5px 2px #ded9c7;
+    -webkit-box-shadow: 0 0 5px 2px #ded9c7;
+    box-shadow: 0 0 5px 2px #ded9c7;
 }
 
 .projects li.project header,

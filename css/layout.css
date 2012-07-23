@@ -19,24 +19,45 @@
 /*
 /* beige:       #ebebdf
 /* orange:      #db562b
-/* bright-blue:  #54c2db
-/* light-blue: #698499
+/* bright-blue: #54c2db
+/* light-blue: 	#698499
 /* dark-blue:   #304351
 
 /* #Site Styles
 ================================================== */
 
-header {
-    border-bottom: 1px #ded9c7 solid;
+body {
+    border-top: 5px #304351 solid;
+}
+
+header.page,
+div.main,
+footer.page {
     padding: 20px 0;
 }
+
+header.page,
+div.main {
+    border-bottom: 1px #ded9c7 solid;    
+}
+
+div.main,
+footer.page {
+    border-top: 1px #fff solid;
+}
+
+header.page {
+    padding-top: 0;
+}
+    img.logo-fs {
+	padding-top: 10px;
+    }
     
     nav.main ul {
         margin-bottom: 0;
     }
     
     nav.main li {
-        height: 64px;
         text-align: center;
     }
     
@@ -45,54 +66,66 @@ header {
         font-size: 17px;
         line-height: 24px;
         margin-bottom: 0;
-        padding-top: 40px;
+	padding-top: 30px;
         text-decoration: none;
         text-transform: uppercase;
     }
     
         nav.main a:hover {
-            background: transparent url(../images/icon.png) no-repeat 35px 0;
+            background: transparent url(../images/menu-hover.png) no-repeat center 0;
             color: #304351;
         }
 
 div.main {
-   border-top: 1px #fff solid;
-   padding: 20px 0 40px;
 }
 
-    div.main .column,
-    div.main .columns {
+    .main section {
 	margin-bottom: 20px;
     }
 
-.footer {
-    background-color: #304351;
-    border-top: 1px #698499 solid;
-    color: #fff;
-    font-size: 0.9em;
-    padding: 20px 0;
-}
 
-    footer h3 {
-        color: #fff;
-        margin-bottom: 21px;
-    }
-    
-    footer h4 {
-        color: #54c2db;
-        text-transform: uppercase;
-    }
-    
-    footer li.four.columns {
-	margin-bottom: 12px;
-    }
-    
-    footer a {
-        color: #fff;
-    }
 
 /* #Page Styles
 ================================================== */
+
+/* Project pages */
+
+.projects li.project {
+    margin-bottom: 60px;
+}
+
+.projects li.project img {
+    
+}
+
+.projects li.project header,
+.projects li.project .description,
+.projects li.project footer {
+    margin-bottom: 28px;
+}
+
+.projects li.project .sub-title {
+    text-transform: uppercase;
+}
+
+.projects li.project .metadata {
+    font-size: 14px; /*Same as legend*/
+}
+
+.projects li.project .project-link {
+    margin-top: 28px;
+}
+
+.projects li.project .project-link a {
+    background: #304351 url(../images/launch.png) no-repeat right;
+    color: #ebebdf;
+    padding: 5px 50px 5px 10px;
+    text-decoration: none;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
 
 /* #Media Queries
 ================================================== */
@@ -109,13 +142,15 @@ div.main {
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
             img.five.columns.logo-fs { margin: auto 100px; width: 220px; }
-            nav.main a { background-image: none; padding: 5px 0; }
+            nav.main a { padding: 5px 0; }
+	    nav.main a:hover {background-image: none;}
             nav.main li { height: auto; }
         }
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
             img.five.columns.logo-fs { margin: auto 40px; width: 220px; }
-            nav.main a { background-image: none; padding: 5px 0; }
+            nav.main a { padding: 5px 0; }
+	    nav.main a:hover {background-image: none;}
             nav.main li { height: auto; }
             h1 { font-size: 28px; line-height: 34px; margin-bottom: 20px; }
             h2 { font-size: 24px; line-height: 30px; margin-bottom: 8px; }

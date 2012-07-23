@@ -253,7 +253,10 @@
 	legend {
 		display: block;
 		font-weight: bold;
-		font-size: 13px;  }
+		font-size: 14px;  }
+	label.inline {
+		display: inline;
+	}
 	select {
 		width: 220px; }
 	input[type="checkbox"] {

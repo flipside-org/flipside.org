@@ -83,6 +83,9 @@ div.main {
 	margin-bottom: 20px;
     }
 
+    .main section.intro {
+	margin-bottom: 28px;
+    }
 
 
 /* #Page Styles
@@ -113,12 +116,11 @@ div.main {
 
 .projects li.project .description {
     border-bottom: 1px #ded9c7 solid;
-    padding-bottom: 7px;
 }
 
 .projects li.project footer {
     border-top: 1px #fff solid;
-    padding-top: 28px;
+    padding-top: 21px;
 }
 
 .projects li.project .sub-title {
@@ -130,7 +132,7 @@ div.main {
 }
 
 .projects li.project .project-link {
-    margin-top: 28px;
+    margin-top: 21px;
 }
 
 .projects li.project .project-link a {

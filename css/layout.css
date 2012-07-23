@@ -71,7 +71,8 @@ header.page {
         text-transform: uppercase;
     }
     
-        nav.main a:hover {
+	nav.main a:hover/*,
+	nav.main a.active*/ {
             background: transparent url(../images/menu-hover.png) no-repeat center 0;
             color: #304351;
         }
@@ -84,12 +85,60 @@ div.main {
     }
 
     .main section.intro {
-	margin-bottom: 28px;
+	margin-bottom: 42px;
     }
 
 
 /* #Page Styles
 ================================================== */
+
+/* Front page */
+
+
+.front .projects a {
+    color: #fff;
+    height: 200px;    
+    text-decoration: none;
+}
+
+.front article.project a {
+    border: 5px #fff solid;
+    
+    -moz-box-shadow: 0 0 5px 3px #ded9c7;
+    -webkit-box-shadow: 0 0 5px 3px #ded9c7;
+    box-shadow: 0 0 5px 3px #ded9c7;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.front article.project a:hover img {
+    display: none;
+    height: 200px;
+}
+
+.front article.project a .description {
+    display: none;
+}
+
+.front article.project a:hover .description {
+    background-color: #698499;
+    display: block;
+    height: 180px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.front article.read-more a {
+    background: transparent url(../images/tmp-project-readmore.png) no-repeat;
+    line-height: 200px;
+    text-align: center;
+}
+
+.front article.read-more .description {
+}
+
 
 /* Project pages */
 

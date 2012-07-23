@@ -131,7 +131,7 @@ div.main {
 }
 
 .front article.read-more a {
-    background: transparent url(../images/tmp-project-readmore.png) no-repeat;
+    background: transparent url(../images/project-readmore.png) no-repeat 25px 14px;
     line-height: 200px;
     text-align: center;
 }

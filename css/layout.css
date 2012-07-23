@@ -95,13 +95,25 @@ div.main {
 }
 
 .projects li.project img {
-    
 }
 
 .projects li.project header,
 .projects li.project .description,
 .projects li.project footer {
-    margin-bottom: 28px;
+}
+
+.projects li.project header {
+    padding-bottom: 28px;
+}
+
+.projects li.project .description {
+    border-bottom: 1px #ded9c7 solid;
+    padding-bottom: 7px;
+}
+
+.projects li.project footer {
+    border-top: 1px #fff solid;
+    padding-top: 28px;
 }
 
 .projects li.project .sub-title {

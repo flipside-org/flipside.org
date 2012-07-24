@@ -30,6 +30,29 @@ body {
     border-top: 5px #304351 solid;
 }
 
+.contact-info {
+    background-color: #304351;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding:20px;
+}
+
+    .contact-info label {
+	color: #54c2db;
+	font-weight: normal;
+	text-transform: uppercase;
+    }
+    
+    .contact-info li {
+	margin-bottom: 20px !important;
+    }
+    
+    .contact-info a {
+	color: #fff;
+	text-decoration: none;
+    }
+
 header.page,
 div.main,
 footer.page {
@@ -111,6 +134,9 @@ div.main {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+}
+
+.front article.project a img {
 }
 
 .front article.project a:hover img {

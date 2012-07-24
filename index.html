@@ -17,9 +17,31 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="shortcut icon" href="images/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript">
+	 
+	$(document).ready(function(){
+	 
+		$(".contact-info").hide();
+		$(".show_hide").show();
+	 
+	    $('.show_hide').click(function(){
+	    $(".contact-info").slideToggle("medium");
+	    });
+	 
+	});
+	 
+</script>
 
 </head>
 <body class="front">
+	<div class="contact-info">
+		<ul class="container">
+			<li class="four columns offset-by-four"><label class="above">Address</label>Avenida de Liberdade 229, 2º dto<br/>1250-142 Lisboa, Portugal</li>
+			<li class="four columns"><label class="above">Phone</label>+351 926 526 465</li>
+			<li class="four columns"><label class="above">Email</label><a href="mailto:info@flipside.org">info@flipside.org</a></li>
+		</ul>
+	</div>
 	<div class="container">
 		<header class="page sixteen columns">  
 			<a href="http://www.flipside.org/" title="Home Flipside" class="five columns alpha"><img src="images/logo-flipside.png" alt="Flipside" title="Flipside" class="logo-fs five columns alpha"/></a>
@@ -28,7 +50,7 @@
 				      <li class="two columns alpha"><a href="index.html" class="home active">Home</a></li>
 				      <li class="two columns"><a href="about.html" class="about">About</a></li>
 				      <li class="two columns"><a href="projects.html" class="work">Work</a></li>
-				      <li class="two columns omega"><a href="#" class="contact">Contact</a></li>
+				      <li class="two columns omega"><a href="#" id="contactlink" class="contact show_hide">Contact</a></li>
 			      </ul>
 			</nav>
 		</header>

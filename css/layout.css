@@ -61,7 +61,7 @@ footer.page {
 
 header.page,
 div.main {
-    border-bottom: 1px #ded9c7 solid;    
+    border-bottom: 1px #ded9c7 solid;
 }
 
 div.main,
@@ -120,28 +120,24 @@ div.main {
 
 .front .projects a {
     color: #fff;
-    height: 200px;    
+    margin-bottom: 20px;
     text-decoration: none;
 }
 
 .front article.project a {
-    border: 5px #fff solid;
+    border: 1px #fff solid;
     
-    -moz-box-shadow: 0 0 5px 3px #ded9c7;
-    -webkit-box-shadow: 0 0 5px 3px #ded9c7;
-    box-shadow: 0 0 5px 3px #ded9c7;
-    
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -moz-box-shadow: 0 0 3px 1px #ded9c7;
+    -webkit-box-shadow: 0 0 3px 1px #ded9c7;
+    box-shadow: 0 0 3px 1px #ded9c7;
 }
 
 .front article.project a img {
+    height: 198px;
 }
 
 .front article.project a:hover img {
     display: none;
-    height: 200px;
 }
 
 .front article.project a .description {
@@ -151,14 +147,14 @@ div.main {
 .front article.project a:hover .description {
     background-color: #698499;
     display: block;
-    height: 180px;
+    height: 178px;
     padding: 10px;
     text-decoration: none;
 }
 
 .front article.read-more a {
     background: transparent url(../images/project-readmore.png) no-repeat 25px 14px;
-    line-height: 200px;
+    line-height: 200px; /*same as height parent div*/
     text-align: center;
 }
 
@@ -175,9 +171,9 @@ div.main {
 .projects li.project img {
     border: 1px #fff solid;
     
-    -moz-box-shadow: 0 0 5px 3px #ded9c7;
-    -webkit-box-shadow: 0 0 5px 3px #ded9c7;
-    box-shadow: 0 0 5px 3px #ded9c7;
+    -moz-box-shadow: 0 0 3px 1px #ded9c7;
+    -webkit-box-shadow: 0 0 3px 1px #ded9c7;
+    box-shadow: 0 0 3px 1px #ded9c7;
 }
 
 .projects li.project header,
@@ -228,7 +224,13 @@ div.main {
 	@media only screen and (max-width: 959px) {}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+	    
+	    /*front-page*/
+	    .front article.project a img { height: 155px; }
+	    .front article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
+	    .front article.read-more a { line-height: 157px; }
+	}
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {}
@@ -239,6 +241,11 @@ div.main {
             nav.main a { padding: 5px 0; }
 	    nav.main a:hover {background-image: none;}
             nav.main li { height: auto; }
+	    
+	    /*front-page*/
+	    .front article.project a img { height: 278px; }
+	    .front article.project a:hover .description { height: 258px; } /*height image -/- 10 10 padding*/
+	    .front article.read-more a { line-height: 256px; }
         }
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {

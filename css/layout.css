@@ -227,9 +227,9 @@ div.main {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
 	    
 	    /*front-page*/
-	    .front article.project a img { height: 155px; }
-	    .front article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
-	    .front article.read-more a { line-height: 157px; }
+	    .front .projects article.project a img { height: 155px; }
+	    .front .projects article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
+	    .front .projects article.read-more a { line-height: 157px; }
 	}
 
 	/* All Mobile Sizes (devices and browser) */
@@ -243,9 +243,9 @@ div.main {
             nav.main li { height: auto; }
 	    
 	    /*front-page*/
-	    .front article.project a img { height: 278px; }
-	    .front article.project a:hover .description { height: 258px; } /*height image -/- 10 10 padding*/
-	    .front article.read-more a { line-height: 256px; }
+	    .front .projects article a { margin-left: 60px !important; margin-right: 60px !important; }
+	    .front .projects article a,
+	    .front .projects article.project a img { width: 298px !important; }
         }
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {

@@ -153,7 +153,7 @@ div.main {
 }
 
 .front article.read-more a {
-    background: transparent url(../images/project-readmore.png) no-repeat 25px 14px;
+    background: transparent url(../images/project-readmore.png) no-repeat;
     line-height: 200px; /*same as height parent div*/
     text-align: center;
 }
@@ -229,7 +229,7 @@ div.main {
 	    /*front-page*/
 	    .front .projects article.project a img { height: 155px; }
 	    .front .projects article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
-	    .front .projects article.read-more a { line-height: 157px; }
+	    .front .projects article.read-more a { background: transparent url(../images/project-readmore-small.png) no-repeat; line-height: 157px; }
 	}
 
 	/* All Mobile Sizes (devices and browser) */

@@ -260,6 +260,7 @@ div.main {
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
 	    nav.main ul { float: none; margin: auto; width: 300px; }
+	    .front .illustration a { margin: 20px 0; }
 	    .contact-info li .left.column { margin-right: 10px; }
 	    .contact-info li .right.column { margin-left: 10px; }
 	}

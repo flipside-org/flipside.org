@@ -48,6 +48,10 @@ body {
 	margin-bottom: 20px !important;
     }
     
+    .contact-info li .column { /*phone number and email are pseudo grids. They don't stack on smaller screens, instead float. */
+	width: 220px;
+    }
+    
     .contact-info a {
 	color: #fff;
 	text-decoration: none;
@@ -77,12 +81,13 @@ header.page {
     }
     
     nav.main ul {
+	float: right;
         margin-bottom: 0;
     }
     
     nav.main li {
 	text-align: center;
-	width: 100px;
+	width: 100px; /*defining the width since we are not giving a official grid class so menu items float on smaller screen sizes */
     }
     
     nav.main a {
@@ -127,6 +132,7 @@ div.main {
     
     color: #fff;
     display: block;
+    margin-top: 100px;
     padding: 5px 10px;
     text-decoration: none;
     text-align: center;
@@ -245,18 +251,24 @@ div.main {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
 	    
 	    /*front-page*/
+	    .contact-info li .column { width: 172px; }
 	    .front .projects article.project a img { height: 155px; }
 	    .front .projects article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
 	    .front .projects article.read-more a { background: transparent url(../images/project-readmore-small.png) no-repeat; line-height: 157px; }
 	}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+	    nav.main ul { float: none; margin: auto; width: 300px; }
+	    .contact-info li .left.column { margin-right: 10px; }
+	    .contact-info li .right.column { margin-left: 10px; }
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
             img.five.columns.logo-fs { margin: auto 100px; width: 220px; }
-            nav.main a { padding: 5px 0; }
+	    .contact-info li .column { width: 200px; }
+	    nav.main a { padding: 5px 0; }
 	    nav.main a:hover {background-image: none;}
             nav.main li { height: auto; }
 	    
@@ -268,7 +280,8 @@ div.main {
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
             img.five.columns.logo-fs { margin: auto 40px; width: 220px; }
-            nav.main a { padding: 5px 0; }
+	    .contact-info li .column { width: 140px; }
+	    nav.main a { padding: 5px 0; }
 	    nav.main a:hover {background-image: none;}
             nav.main li { height: auto; }
             h1 { font-size: 28px; line-height: 34px; margin-bottom: 20px; }

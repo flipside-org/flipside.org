@@ -150,6 +150,7 @@ div.main {
 
 .front article.project a {
     border: 1px #fff solid;
+    font-size: 0.9em;
     
     -moz-box-shadow: 0 0 3px 1px #ded9c7;
     -webkit-box-shadow: 0 0 3px 1px #ded9c7;
@@ -175,6 +176,11 @@ div.main {
     padding: 10px;
     text-decoration: none;
 }
+
+.front article.project a .description .center {
+    margin-top: 30px;
+    text-align: center;
+}    
 
 .front article.read-more a {
     background: transparent url(../images/project-readmore.png) no-repeat;

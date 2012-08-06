@@ -138,6 +138,10 @@ div.main {
     text-align: center;
 }
 
+.front .illustration a:hover {
+    background-color: #304351;
+}
+
     .front .illustration a span {
 	font-size: 1.4em;
     }

@@ -188,9 +188,24 @@ div.main {
 
 .front article.read-more a {
     background: transparent url(../images/project-readmore.png) no-repeat;
+  	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-o-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
     line-height: 200px; /*same as height parent div*/
     text-align: center;
 }
+
+.front article.read-more a:hover {
+	-moz-transform: scale(1.1); 
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);	
+	transform: scale(1.1);  
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-o-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+	}
 
 .front article.read-more .description {
 }

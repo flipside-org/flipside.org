@@ -100,8 +100,7 @@ header.page {
         text-transform: uppercase;
     }
     
-	nav.main a:hover/*,
-	nav.main a.active*/ {
+	nav.main a:hover {
             background: transparent url(../images/menu-hover.png) no-repeat center 0;
             color: #304351;
         }
@@ -113,16 +112,15 @@ div.main {
 	margin-bottom: 20px;
     }
 
-    .main section.intro {
-	margin-bottom: 42px;
-    }
-
-
 /* #Page Styles
 ================================================== */
 
 /* Front page */
 
+.front .illustration {
+    background: transparent url(../images/flipside-illustration.png) no-repeat;
+    height: 385px;
+}
 
 .front .illustration a {
     background-color: #db562b;
@@ -132,14 +130,20 @@ div.main {
     
     color: #fff;
     display: block;
-    margin-top: 100px;
+    margin-top: 250px;
     padding: 5px 10px;
     text-decoration: none;
     text-align: center;
+    
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
 }
 
 .front .illustration a:hover {
     background-color: #304351;
+
 }
 
     .front .illustration a span {
@@ -197,10 +201,10 @@ div.main {
 }
 
 .front article.read-more a:hover {
-	-moz-transform: scale(1.1); 
-	-webkit-transform: scale(1.1);
-	-o-transform: scale(1.1);	
-	transform: scale(1.1);  
+	-moz-transform: scale(1.02); 
+	-webkit-transform: scale(1.02);
+	-o-transform: scale(1.02);	
+	transform: scale(1.02);  
 	-moz-transition: all 0.4s ease-in-out 0s;
 	-webkit-transition: all 0.4s ease-in-out 0s;
 	-o-transition: all 0.4s ease-in-out 0s;
@@ -214,11 +218,25 @@ div.main {
 /* Project pages */
 
 .projects li.project {
-    margin-bottom: 60px;
+    border-bottom: 1px #ded9c7 solid;
+    border-top: 1px #fff solid;
+    margin: 0;
+    padding: 42px 0;
 }
+
+    .projects li.project.first {
+	border-top: none;
+	padding-top: 0;
+    }
+    
+    .projects li.project.last {
+	border-bottom: none;
+	padding-bottom: 0;
+    }
 
 .projects li.project img {
     border: 1px #fff solid;
+    margin-bottom: 21px;
     
     -moz-box-shadow: 0 0 3px 1px #ded9c7;
     -webkit-box-shadow: 0 0 3px 1px #ded9c7;
@@ -277,6 +295,8 @@ div.main {
 	    
 	    /*front-page*/
 	    .contact-info li .column { width: 172px; }
+	    .front .illustration { background: transparent url(../images/flipside-illustration-medium.png) no-repeat; height: 306px; }
+	    .front .illustration a { margin-top: 180px; }
 	    .front .projects article.project a img { height: 155px; }
 	    .front .projects article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
 	    .front .projects article.read-more a { background: transparent url(../images/project-readmore-small.png) no-repeat; line-height: 157px; }
@@ -285,7 +305,6 @@ div.main {
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
 	    nav.main ul { float: none; margin: auto; width: 300px; }
-	    .front .illustration a { margin: 20px 0; }
 	    .contact-info li .left.column { margin-right: 10px; }
 	    .contact-info li .right.column { margin-left: 10px; }
 	}
@@ -299,12 +318,18 @@ div.main {
             nav.main li { height: auto; }
 	    
 	    /*front-page*/
+	    .front .illustration { background: transparent url(../images/flipside-illustration-small.png) no-repeat; height: auto; }
+	    .front .illustration a { margin-top: 227px; }
 	    .front .projects article a { margin-left: 60px !important; margin-right: 60px !important; }
 	    .front .projects article a,
 	    .front .projects article.project a img { width: 298px !important; }
         }
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
+	    /*front page*/
+	    .front .illustration { background: transparent url(../images/flipside-illustration-thumb.png) no-repeat; height: auto; }
+	    .front .illustration a { margin-top: 168px; }
+	    
             img.five.columns.logo-fs { margin: auto 40px; width: 220px; }
 	    .contact-info li .column { width: 140px; }
 	    nav.main a { padding: 5px 0; }

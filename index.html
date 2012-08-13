@@ -19,7 +19,19 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="scripts/flipside.js" type="text/javascript"></script>
-
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33134074-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
 <body class="front">
 	<div class="contact-info">
@@ -48,10 +60,9 @@
 				<h3 class="slogan">Flipside develops web-based communication tools using Open Source technology.</h3>
 				We work with our clients to build apropriate and usable solutions that fit the purpose of the project.
 			</section>
-			<section class="illustration">
-				<img alt="Flipside" src="images/illustration.jpg" class="twelve columns alpha" />
+			<section class="illustration clearfix">
 				<ul>
-					<li class="four columns omega">
+					<li class="four columns alpha omega offset-by-twelve">
 						<a href="about.html" class="button-about">
 							Find more<br/>
 							<span>about us</span>
@@ -77,8 +88,8 @@
 			<section class="projects clearfix">
 				<p>We build a wide range of web-based communication tools for our clients: from websites and data visualizations to collaborative solutions and management information systems.</p>
 				<article class="project one">
-					<a href="projects.html" class="one-third-border column alpha">
-						<img src="images/projects/redes-thumb.png" class="one-third-border column alpha omega" />
+					<a href="projects.html#redes" class="one-third-border column alpha">
+						<img src="images/projects/suchitoto-thumb.jpg" class="one-third-border column alpha omega" />
 						<div class="description">
 							Redes MIS<br/>
 							Mobile Data Collection + MIS<br/>
@@ -89,7 +100,7 @@
 					</a>
 				</article>
 				<article class="project two">
-					<a href="projects.html" class="one-third-border column">
+					<a href="projects.html#macgyver" class="one-third-border column">
 						<img src="images/projects/macgyver-thumb.png" class="one-third-border column alpha omega" />
 						<div class="description">
 							MacGyver<br/>

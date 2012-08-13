@@ -5,7 +5,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Flipside</title>
+	<title>Flipside - Projects</title>
 	<meta name="description" content="Flipside builds web-based communication tools using Open Source tools.">
 	<meta name="author" content="Flipside">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,7 +19,19 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script src="scripts/flipside.js" type="text/javascript"></script>
-
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33134074-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
 <body class="projects">
 	<div class="contact-info">
@@ -56,6 +68,7 @@
 					</div>
 					<article class="six columns omega offset-by-one">
 						<header>
+							<a id="macgyver"></a>
 							<h3>MacGyver</h3>
 							<h4 class="sub-title metadata">Design + Concept + Development</h4>
 						</header>
@@ -73,9 +86,13 @@
 						</footer>
 					</article>
 				</li>
-				<li class="project even clearfix">
-					<article class="six columns alpha">
+				<li class="project last even clearfix">
+					<div class="project-image nine columns alpha">
+						<img class="border nine columns alpha omega" src="images/projects/suchitoto-med.jpg" />
+					</div>
+					<article class="six columns omega offset-by-one">
 						<header>
+							<a id="redes"></a>
 							<h3>Redes MIS</h3>
 							<h4 class="sub-title metadata">Concept + Development</h4>
 						</header>
@@ -87,9 +104,6 @@
 							<label class="inline">Technology:</label> <span class="metadata">Open Data Kit & Drupal</span>
 						</footer>
 					</article>
-					<div class="project-image nine columns offset-by-one omega">
-						<img class="border nine columns alpha omega" src="images/projects/redes-med.png" />
-					</div>
 				</li>
 			</ul>
 			

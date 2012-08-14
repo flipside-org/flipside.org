@@ -4,55 +4,63 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-
-	<!-- Basic Page Needs
-  ================================================== -->
 	<meta charset="utf-8">
-	<title>Flipside</title>
+	<title>Flipside - About</title>
 	<meta name="description" content="Flipside builds web-based communication tools using Open Source tools.">
 	<meta name="author" content="Flipside">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/skeleton.css">
-	<link rel="stylesheet" href="css/layout.css">
-
-	
+	<link rel="stylesheet" href="css/base.css" type='text/css'>
+	<link rel="stylesheet" href="css/skeleton.css" type='text/css'>
+	<link rel="stylesheet" href="css/layout.css" type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<!-- Favicons
-	================================================== -->
 	<link rel="shortcut icon" href="images/favicon.ico">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="scripts/flipside.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-33134074-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
 </head>
-<body>
-	<header>  
-		<div class="container">
-			<a href="http://www.flipside.org/" title="Home Flipside" class="five columns"><img src="images/logo-flipside.png" alt="Flipside" title="Flipside" class="logo-fs five columns alpha"/></a>
-			<nav class="main offset-by-eight">
+<body class="about">
+	<div class="contact-info">
+		<ul class="container">
+			<li class="four columns offset-by-four"><label class="above">Address</label>Avenida de Liberdade 229, 2º<br/>1250-142 Lisboa, Portugal</li>
+			<li class="eight columns">
+				<div class="left column alpha"><label class="above">Phone</label>+351 926 526 465</div>
+				<div class="right column omega"><label class="above">Email</label><a href="mailto:info@flipside.org">info@flipside.org</a></div>
+			</li>
+		</ul>
+	</div>
+	<div class="container">
+		<header class="page sixteen columns">  
+			<a href="/" title="Home Flipside" class="five columns alpha"><img src="images/logo-flipside.png" alt="Flipside" title="Flipside" class="logo-fs five columns alpha"/></a>
+			<nav class="main omega">
 			      <ul class="clearfix">
-				      <li class="two columns"><a href="#" class="about">About</a></li>
-				      <li class="two columns"><a href="#" class="servics">Services</a></li>
-				      <li class="two columns"><a href="#" class="work">Work</a></li>
-				      <li class="two columns"><a href="#" class="contact">Contact</a></li>
+				      <li class="columns alpha"><a href="about.html" class="about">About</a></li>
+				      <li class="columns"><a href="projects.html" class="work">Work</a></li>
+				      <li class="columns omega"><a href="#" id="contactlink" class="contact show_hide">Contact</a></li>
 			      </ul>
 			</nav>
-		</div>
-	</header>
+		</header>
 	
-	<div class="main container" role="main">
-		<article class="eleven columns offset-by-five">
-		<!-- Page content -->
-		      <h1>We're hiring a Junior Web Developer</h1>
-		      <p>We're looking for a junior web developer with the following profile:</p>
+		<div class="main sixteen columns" role="main">
+			<article>
+				<h1 class="page-title">
+					We're hiring a Junior Web Developer
+				</h1>
+				<p>We're looking for a junior web developer with the following profile:</p>
 		      <ul class="circle">
 			      <li>good knowledge of PHP, Javascript, HTML and CSS</li>
 			      <li>a passion for developing elegant and usable web applications </li>
@@ -72,33 +80,12 @@
 		      </ul>
 		      <p>We are looking to hire somebody for the Estágios Profissionais program of IEFP. Please check their <a href="http://www.iefp.pt/apoios/empresas/estagios/EstagiosProfissionais/Paginas/EstagiosProfissionais.aspx">page</a> to see if you fit the conditions. Depending on your profile and experience, we can talk about ways to complement the package offered under this program.</p>
 		      <h3>Heading 3</h4>
-		      <p>To apply, please send your CV and a short motivation letter to <a href="mailto:hiring@flipside.org">hiring@flipside.org</a> before Friday, July 20. A link to your portfolio or examples of your work, either developed in a personal or professional setting, will be highly appreciated.</p>
-		</article>
-	</div>
-	
-	<footer>
-		<div class="container contact-info">
-			<h3>Find us</h3>
-			<ul>
-				<li class="address four columns">
-					<h4>Address</h4>
-					Av. de Liberdade 229, 2º<br/>
-					1250-142 Lisboa, Portugal
-				</li>
-				<li class="phone four columns">
-					<h4>Phone number</h4>
-					+351 926 526 465
-				</li>
-				<li class="email four columns">
-					<h4>Email</h4>
-					<a href="mailto:contact@flipside.org">contact@flipside.org</a>
-				</li>
-			</ul>
+		      <p>To apply, please send your CV and a short motivation letter to <a href="mailto:hiring@flipside.org">hiring@flipside.org</a> before Friday, July 20. A link to your portfolio or examples of your work, either developed in a personal or professional setting, will be highly appreciated.</p>	
+			</article>
 		</div>
-	</footer>
-
-
-<!-- End Document
-================================================== -->
+		<footer class="page sixteen columns">
+			&nbsp;
+		</footer>
+	</div>
 </body>
 </html>

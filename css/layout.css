@@ -143,7 +143,6 @@ div.main {
 
 .front .illustration a:hover {
     background-color: #304351;
-
 }
 
     .front .illustration a span {
@@ -153,6 +152,7 @@ div.main {
 .front .projects a {
     color: #fff;
     margin-bottom: 20px;
+    margin-top: 20px;
     text-decoration: none;
 }
 
@@ -192,10 +192,10 @@ div.main {
 
 .front article.read-more a {
     background: transparent url(../images/project-readmore.png) no-repeat;
-  	-moz-transition: all 0.4s ease-in-out 0s;
-	-webkit-transition: all 0.4s ease-in-out 0s;
-	-o-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
     line-height: 200px; /*same as height parent div*/
     text-align: center;
 }
@@ -205,11 +205,11 @@ div.main {
 	-webkit-transform: scale(1.02);
 	-o-transform: scale(1.02);	
 	transform: scale(1.02);  
-	-moz-transition: all 0.4s ease-in-out 0s;
+/*	-moz-transition: all 0.4s ease-in-out 0s;
 	-webkit-transition: all 0.4s ease-in-out 0s;
 	-o-transition: all 0.4s ease-in-out 0s;
-	transition: all 0.4s ease-in-out 0s;
-	}
+	transition: all 0.4s ease-in-out 0s;*/
+    }
 
 .front article.read-more .description {
 }

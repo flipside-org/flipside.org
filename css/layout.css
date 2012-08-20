@@ -123,7 +123,7 @@ div.main {
 }
 
 .front .illustration a {
-    background-color: #db562b;
+    background-color: #304351;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -142,7 +142,7 @@ div.main {
 }
 
 .front .illustration a:hover {
-    background-color: #304351;
+    background-color: #db562b;
 }
 
     .front .illustration a span {

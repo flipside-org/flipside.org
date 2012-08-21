@@ -148,7 +148,13 @@ div.main {
     .front .illustration a span {
 	font-size: 1.4em;
     }
-
+.front .projects {
+	border-top: 1px solid #DED9C7;
+	}
+.front .projects h3{
+	border-top: 1px solid #FFFFFF;
+	padding-top: 20px;
+	}
 .front .projects a {
     color: #fff;
     margin-bottom: 20px;

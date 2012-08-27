@@ -197,13 +197,17 @@ div.main {
 }    
 
 .front article.read-more a {
-    background: transparent url(../images/project-readmore.png) no-repeat;
+    background: transparent url(../images/project-readmore-spr.png) no-repeat 0px 0px;
+	width: 300px;
+  	height: 200px;
     line-height: 200px; /*same as height parent div*/
     text-align: center;
 }
 
 .front article.read-more a:hover {
-    background: transparent url(../images/project-readmore-hover.png) no-repeat;	
+    background: transparent url(../images/project-readmore-spr.png) no-repeat 0px -200px;
+	width: 300px;
+  	height: 200px;	
 }
 
 .front article.read-more .description {
@@ -293,8 +297,13 @@ div.main {
 	    .front .illustration { background: transparent url(../images/flipside-illustration-medium.png) no-repeat; height: 306px; }
 	    .front .illustration a { margin-top: 180px; }
 	    .front .projects article.project a img { height: 155px; }
-	    .front .projects article.project a:hover .description { height: 135px; } /*height image -/- 10 10 padding*/
-	    .front .projects article.read-more a { background: transparent url(../images/project-readmore-small.png) no-repeat; line-height: 157px; }
+	    .front .projects article.project a:hover .description { height: 135px; } 
+		
+		/*height image -/- 10 10 padding*/
+	    .front .projects article.read-more a { background: transparent url(../images/project-readmore-small-spr.png) no-repeat; line-height: 157px;
+		width:236px;
+		height:157px; }
+			    .front .projects article.read-more a:hover { background: transparent url(../images/project-readmore-small-spr.png) no-repeat 0px -157px; line-height: 157px; }
 	}
 
 	/* All Mobile Sizes (devices and browser) */

@@ -215,12 +215,12 @@ div.main {
   padding: 42px 0;
 }
 
-.project-list .project.first {
+.project-list .project.first, .blog-post.first {
   border-top: none;
   padding-top: 0;
 }
 
-.project-list .project.last {
+.project-list .project.last, .blog-post.last {
   border-bottom: none;
   padding-bottom: 0;
 }
@@ -269,6 +269,40 @@ div.main {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+
+/*** Blog pages ***/
+.blog-post .user, .blog-post .date{
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.blog-post h1{
+  margin-bottom: 0;
+}
+
+.blog-post h1 a{
+  color: #DB562B;
+  text-decoration: none;
+}
+.blog-post h1 a:hover{
+  text-decoration: underline;
+}
+
+.post-list .blog-post{
+  border-bottom: 1px solid #DED9C7;
+  border-top: 1px solid #FFFFFF;
+  padding-top: 20px;
+}
+
+.blog-post.first {
+  border-top: none;
+  padding-top: 0;
+}
+
+.blog-post.last {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* #Media Queries

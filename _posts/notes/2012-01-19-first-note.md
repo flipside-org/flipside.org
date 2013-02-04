@@ -38,31 +38,31 @@ function _aw_callcenter_actions($group){
 
 After declaring the action two function must be created. Each action will have a function with its name and another one with ```_confirm``` appended. For example:
 
-```
+{% highlight php %}
 function _aw_callcenter_respondent_remove_confirm(&$form_state)
-```
+{% endhighlight %}
 
-```
+{% highlight php %}
 function _aw_callcenter_respondent_remove(&$form_state)
-```
+{% endhighlight %}
 
 After selecting the action from the dropdown and submitting the form the action_confirm function will be called. Here we create our confirmation form and return it so it's displayed. And we are now at step 2. When we submit this form, if there aren't more steps (more on this later), the form is submitted and the action function is called. The only thing this function does is set the batch (The batch is set using the normal drupal procedure) that will do the processing, in this case deleting the relation between the respondent and the survey.
 
-```
+{% highlight php %}
 function _aw_callcenter_respondent_remove(&$form_state){
   $survey_node = $form_state['storage']['survey_node'];
   // Use an indexed array instead of using nids as keys
   $rids = array_values($form_state['storage']['rows']);  
   _aw_callcenter_batch_start(t('Removing Respondents'), '_aw_callcenter_batch_respondent_remove', array($rids, $survey_node));
 }
-```
+{% endhighlight %}
 
 There are some cases where we need more than 2 steps. The action for adding random respondents from a selection is one of these examples.
 Step 1 is the general form, in step 2 we prompt the user about how many respondents should be randomized and in step 3 we show a final confirmation form.
 
 This was easy to accomplish, we just created a multi-step form inside the action_confirm function. The step number is stored in ```$form_state['storage']['step']``` and with a switch we return all the different forms.
 
-```
+{% highlight php %}
 $step = $form_state['storage']['step'];
 switch ($step) {
   case 2:
@@ -72,7 +72,7 @@ switch ($step) {
   //...
   break;
 }
-```
+{% endhighlight %}
 
 One important thing to keep in mind is the ```$form_state['storage']['more_steps']``` variable. We needed to set it to ```TRUE``` in every step as long as we wanted more steps. On the last step it must be set to ```FALSE```.
 

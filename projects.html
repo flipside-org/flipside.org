@@ -8,9 +8,8 @@ permalink: projects/index.html
 </section>
 
 <ul class="project-list">
-{% for post in site.posts%}
-  {% if post.type == "project" %}
-  
+{% for post in site.categories.project %}
+
     {% assign class = '' %}
     {% if forloop.first %}
        {% assign class = 'first' %}
@@ -43,6 +42,5 @@ permalink: projects/index.html
 			</footer>
 		</article>
 	</li>
-  {% endif %}
 {% endfor %}
 </ul>

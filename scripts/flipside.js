@@ -7,6 +7,7 @@ $(document).ready(function(){
 	 
     $('.show_hide').click(function(){
         $(".contact-info").slideToggle("medium");
+        return false;
     });
 
 });

@@ -1,116 +1,46 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>Flipside - Projects</title>
-	<meta name="description" content="Flipside builds web-based communication tools using Open Source tools.">
-	<meta name="author" content="Flipside">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="css/base.css" type='text/css'>
-	<link rel="stylesheet" href="css/skeleton.css" type='text/css'>
-	<link rel="stylesheet" href="css/layout.css" type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script src="scripts/flipside.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-33134074-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
-</head>
-<body class="projects">
-	<div class="contact-info">
-		<ul class="container">
-			<li class="four columns offset-by-four"><label class="above">Address</label>Avenida de Liberdade 229, 2º<br/>1250-142 Lisboa, Portugal</li>
-			<li class="eight columns">
-				<div class="left column alpha"><label class="above">Phone</label>+351 926 526 465</div>
-				<div class="right column omega"><label class="above">Email</label><a href="mailto:info@flipside.org">info@flipside.org</a></div>
-			</li>
-		</ul>
-	</div>
-	<div class="container">
-		<header class="page sixteen columns">  
-			<a href="/" title="Home Flipside" class="five columns alpha"><img src="images/logo-flipside.png" alt="Flipside" title="Flipside" class="logo-fs five columns alpha"/></a>
-			<nav class="main omega">
-			      <ul class="clearfix">
-				      <li class="columns alpha"><a href="about.html" class="about">About</a></li>
-				      <li class="columns"><a href="projects.html" class="work">Work</a></li>
-				      <li class="columns omega"><a href="#" id="contactlink" class="contact show_hide">Contact</a></li>
-			      </ul>
-			</nav>
-		</header>
-	
-		<div class="main sixteen columns" role="main">
-			<section class="intro">
-				<h3 class="slogan">At Flipside we work closely with our clients to create appropriate and usable solutions.</h3>
-				Below we have listed some examples of our work.
-			</section>
-			
-			<ul class="project-list">
-				<li class="project first odd clearfix">
-					<div class="project-image nine columns alpha">
-						<img class="border nine columns alpha omega" src="images/projects/macgyver-med.png" />
-					</div>
-					<article class="six columns omega offset-by-one">
-						<header>
-							<a id="macgyver"></a>
-							<h3>MacGyver</h3>
-							<h4 class="sub-title metadata">Design + Concept + Development</h4>
-						</header>
-						<div class="description">
-							<p><a href="http://www.texttochange.com/">Text to Change</a> is a global innovator implementing interactive and incentive based SMS programmes around the world.</p>
-							<p>We worked with TTC to develop MacGyver, a practical and flexible system that allows them to coordinate their growing portfolio of activities. Each employee has a personal dashboard providing an overview with the relevant projects and their milestones and leads.</p>
-							<p>More information about the system and a demo can be found at: <a href="http://macgyver.texttochange.org">http://macgyver.texttochange.org</a>.</p>
-						</div>
-						<footer>
-							<label class="inline">Client:</label> <span class="metadata">Text to Change</span><br/>
-							<label class="inline">Technology:</label> <span class="metadata">Drupal</span><br/>
-							<div class="project-link">
-								<a href="http://macgyver.texttochange.org">MacGyver</a>
-							</div>
-						</footer>
-					</article>
-				</li>
-				<li class="project last even clearfix">
-					<div class="project-image nine columns alpha">
-						<img class="border nine columns alpha omega" src="images/projects/suchitoto-med.jpg" />
-					</div>
-					<article class="six columns omega offset-by-one">
-						<header>
-							<a id="redes"></a>
-							<h3>Redes MIS</h3>
-							<h4 class="sub-title metadata">Concept + Development</h4>
-						</header>
-						<div class="description">
-							<p>Red Suchitoto is a network for micro and small businesses in Suchitoto, El Salvador. Together with <a href="http://redes.org/" title="Fundación Redes">Fundación Redes</a> and <a href="http://www.stro-ca.org" title="STRO Centroamérica">STRO</a> we developed a Management Information System that allows the local staff to coordinate the network and improve the services provided to the members.</p>
-							<p>The system is accesible through a web interface and, to decrease the paperwork for those working in the field, data can also be collected using basic Android mobile phones.</p>
-						</div>
-						<footer>
-							<label class="inline">Technology:</label> <span class="metadata">Open Data Kit & Drupal</span>
-						</footer>
-					</article>
-				</li>
-			</ul>
-			
+---
+layout: default
+permalink: projects/index.html
+---
+<section class="intro">
+	<h3 class="slogan">At Flipside we work closely with our clients to create appropriate and usable solutions.</h3>
+	Below we have listed some examples of our work.
+</section>
+
+<ul class="project-list">
+{% for post in site.categories.project %}
+
+    {% assign class = '' %}
+    {% if forloop.first %}
+       {% assign class = 'first' %}
+    {% endif %}
+    
+    {% if forloop.last %}
+       {% assign class = 'last' %}
+    {% endif %}
+  
+	<li class="project {{ class }} odd clearfix">
+		<div class="project-image nine columns alpha">
+			<img class="border nine columns alpha omega" src="/images/projects/{{ post.image }}" />
 		</div>
-		<footer class="page sixteen columns">
-			&nbsp;
-		</footer>
-	</div>
-</body>
-</html>
+		<article class="six columns omega offset-by-one">
+			<header>
+				<h3>{{ post.title }}</h3>
+				<h4 class="sub-title metadata">{{ post.meta }}</h4>
+			</header>
+			<div class="description">
+			  {{ post.content }}
+			</div>
+			<footer>
+				{% if post.client %}<label class="inline">Client:</label> <span class="metadata">{{ post.client }}</span><br/>{% endif %}
+				<label class="inline">Technology:</label> <span class="metadata">{{ post.technology }}</span><br/>
+				{% if post.project_link %}
+  				<div class="project-link">
+  					<a href="{{ post.project_link.href }}">{{ post.project_link.text }}</a>
+  				</div>
+				{% endif %}
+			</footer>
+		</article>
+	</li>
+{% endfor %}
+</ul>

@@ -162,6 +162,7 @@ div.main {
   -moz-box-shadow: 0 0 3px 1px #ded9c7;
   -webkit-box-shadow: 0 0 3px 1px #ded9c7;
   box-shadow: 0 0 3px 1px #ded9c7;
+  margin-bottom: 20px;
 }
 
 .front-projects .project a img {

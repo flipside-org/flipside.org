@@ -1,7 +1,7 @@
 ---
 layout: note
 title: Data collection with Airwolf
-category: note
+category: airwolf, drupal, mongodb
 
 user: olafveerman
 ---

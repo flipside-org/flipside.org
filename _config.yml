@@ -8,9 +8,21 @@ permalink: /notes/:title/
 users :
   danielfdsilva :
     name: Daniel Silva
-    bio: Once upon a time he born and that's it.
+    function: Developer
+    bio: |
+    Daniel joined Flipside in the summer of 2012 and is an all-round web developer with a special knack for frontend development. He enjoys to craft usable user experiences, enhancing them with Javascript where needed, but also doesn't shy away from building complex MySQL queries. In a short period of time, Daniel has developed an advanced understanding of how to use Drupal as a framework.
+	Daniel has a degree in _New Communication Technologies_, graduating best in class. When he is not working, Daniel can be found with a camera in his hand exploring uncharted territory through geocaching.
   
   olafveerman :
     name: Olaf Veernam
-    nick: O Barqueiro
-    bio: Tha Boss.
+    function: Founder and Project Lead
+    bio: |
+    	Olaf is the founder of Flipside and responsible for the day-to-day operations of the organisation. As the project lead, he serves as the interface between the client and the technical team and enjoys being involved in strategy talks as much as translating clients needs into manageable requirements.
+    	Before founding Flipside in 2011, Olaf worked for international development organizations in Latin America. He has a degree in _Communication Systems_ and a post-graduate degree in _International Management_. He combines his work for Flipside with the position of adviser to the IT Cluster of Fomin of the Interamerican Development Bank.
+
+  nunoveloso :
+  	name: Nuno Veloso
+  	function: Developer
+  	bio: |
+  		Nuno is an experienced web-developer that mostly applies his skills to the back-end side of our projects. He\'s proficient in a wide range of technologies and languages covering the whole web stack, ranging from Apache, MySQL and MongoDB, to PHP, Perl, Drupal and server-side Javascript. Due to his year long experience with the operational aspects of some large scale projects, Nuno also shapes the server architecture of our projects. 
+  		Nuno combines his work at Flipside with the position of Chief Engineer at Demotix. His social engagement and interest in Latin America recently moved him to start his own NGO: Muqu.

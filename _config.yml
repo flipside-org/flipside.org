@@ -2,3 +2,15 @@ safe:        false
 auto:        false
 server:      false
 permalink: /notes/:title/
+
+
+# Users listing
+users :
+  danielfdsilva :
+    name: Daniel Silva
+    bio: Once upon a time he born and that's it.
+  
+  olafveerman :
+    name: Olaf Veernam
+    nick: O Barqueiro
+    bio: Tha Boss.

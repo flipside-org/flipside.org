@@ -108,6 +108,14 @@ div.main {
   margin-bottom: 20px;
 }
 
+.main aside section.box {
+  font-size: 0.8125em;
+  background-color: #f5f6ed;
+  border: 1px solid #CDCABB;
+  border-width: 1px 0;
+  padding: 1em .9em 0 .9em ;
+}
+
 /* #Page Styles
  ================================================== */
 
@@ -320,14 +328,6 @@ code{
 
 pre code{
     margin-bottom: 20px; 
-}
-
-.sidebar-author{
-  font-size: 0.8125em;
-  background-color: #f5f6ed;
-  border: 1px solid #CDCABB;
-  border-width: 1px 0;
-  padding: 1em .9em 0 .9em ;
 }
 
 .author-photo{

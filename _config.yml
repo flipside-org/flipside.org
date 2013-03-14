@@ -1,4 +1,33 @@
 safe:        false
-auto:        false
+auto:        true
 server:      false
 permalink: /notes/:title/
+
+
+# Users listing
+users :
+  danielfdsilva :
+    name: Daniel Silva
+    function: Developer
+    
+    bio: |
+      Daniel joined Flipside in the summer of 2012 and is an all-round web developer with a special knack for frontend development. He enjoys to craft usable user experiences, enhancing them with Javascript where needed, but also doesn't shy away from building complex MySQL queries.
+
+
+    
+  olafveerman :
+    name: Olaf Veerman
+    function: Founder and Project Lead
+    photo: http://lorempixel.com/150/150
+    
+    bio: |
+      Olaf is the founder of Flipside and responsible for the day-to-day operations of the organisation. As the project lead, he serves as the interface between the client and the technical team and enjoys being involved in strategy talks as much as translating clients needs into manageable requirements.
+
+
+
+  nunoveloso :
+    name: Nuno Veloso
+    function: Developer
+    
+    bio: | 
+      Nuno is an experienced web-developer that mostly applies his skills to the back-end side of our projects. He's proficient in a wide range of technologies and languages covering the whole web stack, ranging from Apache, MySQL and MongoDB, to PHP, Perl, Drupal and server-side Javascript.

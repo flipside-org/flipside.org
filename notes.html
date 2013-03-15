@@ -34,5 +34,8 @@ permalink: notes/index.html
   {{ post.content | truncatewords: 100  }}
   
 </article>
+  {% unless forloop.last %}
+    <hr class="divider" / >
+  {% endunless %}
 {% endfor %}
 </section>

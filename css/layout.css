@@ -26,6 +26,13 @@
  /* #Site Styles
  ================================================== */
 
+hr.divider {
+  border-bottom: 1px #fff solid;
+  border-top: 1px #ded9c7 solid;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 body {
   border-top: 5px #304351 solid;
 }
@@ -59,14 +66,6 @@ body {
 
 header.page, div.main, footer.page {
   padding: 20px 0;
-}
-
-header.page, div.main {
-  border-bottom: 1px #ded9c7 solid;
-}
-
-div.main, footer.page {
-  border-top: 1px #fff solid;
 }
 
 header.page {
@@ -150,13 +149,11 @@ div.main {
 .illustration a span {
   font-size: 1.4em;
 }
-.front-projects {
-  border-top: 1px solid #DED9C7;
-}
+
 .front-projects h3 {
-  border-top: 1px solid #FFFFFF;
   padding-top: 20px;
 }
+
 .front-projects a {
   color: #fff;
   margin-bottom: 20px;
@@ -218,20 +215,12 @@ div.main {
 /* Project pages */
 
 .project-list .project {
-  border-bottom: 1px #ded9c7 solid;
-  border-top: 1px #fff solid;
   margin: 0;
   padding: 42px 0;
 }
 
 .project-list .project.first, .blog-post.first {
-  border-top: none;
   padding-top: 0;
-}
-
-.project-list .project.last, .blog-post.last {
-  border-bottom: none;
-  padding-bottom: 0;
 }
 
 .project-list .project img {
@@ -242,19 +231,11 @@ div.main {
   box-shadow: 0 0 3px 1px #ded9c7;
 }
 
-.project-list .project header, .project-list .project .description, .project-list .project footer {
-}
-
 .project-list .project header {
   padding-bottom: 28px;
 }
 
-.project-list .project .description {
-  border-bottom: 1px #ded9c7 solid;
-}
-
 .project-list .project footer {
-  border-top: 1px #fff solid;
   padding-top: 21px;
 }
 
@@ -299,19 +280,11 @@ div.main {
 }
 
 .post-list .blog-post{
-  border-bottom: 1px solid #DED9C7;
-  border-top: 1px solid #FFFFFF;
   padding-top: 20px;
 }
 
 .blog-post.first {
-  border-top: none;
   padding-top: 0;
-}
-
-.blog-post.last {
-  border-bottom: none;
-  padding-bottom: 0;
 }
 
 code{

@@ -32,6 +32,7 @@ permalink: projects/index.html
 			<div class="description">
 			  {{ post.content }}
 			</div>
+			<hr class="divider" />
 			<footer>
 				{% if post.client %}<label class="inline">Client:</label> <span class="metadata">{{ post.client }}</span><br/>{% endif %}
 				<label class="inline">Technology:</label> <span class="metadata">{{ post.technology }}</span><br/>
@@ -43,5 +44,8 @@ permalink: projects/index.html
 			</footer>
 		</article>
 	</li>
+  	{% unless forloop.last %}
+    	<hr class="divider" / >
+  	{% endunless %}
 {% endfor %}
 </ul>

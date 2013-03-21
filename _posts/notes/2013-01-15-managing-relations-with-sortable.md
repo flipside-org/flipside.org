@@ -1,7 +1,8 @@
 ---
 layout: note
 title: Managing Relations with JQuery sortable
-category: drupal, relation
+category: note
+tags: drupal, relation
 
 user: danielfdsilva
 ---
@@ -190,4 +191,4 @@ foreach ($relations["update"] as $order => $rid) {
 }// End foreach update.
 {% endhighlight %}
 
-In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at [Liberdade 229](http://www.liberdade229.com), last February: https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop
+In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at [Liberdade 229](http://www.liberdade229.com), last February: [https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop](https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop).

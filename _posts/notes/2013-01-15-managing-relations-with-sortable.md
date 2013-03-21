@@ -192,4 +192,4 @@ foreach ($relations["update"] as $order => $rid) {
 
 In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at [Liberdade 229](http://www.liberdade229.com), last February.
 
-<script async class="speakerdeck-embed" data-id="8ff13e90747101306f181231392d8723" data-ratio="0.707182320441989" src="//speakerdeck.com/assets/embed.js"></script>
+<script class="speakerdeck-embed" data-id="8ff13e90747101306f181231392d8723" data-ratio="0.707182320441989" src="//speakerdeck.com/assets/embed.js"></script>

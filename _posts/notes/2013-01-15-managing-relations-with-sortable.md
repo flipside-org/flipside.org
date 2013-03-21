@@ -5,36 +5,30 @@ category: drupal, relation
 
 user: danielfdsilva
 ---
-For Drupal 7 there are several contributed modules that allow you to relate entities like References and Entityreference. Though these are stable and mature modules, we've have been using the [Relation](http://www.drupal.org/relation) module for a couple of projects with great success.  
+For Drupal 7 there are several contributed modules like References and Entityreference, that allow you to relate entities. Though these are stable and mature modules, we've have been using the [Relation](http://www.drupal.org/relation) module for a couple of projects with great success.  
+Relations are separate entities, fieldable out of the box and allow you to build pretty complex relations. While it provides several ways for the end user to create these relations, it is mainly an API module and the provided methods might not always fit the use case for a particular project. This blog post explains how we use JQuery Sortable to allow users to relate Questions to a Survey through an intuitive drag and drop interface.
 
-Relations are separate entities, fieldable out of the box and allow you to build pretty complex relations. While it provides several ways for users to create these relations, it is mainly an API module and the provided methods might not always fit the use case for a particular project. This blog post explains how we use JQuery Sortable to work with Relation, allowing users to relate content types through an intuitive drag and drop interface.
+##Basic setup
+To set up the sorting of questions we need a basic structure, in this case we'll use two separate Views. One view will show a listing of all the questions already added to the survey (left side of the image) and the other will show all the available questions in our repository (right side). For jQuery sortable to work, it is important that the Format of both views is set to a List.
 
 ![Managing relations through drag and drop](/images/notes/rearrange.png)
 
-The custom module we created for our project has two main functions:
-1. adding and sorting the questions.
-2. editing the fields of the particular relation.
+The [jQuery Ui sortable plugin](http://jqueryui.com/sortable/) will handle the sorting but we need to add some classes to the views to make them visible to it. Each view will need its own unique class and a common class to relate them. In our project we use ```survey-questions``` for the survey's questions listing, ```available-questions``` for the question repository and ```connect-sortable``` as the common linking class.
 
-In this post we'll explain how the adding and sorting of the questions can be done. The second part, which would allow you to, for example, mark question A as required for survey Z but not for survey X, may be subject of a future blog post.
+When configuring the views, it's also important to define a 'No results behaviour' to make sure that there is always a drop target, even when the view returns no result. In our example we add a Global text field with the following value ```<li class="empty">No questions were added to this survey yet.</li>```.
 
-##Basic setup
-To set up the sorting of questions we need a basic structure, in this case we'll use two views. One will show a listing of all the questions already added to the survey (left side of the image) and the other will show all the available questions in our repository (right side). The way views are built is important, they need to be lists for jQuery sortable to work.
+To be able to use the jQuery sortable library, we need to include it in our module. Since the library is already in the Drupal core, we just activate it by adding the following code to our page generator function:
 
-The [jQuery Ui sortable plugin](http://jqueryui.com/sortable/) will handle the sorting but we need to add some classes to the views to make them visible to it. Each view will need its own class and a common one to relate them. In our project we use survey-questions for the survey's questions listing, available-questions for the question repository and connect-sortable as the common linking class.
-
-Now that we are done with the structure we need to include the jQuery sortable library and, in drupal, that library is in core so we just need to activate it by adding the following code to our page generator function:
 {% highlight php %}
 drupal_add_library('system', 'ui.sortable');
 {% endhighlight %}
 
 ##Adding and sorting
-*Note: The code presented in this article corresponds to a simplified version of the actual code. It will not work on its own.*
-
-Now the we have our structure we are ready to get our hands dirty. We need to enable the sortable plugin on both lists. The snipped below show a basic instantiation on the plugin.
+With the basic structure set up, we can enable the sortable plugin on both lists. The snippet below show a basic instantiation on the plugin.
 
 {% highlight javascript %}
 $( ".survey-questions, .available-questions" ).sortable({
-  // We only want to allow dragging from an handle so we specify its class.
+  // We only want to allow dragging with a handle so we specify its class.
   handle : '.li-drag',
   // Specify which items should be draggable.
   // We want all list items except the empty placeholder.
@@ -45,10 +39,12 @@ $( ".survey-questions, .available-questions" ).sortable({
   connectWith: ".connect-sortable"
 {% endhighlight %}
 
-That's the basic setup in order to make the lists sortable. Now we need a way to save the changes. These changes can occur in three different ways:
+##Saving data
+That's the basic setup in order to make the lists sortable. Now we need a way to save the changes that can occur in three flavors:
+
 1. A question is added to the survey list, i.e., the survey-questions list receives an item.
 2. A question is removed from the survey list, i.e., the available-questions list receives an item.
-3. The survey-questions list items are reordered.
+3. The questions are re-ordered in the survey
  
 Using the jQuery sortable event callback we can capture these changes and show a save button.
 
@@ -73,16 +69,18 @@ $( ".survey-questions" ).sortable({
   }
 });
 {% endhighlight %}
-  
-##Saving data
-Afer clicking on the save button, the node id of the survey and a serialized version (```question[]=14&question[]=12&question[]=17```) of the questions' listing is sent to a page for processing and throught the serialization we know that the question with the id 14 is the first, the id 12 is the second and so on, allowing us to easily set the order.  
 
-However there's a variation to this behavior. If the question is already related to the survey the relation id will be sent in the serialization to ease the update process. It will look something like this: ```question[]=XX-YY``` (XX-> Id question, YY-> Id relation). So, the final look of the serialization will be something like this:  
-```question[]=14-50&question[]=12-45&question[]=17```
+###New questions
+After clicking on the save button, the node id of the survey and a serialized version of the questions (```question[]=14&question[]=12&question[]=17```) is sent to a page for processing. Through the serialization we know that the question with id 14 is the first, id 12 is the second and so on, allowing us to easily set the order.
 
-Now let's peak under the hood to see what's going on.  
-The first thing we do is find out which relations (of type survey_question) are to be added, to be updated and to be removed.  
-The relations to be updated are the ones with the relation id in the serialization, so those are easy to find out. The remaining questions in the serialization are the ones whose relation needs to be created. The tricky part is to find out the relations to be deleted. To accomplish this we load all the existing relations for that survey and match them against the ones in the serialization. Those we don't find in the serialization are deleted. Simple as that.
+###Deal with existing relations
+It is also possible, however, that a user makes changes to a survey with already existing questions. In this case, we add the relation ID in the serialization to ease the update process. It will look something like ```question[]=nid-rid```, where ```nid```` is the node ID of the question and ```rid``` the relation ID. The final look of the serialization will be something like: ```question[]=14-50&question[]=12-45&question[]=17```
+
+###Under the hood
+The first thing we do is find out which relations (of type survey_question) are to be added, which to be updated and which to be removed.
+
+The relations to be updated are the ones with the relation id in the serialization, so those are easy to find out. The remaining questions in the serialization are the ones whose relation needs to be created.  
+The tricky part is to find out the relations to be deleted. To accomplish this we load all the existing relations for that survey and match them against the ones in the serialization. Those we don't find in the serialization are deleted.
 
 {% highlight php %}
 // Stores the relations to be created, updated and deleted.
@@ -191,3 +189,7 @@ foreach ($relations["update"] as $order => $rid) {
 
 }// End foreach update.
 {% endhighlight %}
+
+In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at (Liberdade 229)[http://www.liberdade229.com], last February.
+
+<script async class="speakerdeck-embed" data-id="8ff13e90747101306f181231392d8723" data-ratio="0.707182320441989" src="//speakerdeck.com/assets/embed.js"></script>

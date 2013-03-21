@@ -74,7 +74,7 @@ $( ".survey-questions" ).sortable({
 After clicking on the save button, the node id of the survey and a serialized version of the questions (```question[]=14&question[]=12&question[]=17```) is sent to a page for processing. Through the serialization we know that the question with id 14 is the first, id 12 is the second and so on, allowing us to easily set the order.
 
 ###Deal with existing relations
-It is also possible, however, that a user makes changes to a survey with already existing questions. In this case, we add the relation ID in the serialization to ease the update process. It will look something like ```question[]=nid-rid```, where ```nid```` is the node ID of the question and ```rid``` the relation ID. The final look of the serialization will be something like: ```question[]=14-50&question[]=12-45&question[]=17```
+It is also possible, however, that a user makes changes to a survey with already existing questions. In this case, we add the relation ID in the serialization to ease the update process. It will look something like ```question[]=nid-rid```, where ```nid``` is the node ID of the question and ```rid``` the relation ID. The final look of the serialization will be something like: ```question[]=14-50&question[]=12-45&question[]=17```
 
 ###Under the hood
 The first thing we do is find out which relations (of type survey_question) are to be added, which to be updated and which to be removed.
@@ -190,6 +190,6 @@ foreach ($relations["update"] as $order => $rid) {
 }// End foreach update.
 {% endhighlight %}
 
-In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at (Liberdade 229)[http://www.liberdade229.com], last February.
+In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at [Liberdade 229](http://www.liberdade229.com), last February.
 
 <script async class="speakerdeck-embed" data-id="8ff13e90747101306f181231392d8723" data-ratio="0.707182320441989" src="//speakerdeck.com/assets/embed.js"></script>

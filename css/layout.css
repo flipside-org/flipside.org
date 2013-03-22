@@ -273,6 +273,21 @@ div.main {
   text-decoration: none;
 }
 
+.notes-list header {
+  margin-bottom: 20px;
+}
+
+.notes-list li {
+  margint: 20px 0;
+}
+
+.notes-list li.first {
+  margin-top: 0;
+}
+.notes-list li.last {
+  margin-bottom: 0;
+}
+
 .blog-post .user, .blog-post .date, .blog-post .tags{
   font-size: 12px;
   text-transform: uppercase;

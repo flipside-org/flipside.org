@@ -33,7 +33,7 @@ permalink: notes/index.html
           <div class="sub-title metadata">{{ post.user }} - {{ post.date | date: "%d %B %Y" }}</div>
         </header>
         
-        {{ post.content | truncatewords: 100  }}
+        {{ post.content | truncatewords: 20  }}... <a href="{{ post.url }}">read more</a>
         
       </article>
 

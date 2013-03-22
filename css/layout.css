@@ -150,6 +150,19 @@ div.main {
   font-size: 1.4em;
 }
 
+/* generic classes */
+
+.sub-title {
+  text-transform: uppercase;
+}
+
+.metadata {
+  font-size: 14px; /*Same as legend*/
+}
+
+
+/* frontpage */
+
 .front-projects h3 {
   padding-top: 20px;
 }
@@ -239,14 +252,6 @@ div.main {
   padding-top: 21px;
 }
 
-.project-list .project .sub-title {
-  text-transform: uppercase;
-}
-
-.project-list .project .metadata {
-  font-size: 14px; /*Same as legend*/
-}
-
 .project-list .project .project-link {
   margin-top: 21px;
 }
@@ -262,6 +267,12 @@ div.main {
 }
 
 /*** Blog pages ***/
+
+.notes-list h3 a {
+  color: #DB562B;
+  text-decoration: none;
+}
+
 .blog-post .user, .blog-post .date, .blog-post .tags{
   font-size: 12px;
   text-transform: uppercase;
@@ -461,7 +472,7 @@ pre code{
     line-height: 24px;
     margin-bottom: 4px;
   }
-  
+
   /* notes list */
   .notes-list .note-image {
     display: none;

@@ -219,7 +219,7 @@ div.main {
   padding: 42px 0;
 }
 
-.project-list .project.first, .blog-post.first {
+.project-list .project.first, .note.first {
   padding-top: 0;
 }
 
@@ -412,6 +412,12 @@ pre code{
   .front-projects a, .front-projects .project a img {
     width: 298px !important;
   }
+
+  /* notes list */
+  .notes-list .note-image {
+    display: none;
+  }
+
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
@@ -455,4 +461,10 @@ pre code{
     line-height: 24px;
     margin-bottom: 4px;
   }
+  
+  /* notes list */
+  .notes-list .note-image {
+    display: none;
+  }
+
 }

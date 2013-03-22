@@ -2,6 +2,7 @@
 layout: note
 title: Data collection with Airwolf
 category: note
+image: aw-ccdashboard.png
 tags: airwolf drupal mongodb
 
 user: olafveerman

@@ -22,5 +22,6 @@ layout: default
     ABOUT THE AUTHOR:
     <h3>{{ site.users[page.user].name }}</h3>
     {{ site.users[page.user].bio | markdownify }}
+    <span class="entypo"><a href="mailto: {{ site.users[page.user].email }}">&#9993;</a></span><span class="entypo-social"><a href="http://github.com/{{ site.users[page.user].github }}">&#62208;</a><a href="http://twitter.com/{{ site.users[page.user].twitter }}">&#62229;</a></span>
   </section>
 </aside>

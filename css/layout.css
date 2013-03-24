@@ -26,6 +26,30 @@
  /* #Site Styles
  ================================================== */
 
+@font-face {
+  font-family: 'Entypo';
+  src: url('../font/entypo.eot'); /* IE9 Compat Modes */
+  src: url('../font/entypo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/entypo.woff') format('woff'), /* Modern Browsers */
+       url('../font/entypo.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+@font-face {
+  font-family: 'Entypo-Social';
+  src: url('../font/entypo-social.eot'); /* IE9 Compat Modes */
+  src: url('../font/entypo-social.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/entypo-social.woff') format('woff'), /* Modern Browsers */
+       url('../font/entypo-social.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+.icon {
+  font-family: 'Entypo';
+} 
+
+.icon-social {
+  font-family: 'Entypo-Social';
+} 
+
 hr.divider {
   border-bottom: 1px #fff solid;
   border-top: 1px #ded9c7 solid;
@@ -257,9 +281,9 @@ div.main {
 }
 
 .project-list .project .project-link a {
-  background: #304351 url(../images/launch.png) no-repeat right;
+  background-color: #304351;
   color: #ebebdf;
-  padding: 5px 50px 5px 10px;
+  padding: 5px 10px;
   text-decoration: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;

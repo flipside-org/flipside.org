@@ -26,6 +26,11 @@
  /* #Site Styles
  ================================================== */
 
+.about .icon {
+  color: #CDCABB;
+  font-size: 8em;
+}
+
 hr.divider {
   border-bottom: 1px #fff solid;
   border-top: 1px #ded9c7 solid;
@@ -338,12 +343,12 @@ pre code{
 
 /* Generic page elements */
 
-.main img.left {
+.main .left {
   float: left;
   margin: 10px 10px 10px 0;
 }
 
-.main img.right {
+.main .right {
   float: right;
   margin: 10px 0 10px 10px;
 }

@@ -45,12 +45,15 @@
 .icon {
   font-family: 'Entypo';
   font-size: 4em;
-  padding: 5px;
-  text-decoration: none;
-} 
+}
 
 .icon.social {
   font-family: 'Entypo-Social';
+}
+
+.icon a {
+  padding: 5px;
+  text-decoration: none;
 } 
 
 hr.divider {
@@ -284,9 +287,9 @@ div.main {
 }
 
 .project-list .project .project-link a {
-  background-color: #304351;
+  background: #304351 url(../images/launch.png) no-repeat right;
   color: #ebebdf;
-  padding: 5px 10px;
+  padding: 5px 50px 5px 10px;
   text-decoration: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;

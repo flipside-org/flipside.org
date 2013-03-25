@@ -44,9 +44,12 @@
 
 .icon {
   font-family: 'Entypo';
+  font-size: 4em;
+  padding: 5px;
+  text-decoration: none;
 } 
 
-.icon-social {
+.icon.social {
   font-family: 'Entypo-Social';
 } 
 

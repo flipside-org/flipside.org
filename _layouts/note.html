@@ -22,6 +22,6 @@ layout: default
     ABOUT THE AUTHOR:
     <h3>{{ site.users[page.user].name }}</h3>
     {{ site.users[page.user].bio | markdownify }}
-    <span class="entypo"><a href="mailto: {{ site.users[page.user].email }}">&#9993;</a></span><span class="entypo-social"><a href="http://github.com/{{ site.users[page.user].github }}">&#62208;</a><a href="http://twitter.com/{{ site.users[page.user].twitter }}">&#62229;</a></span>
+    {% if site.users[page.user].email %}<span class="icon"><a href="mailto: {{ site.users[page.user].email }}" title="Write an me email">&#9993;</a></span>{% endif %}<span class="icon social">{% if site.users[page.user].github %}<a href="http://github.com/{{ site.users[page.user].github }}" title="Find me on Github">&#62208;</a>{% endif %}{% if site.users[page.user].twitter %}<a href="http://twitter.com/{{ site.users[page.user].twitter }}" title="Tweet me">&#62229;</a>{% endif %}</span>
   </section>
 </aside>

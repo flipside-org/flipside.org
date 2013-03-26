@@ -45,15 +45,17 @@
 .icon {
   font-family: 'Entypo';
   font-size: 4em;
+  display: inline-block;
 }
 
 .icon.social {
   font-family: 'Entypo-Social';
 }
 
-.icon a {
+.icon {
   padding: 5px;
   text-decoration: none;
+  display: inline-block;
 } 
 
 hr.divider {

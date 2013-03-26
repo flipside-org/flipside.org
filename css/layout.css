@@ -379,7 +379,7 @@ pre code{
 
 .main .right {
   float: right;
-  margin: 10px 0 10px 10px;
+  margin: 20px 0 60px 10px;
 }
 
 /* #Media Queries
@@ -520,6 +520,10 @@ pre code{
     font-size: 21px;
     line-height: 24px;
     margin-bottom: 4px;
+  }
+  
+  .about .icon {
+    display: none;
   }
 
   /* notes list */

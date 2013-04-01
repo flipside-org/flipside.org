@@ -3,7 +3,7 @@ layout: note
 title: Managing Relations with JQuery sortable
 category: note
 image: rearrange.png
-tags: drupal, relation
+tags: drupal relation
 
 user: danielfdsilva
 ---

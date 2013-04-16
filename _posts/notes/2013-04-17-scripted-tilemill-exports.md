@@ -2,7 +2,7 @@
 layout: note
 title: Scripted Tilemill exports
 category: note
-image: rearrange.png
+image: scripted-export.png
 tags: tilemill bash mapbox
 
 user: olafveerman

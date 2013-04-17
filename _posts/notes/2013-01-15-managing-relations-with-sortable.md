@@ -85,6 +85,7 @@ The relations to be updated are the ones with the relation id in the serializati
 The tricky part is to find out the relations to be deleted. To accomplish this we load all the existing relations for that survey and match them against the ones in the serialization. Those we don't find in the serialization are deleted.
 
 {% highlight php startinline %}
+<?php
 // Stores the relations to be created, updated and deleted.
 $relations["insert"] = array();
 $relations["update"] = array();
@@ -150,11 +151,13 @@ else {
   // Since all the existing relations are always updated, the ones not present
   // in the $relations["update"] are to be deleted.
   $relations["delete"] = array_diff($existingRelations, $relations["update"]);
+?>
 {% endhighlight %}
 
 Now, using the functions provided by the relation module, relation_load(), relation_create(), relation_save(), relation_delete(), we can handle all the data present in our $relation array.
 
-{% highlight php linenos startinline %}
+{% highlight php %}
+<? php
 // OPERATIONS - insert, update, delete
 // Delete
 if (!empty($relations["delete"])) {
@@ -190,6 +193,7 @@ foreach ($relations["update"] as $order => $rid) {
   relation_save($relation));
 
 }// End foreach update.
+?>
 {% endhighlight %}
 
 In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at [Liberdade 229](http://www.liberdade229.com), last February: [https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop](https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop).

@@ -348,10 +348,9 @@ div.main {
 }
 
 code{
+  background-color: #F8F8FF;
   font-family: Courier;
   font-size: 0.875em;
-  font-weight: bold;
-  background-color: #F8F8FF;
   padding: 2px 4px;
   overflow-x: auto;
   -moz-border-radius: 3px;
@@ -360,8 +359,15 @@ code{
   -khtml-border-radius: 3px; /* for old Konqueror browsers */
 }
 
-pre code{
-    margin-bottom: 20px; 
+.highlight pre {
+  background-color: #F8F8FF;
+  margin: 20px 0;
+  overflow-x:auto;
+  padding: 5px;
+}
+
+.highlight code {
+  font-size: 0.75em;
 }
 
 .author-photo{

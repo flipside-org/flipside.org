@@ -1,7 +1,8 @@
-safe:        false
-auto:        true
-server:      false
-permalink: /notes/:title/
+safe:       false
+auto:       true
+server:     false
+permalink:  /notes/:title/
+pygments:   true
 
 
 # Users listing

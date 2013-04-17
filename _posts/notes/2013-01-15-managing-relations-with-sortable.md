@@ -84,7 +84,7 @@ The first thing we do is find out which relations (of type survey_question) are 
 The relations to be updated are the ones with the relation id in the serialization, so those are easy to find out. The remaining questions in the serialization are the ones whose relation needs to be created.  
 The tricky part is to find out the relations to be deleted. To accomplish this we load all the existing relations for that survey and match them against the ones in the serialization. Those we don't find in the serialization are deleted.
 
-{% highlight php startinline %}
+{% highlight php startinline=True %}
 // Stores the relations to be created, updated and deleted.
 $relations["insert"] = array();
 $relations["update"] = array();
@@ -154,7 +154,7 @@ else {
 
 Now, using the functions provided by the relation module, relation_load(), relation_create(), relation_save(), relation_delete(), we can handle all the data present in our $relation array.
 
-{% highlight php linenos startinline %}
+{% highlight php startinline=True %}
 // OPERATIONS - insert, update, delete
 // Delete
 if (!empty($relations["delete"])) {

@@ -459,8 +459,10 @@ code{
   nav.main a {
     padding: 5px 0;
   }
-  nav.main a:hover {
+  nav.main a:hover,
+  nav.main a.active {
     background-image: none;
+    color: #54C2DB;
   }
   nav.main li {
     height: auto;
@@ -509,8 +511,10 @@ code{
   nav.main a {
     padding: 5px 0;
   }
-  nav.main a:hover {
+  nav.main a:hover,
+  nav.main a.active {
     background-image: none;
+    color: #54C2DB;
   }
   nav.main li {
     height: auto;

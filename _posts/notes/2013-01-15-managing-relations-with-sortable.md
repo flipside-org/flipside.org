@@ -1,5 +1,7 @@
 ---
 layout: note
+notes_active : true
+
 title: Managing Relations with JQuery sortable
 category: note
 image: rearrange.png

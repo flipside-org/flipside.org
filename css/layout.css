@@ -129,7 +129,8 @@ nav.main a {
   text-transform: uppercase;
 }
 
-nav.main a:hover {
+nav.main a:hover,
+nav.main a.active {
   background: transparent url(../images/menu-hover.png) no-repeat center 0;
   color: #304351;
 }

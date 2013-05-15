@@ -1,5 +1,7 @@
 ---
 layout: note
+notes_active : true
+
 title: Data collection with Airwolf
 category: note
 image: aw-ccdashboard.png

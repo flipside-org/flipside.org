@@ -26,9 +26,9 @@
       <a href="/" title="Home Flipside" class="five columns alpha"><img src="/images/logo-flipside.png" alt="Flipside" title="Flipside" class="logo-fs five columns alpha"/></a>
       <nav class="main omega">
             <ul class="clearfix">
-              <li class="columns alpha"><a href="/about/" class="about">About</a></li>
-              <li class="columns"><a href="/projects/" class="work">Work</a></li>
-              <li class="columns"><a href="/notes/" class="notes">Notes</a></li>
+              <li class="columns alpha"><a href="/about/" class="about {% if page.about_active %} active {% endif %}">About</a></li>
+              <li class="columns"><a href="/projects/" class="work  {% if page.work_active %} active {% endif %}">Work</a></li>
+              <li class="columns"><a href="/notes/" class="notes  {% if page.notes_active %} active {% endif %}">Notes</a></li>
               <li class="columns omega"><a href="#" id="contactlink" class="contact show_hide">Contact</a></li>
             </ul>
       </nav>

@@ -1,5 +1,7 @@
 ---
 layout: note
+notes_active : true
+
 title: Scripted Tilemill exports
 category: note
 image: scripted-export.png

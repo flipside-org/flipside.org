@@ -15,7 +15,10 @@ Relations are separate entities, fieldable out of the box and allow you to build
 ##Basic setup
 To set up the sorting of questions we need a basic structure, in this case we'll use two separate Views. One view will show a listing of all the questions already added to the survey (left side of the image) and the other will show all the available questions in our repository (right side). For jQuery sortable to work, it is important that the Format of both views is set to a List.
 
-![Managing relations through drag and drop](/images/notes/rearrange.png)
+<div class="image-with-caption eleven columns alpha omega">
+  <img src="/images/notes/rearrange.png" class="nine columns offset-by-one inset-by-one border alpha omega" alt="Managing relations through drag and drop" />
+  <span>Managing relations through drag and drop</span>
+</div>
 
 The [jQuery Ui sortable plugin](http://jqueryui.com/sortable/) will handle the sorting but we need to add some classes to the views to make them visible to it. Each view will need its own unique class and a common class to relate them. In our project we use ```survey-questions``` for the survey's questions listing, ```available-questions``` for the question repository and ```connect-sortable``` as the common linking class.
 

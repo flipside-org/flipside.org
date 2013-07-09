@@ -72,6 +72,7 @@
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
+    .container .inset-by-one                    { padding-right: 60px;  }
 
 
 /* #Tablet (Portrait)
@@ -128,6 +129,8 @@
         .container .offset-by-thirteen              { padding-left: 624px; }
         .container .offset-by-fourteen              { padding-left: 672px; }
         .container .offset-by-fifteen               { padding-left: 720px; }
+        
+        .container .inset-by-one                    { padding-right: 40px;  }
     }
 
 
@@ -180,6 +183,7 @@
         .container .offset-by-fourteen,
         .container .offset-by-fifteen { padding-left: 0; }
 
+        .container .inset-by-one { padding-right: 0;  }
     }
 
 

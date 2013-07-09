@@ -32,6 +32,6 @@ The original dataset is very detailed and contains a lot of information about ea
 In the coming weeks we will add more pages with analysis on a certain topic. If you would like to contribute with your own analysis, we'd love to hear from you.
 
 ##Technology
-[Incendios.pt](http://www.incendios.pt) is fully built on Open Source technology, mainly on Express, MongoDB, Mapbox, Leaflet and Morris. For a more complete list of the technology we used for this site, please see the [About](http://www.incendios.pt/en/data) page. In the coming weeks we'll publish more notes that explain some of the technical aspects in more detail.
+[Incendios.pt](http://www.incendios.pt) is fully built on Open Source technology, mainly on Express, MongoDB, Mapbox, Leaflet and Morris. For a more complete list of the technology we used for this site, please see the [About](http://www.incendios.pt/en/data) page. We'll be publishing more notes that explain some of the technical aspects in more detail.
 
-In the coming weeks you can also expect improvements and some new features to the site, follow us on Twitter to be kept up to date. If in the meantime you have a question, feedback or suggestions, feel free to drop us a line at [info@flipside.org](mailto:info@flipside.org).
+Over the coming months you can also expect improvements and some new features to the site, follow us on [Twitter](http://www.twitter.com/flipside_org) to be kept up to date. If in the meantime you have a question, feedback or suggestions, feel free to drop us a line at [info@flipside.org](mailto:info@flipside.org).

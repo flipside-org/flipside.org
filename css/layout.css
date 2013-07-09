@@ -195,6 +195,17 @@ div.main {
   font-size: 14px; /*Same as legend*/
 }
 
+.image-with-caption {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+  .image-with-caption span {
+    display: block;
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+  }
 
 /* frontpage */
 

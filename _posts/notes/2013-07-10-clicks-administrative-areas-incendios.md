@@ -2,7 +2,7 @@
 layout: note
 notes_active : true
 
-title: Incendios.pt - Clicks and administrative areas
+title: Click behaviour and zoom levels with Mapbox.js
 category: note
 image: incendios-pt-administrative-areas.png
 tags: incendios.pt mapbox
@@ -10,29 +10,46 @@ tags: incendios.pt mapbox
 user: danielfdsilva
 ---
 
-The main section of the [incendios.pt](http://incendios.pt) website is the explore section. To allow users to switch between administrative areas more easily we allowed click events on the map. Everytime a user clicks on a specific administrative area type, like District, Municipality, or Parish, its page is shown. This improves the speed of the exploration since the users don't need to drill down using the selectors.
+An important feature of [incendios.pt](http://incendios.pt) are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between regions, we allow click events on the map to browse the site. Every time a user clicks on a specific administrative area type, like District, Municipality, or Parish, its page is shown. This improves the speed of the exploration since the users don't need to drill down using the hierarchical selectors.
 
-Tilemill (the program we used to build the maps) allows us to set a location to which the user is redirected upon click on a feature, which can be a point, a polygon, etc. But, in our case, this basic functionality was not enough. Our goal was to allow a redirection to a different administrative area type (District, Municipality, Parish) based on the zoom level.
+The visibility of the different types of administrative areas changes according to the zoom level. Up to zoom level 9 the Districts are visible, from 10 to 12 the Municipalities are visible and from 13 onwards Parishes can be viewed. The click behaviour we implemented follows the same logic. 
 
-The visible administrative areas change according with the zoom level. From minimum zoom level to zoom level 9 the Districts are visible, from 10 to 12 the Municipalities are visible and from 13 onwards Parishes can be viewed.  
-<div class="eleven columns alpha omega">
+<div class="image-with-caption eleven columns alpha omega">
   <img src="/images/notes/incendios-pt-administrative-areas.png" class="nine columns offset-by-one inset-by-one border alpha omega" alt="Explore data by location" />
+  <span>District (Lisboa) zoom until 10, Municipality (Cascais) zoom 10-12 and Parish (Estoril) from zoom 13 onwards</span>
 </div>
 
-So, according to the visible administrative area type, we wanted a different redirection. This conditional  location couldn't be done in tilemill, so we did it through javascript when including the map in the website.
+Even though [Tilemill](http://www.tilemill.com) allows to set a location when a user clicks on a point, polygon or line, it does not allow one to differentiate based on zoom level. This note explains briefly how we built a different link based on zoom level of the maps.
+
+###Structure of links
+Every area in Portugal has a unique id which in our project is called AAID. This is a number which can have 2, 4 or 6 digits, depending on the level of the area.
+
+| District  |  Municipality  |  Parish  |
+|:---------:|:--------------:|:--------:|
+|  Lisboa   |    Cascais     |  Estoril |
+|    11     |      05        |    04    |
+
+The ine for Lisboa is 11  
+The ine for Cascais is 1105  
+The ine for Estoril is 110504  
+
+The links of the pages of incendios.pt are structured using the same id. In the case of our example: http://incendios.pt/en/por/110504.
+
+###Setting up the interactivity
+To add the links to the map, we use a layer containing the polygons of all the parishes, with the AAID as one of the attributes. This layer is completely transparent, since we only use it to implement the navigation.
+
 
 {% highlight javascript %}
 // Include the map.
-var map = L.mapbox.map('map', 'flipside.map-epnw0q4t', {minZoom: 7, maxZoom: 14}).setView([40, -7.5], 6);
+var map = L.mapbox.map('map', '[map-id]', {minZoom: 7, maxZoom: 14}).setView([40, -7.5], 6);
 {% endhighlight %}
 
-Since all the tiles that compose the maps are rasterized, mapbox uses a [UTFGrid](http://www.mapbox.com/developers/utfgrid/) to allow interactivity with certain points or areas of a map.  
-Through this layer we can control how our click will behave.  
-The map click will always fire on the Parishes because they are the last element in the ```District > Municipality > Parish``` stack. When the click event occurs, mapbox will make available all the data we entered in tilemill about that parish which will contain its id (More on this in the section Note about INE).
+
+The map click will always fire on the Parishes because they are the most detailed element in the ```District > Municipality > Parish``` stack. When the click event occurs, Mapbox provides all the attributes of the parish that were included in the original layer in Tilemill, including the AAID.
 
 {% highlight javascript %}
 // *** Layer. Grid of administrative borders. Used for interactivity.
-var grid_layer = L.mapbox.gridLayer('flipside.pt-admin-areas');
+var grid_layer = L.mapbox.gridLayer('flipside.map-id');
 
 // Setup the interactivity.
 // When the user clicks...
@@ -72,14 +89,8 @@ grid_layer.on('click', function(data){
 map.addLayer(grid_layer);
 {% endhighlight %}
 
-###Note about INE
-Every administrative area in Portugal as an id which is called ine. This is a number which can have 2, 4 or 6 digits and it takes into account the value of the parent. For example:
 
-| District  |  Municipality	 |  Parish  |
-|:---------:|:--------------:|:--------:|
-|  Lisboa		|    Cascais		 |  Estoril |
-|    11		  |      05			   |    04    |
 
-The ine for Lisboa is 11  
-The ine for Cascais is 1105  
-The ine for Estoril is 110504  
+
+>Restructure the below phrases
+Tiles served by Mapbox are rasterized and use [UTFGrid](http://www.mapbox.com/developers/utfgrid/) to allow interactivity with certain points or areas of a map.

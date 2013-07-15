@@ -402,6 +402,12 @@ code{
   margin: 20px 0 60px 10px;
 }
 
+.main article ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
 /* #Media Queries
  ================================================== */
 

@@ -2,7 +2,7 @@
 layout: note
 notes_active : true
 
-title: Click behaviour and zoom levels with Mapbox.js
+title: Map interaction and zoom levels
 category: note
 image: incendios-pt-administrative-areas.png
 tags: incendios.pt mapbox

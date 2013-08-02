@@ -47,7 +47,7 @@ var map = L.mapbox.map('map', 'flipside.map-epnw0q4t', {minZoom: 7, maxZoom: 14}
 {% endhighlight %}
 
 
-The map click will always fire on the Parishes because they are the most detailed element in the ```District > Municipality > Parish``` stack. When the click event occurs, Mapbox provides all the attributes of the parish that were included in the original layer in Tilemill, including the AAID.
+The map click will always fire on the Parishes because they are the most detailed element in the ```District > Municipality > Parish``` stack. When the click event occurs, Mapbox provides all the attributes of the parish that were included in the original layer in Tilemill, including the AAID. This allows us to generate the proper ID based on the zoom level.
 
 {% highlight javascript %}
 // *** Layer. Grid of administrative borders. Used for interactivity.
@@ -91,4 +91,4 @@ grid_layer.on('click', function(data){
 map.addLayer(grid_layer);
 {% endhighlight %}
 
-For incendios.pt we only needed something this simple, but you could apply the same approach to build custom legends, popups...
+For incendios.pt we only needed something simple, but you could apply the same approach to build things like custom legends and popups.

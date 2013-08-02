@@ -359,6 +359,17 @@ div.main {
   padding-top: 0;
 }
 
+.blog-post table{
+  margin-bottom: 20px;
+}
+.blog-post table td,
+.blog-post table th{
+  padding: 2px 5px;
+}
+.blog-post table th{
+  font-weight: bold;
+}
+
 code{
   background-color: #F8F8FF;
   font-family: Courier;
@@ -400,6 +411,12 @@ code{
 .main .right {
   float: right;
   margin: 20px 0 60px 10px;
+}
+
+.main article ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 /* #Media Queries

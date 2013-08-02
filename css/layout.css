@@ -359,6 +359,17 @@ div.main {
   padding-top: 0;
 }
 
+.blog-post table{
+  margin-bottom: 20px;
+}
+.blog-post table td,
+.blog-post table th{
+  padding: 2px 5px;
+}
+.blog-post table th{
+  font-weight: bold;
+}
+
 code{
   background-color: #F8F8FF;
   font-family: Courier;

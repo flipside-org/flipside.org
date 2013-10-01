@@ -18,7 +18,7 @@ One of the lessons we learned during the last event, is that we need concrete id
 - **Open Spending**  
 During the last meetup, a start was made to gather data on 'Ajustes Diretos' in order to add it to Open Spending. The data has since been gathered and will be uploaded soon. During the night, designers and developers can collaborate to analyse and visualise the data.
 - **Marriages and divorces visualization**
-Based on data from the [INE](http://www.ine.pt) about marriages and divorces, people will work on a visualization that points out differences between same sex and opposite sex.
+Based on data from the [INE](http://www.ine.pt), people will work on a visualization about differences between same sex and opposite sex marriages and divorces.
 - **Open Data Census**  
 The Open Data Census tracks the status of government open data on the national level. A sprint has been planned for the month October to revise the current data in the census and improve its quality, in time for the [Open Government Partnership Summit](http://www.opengovpartnership.org/london-summit-2013). During the meetup we'll focus on improving the census for Portugal.
 

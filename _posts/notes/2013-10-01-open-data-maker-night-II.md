@@ -12,6 +12,7 @@ user: olafveerman
 
 On Thursday October 17, we'll be hosting another Open Data Maker Night. These nights are focused on making stuff with Open Data. Everybody is welcome, you don't need to be a skilled developer, data scientist or designer to make things happen.
 
+<img class="right" src="/images/notes/odmn1.jpg" alt="Open Data Maker Night in action">
 ### What we'll be working on
 One of the lessons we learned during the last event, is that we need concrete ideas for people to work on. For the next session we have gathered a couple of people that will serve as "initiative owners". The role of these people is to prepare the tasks and be able to kick-start the activities during the evening. The list below is not exhaustive and we invite you to bring your own ideas to the table.
 

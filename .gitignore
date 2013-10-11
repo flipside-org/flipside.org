@@ -1,2 +1,12 @@
+# Jekyll generated site.
 _site
+
+# SASS cache
+.sass-cache
+
+# Node modules. This must be installed localy
+node_modules
+
+# Aptana files.
 .project
+

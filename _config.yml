@@ -1,9 +1,7 @@
 safe:       false
-auto:       true
-server:     false
 permalink:  /notes/:title/
 pygments:   true
-
+exclude:    ['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md']
 
 # Users listing
 users :

@@ -1,6 +1,4 @@
 safe:       false
-auto:       true
-server:     false
 permalink:  /notes/:title/
 pygments:   true
 

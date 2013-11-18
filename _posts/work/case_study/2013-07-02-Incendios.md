@@ -1,9 +1,11 @@
 ---
-title: Incêndios.pt
-permalink: /projects/incendios/index.html
-category: project
-anchor: incendios
+permalink: /projects/incendios/
+category: case_study
+layout: case_study
 
+title: Incêndios.pt
+
+anchor: incendios
 meta: Design + Concept + Development
 image: incendios-med.png
 technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 

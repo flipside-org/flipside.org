@@ -1,0 +1,5 @@
+<div>  
+{% for filter in site.categories.filter %}
+  <a href="{{ filter.url }}">{{ filter.title }}</a> | 
+{% endfor %}
+</div>

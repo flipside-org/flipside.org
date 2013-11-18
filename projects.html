@@ -1,0 +1,19 @@
+---
+layout: base
+permalink: projects/index.html
+title : Flipside
+---
+  <p>LOG: Projects page</p>
+  {% include menu.html %}
+  
+  <hr>
+  
+  <p>list of case studies (projects w/ link):</p>
+  {% for post in site.categories.case_study %}
+    <a href="{{ post.url }}">{{ post.title }}</a><br />
+  {% endfor %}
+
+  <p>list of projects:</p>
+  {% for post in site.categories.project %}
+    {{ post.title }}<br />
+  {% endfor %}

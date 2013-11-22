@@ -4,3 +4,51 @@ layout: base
 <p>LOG: case_study layout</p>
 
 {{ content }}
+
+
+{% comment %}
+  Navigation links for case studies can be rendered differently from notes
+  since they don't need filters.
+  To render these links we just loop through the posts array and find the
+  case study before and after.
+{% endcomment %}
+
+{% assign break_cicle = false %}
+
+{% assign previous_case_study = false %}
+{% assign next_case_study = false %}
+{% assign current_found = false %}
+
+{% for post in site.categories.case_study %}
+  {% unless break_cicle %}
+
+    {% if current_found %}
+    
+      {% assign next_case_study = post %}
+      {% assign break_cicle = true %}
+      
+    {% else %}
+    
+      {% if page.url == post.url %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign previous_case_study = post %}
+      {% endif %}
+      
+    {% endif %}
+    
+  {% endunless%}
+
+{% endfor%}
+
+{% unless previous_case_study == false %}
+  <a href="{{ previous_case_study.url }}">Previous case study</a><br />
+{% else %}
+  There's no previous case study.<br/>
+{% endunless%}
+
+{% unless next_case_study == false %}
+  <a href="{{ next_case_study.url }}">Next case study</a><br />
+{% else %}
+  There's no next case study.
+{% endunless%}

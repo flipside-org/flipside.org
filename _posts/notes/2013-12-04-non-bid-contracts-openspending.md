@@ -10,7 +10,7 @@ tags: open-data spending
 user: danielfdsilva
 ---
 
-[Open Spending](https://openspending.org/) is a project from the Open Knowledge Foundation that aims to map financial transactions from governments around the world. This post describes how we added over 380.000 non-bid contracts from the Portuguese government to openspending.
+[Open Spending](https://openspending.org/) is a project from the Open Knowledge Foundation that aims to map financial transactions from governments around the world. This post describes how we added over [380.000](https://openspending.org/pt_ajustes-diretos/) non-bid contracts from the Portuguese government to openspending.
 
 Even though the data on non-bid expenditures from the Portuguese government is already publicly available on [Base.gov.pt](http://www.base.gov.pt), the data on Open Spending is much more accessible. People can explore and browse the set in the browser, or use the API to create visualizations or other insights.
 

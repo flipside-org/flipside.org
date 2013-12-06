@@ -5,6 +5,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  {% if page.twitter_card %}
+  	{% include twitter_card.html %}
+  {% endif %}
+  {% if page.facebook_og %}
+  	{% include facebook_og.html %}
+  {% endif %}
   <title>{{ page.title }}</title>
   
   <link rel="stylesheet" href="/css/app.css">

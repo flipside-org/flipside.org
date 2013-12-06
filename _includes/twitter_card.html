@@ -3,4 +3,10 @@
 <meta name="twitter:creator" content="@{{ site.data.team[page.user].twitter }}">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
-<!--<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-article.jpg">-->
+{% if page.category == "note" %}
+	{% assign image_path = "/images/notes/" %}
+{% endif %}
+{% if page.category == "project" %}
+	{% assign image_path = "/images/projects/" %}
+{% endif %}
+<meta name="twitter:image" content="{{ image_path }}{{ page.image }}">

@@ -1,0 +1,11 @@
+<meta name="og:type" content="article">
+<meta name="og:title" content="{{ page.title }}">
+<meta name="og:url" content="{{ site.domain }}{{ page.url }}">
+<meta name="og:description" content="{{ page.description }}">
+{% if page.category == "note" %}
+	{% assign image_path = "/images/notes/" %}
+{% endif %}
+{% if page.category == "project" %}
+	{% assign image_path = "/images/projects/" %}
+{% endif %}
+<meta name="og:image" content="{{ image_path }}{{ page.image }}">

@@ -1,4 +1,5 @@
 safe:       false
 permalink:  /notes/:title/
 pygments:   true
+domain:		http://flipside.org
 exclude:    ['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md']

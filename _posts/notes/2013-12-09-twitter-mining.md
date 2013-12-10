@@ -18,11 +18,14 @@ During the research on how to interact with the Streaming API we found a nice sc
 For our project we have the script running on a server with ```screen``` and every time a tweet comes back it is stored in a database. Then we created a simple API for our project that returns the total count and the last tweet. As simple as that.  
 
 ## The Script
-Since the script is easy and fun to use, we put our own version with some instructions in a [Gist](https://gist.github.com/danielfdsilva/7888253).
+Since the script is easy and fun to use, we put our own version in a [Gist](https://gist.github.com/danielfdsilva/7888253).
  
-The ```TwitterStream``` class was made abstract so it needs to be extended.  
-The ```__constructor``` method is used to setup credentials and keywords and every time a matching tweet is found it is sent to ```processTweet()```.
+The ```TwitterStream``` abstract class was created from the original script with the addition of a few methods. Nothing needs to be done to this class, it just needs to be included in the project. [Download here](https://gist.github.com/danielfdsilva/7888253/raw/TwitterStream.php).  
+On the index file we extend ```TwitterStream``` and implement the abstract method ```processTweet()```.
+The ```__constructor``` is used to setup credentials and keywords and every time a matching tweet is found it is sent to ```processTweet()```.
 However we found that sometimes a ```disconnect``` response is returned so we check if the actual tweet text is present thus validating the data.  
+
+{% gist 7888253 index.php %}
 
 ### Streaming API and accents
 Note that when you want to track accented keywords, it might be a good idea to include all the different variations. In our case, we needed to check for the Spanish hashtag 'quécambiarias'. Since users are not always accurate in their spelling (even less when it comes to hashtags), it is important to account for variations: 'quecambiarias', 'quecambiarías', 'quécambiarias', 'quécambiarías'.

@@ -4,7 +4,7 @@ notes_active : true
 
 title: Twitter Streams
 category: note
-image: 
+image: twitter-streams.png
 tags: twitter
 
 user: danielfdsilva

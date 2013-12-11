@@ -4,13 +4,19 @@ To set up the development environment for this website, you'll need to install t
 - Npm
 - compass & sass
 - Grunt ( $ npm install -g grunt-cli )
+- Bower ($ npm install -g bower)
 - jekyll ( $ gem install jekyll )
 
 
-After these basic requirements are met, run the following command in the website's folder:
+After these basic requirements are met, run the following commands in the website's folder:
 ```
 $ npm install
 ```
+
+```
+$ bower install
+```
+Bower will create a vendor directory in the src with all the sass and js needed for foundation. Nothing needs to be done there.
 
 You might have to run these as sudo.
 

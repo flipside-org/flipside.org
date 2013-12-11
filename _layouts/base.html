@@ -23,13 +23,7 @@
       <div class="branding">
         <img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" />
       </div>
-      <nav class="primary text-center">
-        <ul>
-          <li>one</li>
-          <li>two</li>
-          <li>three</li>
-        </ul>
-      </nav>
+      {% include menu.html %}
       <div class="social">
         github, twitter
       </div>
@@ -41,15 +35,20 @@
     {{ content }}
   </main>
 
-  <footer class="page" role="contentinfo">
-    <div class="action">
-      <div class="row">
-        CALL TO ACTION WITH BIG BUTTON
-      </div>
+  <div class="pre-footer">
+    <div class="row">
+      <p class="invitation">
+        CALL TO ACTION TEXT
+      </p>
+      <a href="mailto:info@flipside.org" class="button contact">info@flipside.org</a>
     </div>
-    <div class="credit">
+  </div>
+
+  <footer class="page" role="contentinfo">
       <div class="row">
-        2013 Flipside - Built with Jekyll
+        <p class="credit text-center">
+          2013 Flipside - Built with Jekyll
+        </p>
       </div>
     </div>
   </footer>

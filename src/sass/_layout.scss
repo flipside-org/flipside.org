@@ -3,6 +3,15 @@
    ========================================================================== */
 
 /**
+ * DEV - REMOVE OR IMPROVE FOR PROD
+ */
+
+.pre-content,
+.pre-footer {
+	background-color: #e6e6e6;
+}
+
+/**
  * Contains the basic structure of the site
  */
 
@@ -27,19 +36,25 @@ header.page {
 	}
 }
 
-.pre-content {
-	background-color: #e6e6e6;
-}
-
 .main-content {
 	article {
 		@include grid-column(12);
 	}
 }
 
-footer .action {
+.action {
 	background-color: #e6e6e6;
 }
 
+.pre-footer {
+	.invitation {
+		@include grid-column(12);
+	}
+	.contact {
+		@include grid-column(12);
+	}
+}
+
 footer .credit {
+	@include grid-column(12);
 }

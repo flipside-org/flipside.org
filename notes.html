@@ -3,19 +3,18 @@ layout: base
 permalink: notes/
 title : Notes
 ---
-<div class="pre-content">
+<div class="banner">
 	<div class="row">
+		<h1>Notes from the field</h1>
 		{% include filters.html %}
     </div>
 </div>
 <div class="main-content">
-	<ul class="row">
+	<div class="row">
 		{% for note in site.categories.note %}
-		<li>
-			<article>
-				<a href="{{ note.url }}">{{ note.date }} - {{ note.title }}</a><br />
-			</article>
-		</li>
+		<article>
+			<a href="{{ note.url }}">{{ note.date }} - {{ note.title }}</a><br />
+		</article>
 		{% endfor %}
-	</ul>
+	</div>
 </div>

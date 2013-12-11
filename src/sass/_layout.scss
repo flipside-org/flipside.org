@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Layout
+   Layout - structure the basic layout of the site
    ========================================================================== */
 
 /**
  * DEV - REMOVE OR IMPROVE FOR PROD
  */
 
-.pre-content,
+.banner,
 .cta {
 	background-color: #e6e6e6;
 }
@@ -31,6 +31,14 @@ header.page {
 		.social-nav {
 			@include grid-column(2);
 		}
+	}
+}
+
+.banner {
+	h1,
+	.filters {
+		@include grid-column(12);
+		text-align: center;
 	}
 }
 

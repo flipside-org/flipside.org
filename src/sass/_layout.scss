@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+/**
+ * Contains the basic structure of the site
+ */
+
+header.page {
+	.branding,
+	nav.primary,
+	.social {
+		@include grid-column(12);
+	}
+}
+@media #{$small} {
+	header.page {
+		.branding {
+			@include grid-column(2);
+		}
+		nav.primary {
+			@include grid-column(8);
+		}
+		.social {
+			@include grid-column(2);
+		}
+	}
+}
+
+.pre-content {
+	background-color: #e6e6e6;
+}
+
+.main-content {
+	article {
+		@include grid-column(12);
+	}
+}
+
+footer .action {
+	background-color: #e6e6e6;
+}
+
+footer .credit {
+}

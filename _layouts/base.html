@@ -18,8 +18,41 @@
 
 </head>
 <body>
-  <p>LOG: base layout</p>
-  {{ content }}
+  <header class="page" role="banner">
+    <div class="row">
+      <div class="branding">
+        <img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" />
+      </div>
+      <nav class="primary text-center">
+        <ul>
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+        </ul>
+      </nav>
+      <div class="social">
+        github, twitter
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <p>LOG: base layout</p>
+    {{ content }}
+  </main>
+
+  <footer class="page" role="contentinfo">
+    <div class="action">
+      <div class="row">
+        CALL TO ACTION WITH BIG BUTTON
+      </div>
+    </div>
+    <div class="credit">
+      <div class="row">
+        2013 Flipside - Built with Jekyll
+      </div>
+    </div>
+  </footer>
 
   <script src="/scripts/foundation.min.js"></script>
   <script src="/scripts/flipside.min.js"></script>

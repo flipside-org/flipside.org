@@ -21,9 +21,7 @@ header.page {
 	.social {
 		@include grid-column(12);
 	}
-}
-@media #{$small} {
-	header.page {
+	@media #{$medium-up} {
 		.branding {
 			@include grid-column(2);
 		}
@@ -49,9 +47,19 @@ header.page {
 .pre-footer {
 	.invitation {
 		@include grid-column(12);
+		text-align: center;
 	}
 	.contact {
-		@include grid-column(12);
+		@include grid-column(6,$offset:3);
+	}
+	@media #{$medium-up} {
+		.invitation {
+			@include grid-column(6);
+			text-align: left;
+		}
+		.contact {
+			@include grid-column(4, $offset:1);
+		}
 	}
 }
 

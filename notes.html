@@ -3,20 +3,19 @@ layout: base
 permalink: notes/
 title : Notes
 ---
-<p>LOG: Notes page</p>
-<hr>
-
 <div class="pre-content">
 	<div class="row">
 		{% include filters.html %}
     </div>
 </div>
 <div class="main-content">
-	<div class="row">
+	<ul class="row">
 		{% for note in site.categories.note %}
-		<article>
-			<a href="{{ note.url }}">{{ note.date }} - {{ note.title }}</a><br />
-		</article>
+		<li>
+			<article>
+				<a href="{{ note.url }}">{{ note.date }} - {{ note.title }}</a><br />
+			</article>
+		</li>
 		{% endfor %}
-	</div>
+	</ul>
 </div>

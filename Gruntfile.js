@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       options : {
           sassDir : 'src/sass',
           cssDir : 'css',
-          require : ['zurb-foundation']
+          raw : 'add_import_path "src/vendor/foundation/scss"'
       },
       
       dev : {
@@ -49,27 +49,25 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'scripts/flipside.min.js': ['src/js/*.js'],
-          'scripts/modernizr.min.js': ['src/js/vendor/custom.modernizr.js'],
+          'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
           
           'scripts/foundation.min.js': [
-            'src/js/vendor/jquery.js',
+            'src/vendor/jquery/jquery.js',
             
-            //'src/js/foundation/foundation.abide.js',
-            'src/js/foundation/foundation.js',
-            'src/js/foundation/foundation.clearing.js',
-            'src/js/foundation/foundation.dropdown.js',
-            'src/js/foundation/foundation.interchange.js',
-            //'src/js/foundation/foundation.orbit.js',
-            'src/js/foundation/foundation.reveal.js',
-            'src/js/foundation/foundation.tooltips.js',
-            //'src/js/foundation/foundation.alerts.js',
-            'src/js/foundation/foundation.cookie.js',
-            //'src/js/foundation/foundation.forms.js',
-            //'src/js/foundation/foundation.joyride.js',
-            //'src/js/foundation/foundation.magellan.js',
-            //'src/js/foundation/foundation.placeholder.js',
-            //'src/js/foundation/foundation.section.js',
-            'src/js/foundation/foundation.topbar.js'
+            //'src/vendor/foundation/js/foundation/foundation.abide.js',
+            //'src/vendor/foundation/js/foundation/foundation.accordion.js',
+            'src/vendor/foundation/js/foundation/foundation.clearing.js',
+            'src/vendor/foundation/js/foundation/foundation.dropdown.js',
+            'src/vendor/foundation/js/foundation/foundation.interchange.js',
+            //'src/vendor/foundation/js/foundation/foundation.joyride.js',
+            'src/vendor/foundation/js/foundation/foundation.js',
+            //'src/vendor/foundation/js/foundation/foundation.magellan.js',
+            //'src/vendor/foundation/js/foundation/foundation.offcanvas.js',
+            //'src/vendor/foundation/js/foundation/foundation.orbit.js',
+            //'src/vendor/foundation/js/foundation/foundation.reveal.js',
+            //'src/vendor/foundation/js/foundation/foundation.tab.js',
+            //'src/vendor/foundation/js/foundation/foundation.tooltips.js',
+            //'src/vendor/foundation/js/foundation/foundation.topbar.js'
           ]
         }
       }

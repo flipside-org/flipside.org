@@ -1,0 +1,6 @@
+{
+  "name": "Flipside - Splinter",
+  "dependencies": {
+    "foundation": "~5.0.2"
+  }
+} 

@@ -7,7 +7,7 @@
  */
 
 .pre-content,
-.pre-footer {
+.cta {
 	background-color: #e6e6e6;
 }
 
@@ -18,7 +18,7 @@
 header.page {
 	.branding,
 	nav.primary,
-	.social {
+	.social-nav {
 		@include grid-column(12);
 	}
 	@media #{$medium-up} {
@@ -28,7 +28,7 @@ header.page {
 		nav.primary {
 			@include grid-column(8);
 		}
-		.social {
+		.social-nav {
 			@include grid-column(2);
 		}
 	}
@@ -40,11 +40,7 @@ header.page {
 	}
 }
 
-.action {
-	background-color: #e6e6e6;
-}
-
-.pre-footer {
+.cta {
 	.invitation {
 		@include grid-column(12);
 		text-align: center;
@@ -65,4 +61,5 @@ header.page {
 
 footer .credit {
 	@include grid-column(12);
+	text-align: center;
 }

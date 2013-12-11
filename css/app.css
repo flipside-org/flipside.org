@@ -3888,7 +3888,7 @@ th.hide-for-touch {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000310}}
 .pre-content,
-.pre-footer {
+.cta {
   background-color: #e6e6e6;
 }
 
@@ -3898,7 +3898,7 @@ th.hide-for-touch {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000321}}
 header.page .branding,
 header.page nav.primary,
-header.page .social {
+header.page .social-nav {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -3923,7 +3923,7 @@ header.page .social {
     float: left;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000331}}
-  header.page .social {
+  header.page .social-nav {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -3941,13 +3941,8 @@ header.page .social {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000343}}
-.action {
-  background-color: #e6e6e6;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000348}}
-.pre-footer .invitation {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000344}}
+.cta .invitation {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -3955,8 +3950,8 @@ header.page .social {
   float: left;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000352}}
-.pre-footer .contact {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000348}}
+.cta .contact {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -3965,8 +3960,8 @@ header.page .social {
   float: left;
 }
 @media only screen and (min-width: 40.063em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000356}}
-  .pre-footer .invitation {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000352}}
+  .cta .invitation {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -3974,8 +3969,8 @@ header.page .social {
     float: left;
     text-align: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000360}}
-  .pre-footer .contact {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000356}}
+  .cta .contact {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -3985,13 +3980,14 @@ header.page .social {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_layout\.scss}line{font-family:\0000362}}
 footer .credit {
   position: relative;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
   float: left;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -4000,11 +3996,22 @@ footer .credit {
 /**
  * Contains the styling of the navigation items
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000310}}
-nav.primary ul {
-  list-style: none;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\000039}}
+nav.primary {
+  text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000313}}
-nav.primary li {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000314}}
+nav.primary ul,
+ul.social-nav {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000320}}
+nav.primary ul li,
+ul.social-nav li {
   float: left;
+  margin: 0;
 }

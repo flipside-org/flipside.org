@@ -1,7 +1,12 @@
 <div class="filters">
 	<ul>  
 	{% for filter in site.categories.filter %}
+	
+	  {% if filter.filter_name == include.active_filter %}
+	  <li class="active">
+	  {% else %}
 	  <li>
+	  {% endif %}
 	  	<a href="{{ filter.url }}">{{ filter.title }}</a>
 	  </li>
 	{% endfor %}

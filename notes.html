@@ -1,20 +1,17 @@
 ---
-layout: base
+layout: note_list
 permalink: notes/
 title : Notes
 ---
-<div class="banner">
-	<div class="row">
-		<h1>Notes from the field</h1>
-		{% include filters.html %}
-    </div>
-</div>
-<div class="main-content">
-	<div class="row">
-		{% for note in site.categories.note %}
-		<article>
-			<a href="{{ note.url }}">{{ note.date }} - {{ note.title }}</a><br />
-		</article>
-		{% endfor %}
-	</div>
-</div>
+{% comment %}
+  There is nothing to do in this file. The code related to the rendering of
+  each individual note in the list is in the include note_list_element.
+  Code related to the wrapper of that list is inside the layout notes_list.
+  
+  Note: The code for a list with and without filters applied is the same.
+  The only difference is an active class in the filter's menu.
+{% endcomment %}
+
+{% for note in site.categories.note %}
+  {% include note_list_element.html note=note %}
+{% endfor %}

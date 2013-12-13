@@ -1,0 +1,4030 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000322}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000332}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000341}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000352}}
+[hidden],
+template {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000356}}
+script {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000370}}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000380}}
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\0000392}}
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003100}}
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003109}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003122}}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003131}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003140}}
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003148}}
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003156}}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003166}}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003178}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003187}}
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003195}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003203}}
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003212}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003219}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003223}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003235}}
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003243}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003255}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003267}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003278}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003292}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003304}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003316}}
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003331}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003341}}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003351}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003362}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003375}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003384}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003394}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_normalize\.scss}line{font-family:\00003407}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003287}}
+meta.foundation-mq-small {
+  font-family: "/only screen and (max-width: 40em)/";
+  width: 0em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003292}}
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  width: 40.063em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003297}}
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:64.063em)/";
+  width: 64.063em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003302}}
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:90.063em)/";
+  width: 90.063em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003307}}
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:120.063em)/";
+  width: 120.063em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003317}}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003322}}
+html,
+body {
+  font-size: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003325}}
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003338}}
+a:hover {
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003343}}
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003346}}
+object,
+embed {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003347}}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003353}}
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003358}}
+.left {
+  float: left !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003359}}
+.right {
+  float: right !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003360}}
+.clearfix {
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003165}}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003166}}
+.clearfix:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003361}}
+.text-left {
+  text-align: left !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003362}}
+.text-right {
+  text-align: right !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003363}}
+.text-center {
+  text-align: center !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003364}}
+.text-justify {
+  text-align: justify !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003365}}
+.hide {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003371}}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003374}}
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003384}}
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003387}}
+select {
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\00003114}}
+.breadcrumbs {
+  display: block;
+  padding: 0.5625rem 0.875rem 0.5625rem;
+  overflow: hidden;
+  margin-left: 0;
+  list-style: none;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #f4f4f4;
+  border-color: #dadada;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\00003118}}
+.breadcrumbs > * {
+  margin: 0;
+  float: left;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000362}}
+.breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000365}}
+.breadcrumbs > * a,
+.breadcrumbs > * span {
+  text-transform: uppercase;
+  color: #008cba;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000371}}
+.breadcrumbs > *.current {
+  cursor: default;
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000374}}
+.breadcrumbs > *.current a {
+  cursor: default;
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000380}}
+.breadcrumbs > *.current:hover, .breadcrumbs > *.current:hover a, .breadcrumbs > *.current:focus, .breadcrumbs > *.current:focus a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000384}}
+.breadcrumbs > *.unavailable {
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000386}}
+.breadcrumbs > *.unavailable a {
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000391}}
+.breadcrumbs > *.unavailable:hover, .breadcrumbs > *.unavailable:hover a, .breadcrumbs > *.unavailable:focus,
+.breadcrumbs > *.unavailable a:focus {
+  text-decoration: none;
+  color: #999999;
+  cursor: default;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\0000398}}
+.breadcrumbs > *:before {
+  content: "/";
+  color: #aaaaaa;
+  margin: 0 0.75rem;
+  position: relative;
+  top: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_breadcrumbs\.scss}line{font-family:\00003106}}
+.breadcrumbs > *:first-child:before {
+  content: " ";
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003197}}
+button, .button {
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+  background-color: #008cba;
+  border-color: #0079a1;
+  color: white;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1.0625rem;
+  padding-bottom: 1rem;
+  -webkit-appearance: none;
+  border: none;
+  font-weight: normal !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #0079a1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button:hover, button:focus, .button:hover, .button:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003205}}
+button.secondary, .button.secondary {
+  background-color: #e7e7e7;
+  border-color: #dadada;
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+  background-color: #dadada;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003148}}
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003206}}
+button.success, .button.success {
+  background-color: #43ac6a;
+  border-color: #3c9a5f;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+  background-color: #3c9a5f;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003207}}
+button.alert, .button.alert {
+  background-color: #f04124;
+  border-color: #ea2f10;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  background-color: #ea2f10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003209}}
+button.large, .button.large {
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003210}}
+button.small, .button.small {
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003211}}
+button.tiny, .button.tiny {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 0.6875rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003212}}
+button.expand, .button.expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003214}}
+button.left-align, .button.left-align {
+  text-align: left;
+  text-indent: 0.75rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003215}}
+button.right-align, .button.right-align {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003217}}
+button.radius, .button.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003218}}
+button.round, .button.round {
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003220}}
+button.disabled, button[disabled], .button.disabled, .button[disabled] {
+  background-color: #008cba;
+  border-color: #0079a1;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  background-color: #0079a1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003166}}
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  background-color: #008cba;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003221}}
+button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+  background-color: #e7e7e7;
+  border-color: #dadada;
+  color: #333333;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  background-color: #dadada;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003148}}
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003166}}
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  background-color: #e7e7e7;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003222}}
+button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+  background-color: #43ac6a;
+  border-color: #3c9a5f;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  background-color: #3c9a5f;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003166}}
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  background-color: #43ac6a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003223}}
+button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+  background-color: #f04124;
+  border-color: #ea2f10;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003142}}
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  background-color: #ea2f10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003153}}
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003166}}
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  background-color: #f04124;
+}
+
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003228}}
+  button, .button {
+    display: inline-block;
+  }
+}
+/* Clearing Styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000340}}
+[data-clearing] {
+  *zoom: 1;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003165}}
+[data-clearing]:before, [data-clearing]:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003166}}
+[data-clearing]:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000346}}
+[data-clearing] li {
+  float: left;
+  margin-right: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000352}}
+.clearing-blackout {
+  background: #333333;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000361}}
+.clearing-blackout .clearing-close {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000364}}
+.clearing-container {
+  position: relative;
+  z-index: 998;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000372}}
+.visible-img {
+  height: 95%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000376}}
+.visible-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\0000386}}
+.clearing-caption {
+  color: #cccccc;
+  font-size: 0.875em;
+  line-height: 1.3;
+  margin-bottom: 0;
+  text-align: center;
+  bottom: 0;
+  background: #333333;
+  width: 100%;
+  padding: 10px 30px 20px;
+  position: absolute;
+  left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003100}}
+.clearing-close {
+  z-index: 999;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 30px;
+  line-height: 1;
+  color: #cccccc;
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003110}}
+.clearing-close:hover, .clearing-close:focus {
+  color: #ccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003113}}
+.clearing-assembled .clearing-container {
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003114}}
+.clearing-assembled .clearing-container .carousel > ul {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003118}}
+.clearing-feature li {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003120}}
+.clearing-feature li.clearing-featured-img {
+  display: block;
+}
+
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003128}}
+  .clearing-main-prev,
+  .clearing-main-next {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003133}}
+  .clearing-main-prev > span,
+  .clearing-main-next > span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 12px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003140}}
+  .clearing-main-prev > span:hover,
+  .clearing-main-next > span:hover {
+    opacity: 0.8;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003143}}
+  .clearing-main-prev {
+    left: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003145}}
+  .clearing-main-prev > span {
+    left: 5px;
+    border-color: transparent;
+    border-right-color: #cccccc;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003151}}
+  .clearing-main-next {
+    right: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003153}}
+  .clearing-main-next > span {
+    border-color: transparent;
+    border-left-color: #cccccc;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003160}}
+  .clearing-main-prev.disabled,
+  .clearing-main-next.disabled {
+    opacity: 0.3;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003164}}
+  .clearing-assembled .clearing-container .carousel {
+    background: rgba(51, 51, 51, 0.8);
+    height: 120px;
+    margin-top: 10px;
+    text-align: center;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003170}}
+  .clearing-assembled .clearing-container .carousel > ul {
+    display: inline-block;
+    z-index: 999;
+    height: 100%;
+    position: relative;
+    float: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003177}}
+  .clearing-assembled .clearing-container .carousel > ul li {
+    display: block;
+    width: 120px;
+    min-height: inherit;
+    float: left;
+    overflow: hidden;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003190}}
+  .clearing-assembled .clearing-container .carousel > ul li.fix-height img {
+    height: 100%;
+    max-width: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003196}}
+  .clearing-assembled .clearing-container .carousel > ul li a.th {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003205}}
+  .clearing-assembled .clearing-container .carousel > ul li img {
+    cursor: pointer !important;
+    width: 100% !important;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003210}}
+  .clearing-assembled .clearing-container .carousel > ul li.visible {
+    opacity: 1;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003211}}
+  .clearing-assembled .clearing-container .carousel > ul li:hover {
+    opacity: 0.8;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003216}}
+  .clearing-assembled .clearing-container .visible-img {
+    background: #333333;
+    overflow: hidden;
+    height: 85%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_clearing\.scss}line{font-family:\00003223}}
+  .clearing-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003135}}
+  .f-dropdown {
+    max-width: 100%;
+    left: 0;
+  }
+}
+/* Foundation Dropdowns */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003142}}
+.f-dropdown {
+  position: absolute;
+  top: -9999px;
+  list-style: none;
+  margin-left: 0;
+  width: 100%;
+  max-height: none;
+  height: auto;
+  background: white;
+  border: solid 1px #cccccc;
+  font-size: 16px;
+  z-index: 99;
+  margin-top: 2px;
+  max-width: 200px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000354}}
+.f-dropdown > *:first-child {
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000355}}
+.f-dropdown > *:last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000380}}
+.f-dropdown:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 6px;
+  border-color: transparent transparent white transparent;
+  border-bottom-style: solid;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  z-index: 99;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000387}}
+.f-dropdown:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 7px;
+  border-color: transparent transparent #cccccc transparent;
+  border-bottom-style: solid;
+  position: absolute;
+  top: -14px;
+  left: 9px;
+  z-index: 98;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000395}}
+.f-dropdown.right:before {
+  left: auto;
+  right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000399}}
+.f-dropdown.right:after {
+  left: auto;
+  right: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003146}}
+.f-dropdown li {
+  font-size: 0.875rem;
+  cursor: pointer;
+  line-height: 1.125rem;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003122}}
+.f-dropdown li:hover, .f-dropdown li:focus {
+  background: #eeeeee;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003124}}
+.f-dropdown li a {
+  display: block;
+  padding: 0.5rem;
+  color: #555555;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003149}}
+.f-dropdown.content {
+  position: absolute;
+  top: -9999px;
+  list-style: none;
+  margin-left: 0;
+  padding: 1.25rem;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  background: white;
+  border: solid 1px #cccccc;
+  font-size: 16px;
+  z-index: 99;
+  max-width: 200px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000354}}
+.f-dropdown.content > *:first-child {
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\0000355}}
+.f-dropdown.content > *:last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003152}}
+.f-dropdown.tiny {
+  max-width: 200px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003153}}
+.f-dropdown.small {
+  max-width: 300px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003154}}
+.f-dropdown.medium {
+  max-width: 500px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown\.scss}line{font-family:\00003155}}
+.f-dropdown.large {
+  max-width: 800px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003118}}
+.dropdown.button {
+  position: relative;
+  padding-right: 3.5625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\0000358}}
+.dropdown.button:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  top: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\0000393}}
+.dropdown.button:before {
+  border-width: 0.375rem;
+  right: 1.40625rem;
+  margin-top: -0.15625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003112}}
+.dropdown.button:before {
+  border-color: white transparent transparent transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003119}}
+.dropdown.button.tiny {
+  padding-right: 2.625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\0000373}}
+.dropdown.button.tiny:before {
+  border-width: 0.375rem;
+  right: 1.125rem;
+  margin-top: -0.125rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003112}}
+.dropdown.button.tiny:before {
+  border-color: white transparent transparent transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003120}}
+.dropdown.button.small {
+  padding-right: 3.0625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\0000383}}
+.dropdown.button.small:before {
+  border-width: 0.4375rem;
+  right: 1.3125rem;
+  margin-top: -0.15625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003112}}
+.dropdown.button.small:before {
+  border-color: white transparent transparent transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003121}}
+.dropdown.button.large {
+  padding-right: 3.625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003103}}
+.dropdown.button.large:before {
+  border-width: 0.3125rem;
+  right: 1.71875rem;
+  margin-top: -0.15625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003112}}
+.dropdown.button.large:before {
+  border-color: white transparent transparent transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_dropdown-buttons\.scss}line{font-family:\00003122}}
+.dropdown.button.secondary:before {
+  border-color: #333333 transparent transparent transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003190}}
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003165}}
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003166}}
+.row:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003195}}
+.row.collapse > .column,
+.row.collapse > .columns {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003197}}
+.row.collapse .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003200}}
+.row .row {
+  width: auto;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003165}}
+.row .row:before, .row .row:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003166}}
+.row .row:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003201}}
+.row .row.collapse {
+  width: auto;
+  margin: 0;
+  max-width: none;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003165}}
+.row .row.collapse:before, .row .row.collapse:after {
+  content: " ";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_global\.scss}line{font-family:\00003166}}
+.row .row.collapse:after {
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003206}}
+.column,
+.columns {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+
+@media only screen {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .small-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .small-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003157}}
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-3 {
+    position: relative;
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-6 {
+    position: relative;
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-9 {
+    position: relative;
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .small-12 {
+    position: relative;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .small-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003168}}
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003169}}
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003172}}
+  .column.small-centered,
+  .columns.small-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003175}}
+  .column.small-uncentered,
+  .columns.small-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003182}}
+  .column.small-uncentered.opposite,
+  .columns.small-uncentered.opposite {
+    float: right !important;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .medium-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .medium-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003157}}
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-3 {
+    position: relative;
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-6 {
+    position: relative;
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-9 {
+    position: relative;
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .medium-12 {
+    position: relative;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .medium-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003168}}
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003169}}
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003172}}
+  .column.medium-centered,
+  .columns.medium-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003175}}
+  .column.medium-uncentered,
+  .columns.medium-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003182}}
+  .column.medium-uncentered.opposite,
+  .columns.medium-uncentered.opposite {
+    float: right !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003216}}
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003219}}
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .large-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .large-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003157}}
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-3 {
+    position: relative;
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-6 {
+    position: relative;
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-9 {
+    position: relative;
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .large-12 {
+    position: relative;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .large-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003168}}
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003169}}
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003172}}
+  .column.large-centered,
+  .columns.large-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003175}}
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003182}}
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right !important;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xlarge-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xlarge-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003157}}
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-3 {
+    position: relative;
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-6 {
+    position: relative;
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-9 {
+    position: relative;
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xlarge-12 {
+    position: relative;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xlarge-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003168}}
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003169}}
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003172}}
+  .column.xlarge-centered,
+  .columns.xlarge-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003175}}
+  .column.xlarge-uncentered,
+  .columns.xlarge-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003182}}
+  .column.xlarge-uncentered.opposite,
+  .columns.xlarge-uncentered.opposite {
+    float: right !important;
+  }
+}
+@media only screen and (min-width: 120.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003148}}
+  .xxlarge-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003151}}
+  .xxlarge-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003157}}
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-1 {
+    position: relative;
+    width: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-2 {
+    position: relative;
+    width: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-3 {
+    position: relative;
+    width: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-4 {
+    position: relative;
+    width: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-5 {
+    position: relative;
+    width: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-6 {
+    position: relative;
+    width: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-7 {
+    position: relative;
+    width: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-8 {
+    position: relative;
+    width: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-9 {
+    position: relative;
+    width: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-10 {
+    position: relative;
+    width: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-11 {
+    position: relative;
+    width: 91.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003161}}
+  .xxlarge-12 {
+    position: relative;
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-0 {
+    position: relative;
+    margin-left: 0%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-1 {
+    position: relative;
+    margin-left: 8.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-2 {
+    position: relative;
+    margin-left: 16.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-3 {
+    position: relative;
+    margin-left: 25%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-4 {
+    position: relative;
+    margin-left: 33.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-5 {
+    position: relative;
+    margin-left: 41.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-6 {
+    position: relative;
+    margin-left: 50%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-7 {
+    position: relative;
+    margin-left: 58.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-8 {
+    position: relative;
+    margin-left: 66.66667%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-9 {
+    position: relative;
+    margin-left: 75%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003165}}
+  .xxlarge-offset-10 {
+    position: relative;
+    margin-left: 83.33333%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003168}}
+  [class*="column"] + [class*="column"]:last-child {
+    float: right;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003169}}
+  [class*="column"] + [class*="column"].end {
+    float: left;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003172}}
+  .column.xxlarge-centered,
+  .columns.xxlarge-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003175}}
+  .column.xxlarge-uncentered,
+  .columns.xxlarge-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_grid\.scss}line{font-family:\00003182}}
+  .column.xxlarge-uncentered.opposite,
+  .columns.xxlarge-uncentered.opposite {
+    float: right !important;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_keystrokes\.scss}line{font-family:\0000352}}
+.keystroke,
+kbd {
+  background-color: #ededed;
+  border-color: #dbdbdb;
+  color: #222222;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0;
+  font-family: "Consolas", "Menlo", "Courier", monospace;
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem 0;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003132}}
+ul.pagination {
+  display: block;
+  height: 1.5rem;
+  margin-left: -0.3125rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\0000395}}
+ul.pagination li {
+  height: 1.5rem;
+  color: #222222;
+  font-size: 0.875rem;
+  margin-left: 0.3125rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003101}}
+ul.pagination li a {
+  display: block;
+  padding: 0.0625rem 0.625rem 0.0625rem;
+  color: #999999;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003109}}
+ul.pagination li:hover a,
+ul.pagination li a:focus {
+  background: #e6e6e6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\0000347}}
+ul.pagination li.unavailable a {
+  cursor: default;
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\0000352}}
+ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
+  background: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\0000360}}
+ul.pagination li.current a {
+  background: #008cba;
+  color: white;
+  font-weight: bold;
+  cursor: default;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\0000367}}
+ul.pagination li.current a:hover, ul.pagination li.current a:focus {
+  background: #008cba;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003119}}
+ul.pagination li {
+  float: left;
+  display: block;
+}
+
+/* Pagination centred wrapper */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003137}}
+.pagination-centered {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_pagination\.scss}line{font-family:\00003119}}
+.pagination-centered ul.pagination li {
+  float: none;
+  display: inline-block;
+}
+
+/* Foundation Visibility HTML Classes */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000327}}
+.show-for-small,
+.show-for-small-only,
+.show-for-medium-down,
+.show-for-large-down,
+.hide-for-medium,
+.hide-for-medium-up,
+.hide-for-medium-only,
+.hide-for-large,
+.hide-for-large-up,
+.hide-for-large-only,
+.hide-for-xlarge,
+.hide-for-xlarge-up,
+.hide-for-xlarge-only,
+.hide-for-xxlarge-up,
+.hide-for-xxlarge-only {
+  display: inherit !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000343}}
+.hide-for-small,
+.hide-for-small-only,
+.hide-for-medium-down,
+.show-for-medium,
+.show-for-medium-up,
+.show-for-medium-only,
+.hide-for-large-down,
+.show-for-large,
+.show-for-large-up,
+.show-for-large-only,
+.show-for-xlarge,
+.show-for-xlarge-up,
+.show-for-xlarge-only,
+.show-for-xxlarge-up,
+.show-for-xxlarge-only {
+  display: none !important;
+}
+
+/* Specific visibility for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000361}}
+table.show-for-small, table.show-for-small-only, table.show-for-medium-down, table.show-for-large-down, table.hide-for-medium, table.hide-for-medium-up, table.hide-for-medium-only, table.hide-for-large, table.hide-for-large-up, table.hide-for-large-only, table.hide-for-xlarge, table.hide-for-xlarge-up, table.hide-for-xlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge-only {
+  display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000378}}
+thead.show-for-small, thead.show-for-small-only, thead.show-for-medium-down, thead.show-for-large-down, thead.hide-for-medium, thead.hide-for-medium-up, thead.hide-for-medium-only, thead.hide-for-large, thead.hide-for-large-up, thead.hide-for-large-only, thead.hide-for-xlarge, thead.hide-for-xlarge-up, thead.hide-for-xlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge-only {
+  display: table-header-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000395}}
+tbody.show-for-small, tbody.show-for-small-only, tbody.show-for-medium-down, tbody.show-for-large-down, tbody.hide-for-medium, tbody.hide-for-medium-up, tbody.hide-for-medium-only, tbody.hide-for-large, tbody.hide-for-large-up, tbody.hide-for-large-only, tbody.hide-for-xlarge, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge-only {
+  display: table-row-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003112}}
+tr.show-for-small, tr.show-for-small-only, tr.show-for-medium-down, tr.show-for-large-down, tr.hide-for-medium, tr.hide-for-medium-up, tr.hide-for-medium-only, tr.hide-for-large, tr.hide-for-large-up, tr.hide-for-large-only, tr.hide-for-xlarge, tr.hide-for-xlarge-up, tr.hide-for-xlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge-only {
+  display: table-row !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003126}}
+td.show-for-small, td.show-for-small-only, td.show-for-medium-down
+td.show-for-large-down, td.hide-for-medium, td.hide-for-medium-up, td.hide-for-large, td.hide-for-large-up, td.hide-for-xlarge
+td.hide-for-xlarge-up, td.hide-for-xxlarge-up,
+th.show-for-small,
+th.show-for-small-only,
+th.show-for-medium-down
+th.show-for-large-down,
+th.hide-for-medium,
+th.hide-for-medium-up,
+th.hide-for-large,
+th.hide-for-large-up,
+th.hide-for-xlarge
+th.hide-for-xlarge-up,
+th.hide-for-xxlarge-up {
+  display: table-cell !important;
+}
+
+/* Medium Displays: 641px and up */
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003144}}
+  .hide-for-small,
+  .hide-for-small-only,
+  .show-for-medium,
+  .show-for-medium-down,
+  .show-for-medium-up,
+  .show-for-medium-only,
+  .hide-for-large,
+  .hide-for-large-up,
+  .hide-for-large-only,
+  .hide-for-xlarge,
+  .hide-for-xlarge-up,
+  .hide-for-xlarge-only,
+  .hide-for-xxlarge-up,
+  .hide-for-xxlarge-only {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003160}}
+  .show-for-small,
+  .show-for-small-only,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .hide-for-medium-up,
+  .hide-for-medium-only,
+  .hide-for-large-down,
+  .show-for-large,
+  .show-for-large-up,
+  .show-for-large-only,
+  .show-for-xlarge,
+  .show-for-xlarge-up,
+  .show-for-xlarge-only,
+  .show-for-xxlarge-up,
+  .show-for-xxlarge-only {
+    display: none !important;
+  }
+
+  /* Specific visibility for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003177}}
+  table.hide-for-small, table.hide-for-small-only, table.show-for-medium, table.show-for-medium-down, table.show-for-medium-up, table.show-for-medium-only, table.hide-for-large, table.hide-for-large-up, table.hide-for-large-only, table.hide-for-xlarge, table.hide-for-xlarge-up, table.hide-for-xlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge-only {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003193}}
+  thead.hide-for-small, thead.hide-for-small-only, thead.show-for-medium, thead.show-for-medium-down, thead.show-for-medium-up, thead.show-for-medium-only, thead.hide-for-large, thead.hide-for-large-up, thead.hide-for-large-only, thead.hide-for-xlarge, thead.hide-for-xlarge-up, thead.hide-for-xlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge-only {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003209}}
+  tbody.hide-for-small, tbody.hide-for-small-only, tbody.show-for-medium, tbody.show-for-medium-down, tbody.show-for-medium-up, tbody.show-for-medium-only, tbody.hide-for-large, tbody.hide-for-large-up, tbody.hide-for-large-only, tbody.hide-for-xlarge, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge-only {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003225}}
+  tr.hide-for-small, tr.hide-for-small-only, tr.show-for-medium, tr.show-for-medium-down, tr.show-for-medium-up, tr.show-for-medium-only, tr.hide-for-large, tr.hide-for-large-up, tr.hide-for-large-only, tr.hide-for-xlarge, tr.hide-for-xlarge-up, tr.hide-for-xlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge-only {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003242}}
+  td.hide-for-small, td.hide-for-small-only, td.show-for-medium, td.show-for-medium-down, td.show-for-medium-up, td.show-for-medium-only, td.hide-for-large, td.hide-for-large-up, td.hide-for-large-only, td.hide-for-xlarge, td.hide-for-xlarge-up, td.hide-for-xlarge-only, td.hide-for-xxlarge-up, td.hide-for-xxlarge-only,
+  th.hide-for-small,
+  th.hide-for-small-only,
+  th.show-for-medium,
+  th.show-for-medium-down,
+  th.show-for-medium-up,
+  th.show-for-medium-only,
+  th.hide-for-large,
+  th.hide-for-large-up,
+  th.hide-for-large-only,
+  th.hide-for-xlarge,
+  th.hide-for-xlarge-up,
+  th.hide-for-xlarge-only,
+  th.hide-for-xxlarge-up,
+  th.hide-for-xxlarge-only {
+    display: table-cell !important;
+  }
+}
+/* Large Displays: 1024px and up */
+@media only screen and (min-width: 64.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003261}}
+  .hide-for-small,
+  .hide-for-small-only,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .hide-for-medium-only,
+  .show-for-medium-up,
+  .show-for-large,
+  .show-for-large-up,
+  .show-for-large-only,
+  .hide-for-xlarge,
+  .hide-for-xlarge-up,
+  .hide-for-xlarge-only,
+  .hide-for-xxlarge-up,
+  .hide-for-xxlarge-only {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003274}}
+  .show-for-small-only,
+  .show-for-medium,
+  .show-for-medium-down,
+  .show-for-medium-only,
+  .hide-for-large,
+  .hide-for-large-up,
+  .hide-for-large-only,
+  .show-for-xlarge,
+  .show-for-xlarge-up,
+  .show-for-xlarge-only,
+  .show-for-xxlarge-up,
+  .show-for-xxlarge-only {
+    display: none !important;
+  }
+
+  /* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003291}}
+  table.hide-for-small, table.hide-for-small-only, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-medium-only, table.show-for-medium-up, table.show-for-large, table.show-for-large-up, table.show-for-large-only, table.hide-for-xlarge, table.hide-for-xlarge-up, table.hide-for-xlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge-only {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003307}}
+  thead.hide-for-small, thead.hide-for-small-only, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.show-for-large, thead.show-for-large-up, thead.show-for-large-only, thead.hide-for-xlarge, thead.hide-for-xlarge-up, thead.hide-for-xlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge-only {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003323}}
+  tbody.hide-for-small, tbody.hide-for-small-only, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.show-for-large, tbody.show-for-large-up, tbody.show-for-large-only, tbody.hide-for-xlarge, tbody.hide-for-xlarge-up, tbody.hide-for-xlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge-only {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003339}}
+  tr.hide-for-small, tr.hide-for-small-only, tr.hide-for-medium, tr.hide-for-medium-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.show-for-large, tr.show-for-large-up, tr.show-for-large-only, tr.hide-for-xlarge, tr.hide-for-xlarge-up, tr.hide-for-xlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge-only {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003356}}
+  td.hide-for-small, td.hide-for-small-only, td.hide-for-medium, td.hide-for-medium-down, td.hide-for-medium-only, td.show-for-medium-up, td.show-for-large, td.show-for-large-up, td.show-for-large-only, td.hide-for-xlarge, td.hide-for-xlarge-up, td.hide-for-xlarge-only, td.hide-for-xxlarge-up, td.hide-for-xxlarge-only,
+  th.hide-for-small,
+  th.hide-for-small-only,
+  th.hide-for-medium,
+  th.hide-for-medium-down,
+  th.hide-for-medium-only,
+  th.show-for-medium-up,
+  th.show-for-large,
+  th.show-for-large-up,
+  th.show-for-large-only,
+  th.hide-for-xlarge,
+  th.hide-for-xlarge-up,
+  th.hide-for-xlarge-only,
+  th.hide-for-xxlarge-up,
+  th.hide-for-xxlarge-only {
+    display: table-cell !important;
+  }
+}
+/* X-Large Displays: 1441 and up */
+@media only screen and (min-width: 90.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003373}}
+  .hide-for-small,
+  .hide-for-small-only,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .hide-for-medium-only,
+  .show-for-medium-up,
+  .show-for-large-up,
+  .show-for-xlarge,
+  .show-for-xlarge-up,
+  .show-for-xlarge-only,
+  .hide-for-xxlarge-up,
+  .hide-for-xxlarge-only {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003386}}
+  .show-for-small-only,
+  .show-for-medium,
+  .show-for-medium-down,
+  .show-for-medium-only,
+  .show-for-large,
+  .show-for-large-only,
+  .show-for-large-down,
+  .hide-for-xlarge,
+  .hide-for-xlarge-up,
+  .hide-for-xlarge-only,
+  .show-for-xxlarge-up,
+  .show-for-xxlarge-only {
+    display: none !important;
+  }
+
+  /* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003401}}
+  table.hide-for-small, table.hide-for-small-only, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-medium-only, table.show-for-medium-up, table.show-for-large-up, table.show-for-xlarge, table.show-for-xlarge-up, table.show-for-xlarge-only, table.hide-for-xxlarge-up, table.hide-for-xxlarge-only {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003415}}
+  thead.hide-for-small, thead.hide-for-small-only, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.show-for-large-up, thead.show-for-xlarge, thead.show-for-xlarge-up, thead.show-for-xlarge-only, thead.hide-for-xxlarge-up, thead.hide-for-xxlarge-only {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003429}}
+  tbody.hide-for-small, tbody.hide-for-small-only, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.show-for-large-up, tbody.show-for-xlarge, tbody.show-for-xlarge-up, tbody.show-for-xlarge-only, tbody.hide-for-xxlarge-up, tbody.hide-for-xxlarge-only {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003443}}
+  tr.hide-for-small, tr.hide-for-small-only, tr.hide-for-medium, tr.hide-for-medium-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.show-for-large-up, tr.show-for-xlarge, tr.show-for-xlarge-up, tr.show-for-xlarge-only, tr.hide-for-xxlarge-up, tr.hide-for-xxlarge-only {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003458}}
+  td.hide-for-small, td.hide-for-small-only, td.hide-for-medium, td.hide-for-medium-down, td.hide-for-medium-only, td.show-for-medium-up, td.show-for-large-up, td.show-for-xlarge, td.show-for-xlarge-up, td.show-for-xlarge-only, td.hide-for-xxlarge-up, td.hide-for-xxlarge-only,
+  th.hide-for-small,
+  th.hide-for-small-only,
+  th.hide-for-medium,
+  th.hide-for-medium-down,
+  th.hide-for-medium-only,
+  th.show-for-medium-up,
+  th.show-for-large-up,
+  th.show-for-xlarge,
+  th.show-for-xlarge-up,
+  th.show-for-xlarge-only,
+  th.hide-for-xxlarge-up,
+  th.hide-for-xxlarge-only {
+    display: table-cell !important;
+  }
+}
+/* XX-Large Displays: 1920 and up */
+@media only screen and (min-width: 120.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003473}}
+  .hide-for-small,
+  .hide-for-small-only,
+  .hide-for-medium,
+  .hide-for-medium-down,
+  .hide-for-medium-only,
+  .show-for-medium-up,
+  .show-for-large-up,
+  .show-for-xlarge-up,
+  .show-for-xxlarge-up,
+  .show-for-xxlarge-only {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003485}}
+  .show-for-small-only,
+  .show-for-medium,
+  .show-for-medium-down,
+  .show-for-medium-only,
+  .show-for-large,
+  .show-for-large-only,
+  .show-for-large-down,
+  .hide-for-xlarge,
+  .show-for-xlarge-only,
+  .hide-for-xxlarge-up,
+  .hide-for-xxlarge-only {
+    display: none !important;
+  }
+
+  /* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003498}}
+  table.hide-for-small, table.hide-for-small-only, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-medium-only, table.show-for-medium-up, table.show-for-large-up, table.show-for-xlarge-up, table.show-for-xxlarge-up, table.show-for-xxlarge-only {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003510}}
+  thead.hide-for-small, thead.hide-for-small-only, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.show-for-large-up, thead.show-for-xlarge-up, thead.show-for-xxlarge-up, thead.show-for-xxlarge-only {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003522}}
+  tbody.hide-for-small, tbody.hide-for-small-only, tbody.hide-for-medium, tbody.hide-for-medium-down, tbody.hide-for-medium-only, tbody.show-for-medium-up, tbody.show-for-large-up, tbody.show-for-xlarge-up, tbody.show-for-xxlarge-up, tbody.show-for-xxlarge-only {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003534}}
+  tr.hide-for-small, tr.hide-for-small-only, tr.hide-for-medium, tr.hide-for-medium-down, tr.hide-for-medium-only, tr.show-for-medium-up, tr.show-for-large-up, tr.show-for-xlarge-up, tr.show-for-xxlarge-up, tr.show-for-xxlarge-only {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003547}}
+  td.hide-for-small, td.hide-for-small-only, td.hide-for-medium, td.hide-for-medium-down, td.hide-for-medium-only, td.show-for-medium-up, td.show-for-large-up, td.show-for-xlarge-up, td.show-for-xxlarge-up, td.show-for-xxlarge-only,
+  th.hide-for-small,
+  th.hide-for-small-only,
+  th.hide-for-medium,
+  th.hide-for-medium-down,
+  th.hide-for-medium-only,
+  th.show-for-medium-up,
+  th.show-for-large-up,
+  th.show-for-xlarge-up,
+  th.show-for-xxlarge-up,
+  th.show-for-xxlarge-only {
+    display: table-cell !important;
+  }
+}
+/* Orientation targeting */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003554}}
+.show-for-landscape,
+.hide-for-portrait {
+  display: inherit !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003556}}
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important;
+}
+
+/* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003561}}
+table.hide-for-landscape, table.show-for-portrait {
+  display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003565}}
+thead.hide-for-landscape, thead.show-for-portrait {
+  display: table-header-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003569}}
+tbody.hide-for-landscape, tbody.show-for-portrait {
+  display: table-row-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003573}}
+tr.hide-for-landscape, tr.show-for-portrait {
+  display: table-row !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003578}}
+td.hide-for-landscape, td.show-for-portrait,
+th.hide-for-landscape,
+th.show-for-portrait {
+  display: table-cell !important;
+}
+
+@media only screen and (orientation: landscape) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003583}}
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003585}}
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important;
+  }
+
+  /* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003590}}
+  table.show-for-landscape, table.hide-for-portrait {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003594}}
+  thead.show-for-landscape, thead.hide-for-portrait {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003598}}
+  tbody.show-for-landscape, tbody.hide-for-portrait {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003602}}
+  tr.show-for-landscape, tr.hide-for-portrait {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003607}}
+  td.show-for-landscape, td.hide-for-portrait,
+  th.show-for-landscape,
+  th.hide-for-portrait {
+    display: table-cell !important;
+  }
+}
+@media only screen and (orientation: portrait) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003613}}
+  .show-for-portrait,
+  .hide-for-landscape {
+    display: inherit !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003615}}
+  .hide-for-portrait,
+  .show-for-landscape {
+    display: none !important;
+  }
+
+  /* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003620}}
+  table.show-for-portrait, table.hide-for-landscape {
+    display: table;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003624}}
+  thead.show-for-portrait, thead.hide-for-landscape {
+    display: table-header-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003628}}
+  tbody.show-for-portrait, tbody.hide-for-landscape {
+    display: table-row-group !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003632}}
+  tr.show-for-portrait, tr.hide-for-landscape {
+    display: table-row !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003637}}
+  td.show-for-portrait, td.hide-for-landscape,
+  th.show-for-portrait,
+  th.hide-for-landscape {
+    display: table-cell !important;
+  }
+}
+/* Touch-enabled device targeting */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003642}}
+.show-for-touch {
+  display: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003643}}
+.hide-for-touch {
+  display: inherit !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003644}}
+.touch .show-for-touch {
+  display: inherit !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003645}}
+.touch .hide-for-touch {
+  display: none !important;
+}
+
+/* Specific visilbity for tables */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003648}}
+table.hide-for-touch {
+  display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003649}}
+.touch table.show-for-touch {
+  display: table;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003650}}
+thead.hide-for-touch {
+  display: table-header-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003651}}
+.touch thead.show-for-touch {
+  display: table-header-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003652}}
+tbody.hide-for-touch {
+  display: table-row-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003653}}
+.touch tbody.show-for-touch {
+  display: table-row-group !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003654}}
+tr.hide-for-touch {
+  display: table-row !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003655}}
+.touch tr.show-for-touch {
+  display: table-row !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003656}}
+td.hide-for-touch {
+  display: table-cell !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003657}}
+.touch td.show-for-touch {
+  display: table-cell !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003658}}
+th.hide-for-touch {
+  display: table-cell !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\00003659}}
+.touch th.show-for-touch {
+  display: table-cell !important;
+}
+
+/* ==========================================================================
+   Layout - structure the basic layout of the site
+   ========================================================================== */
+/**
+ * DEV - REMOVE OR IMPROVE FOR PROD
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000310}}
+.banner,
+.cta {
+  background-color: #e6e6e6;
+}
+
+/**
+ * Contains the basic structure of the site
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000321}}
+header.page .branding,
+header.page nav.primary,
+header.page .social-nav {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000325}}
+  header.page .branding {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 16.66667%;
+    float: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000328}}
+  header.page nav.primary {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000331}}
+  header.page .social-nav {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 16.66667%;
+    float: left;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000339}}
+.banner h1,
+.banner .filters {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000346}}
+.main-content article {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000352}}
+.cta .invitation {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000356}}
+.cta .contact {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 50%;
+  margin-left: 25%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000360}}
+  .cta .invitation {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000364}}
+  .cta .contact {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    margin-left: 8.33333%;
+    float: left;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_layout\.scss}line{font-family:\0000370}}
+footer .credit {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+/**
+ * Contains the styling of the navigation items
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_nav\.scss}line{font-family:\000039}}
+nav.primary {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_nav\.scss}line{font-family:\0000315}}
+nav.primary ul,
+ul.social-nav,
+.filters ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/daniel\/public_html\/flipside2\.0\/src\/sass\/_nav\.scss}line{font-family:\0000321}}
+nav.primary ul li,
+ul.social-nav li,
+.filters ul li {
+  float: left;
+  margin: 0;
+}

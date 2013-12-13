@@ -1,0 +1,7 @@
+<article>
+  {% if include.active_filter %}
+  <a href="{{ include.note.url }}#{{ include.active_filter }}">{{ include.note.date }} - {{ include.note.title }}</a>
+  {% else %}
+  <a href="{{ include.note.url }}">{{ include.note.date }} - {{ include.note.title }}</a>
+  {% endif %}
+</article>

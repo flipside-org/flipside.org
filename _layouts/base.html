@@ -18,8 +18,40 @@
 
 </head>
 <body>
-  <p>LOG: base layout</p>
-  {{ content }}
+  <header class="page" role="banner">
+    <div class="row">
+      <div class="branding">
+        <img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" />
+      </div>
+      {% include menu.html %}
+      <ul class="social-nav">
+        <li>github</li>
+        <li>twitter</li>
+      </ul>
+    </div>
+  </header>
+
+  <main role="main">
+    {{ content }}
+  </main>
+
+  <div class="cta">
+    <div class="row">
+      <p class="invitation">
+        Whether you want to talk about a project or have a question or suggestion, we'd love to hear from you.
+      </p>
+      <a href="mailto:info@flipside.org" class="button contact">info@flipside.org</a>
+    </div>
+  </div>
+
+  <footer class="page" role="contentinfo">
+      <div class="row">
+        <p class="credit">
+          2013 Flipside - Built with Jekyll
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script src="/scripts/foundation.min.js"></script>
   <script src="/scripts/flipside.min.js"></script>

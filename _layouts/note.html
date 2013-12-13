@@ -3,9 +3,17 @@ layout: base
 twitter_card: true
 facebook_og: true
 ---
-<p>LOG: note layout</p>
-
-<a href="#" class="notes-nav-link previous">Previous post</a><br />
-<a href="#" class="notes-nav-link next">Next post</a>
-
-{{ content }}
+<div class="banner">
+	<div class="row">
+    	PRE-CONTENT
+    </div>
+</div>
+<div class="main-content">
+	<div class="row">
+		<a href="#" class="notes-nav-link previous">Previous post</a><br />
+		<a href="#" class="notes-nav-link next">Next post</a>
+		<article class="main">
+			{{ content }}
+		</article>
+	</div>
+</div>

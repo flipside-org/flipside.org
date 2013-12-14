@@ -1,6 +1,7 @@
 ---
 layout: note
 notes_active : true
+filters: event
 
 title: Lisbon Open Data Maker Night - II
 category: note

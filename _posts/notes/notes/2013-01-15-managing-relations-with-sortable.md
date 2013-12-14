@@ -1,6 +1,7 @@
 ---
 layout: note
 notes_active : true
+filters: guide
 
 title: Managing Relations with JQuery sortable
 category: note

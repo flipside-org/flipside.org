@@ -3,17 +3,29 @@ layout: base
 twitter_card: true
 facebook_og: true
 ---
+<a href="#" class="notes-nav-link previous">Previous post</a><br />
+<a href="#" class="notes-nav-link next">Next post</a>
+{% if page.featured_image %}
 <div class="banner">
 	<div class="row">
-    	PRE-CONTENT
+    	<h1>{{ page.title }}</h1>
+    	<img src="/images/notes/{{ page.featured_image }}" />
     </div>
 </div>
 <div class="main-content">
 	<div class="row">
-		<a href="#" class="notes-nav-link previous">Previous post</a><br />
-		<a href="#" class="notes-nav-link next">Next post</a>
 		<article class="main">
 			{{ content }}
 		</article>
 	</div>
 </div>
+{% else %}
+<div class="main-content">
+	<div class="row">
+		<article class="main">
+			<h1>{{ page.title }}</h1>
+			{{ content }}
+		</article>
+	</div>
+</div>
+{% endif %}

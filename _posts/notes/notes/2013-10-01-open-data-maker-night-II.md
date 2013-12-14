@@ -2,6 +2,7 @@
 layout: note
 notes_active : true
 filters: event
+featured_image: odmn1.jpg
 
 title: Lisbon Open Data Maker Night - II
 category: note

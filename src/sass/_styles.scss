@@ -1,2 +1,6 @@
 @import "layout";
 @import "nav";
+
+body {
+	line-height: $base-line-height;
+}

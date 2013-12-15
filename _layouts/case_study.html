@@ -1,10 +1,47 @@
 ---
 layout: base
+twitter_card: true
+facebook_og: true
 ---
-<p>LOG: case_study layout</p>
-
-{{ content }}
-
+{% if page.featured_image %}
+<div class="banner">
+  <div class="row">
+      <h1>{{ page.title }}</h1>
+      <img src="/images/notes/{{ page.featured_image }}" class="featured" />
+    </div>
+</div>
+<div class="main-content">
+  <div class="row">
+    <article class="main">
+      {{ content }}
+    </article>
+{% else %}
+<div class="main-content">
+  <div class="row">
+    <article class="main">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </article>
+{% endif %}
+    <aside class="main">
+    {% if page.meta %}
+      <span class="label">Type:</span> <span class="value">{{ page.meta }}</span>
+    {% endif %}
+    {% if page.client %}
+      <span class="label">Client:</span> <span class="value">{{ page.client }}</span>
+    {% endif %}
+    {% if page.technology %}
+      <span class="label">Technology:</span> <span class="value">{{ page.technology }}</span>
+    {% endif %}
+    {% if page.keywords %}
+      <span class="label">Keywords:</span> <span class="value">{{ page.keywords }}</span>
+    {% endif %}
+    {% if page.project_link.href %}
+      <span class="label">URL:</span> <span class="value"><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></span>
+    {% endif %}
+    </aside>
+  </div>
+</div>
 
 {% comment %}
   Navigation links for case studies can be rendered differently from notes

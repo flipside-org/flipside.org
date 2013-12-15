@@ -9,7 +9,7 @@ facebook_og: true
 <div class="banner">
 	<div class="row">
     	<h1>{{ page.title }}</h1>
-    	<img src="/images/notes/{{ page.featured_image }}" />
+    	<img src="/images/notes/{{ page.featured_image }}" class="featured" />
     </div>
 </div>
 <div class="main-content">
@@ -17,8 +17,6 @@ facebook_og: true
 		<article class="main">
 			{{ content }}
 		</article>
-	</div>
-</div>
 {% else %}
 <div class="main-content">
 	<div class="row">
@@ -26,6 +24,6 @@ facebook_og: true
 			<h1>{{ page.title }}</h1>
 			{{ content }}
 		</article>
+{% endif %}
 	</div>
 </div>
-{% endif %}

@@ -6,6 +6,7 @@ layout: case_study
 title: Incêndios.pt
 
 anchor: incendios
+featured_image: ../notes/incendios-pt_explore-location.png
 meta: Design + Concept + Development
 image: incendios-med.png
 technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 

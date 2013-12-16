@@ -16,7 +16,7 @@
 $base-font-size: 100%;
 
 // The $base-line-height is 100% while $base-font-size is 150%
-$base-line-height: 150%;
+// $base-line-height: 150%;
 
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
@@ -993,3 +993,5 @@ $body-font-family: 'Merriweather', serif;
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+
+$header-font-family: $body-font-family;

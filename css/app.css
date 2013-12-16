@@ -2971,6 +2971,460 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   display: block;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003111}}
+p.lead {
+  font-size: 1.21875rem;
+  line-height: 1.6;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003116}}
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Typography resets */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003145}}
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+
+/* Default Link Styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003152}}
+a {
+  color: #008cba;
+  text-decoration: none;
+  line-height: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003158}}
+a:hover, a:focus {
+  color: #0079a1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003160}}
+a img {
+  border: none;
+}
+
+/* Default paragraph styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003164}}
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003174}}
+p aside {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Default header styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003182}}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003192}}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003199}}
+h1 {
+  font-size: 2.125rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003200}}
+h2 {
+  font-size: 1.6875rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003201}}
+h3 {
+  font-size: 1.375rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003202}}
+h4 {
+  font-size: 1.125rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003203}}
+h5 {
+  font-size: 1.125rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003204}}
+h6 {
+  font-size: 1rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003208}}
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003218}}
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003224}}
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003229}}
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003234}}
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #bb260d;
+}
+
+/* Lists */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003243}}
+ul,
+ol,
+dl {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003251}}
+ul {
+  margin-left: 1.1rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003253}}
+ul.no-bullet {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003257}}
+ul.no-bullet li ul,
+ul.no-bullet li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Unordered Lists */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003270}}
+ul li ul,
+ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  /* Override nested font-size change */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003279}}
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003282}}
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003283}}
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003284}}
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003285}}
+ul.no-bullet {
+  list-style: none;
+}
+
+/* Ordered Lists */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003289}}
+ol {
+  margin-left: 1.4rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003293}}
+ol li ul,
+ol li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Definition Lists */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003302}}
+dl dt {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003306}}
+dl dd {
+  margin-bottom: 0.75rem;
+}
+
+/* Abbreviations */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003311}}
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003318}}
+abbr {
+  text-transform: none;
+}
+
+/* Blockquotes */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003323}}
+blockquote {
+  margin: 0 0 1.25rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #dddddd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003328}}
+blockquote cite {
+  display: block;
+  font-size: 0.8125rem;
+  color: #555555;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003332}}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003337}}
+blockquote cite a,
+blockquote cite a:visited {
+  color: #555555;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003343}}
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+/* Microformats */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003349}}
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.25rem 0;
+  border: 1px solid #dddddd;
+  padding: 0.625rem 0.75rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003355}}
+.vcard li {
+  margin: 0;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003359}}
+.vcard .fn {
+  font-weight: bold;
+  font-size: 0.9375rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003366}}
+.vevent .summary {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003368}}
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.0625rem;
+}
+
+@media only screen and (min-width: 40.063em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003379}}
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003380}}
+  h1 {
+    font-size: 2.75rem;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003381}}
+  h2 {
+    font-size: 2.3125rem;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003382}}
+  h3 {
+    font-size: 1.6875rem;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003383}}
+  h4 {
+    font-size: 1.4375rem;
+  }
+}
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003394}}
+.print-only {
+  display: none !important;
+}
+
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003396}}
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003404}}
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003405}}
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003407}}
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003412}}
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003415}}
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003420}}
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003423}}
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003425}}
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003431}}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003437}}
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003439}}
+  .hide-on-print {
+    display: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003440}}
+  .print-only {
+    display: block !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003441}}
+  .hide-for-print {
+    display: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003442}}
+  .show-for-print {
+    display: inherit !important;
+  }
+}
 /* Foundation Visibility HTML Classes */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_visibility\.scss}line{font-family:\0000327}}
 .show-for-small,
@@ -3778,7 +4232,7 @@ ul.social-nav > li > *,
 }
 
 /* ==========================================================================
-   Fonts - structure the basic layout of the site
+   Type - basic styling of the typography
    ========================================================================== */
 /* Icon font generated with Fontello */
 @font-face {
@@ -3789,7 +4243,7 @@ ul.social-nav > li > *,
   font-style: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_font\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000318}}
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -3810,19 +4264,19 @@ ul.social-nav > li > *,
   margin-left: .2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_font\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000342}}
 .icon-mail:before {
   content: '\e804';
 }
 
 /* '' */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_font\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000343}}
 .icon-github:before {
   content: '\e800';
 }
 
 /* '' */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_font\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000344}}
 .icon-twitter:before {
   content: '\e803';
 }

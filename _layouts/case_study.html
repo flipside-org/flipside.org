@@ -1,10 +1,56 @@
 ---
 layout: base
+twitter_card: true
+facebook_og: true
 ---
-<p>LOG: case_study layout</p>
-
-{{ content }}
-
+{% if page.featured_image %}
+<div class="banner">
+  <div class="row">
+      <h1>{{ page.title }}</h1>
+      <img src="/images/notes/{{ page.featured_image }}" class="featured" />
+    </div>
+</div>
+<div class="main-content">
+  <div class="row">
+    <article class="main">
+      {{ content }}
+    </article>
+{% else %}
+<div class="main-content">
+  <div class="row">
+    <article class="main">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </article>
+{% endif %}
+    {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
+    <aside class="main">
+      <dl>
+        {% if page.meta %}
+          <dt>Type:</dt>
+          <dd>{{ page.meta }}</dd>
+        {% endif %}
+        {% if page.client %}
+          <dt>Client:</dt>
+          <dd>{{ page.client }}</dd>
+        {% endif %}
+        {% if page.technology %}
+          <dt>Technology:</dt>
+          <dd>{{ page.technology }}</dd>
+        {% endif %}
+        {% if page.keywords %}
+          <dt>Keywords:</dt>
+          <dd>{{ page.keywords }}</dd>
+        {% endif %}
+        {% if page.project_link.href %}
+          <dt>URL:</dt>
+          <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
+        {% endif %}
+      </dl>
+    </aside>
+    {% endif %}
+  </div>
+</div>
 
 {% comment %}
   Navigation links for case studies can be rendered differently from notes

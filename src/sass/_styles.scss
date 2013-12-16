@@ -1,2 +1,13 @@
-@import "layout";
-@import "nav";
+/* ==========================================================================
+   Styles - generic styles
+   ========================================================================== */
+
+body {
+	line-height: $base-line-height;
+}
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}

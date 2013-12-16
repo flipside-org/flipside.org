@@ -1,6 +1,7 @@
 ---
 layout: note
 notes_active : true
+filters: guide
 
 title: Map interaction and zoom levels
 category: note

@@ -40,11 +40,38 @@ header.page {
 		@include grid-column(12);
 		text-align: center;
 	}
+	img.featured {
+		@include grid-column(12);
+	}
+	@media #{$small-only} {
+		img.featured {
+			display: none;
+		}
+	}
 }
 
 .main-content {
 	article {
 		@include grid-column(12);
+	}
+	aside.main {
+		@include grid-column(12)
+	};
+	@media #{$medium-up} {
+		article.main {
+			@include grid-column(8,$offset:1);
+		}
+		aside.main {
+			@include grid-column(3);
+			
+			span {
+				display: block;
+
+				&.value {
+					margin-bottom: 10px;
+				}
+			}
+		}
 	}
 }
 

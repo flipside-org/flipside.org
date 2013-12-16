@@ -23,23 +23,32 @@ facebook_og: true
       {{ content }}
     </article>
 {% endif %}
+    {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
     <aside class="main">
-    {% if page.meta %}
-      <span class="label">Type:</span> <span class="value">{{ page.meta }}</span>
-    {% endif %}
-    {% if page.client %}
-      <span class="label">Client:</span> <span class="value">{{ page.client }}</span>
-    {% endif %}
-    {% if page.technology %}
-      <span class="label">Technology:</span> <span class="value">{{ page.technology }}</span>
-    {% endif %}
-    {% if page.keywords %}
-      <span class="label">Keywords:</span> <span class="value">{{ page.keywords }}</span>
-    {% endif %}
-    {% if page.project_link.href %}
-      <span class="label">URL:</span> <span class="value"><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></span>
-    {% endif %}
+      <dl>
+        {% if page.meta %}
+          <dt>Type:</dt>
+          <dd>{{ page.meta }}</dd>
+        {% endif %}
+        {% if page.client %}
+          <dt>Client:</dt>
+          <dd>{{ page.client }}</dd>
+        {% endif %}
+        {% if page.technology %}
+          <dt>Technology:</dt>
+          <dd>{{ page.technology }}</dd>
+        {% endif %}
+        {% if page.keywords %}
+          <dt>Keywords:</dt>
+          <dd>{{ page.keywords }}</dd>
+        {% endif %}
+        {% if page.project_link.href %}
+          <dt>URL:</dt>
+          <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
+        {% endif %}
+      </dl>
     </aside>
+    {% endif %}
   </div>
 </div>
 

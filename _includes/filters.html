@@ -1,7 +1,13 @@
 <div class="filters">
-	<ul>  
+	<ul>
+	{% if include.active_filter %}
+	  <li>
+	{% else %}
+	  <li class="active">
+	{% endif %}	
+	  	<a href="/notes">All</a>
+	  </li>
 	{% for filter in site.categories.filter %}
-	
 	  {% if filter.filter_name == include.active_filter %}
 	  <li class="active">
 	  {% else %}

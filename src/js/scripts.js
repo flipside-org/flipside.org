@@ -5,7 +5,7 @@ $(document).ready(function() {
   // Remove this eventually
   var $log = $('<div>');
   $.extend($log, {log : function(txt) {
-      $(this).append(txt + '<br/>');
+  //    $(this).append(txt + '<br/>');
     }
   });
   $log.prependTo("body");

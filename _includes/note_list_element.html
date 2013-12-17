@@ -1,15 +1,18 @@
 <article>
-  {{ site.data.team[include.note.user].name }} in {% for filter in include.note.filters %}{{ filter | capitalize }}{% endfor %} on {{ include.note.date | date: "%B %d, %Y" }}
   {% if include.active_filter %}
-  <a href="{{ include.note.url }}#{{ include.active_filter }}">
+    {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
   {% else %}
-  <a href="{{ include.note.url }}">
+    {% capture url %}{{ include.note.url }}{% endcapture %} 
   {% endif %}
-  	<h1>
-  		{{ include.note.title }}
-  	</h1>
+  
+  <a href="{{ url }}">
+    <h3>
+      {{ include.note.title }}
+    </h3>
   </a>
-  <p>
-  	INTRO text, intro text
+  <p class="intro">
+    {{ include.note.excerpt | strip_html | truncatewords: 40 }}<br/>
+    <a href="{{ url }}">Read more</a>
   </p>
+  <span class="metadata">{{ site.data.team[include.note.user].name }} in {% for filter in include.note.filters %}{{ filter | capitalize }}{% endfor %} on {{ include.note.date | date: "%B %d, %Y" }}</span>
 </article>

@@ -6,8 +6,23 @@ body {
 	line-height: $base-line-height;
 }
 
-.main-content.front section li {
-	list-style: none;
+.main-content {
+  &.front section li {
+  	list-style: none;
+  }
+  
+  &.notes {
+    article {
+  		margin-bottom: 2em;
+  		margin-top: 2em;
+  	}
+  	p.intro {
+  		margin-bottom: 0.5em;
+  	}
+  	.metadata {
+  		font-style: italic;
+  	}
+  }
 }
 
 .screen-reader-text {

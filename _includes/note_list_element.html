@@ -1,7 +1,18 @@
 <article>
   {% if include.active_filter %}
-  <a href="{{ include.note.url }}#{{ include.active_filter }}">{{ include.note.date }} - {{ include.note.title }}</a>
+    {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
   {% else %}
-  <a href="{{ include.note.url }}">{{ include.note.date }} - {{ include.note.title }}</a>
+    {% capture url %}{{ include.note.url }}{% endcapture %} 
   {% endif %}
+  
+  <a href="{{ url }}">
+    <h3>
+      {{ include.note.title }}
+    </h3>
+  </a>
+  <p class="intro">
+    {{ include.note.excerpt | strip_html | truncatewords: 40 }}<br/>
+    <a href="{{ url }}">Read more</a>
+  </p>
+  <span class="metadata">{{ site.data.team[include.note.user].name }} in {% for filter in include.note.filters %}{{ filter | capitalize }}{% endfor %} on {{ include.note.date | date: "%B %d, %Y" }}</span>
 </article>

@@ -7,7 +7,8 @@
  */
 
 .banner,
-.cta {
+.cta,
+.main-content.front section li {
 	background-color: #e6e6e6;
 }
 
@@ -72,6 +73,37 @@ header.page {
 				}
 			}
 		}
+	}
+}
+
+.main-content.front {
+	section {
+		text-align: center;
+		@include grid-column(12);
+	
+		ul {
+			@include grid-row();
+			
+			li {
+				@include grid-column(12);
+			}
+		}
+	}
+	@media #{$medium-up} {
+		section.areas-work li {
+			@include grid-column(4);
+		}
+		section.what-we-do li {
+			@include grid-column(3);
+		}
+		section.clients li {
+			@include grid-column(2);
+			
+			&:first-child {
+				@include grid-column(2, $offset:1);
+			}
+		}
+
 	}
 }
 

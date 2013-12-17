@@ -11,7 +11,7 @@
   {% if page.facebook_og %}
   	{% include facebook_og.html %}
   {% endif %}
-  <title>{{ page.title }}</title>
+  <title>Flipside - {{ page.title }}</title>
   
   <link rel="stylesheet" href="/css/app.css">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -20,9 +20,9 @@
 <body>
   <header class="page" role="banner">
     <div class="row">
-      <div class="branding">
-        <img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" />
-      </div>
+      <h1 class="branding">
+        <a href="http://flipside.org" title="Home"><img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" /></a>
+      </h1>
       {% include menu.html %}
       <ul class="social-nav">
         <li><a href="mailto:info@flipside.org"><i class="icon-mail"></i><span class="screen-reader-text">mail</span></a></li>

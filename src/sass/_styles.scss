@@ -6,6 +6,10 @@ body {
 	line-height: $base-line-height;
 }
 
+.main-content.front section li {
+	list-style: none;
+}
+
 .screen-reader-text {
 	position: absolute;
 	top: -9999px;

@@ -5,6 +5,16 @@
     {% capture url %}{{ include.note.url }}{% endcapture %} 
   {% endif %}
   
+  {% assign filter_list = '' %}
+  {% for filter in include.note.filters %}
+    {% capture filter_list %}{{filter_list}}{{ filter | capitalize }}{% endcapture %}
+    
+    {% unless forloop.last %}
+      {% capture filter_list %}{{filter_list}}, {% endcapture %}
+    {% endunless %}
+  {% endfor %}
+
+
   <a href="{{ url }}">
     <h3>
       {{ include.note.title }}
@@ -14,15 +24,6 @@
     {{ include.note.excerpt | strip_html | truncatewords: 40 }}<br/>
     <a href="{{ url }}">Read more</a>
   </p>
-    
-  {% for filter in include.note.filters %}
-    {% capture filter_list %}{{filter_list}}{{ filter | capitalize }}{% endcapture %}
-    
-    {% unless forloop.last %}
-      {% capture filter_list %}{{filter_list}}, {% endcapture %}
-    {% endunless %}
-    
-  {% endfor %}
   
   <span class="metadata">{{ site.data.team[include.note.user].name }} in {{ filter_list }} on {{ include.note.date | date: "%B %d, %Y" }}</span>
 </article>

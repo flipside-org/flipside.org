@@ -17,10 +17,17 @@
  */
 
 header.page {
-	.branding,
-	nav.primary,
-	.social-nav {
+	.branding {
+		@include grid-column(6);
+	}
+	nav.primary {
 		@include grid-column(12);
+		height: 100px;
+	}
+	.social-nav {
+		@include grid-column(6,$push:6);
+		margin-left: 0;
+		margin-top: -150px;
 	}
 	@media #{$medium-up} {
 		.branding {
@@ -30,7 +37,8 @@ header.page {
 			@include grid-column(6);
 		}
 		.social-nav {
-			@include grid-column(3);
+			@include grid-column(3,$push:0);
+			margin-top: 0;
 		}
 	}
 }

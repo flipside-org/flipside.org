@@ -472,7 +472,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -588,7 +588,7 @@ select {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_buttons\.scss}line{font-family:\00003197}}
 button, .button {
   cursor: pointer;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3048,7 +3048,7 @@ p aside {
 /* Default header styles */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/public_html\/flipside-org\.github\.com\/src\/vendor\/foundation\/scss\/foundation\/components\/_type\.scss}line{font-family:\00003182}}
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #222222;

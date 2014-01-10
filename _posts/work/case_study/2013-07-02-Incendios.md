@@ -7,8 +7,10 @@ title: Incêndios.pt
 
 anchor: incendios
 featured_image: ../notes/incendios-pt_explore-location.png
-meta: Design + Concept + Development
 image: incendios-med.png
+background_color: c45b3e
+
+meta: Design + Concept + Development
 technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 
 keywords: Data visualization, Open Data, Maps
 project_link:

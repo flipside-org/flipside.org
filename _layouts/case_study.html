@@ -4,11 +4,17 @@ active_menu : projects
 twitter_card: true
 facebook_og: true
 ---
-{% if page.featured_image %}
+
+{% if page.background_color %}
+<div class="banner" style="background-color: #{{ page.background_color }};">
+{% else %}
 <div class="banner">
+{% endif %}
   <div class="row">
       <h1>{{ page.title }}</h1>
+    {% if page.featured_image %}
       <img src="/images/notes/{{ page.featured_image }}" class="featured" />
+    {% endif %}
     </div>
 </div>
 <div class="main-content">
@@ -16,14 +22,6 @@ facebook_og: true
     <article class="main">
       {{ content }}
     </article>
-{% else %}
-<div class="main-content">
-  <div class="row">
-    <article class="main">
-      <h1>{{ page.title }}</h1>
-      {{ content }}
-    </article>
-{% endif %}
     {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
     <aside class="main">
       <dl>

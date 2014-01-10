@@ -6,6 +6,13 @@ body {
 	line-height: $base-line-height;
 }
 
+.banner {
+  background-color: $primary-blue;
+  h1 {
+    color: #fff;
+  }
+}
+
 .main-content {
   &.front section li {
   	list-style: none;

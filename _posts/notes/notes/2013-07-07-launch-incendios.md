@@ -6,6 +6,8 @@ filters: project
 title: Incendios.pt - eleven years of fire data
 category: note
 image: incendios-pt_map.png
+background_color: c45b3e
+
 tags: data visualization
 
 user: olafveerman

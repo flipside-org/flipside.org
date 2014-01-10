@@ -7,11 +7,11 @@
  */
 
 nav.primary {
-	text-align: right;
 }
 
 nav.primary ul,
 .filters ul {
   	@include inline-list;
 	display: inline-block;
+	margin: 0;
 }

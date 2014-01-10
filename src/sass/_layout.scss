@@ -17,6 +17,7 @@
  */
 
 header.page {
+	text-align: center;
 
 	.branding {
 		@include grid-column(12);
@@ -26,10 +27,14 @@ header.page {
 	}
 	@media #{$medium-up} {
 		.branding {
-			@include grid-column(6);
+			@include grid-column(4);
+			padding-left: 20px;
+			text-align: left;
 		}
 		nav.primary {
-			@include grid-column(6);
+			@include grid-column(8);
+			line-height: 60px;
+			text-align: right;
 		}
 	}
 }
@@ -38,6 +43,8 @@ main {
 }
 
 .banner {
+	padding-top: 200px;
+	margin-top: -200px;
 	h1,
 	h2,
 	.filters {

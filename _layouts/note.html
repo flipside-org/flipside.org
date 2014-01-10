@@ -4,25 +4,27 @@ active_menu : notes
 twitter_card: true
 facebook_og: true
 ---
-<a href="#" class="notes-nav-link previous">Previous post</a><br />
-<a href="#" class="notes-nav-link next">Next post</a>
-
 {% if page.background_color %}
 <div class="banner" style="background-color: #{{ page.background_color }};">
 {% else %}
 <div class="banner">
 {% endif %}
 	<div class="row">
-    	<h1>{{ page.title }}</h1>
+    	<h1 class="title">{{ page.title }}</h1>
     {% if page.featured_image %}
-    	<img src="/images/notes/{{ page.featured_image }}" class="featured" />
+    	<div class="featured">
+    		<img src="/images/notes/{{ page.featured_image }}" />
+    	</div>
     {% endif %}
     </div>
 </div>
-<div class="main-content">
+<div class="main-content note">
 	<div class="row">
 		<article class="main">
 			{{ content }}
 		</article>
 	</div>
 </div>
+
+<a href="#" class="notes-nav-link previous">Previous post</a><br />
+<a href="#" class="notes-nav-link next">Next post</a>

@@ -45,15 +45,22 @@ main {
 	padding-top: 400px;
 	margin-top: -400px;
 	
-	h1 {
+	.title,
+	.featured {
 		@include grid-column(12);
 	}
 	.filters {
 		@include grid-column(12);
 		text-align: center;
 	}
-	img.featured {
-		@include grid-column(12);
+	@media #{$medium-up} {
+		.title,
+		.featured {
+			@include grid-column(6);
+		}
+		.featured img {
+			max-width: 180%;
+		}
 	}
 }
 
@@ -69,18 +76,10 @@ main {
 	}
 	@media #{$medium-up} {
 		article.main {
-			@include grid-column(8,$offset:1);
+			@include grid-column(8,$push:3);
 		}
 		aside.main {
-			@include grid-column(3);
-			
-			span {
-				display: block;
-
-				&.value {
-					margin-bottom: 10px;
-				}
-			}
+			@include grid-column(3,$pull:8);
 		}
 		&.notes article {
 			@include grid-column(8, $offset:2);

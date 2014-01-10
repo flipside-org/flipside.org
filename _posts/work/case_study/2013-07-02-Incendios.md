@@ -6,7 +6,7 @@ layout: case_study
 title: Incêndios.pt
 
 anchor: incendios
-featured_image: ../notes/incendios-pt_explore-location.png
+featured_image: incendios-l.png
 image: incendios-med.png
 background_color: c45b3e
 

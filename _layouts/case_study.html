@@ -11,7 +11,10 @@ facebook_og: true
 <div class="banner">
 {% endif %}
   <div class="row">
-      <h1 class="title">{{ page.title }}</h1>
+      <div class="heading">
+        <span class="subheading">Project</span>
+        <h1 class="title">{{ page.title }}</h1>
+      </div>
     {% if page.featured_image %}
       <div class="featured">  
         <img src="/images/projects/{{ page.featured_image }}" />

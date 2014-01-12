@@ -8,27 +8,15 @@ body {
 
 .banner {
   background-color: $primary-blue;
+  color: $light-grey;
   .title {
     color: #fff;
   }
 }
 
 .main-content {
-  &.front section li {
-  	list-style: none;
-  }
   
   &.notes {
-    article {
-  		margin-bottom: 2em;
-  		margin-top: 2em;
-  	}
-  	p.intro {
-  		margin-bottom: 0.5em;
-  	}
-  	.metadata {
-  		font-style: italic;
-  	}
   }
 }
 
@@ -43,18 +31,12 @@ body {
   }
 }
 
-footer.page {
+footer.page,
+footer.page a {
   background-color: $dark-grey;
   color: $light-grey;
 
   .fs {
     color: #ffffff;
   }
-}
-
-
-.screen-reader-text {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
 }

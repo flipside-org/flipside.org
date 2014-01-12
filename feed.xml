@@ -5,7 +5,7 @@ layout: none
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
                 <title>{{ site.name | xml_escape }} - Notes</title>
-                <description>Flipside's writing from the notes section</description>
+                <description>Writings from the notes section of flipside.org</description>
                 <link>{{ site.domain }}</link>
                 <atom:link href="{{site.domain }}/feed.xml" rel="self" type="application/rss+xml" />
                 {% for note in site.categories.note limit:10 %}

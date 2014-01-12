@@ -32,6 +32,27 @@ body {
   }
 }
 
+.contact {
+  background-color: $mid-grey;
+  color: $light-grey;
+
+  h3,
+  li,
+  a {
+    color: #ffffff;
+  }
+}
+
+footer.page {
+  background-color: $dark-grey;
+  color: $light-grey;
+
+  .fs {
+    color: #ffffff;
+  }
+}
+
+
 .screen-reader-text {
 	position: absolute;
 	top: -9999px;

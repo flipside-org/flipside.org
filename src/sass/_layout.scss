@@ -3,16 +3,6 @@
    ========================================================================== */
 
 /**
- * DEV - REMOVE OR IMPROVE FOR PROD
- */
-
-.banner,
-.cta,
-.main-content.front section li {
-	background-color: #e6e6e6;
-}
-
-/**
  * Contains the basic structure of the site
  */
 
@@ -118,6 +108,35 @@ main {
 	}
 }
 
+.contact {
+	.follow-us,
+	.contact-us {
+		@include grid-column(12);
+		text-align: center;
+	}
+	ul {
+		@include inline-list;
+		display: inline-block;
+	}
+	@media #{$medium-up} {
+		.follow-us,
+		.contact-us {
+			@include grid-column(6);
+		}
+	}
+}
+
+footer {
+	.built-by,
+	.technology {
+		@include grid-column(6);
+	}
+	.technology {
+		text-align: right;
+	}
+}
+
+/*
 .cta {
 	.invitation {
 		@include grid-column(12);
@@ -139,5 +158,5 @@ main {
 
 footer .credit {
 	@include grid-column(12);
-	text-align: center;
 }
+*/

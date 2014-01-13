@@ -4,6 +4,37 @@ active_menu : projects
 twitter_card: true
 facebook_og: true
 ---
+{% comment %}
+  Navigation links for case studies can be rendered differently from notes
+  since they don't need filters.
+  To render these links we just loop through the posts array and find the
+  case study before and after.
+{% endcomment %}
+
+{% assign break_cicle = false %}
+
+{% assign previous_case_study = false %}
+{% assign next_case_study = false %}
+{% assign current_found = false %}
+
+{% for post in site.categories.case_study %}
+  {% unless break_cicle %}
+    {% if current_found %}
+    
+      {% assign next_case_study = post %}
+      {% assign break_cicle = true %}
+      
+    {% else %}
+    
+      {% if page.url == post.url %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign previous_case_study = post %}
+      {% endif %}
+      
+    {% endif %}  
+  {% endunless%}
+{% endfor%}
 
 {% if page.background_color %}
 <div class="banner" style="background-color: #{{ page.background_color }};">
@@ -15,16 +46,25 @@ facebook_og: true
         <span class="subheading">Project</span>
         <h1 class="title">{{ page.title }}</h1>
       </div>
-    {% if page.featured_image %}
-      <div class="featured">  
-        <img src="/images/projects/{{ page.featured_image }}" />
+      <div class="actions">
+        <a href="#"><i class="icon-export"></i><span class="screen-reader-text">share</span></a>
+        {% if previous_case_study %}
+          <a href="{{ previous_case_study.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
+        {% endif %}
+        {% if next_case_study %}
+          <a href="{{ next_case_study.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
+        {% endif %}
       </div>
-    {% endif %}
     </div>
 </div>
-<div class="main-content">
+<div class="main-content project">
   <div class="row">
     <article class="main">
+    {% if page.image %}
+      <div class="image">  
+        <img src="/images/projects/{{ page.image }}" />
+      </div>
+    {% endif %}
       {{ content }}
     </article>
     {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
@@ -55,50 +95,3 @@ facebook_og: true
     {% endif %}
   </div>
 </div>
-
-{% comment %}
-  Navigation links for case studies can be rendered differently from notes
-  since they don't need filters.
-  To render these links we just loop through the posts array and find the
-  case study before and after.
-{% endcomment %}
-
-{% assign break_cicle = false %}
-
-{% assign previous_case_study = false %}
-{% assign next_case_study = false %}
-{% assign current_found = false %}
-
-{% for post in site.categories.case_study %}
-  {% unless break_cicle %}
-
-    {% if current_found %}
-    
-      {% assign next_case_study = post %}
-      {% assign break_cicle = true %}
-      
-    {% else %}
-    
-      {% if page.url == post.url %}
-        {% assign current_found = true %}
-      {% else %}
-        {% assign previous_case_study = post %}
-      {% endif %}
-      
-    {% endif %}
-    
-  {% endunless%}
-
-{% endfor%}
-
-{% unless previous_case_study == false %}
-  <a href="{{ previous_case_study.url }}">Previous case study</a><br />
-{% else %}
-  There's no previous case study.<br/>
-{% endunless%}
-
-{% unless next_case_study == false %}
-  <a href="{{ next_case_study.url }}">Next case study</a><br />
-{% else %}
-  There's no next case study.
-{% endunless%}

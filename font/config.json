@@ -13,9 +13,39 @@
       "src": "entypo"
     },
     {
+      "uid": "390d6d13398cbf8c8c3c5493f7d34088",
+      "css": "export",
+      "code": 59393,
+      "src": "entypo"
+    },
+    {
+      "uid": "5854855e963044f93b15738a5bb27a29",
+      "css": "phone",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
+      "uid": "c311c48d79488965b0fab7f9cd12b6b5",
+      "css": "left-open",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "749e7d90a9182938180f1d2d8c33584e",
+      "css": "right-open",
+      "code": 59398,
+      "src": "entypo"
+    },
+    {
       "uid": "d94334f23acba022bfd68e49d76b31bb",
       "css": "github",
       "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "14cfd18cc1dd5fb99ba04311b888bc23",
+      "css": "flickr",
+      "code": 59394,
       "src": "entypo"
     },
     {

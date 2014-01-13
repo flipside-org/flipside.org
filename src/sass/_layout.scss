@@ -7,7 +7,6 @@
  */
 
 header.page {
-
 	.branding {
 		@include grid-column(12);
 	}
@@ -26,27 +25,20 @@ header.page {
 	}
 }
 
-main {
-}
-
 .banner {
 	padding-top: 400px;
 	margin-top: -400px;
 	
 	.heading,
+	.actions,
 	.featured {
-		@include grid-column(12);
-	}
-	.filters {
 		@include grid-column(12);
 	}
 	@media #{$medium-up} {
 		.heading,
+		.actions,
 		.featured {
 			@include grid-column(6);
-		}
-		.featured img {
-			max-width: 180%;
 		}
 	}
 }
@@ -67,6 +59,13 @@ main {
 		}
 		&.notes article {
 			@include grid-column(4);
+		}
+		&.project .image {
+			float: right;
+			width: 50%;
+			img {
+				max-width: 130%;
+			}
 		}
 	}
 }
@@ -131,28 +130,3 @@ footer {
 		text-align: right;
 	}
 }
-
-/*
-.cta {
-	.invitation {
-		@include grid-column(12);
-		text-align: center;
-	}
-	.contact {
-		@include grid-column(6,$offset:3);
-	}
-	@media #{$medium-up} {
-		.invitation {
-			@include grid-column(6);
-			text-align: left;
-		}
-		.contact {
-			@include grid-column(4, $offset:1);
-		}
-	}
-}
-
-footer .credit {
-	@include grid-column(12);
-}
-*/

@@ -9,6 +9,10 @@ body {
 .banner {
   background-color: $primary-blue;
   color: $light-grey;
+  .actions {
+    text-align: right;
+  }
+  a,
   .title {
     color: #fff;
   }
@@ -29,6 +33,18 @@ body {
   a {
     color: #ffffff;
   }
+  ul {
+    margin: 0;
+  }
+  li {
+    a,
+    i {
+      display: inline;
+    }
+    i {
+      padding-right: 10px;
+    }
+  }
 }
 
 footer.page,
@@ -39,4 +55,10 @@ footer.page a {
   .fs {
     color: #ffffff;
   }
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }

@@ -5,31 +5,31 @@ twitter_card: true
 facebook_og: true
 ---
 {% comment %}
-  Navigation links for case studies can be rendered differently from notes
+  Navigation links for projects can be rendered differently from notes
   since they don't need filters.
   To render these links we just loop through the posts array and find the
-  case study before and after.
+  project before and after.
 {% endcomment %}
 
-{% assign break_cicle = false %}
+{% assign break_cycle = false %}
 
-{% assign previous_case_study = false %}
-{% assign next_case_study = false %}
+{% assign previous_project = false %}
+{% assign next_project = false %}
 {% assign current_found = false %}
 
-{% for post in site.categories.case_study %}
-  {% unless break_cicle %}
+{% for post in site.categories.project %}
+  {% unless break_cycle %}
     {% if current_found %}
     
-      {% assign next_case_study = post %}
-      {% assign break_cicle = true %}
+      {% assign next_project = post %}
+      {% assign break_cycle = true %}
       
     {% else %}
     
       {% if page.url == post.url %}
         {% assign current_found = true %}
       {% else %}
-        {% assign previous_case_study = post %}
+        {% assign previous_project = post %}
       {% endif %}
       
     {% endif %}  
@@ -48,11 +48,11 @@ facebook_og: true
       </div>
       <div class="actions">
         <a href="#"><i class="icon-export"></i><span class="screen-reader-text">share</span></a>
-        {% if previous_case_study %}
-          <a href="{{ previous_case_study.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
+        {% if previous_project %}
+          <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
         {% endif %}
-        {% if next_case_study %}
-          <a href="{{ next_case_study.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
+        {% if next_project %}
+          <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
         {% endif %}
       </div>
     </div>

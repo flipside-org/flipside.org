@@ -1,7 +1,7 @@
 ---
 permalink: /projects/incendios/
-category: case_study
-layout: case_study
+category: project
+layout: project
 
 title: Incêndios.pt
 

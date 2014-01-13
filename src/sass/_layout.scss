@@ -65,11 +65,13 @@ header.page {
 }
 
 .main-content {
-	.content {
+	.content,
+	aside,
+	ul.grid-list li {
 		@include grid-column(12);
 	}
-	aside {
-		@include grid-column(12);
+	ul.grid-list {
+		list-style: none;
 	}
 	@media #{$medium-up} {
 		.content {
@@ -78,8 +80,11 @@ header.page {
 		aside {
 			@include grid-column(3,$pull:8);
 		}
-		&.notes article {
+		ul.grid-list li {
 			@include grid-column(4);
+			&:nth-child(3n+1) {
+				clear: left;
+			}
 		}
 		&.project .image {
 			float: right;

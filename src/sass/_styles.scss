@@ -3,6 +3,7 @@
    ========================================================================== */
 
 body {
+  background-color: $dark-grey;
 	line-height: $base-line-height;
 }
 
@@ -20,9 +21,7 @@ body {
 }
 
 .main-content {
-  
-  &.notes {
-  }
+  background-color: #fff;
 }
 
 .contact {
@@ -32,7 +31,7 @@ body {
   h3,
   li,
   a {
-    color: #ffffff;
+    color: #fff;
   }
   li {
     a,
@@ -44,7 +43,6 @@ body {
 
 footer.page,
 footer.page a {
-  background-color: $dark-grey;
   color: $light-grey;
 
   .fs {

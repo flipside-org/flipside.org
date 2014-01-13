@@ -10,13 +10,11 @@ active_menu : projects
       <h1 class="title">Projects</h1>
     </div>
     <div class="actions">
-      <a href="#"><i class="icon-export"></i><span class="screen-reader-text">share</span></a>
     </div>
   </div>
 </div>
 <div class="main-content">
-  <ul class="row">
-    <p>list of projects:</p>
+  <ul class="row grid-list">
     {% for post in site.categories.project %}
     <li>
       <article>

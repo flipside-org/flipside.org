@@ -1,28 +1,30 @@
-<article>
-  {% if include.active_filter %}
-    {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
-  {% else %}
-    {% capture url %}{{ include.note.url }}{% endcapture %} 
-  {% endif %}
-  
-  {% assign filter_list = '' %}
-  {% for filter in include.note.filters %}
-    {% capture filter_list %}{{filter_list}}{{ filter | capitalize }}{% endcapture %}
+<li>
+  <article>
+    {% if include.active_filter %}
+      {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
+    {% else %}
+      {% capture url %}{{ include.note.url }}{% endcapture %} 
+    {% endif %}
     
-    {% unless forloop.last %}
-      {% capture filter_list %}{{filter_list}}, {% endcapture %}
-    {% endunless %}
-  {% endfor %}
+    {% assign filter_list = '' %}
+    {% for filter in include.note.filters %}
+      {% capture filter_list %}{{filter_list}}{{ filter | capitalize }}{% endcapture %}
+      
+      {% unless forloop.last %}
+        {% capture filter_list %}{{filter_list}}, {% endcapture %}
+      {% endunless %}
+    {% endfor %}
 
-  <img class="thumbnail" src="/images/notes/{{ include.note.image }}" />
-  <span class="metadata">{{ filter_list }} - {{ include.note.date | date: "%B %d, %Y" }}</span>
-  <a href="{{ url }}">
-    <h3>
-      {{ include.note.title }}
-    </h3>
-  </a>
-  <p class="intro">
-    {{ include.note.excerpt | strip_html | truncatewords: 40 }}<br/>
-    <a href="{{ url }}">Read more</a>
-  </p>
-</article>
+    <img class="thumbnail" src="/images/notes/{{ include.note.image }}" />
+    <span class="metadata">{{ filter_list }} - {{ include.note.date | date: "%B %d, %Y" }}</span>
+    <a href="{{ url }}">
+      <h3>
+        {{ include.note.title }}
+      </h3>
+    </a>
+    <p class="intro">
+      {{ include.note.excerpt | strip_html | truncatewords: 40 }}<br/>
+      <a href="{{ url }}">Read more</a>
+    </p>
+  </article>
+</li>

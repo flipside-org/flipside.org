@@ -13,7 +13,8 @@ body {
     text-align: right;
   }
   a,
-  .title {
+  .title,
+  i {
     color: #fff;
   }
 }
@@ -33,16 +34,10 @@ body {
   a {
     color: #ffffff;
   }
-  ul {
-    margin: 0;
-  }
   li {
     a,
     i {
       display: inline;
-    }
-    i {
-      padding-right: 10px;
     }
   }
 }

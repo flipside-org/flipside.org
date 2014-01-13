@@ -34,6 +34,27 @@ header.page {
 	.featured {
 		@include grid-column(12);
 	}
+	.actions ul {
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+		text-align: right;
+		li {
+			float: left;
+			&.social-share li {
+				float: none;
+			}
+		}
+	}
+	.social-share {
+	  .level-one {
+	    display:none;
+	    position: absolute;
+	  }
+	  &:hover .level-one { /* Show first level dropdown on hover*/
+	    display:block;
+	  }
+	}
 	@media #{$medium-up} {
 		.heading,
 		.actions,
@@ -44,17 +65,17 @@ header.page {
 }
 
 .main-content {
-	article {
+	.content {
 		@include grid-column(12);
 	}
-	aside.main {
+	aside {
 		@include grid-column(12);
 	}
 	@media #{$medium-up} {
-		article.main {
+		.content {
 			@include grid-column(8,$push:3);
 		}
-		aside.main {
+		aside {
 			@include grid-column(3,$pull:8);
 		}
 		&.notes article {
@@ -70,7 +91,6 @@ header.page {
 	}
 }
 
-/*
 .main-content.front {
 	section {
 		text-align: center;
@@ -78,30 +98,21 @@ header.page {
 	
 		ul {
 			@include grid-row();
+			list-style: none;
+			margin: 0;
 			
 			li {
 				@include grid-column(12);
+				float: left;
 			}
 		}
 	}
 	@media #{$medium-up} {
-		section.areas-work li {
-			@include grid-column(4);
-		}
-		section.what-we-do li {
+		section ul li {
 			@include grid-column(3);
 		}
-		section.clients li {
-			@include grid-column(2);
-			
-			&:first-child {
-				@include grid-column(2, $offset:1);
-			}
-		}
-
 	}
 }
-*/
 
 .contact {
 	.follow-us,
@@ -110,8 +121,12 @@ header.page {
 		text-align: center;
 	}
 	ul {
-		@include inline-list;
+		list-style: none;
+		margin: 0;
 		display: inline-block;
+		li {
+			float: left;
+		}
 	}
 	@media #{$medium-up} {
 		.follow-us,

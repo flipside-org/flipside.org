@@ -8,9 +8,11 @@ active_menu : notes
 		<span class="subheading">Writings and stuff</span>
     	<h2 class="title">Notes</h2>
     </div>
-    <a href="{{ site.domain }}/feed.xml">RSS</a>
-    {% include filters.html active_filter=page.filter_name %}
+    <div class="actions">
+      <a href="{{ site.domain }}/feed.xml"><i class="icon-rss"></i><span class="screen-reader-text">RSS</span></a>
+      {% include filters.html active_filter=page.filter_name %}
     </div>
+  </div>
 </div>
 <div class="main-content notes">
   <div class="row">

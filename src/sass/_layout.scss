@@ -82,8 +82,23 @@ header.page {
 		}
 		ul.grid-list li {
 			@include grid-column(4);
+
 			&:nth-child(3n+1) {
 				clear: left;
+			}
+			header {
+				a {
+					display: block;
+					position: relative;
+				}
+				h3 {
+					background-color: #fff;
+					bottom: 0;
+					margin: 0;
+					max-width: 85%;
+					padding-right: 10px;
+					position: absolute;
+				}
 			}
 		}
 		&.project .image {

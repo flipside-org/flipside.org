@@ -48,8 +48,11 @@ module.exports = function(grunt) {
     uglify: {
       prod: {
         files: {
-          'scripts/flipside.min.js': ['src/js/*.js'],
-          'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
+          'scripts/flipside.min.js': [
+            'src/js/libs/keypress/keypress-1.0.9.min.js',
+            'src/js/*.js'
+          ],
+          //'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
           
           'scripts/foundation.min.js': [
             'src/vendor/jquery/jquery.js',

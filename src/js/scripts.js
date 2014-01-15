@@ -5,8 +5,9 @@ $(document).ready(function() {
   // Remove this eventually
   var $log = $('<div>');
   $.extend($log, {log : function(txt) {
-  //    $(this).append(txt + '<br/>');
-    }
+    //$(this).append(txt + '<br/>');
+    console.log(txt);
+  }
   });
   $log.prependTo("body");
   // END / Remove this eventually
@@ -80,4 +81,18 @@ $(document).ready(function() {
             
     });
   }
+});
+
+$(document).ready(function() {
+  // Easter eggs.
+  
+  // Konami code
+  keypress.sequence_combo("up up down down left right left right b a", function() {
+    window.location = 'http://edispilf.org';
+  }, false);
+  
+  keypress.sequence_combo("f l i p s i d e", function() {
+    alert('Hello! :)');
+  }, false);
+  
 });

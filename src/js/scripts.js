@@ -61,22 +61,18 @@ $(document).ready(function() {
       // Everything is ready. Create the prev and next links.
       var $prev_link = $notes_nav.filter('.previous');
       if (nav.prev) {
-        $prev_link
-        .attr('href', nav.prev.url + nav.append_hash);
+        $prev_link.attr('href', nav.prev.url + nav.append_hash);
       }
       else {
-        $prev_link
-        .attr('class', 'inactive');
+        $prev_link.attr('class', 'inactive');
       }
       
       var $next_link = $notes_nav.filter('.next');
       if (nav.next) {
-        $next_link
-        .attr('href', nav.next.url + nav.append_hash);
+        $next_link.attr('href', nav.next.url + nav.append_hash);
       }
       else {
-        $next_link
-        .attr('class', 'inactive');
+        $next_link.attr('class', 'inactive');
       }      
     });
   }

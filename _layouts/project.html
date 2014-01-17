@@ -36,70 +36,70 @@ facebook_og: true
   {% endunless%}
 {% endfor%}
 
-{% if page.background_color %}
-<header class="banner" style="background-color: #{{ page.background_color }};">
-{% else %}
-<header class="banner">
-{% endif %}
-  <div class="row">
-    <div class="heading">
-      <h2 class="section-title">Project</h2>
-      <h1 class="title">{{ page.title }}</h1>
-    </div>
-    <div class="actions">
-      <ul>
-        {% include social-share.html %}
-        {% if previous_project %}
-        <li>
-          <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
-        </li>
-        {% endif %}
-        {% if next_project %}
-        <li>
-          <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
-        </li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-</header>
-<div class="main-content project">
-  <div class="row">
-    <article class="main">
-      <div class="content">  
-        {% if page.image %}
-        <div class="image">  
-          <img src="/images/projects/{{ page.image }}" />
-        </div>
-        {% endif %}
-        {{ content }}
+<article>
+
+  {% if page.background_color %}
+  <header class="banner" style="background-color: #{{ page.background_color }};">
+  {% else %}
+  <header class="banner">
+  {% endif %}
+    <div class="row">
+      <div class="heading">
+        <h2 class="section-title">Project</h2>
+        <h1 class="title">{{ page.title }}</h1>
       </div>
-      {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
-      <aside>
-        <dl>
-          {% if page.meta %}
-            <dt>Type:</dt>
-            <dd>{{ page.meta }}</dd>
+      <div class="actions">
+        <ul>
+          {% include social-share.html %}
+          {% if previous_project %}
+          <li>
+            <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="visually-hidden">previous</span></a>
+          </li>
           {% endif %}
-          {% if page.client %}
-            <dt>Client:</dt>
-            <dd>{{ page.client }}</dd>
+          {% if next_project %}
+          <li>
+            <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="visually-hidden">next</span></a>
+          </li>
           {% endif %}
-          {% if page.technology %}
-            <dt>Technology:</dt>
-            <dd>{{ page.technology }}</dd>
-          {% endif %}
-          {% if page.keywords %}
-            <dt>Keywords:</dt>
-            <dd>{{ page.keywords }}</dd>
-          {% endif %}
-          {% if page.project_link.href %}
-            <dt>URL:</dt>
-            <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
-          {% endif %}
-        </dl>
-      </aside>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="content">  
+      {% if page.image %}
+      <div class="image">  
+        <img src="/images/projects/{{ page.image }}" />
+      </div>
       {% endif %}
-    </article>
+      {{ content }}
+    </div>
+    {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
+    <aside>
+      <dl>
+        {% if page.meta %}
+          <dt>Type:</dt>
+          <dd>{{ page.meta }}</dd>
+        {% endif %}
+        {% if page.client %}
+          <dt>Client:</dt>
+          <dd>{{ page.client }}</dd>
+        {% endif %}
+        {% if page.technology %}
+          <dt>Technology:</dt>
+          <dd>{{ page.technology }}</dd>
+        {% endif %}
+        {% if page.keywords %}
+          <dt>Keywords:</dt>
+          <dd>{{ page.keywords }}</dd>
+        {% endif %}
+        {% if page.project_link.href %}
+          <dt>URL:</dt>
+          <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
+        {% endif %}
+      </dl>
+    </aside>
+    {% endif %}
   </div>
-</div>
+</article>

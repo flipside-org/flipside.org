@@ -4,35 +4,40 @@ active_menu : notes
 twitter_card: true
 facebook_og: true
 ---
-{% if page.background_color %}
-<div class="banner" style="background-color: #{{ page.background_color }};">
-{% else %}
-<div class="banner">
-{% endif %}
-	<div class="row">
-  	<div class="heading">
-      <h2 class="section-title">Note</h2>
-      <h1 class="title">{{ page.title }}</h1>
-    </div>
-  	<div class="actions">
-      <ul>
-        {% include social-share.html %}
-        <li>
-          <a href="#" class="notes-nav-link previous"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
-        </li>
-        <li>
-          <a href="#" class="notes-nav-link next"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="main-content note">
-	<div class="row">
-		<article class="main">
-			<div class="content">
-        {{ content }}
+
+<article>
+
+  {% if page.background_color %}
+  <header class="banner" style="background-color: #{{ page.background_color }};">
+  {% else %}
+  <header class="banner">
+  {% endif %}
+  	<div class="row">
+    	<div class="heading">
+        <h2 class="section-title">Note</h2>
+        <h1 class="title">{{ page.title }}</h1>
       </div>
-		</article>
-	</div>
-</div>
+    	<div class="actions">
+        <ul>
+          {% include social-share.html %}
+          <li>
+            <a href="#" class="notes-nav-link previous"><i class="icon-left-open"></i><span class="visually-hidden">previous</span></a>
+          </li>
+          <li>
+            <a href="#" class="notes-nav-link next"><i class="icon-right-open"></i><span class="visually-hidden">next</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      {{ content }}
+    </div>
+    <aside>
+      asdfkljasdlfkjasdlkçfj
+    </aside>
+  </div>
+
+</article>

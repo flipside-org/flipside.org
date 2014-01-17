@@ -18,51 +18,54 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.domain }}/feed.xml">
 </head>
 <body>
-  <header class="page" role="banner">
-    <div class="row">
-      <a href="http://flipside.org" class="branding" title="Home"><img src="/images/flipside-logo-white.png" alt="Logo Flipside" title="Flipside" /></a>
-      {% include menu.html %}
-    </div>
-  </header>
-
-  <main role="main">
-    {{ content }}
-  </main>
-
-  <div class="contact">
-    <div class="row">
-      <div class="follow-us">
-        <h3>Follow us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <ul class="social">
-          <li class="twitter"><i class="icon-twitter"></i><a href="http://twitter.com/flipside_org">Twitter</a></li>
-          <li class="github"><i class="icon-github"></i><a href="http://github.com/flipside-org">Github</a></li>
-          <li class="flickr"><i class="icon-flickr"></i><a href="http://flickr.com/photos/flipside-org">Flickr</a></li>
-        </ul>
-      </div>
-      <div class="contact-us">
-        <h3>Contact us</h3>
-        <p>Want to talk about a project or have a question or suggestion? We'd love to hear from you.</p>
-        <ul class="contact-info">
-          <li class="phone"><i class="icon-phone"></i>+351 926 526 465</li>
-          <li class="email"><i class="icon-mail"></i><a href="mailto:info@flipside.org">info@flipside.org</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <footer class="page" role="contentinfo">
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
       <div class="row">
-        <p class="built-by">
-          <span class="fs">Flipside</span> - 2013
-        </p>
-        <p class="technology">
-          Built with <a href="http://jekyllrb.com/">Jekyll</a>
-        </p>
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo-white.png" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        {% include menu.html %}
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      {{ content }}
+    </main>
+
+    <div class="contact">
+      <div class="row">
+        <div class="follow-us">
+          <h3>Follow us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <ul class="social">
+            <li class="twitter"><i class="icon-twitter"></i><a href="http://twitter.com/flipside_org">Twitter</a></li>
+            <li class="github"><i class="icon-github"></i><a href="http://github.com/flipside-org">Github</a></li>
+            <li class="flickr"><i class="icon-flickr"></i><a href="http://flickr.com/photos/flipside-org">Flickr</a></li>
+          </ul>
+        </div>
+        <div class="contact-us">
+          <h3>Contact us</h3>
+          <p>Want to talk about a project or have a question or suggestion? We'd love to hear from you.</p>
+          <ul class="contact-info">
+            <li class="phone"><i class="icon-phone"></i>+351 926 526 465</li>
+            <li class="email"><i class="icon-mail"></i><a href="mailto:info@flipside.org">info@flipside.org</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </footer>
 
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <p class="built-by">
+            <span class="fs">Flipside</span> - 2013
+          </p>
+          <p class="technology">
+            Built with <a href="http://jekyllrb.com/">Jekyll</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="/scripts/foundation.min.js"></script>
   <script src="/scripts/flipside.min.js"></script>
 </body>

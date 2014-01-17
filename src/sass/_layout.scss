@@ -6,18 +6,19 @@
  * Contains the basic structure of the site
  */
 
-header.page {
+#site-hdr {
   position: relative;
   z-index: 99;
   
-	.branding {
-		@include grid-column(12);
-	}
+	#site-title,
 	nav.primary {
 		@include grid-column(12);
 	}
+	#site-title {
+		margin: 0;
+	}
 	@media #{$medium-up} {
-		.branding {
+		#site-title {
 			@include grid-column(4);
 		}
 		nav.primary {
@@ -82,7 +83,7 @@ header.page {
 	}
 }
 
-.main-content {
+main {
 	.content,
 	aside,
 	ul.grid-list li {
@@ -127,30 +128,31 @@ header.page {
 			}
 		}
 	}
-}
-
-.main-content.front {
-	section {
-		text-align: center;
-		@include grid-column(12);
 	
-		ul {
-			@include grid-row();
-			list-style: none;
-			margin: 0;
-			
-			li {
-				@include grid-column(12);
-				float: left;
+	.front {
+		section {
+			text-align: center;
+			@include grid-column(12);
+		
+			ul {
+				@include grid-row();
+				list-style: none;
+				margin: 0;
+				
+				li {
+					@include grid-column(12);
+					float: left;
+				}
+			}
+		}
+		@media #{$medium-up} {
+			section ul li {
+				@include grid-column(3);
 			}
 		}
 	}
-	@media #{$medium-up} {
-		section ul li {
-			@include grid-column(3);
-		}
-	}
 }
+
 
 .contact {
 	.follow-us,

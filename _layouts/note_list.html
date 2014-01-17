@@ -2,18 +2,18 @@
 layout: base
 active_menu : notes
 ---
-<div class="banner">
+<header class="banner">
   <div class="row">
-	<div class="heading">
-		<span class="subheading">Writings and stuff</span>
-    	<h2 class="title">Notes</h2>
+    <div class="heading">
+      <h2 class="section-title">Writings and stuff</h2>
+      <h1 class="title">Notes</h1>
     </div>
     <div class="actions">
       <a href="{{ site.domain }}/feed.xml"><i class="icon-rss"></i><span class="screen-reader-text">RSS</span></a>
       {% include filters.html active_filter=page.filter_name %}
     </div>
   </div>
-</div>
+</header>
 <div class="main-content notes">
   <ul class="row grid-list">
     {{ content }}

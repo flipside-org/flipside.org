@@ -7,6 +7,7 @@ title: Jekyll Talk
 category: note
 image: jekyll.png
 tags: jekyll FA7
+featured: true
 
 user: danielfdsilva
 ---

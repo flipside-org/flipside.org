@@ -37,32 +37,32 @@ facebook_og: true
 {% endfor%}
 
 {% if page.background_color %}
-<div class="banner" style="background-color: #{{ page.background_color }};">
+<header class="banner" style="background-color: #{{ page.background_color }};">
 {% else %}
-<div class="banner">
+<header class="banner">
 {% endif %}
   <div class="row">
-      <div class="heading">
-        <span class="subheading">Project</span>
-        <h1 class="title">{{ page.title }}</h1>
-      </div>
-      <div class="actions">
-        <ul>
-          {% include social-share.html %}
-          {% if previous_project %}
-          <li>
-            <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
-          </li>
-          {% endif %}
-          {% if next_project %}
-          <li>
-            <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+    <div class="heading">
+      <h2 class="section-title">Project</h2>
+      <h1 class="title">{{ page.title }}</h1>
     </div>
-</div>
+    <div class="actions">
+      <ul>
+        {% include social-share.html %}
+        {% if previous_project %}
+        <li>
+          <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="screen-reader-text">previous</span></a>
+        </li>
+        {% endif %}
+        {% if next_project %}
+        <li>
+          <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="screen-reader-text">next</span></a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</header>
 <div class="main-content project">
   <div class="row">
     <article class="main">

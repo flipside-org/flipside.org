@@ -2,21 +2,36 @@
    Styles - generic styles
    ========================================================================== */
 
+dl {
+  margin: 0;
+}
+
+/* Page styles */
+
 body {
   background-color: $dark-grey;
 	line-height: $base-line-height;
 }
 
-.banner {
+.banner,
+.featured {
   background-color: $primary-blue;
   color: $light-grey;
-  .actions {
-    text-align: right;
-  }
   a,
   .title,
-  i {
+  i,
+  .summary {
     color: #fff;
+  }
+  .title,
+  .section-title {
+    line-height: 1;
+  }
+  .section-title {
+    color: $light-grey;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
   }
 }
 

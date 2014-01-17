@@ -9,6 +9,7 @@ anchor: incendios
 featured_image: incendios-l.png
 image: incendios-med.png
 background_color: c45b3e
+featured: true
 
 meta: Design + Concept + Development
 technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 

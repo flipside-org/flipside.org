@@ -62,23 +62,22 @@ $(document).ready(function() {
       var $prev_link = $notes_nav.filter('.previous');
       if (nav.prev) {
         $prev_link
-        .attr('href', nav.prev.url + nav.append_hash)
-        .text("Previous post (" + nav.prev.title + ")");
+        .attr('href', nav.prev.url + nav.append_hash);
       }
       else {
-        $prev_link.replaceWith('No previous note. This is going to be removed.');
+        $prev_link
+        .attr('class', 'inactive');
       }
       
       var $next_link = $notes_nav.filter('.next');
       if (nav.next) {
         $next_link
-        .attr('href', nav.next.url + nav.append_hash)
-        .text("Next post (" + nav.next.title + ")");
+        .attr('href', nav.next.url + nav.append_hash);
       }
       else {
-        $next_link.replaceWith('No next note. This is going to be removed.');
-      }
-            
+        $next_link
+        .attr('class', 'inactive');
+      }      
     });
   }
 });

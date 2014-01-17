@@ -10,52 +10,35 @@ title : Flipside
   or a /dev/null if you prefer. :)
 {% endcomment %}
 
-<section>
+<section class="featured">
 	<h1 style="display: none">Featured</h1>
 	<div class="flexslider">
   	<ul class="slides">
-  	  
-  	 <li style="background-color: #314879;">
-  	   
-    	 	 <article class="row">
-    	 		 <div class="large-6 columns">
-    	 			 <hgroup>
-    	 				 <h2>Note</h2>
-    	 				 <h1>Lisbon Open data maker night III</h1>
-    	 			 </hgroup>
-    	 			 <p>Lorem ipsum...</p>
-    	 		 </div>
-    	 		 <div class="large-6 columns">
-             <div style="background-color: #880000; max-width: 160%; width: 160%;">
-    	 		     <img src="images/projects/macgyver-med.png" alt="Incendios" style="width: 70%;" />
-    	 		     <img src="images/projects/incendios-thumb.png" alt="Incendios" style="width: 30%; margin-top: -200px"/>
-    	 		   </div>
-    	 		 </div>
-    	 	 </article>
-  	 	
-  	 </li>
-  	 
-  	 <li style="background-color: #C45B3E;">
-  	   
-    	 	 <article class="row">
-    	 		 <div class="small-6 columns">
-    	 			 <hgroup>
-    	 				 <h2>Note</h2>
-    	 				 <h1>Lisbon Open data maker night I</h1>
-    	 			 </hgroup>
-    	 			 <p>Lorem ipsum...</p>
-    	 		 </div>
-    	 		 <div class="small-6 columns">
-    	 		   <div style="background-color: #880000">
-    	 		     <img src="images/projects/macgyver-med.png" alt="Incendios" />
-    	 		   </div>
-    	 		 </div>
-    	 	 </article>
-  	 	
-  	 </li>
-  	 
-  	</ul>
-	</div>
+      {% for post in site.posts %}
+      {% if post.featured == true %}
+      {% if post.background_color %}
+      <li style="background-color: #{{ post.background_color }}; overflow: hidden;">
+      {% else %}
+      <li style="overflow: hidden;">
+      {% endif %}
+        <article class="row">
+          <div class="intro">
+            <h2 class="section-title">{{ post.category | capitalize }}</h2>
+            <h1 class="title">{{ post.title }}</h1>
+            <p class="summary">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          </div>
+          <div class="media">
+            <div style="max-width: 160%; width: 160%;">
+              <img src="images/projects/macgyver-med.png" alt="Incendios" style="width: auto;" />
+              <img src="images/projects/incendios-thumb.png" alt="Incendios" style="width: 30%; margin-top: -200px"/>
+            </div>
+          </div>
+        </article>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
 <div class="main-content front">

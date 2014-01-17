@@ -1,29 +1,25 @@
 <nav class="primary">
 	<ul>
-	  
-		{% if page.active_menu == 'notes' %}
-		<li class="active">
-		{% else %}
-		<li>
-		{% endif %}
-			<a href="/notes/">notes</a>
-		</li>
-		
 		{% if page.active_menu == 'projects' %}
     <li class="active">
     {% else %}
     <li>
     {% endif %}
-			<a href="/projects/">projects</a>
+			<a href="/projects/">Projects</a>
 		</li>
-		
+		{% if page.active_menu == 'notes' %}
+		<li class="active">
+		{% else %}
+		<li>
+		{% endif %}
+			<a href="/notes/">Notes</a>
+		</li>
 		{% if page.active_menu == 'about' %}
     <li class="active">
     {% else %}
     <li>
     {% endif %}
-			<a href="/about/">about</a>
+			<a href="/about/">About</a>
 		</li>
-		
 	</ul>
 </nav>

@@ -2,10 +2,6 @@
    Styles - generic styles
    ========================================================================== */
 
-dl {
-  margin: 0;
-}
-
 /* Page styles */
 
 body {
@@ -62,6 +58,19 @@ main {
   .fs {
     color: #ffffff;
   }
+}
+
+/* Generic styles */
+
+dl {
+  margin: 0;
+}
+
+.user-thumb {
+  @include border-radius(25px);
+  float: left;
+  margin-right: 10px;
+  width: 50px;
 }
 
 .visually-hidden {

@@ -50,16 +50,28 @@
 	.actions {
 		@include grid-column(12);
 	}
-	.actions ul {
-		display: inline-block;
-		list-style: none;
-		margin: 0;
-		text-align: right;
-		li {
-			float: left;
-			&.social-share li {
-				float: none;
+	.actions {
+		ul {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			text-align: right;
+			li {
+				float: left;
+				&.social-share li {
+					float: none;
+				}
 			}
+		}
+		i {
+			background-color: rgba(0,0,0,0.3);
+		    @include border-radius(15px);
+		    display: inline-block;
+		    height: 30px;
+		    line-height: 30px;
+		    margin-right: 5px;
+		    text-align: center;
+		    width: 30px;
 		}
 	}
 	.social-share {

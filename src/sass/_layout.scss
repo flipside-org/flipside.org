@@ -10,21 +10,19 @@
   position: relative;
   z-index: 99;
   
-	#site-title,
-	nav.primary {
-		@include grid-column(12);
-	}
 	#site-title {
+		@include grid-column(10);
 		margin: 0;
+	}
+	nav#primary {
+		@include grid-column(2);
 	}
 	@media #{$medium-up} {
 		#site-title {
 			@include grid-column(4);
 		}
-		nav.primary {
+		nav#primary {
 			@include grid-column(8);
-			line-height: 60px;
-			text-align: right;
 		}
 	}
 }

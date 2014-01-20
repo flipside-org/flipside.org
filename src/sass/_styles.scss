@@ -67,7 +67,7 @@ dl {
 }
 
 .user-thumb {
-  @include border-radius(25px);
+  @include border-radius(200px);
   float: left;
   margin-right: 10px;
   width: 50px;

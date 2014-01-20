@@ -6,15 +6,58 @@
  * Contains the styling of the navigation items
  */
 
-nav.primary {
+nav#primary {
+	text-align: right;
 	a {
 		color: #fff;
+		display: block;
+		height: 60px;
+		line-height: 60px;
+	}
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;	
+		//text-align: right;
 	}
 }
 
-nav.primary ul,
-.filters ul {
-  	@include inline-list;
-	display: inline-block;
-	margin: 0;
+@media #{$small-only} {
+	nav#primary {
+		ul {
+			background-color: rgba(0,0,0,0.5);
+			margin: 0 10px;
+			padding: 0;
+			position: absolute;
+	    right: 0;
+	    text-align: left;
+			width: 120px;
+			a {
+				height: auto;
+				line-height: 2em;
+				padding: 0 5px;
+			}
+			a:hover,
+			li.active a {
+				background-color: rgba(0,0,0,0.8);
+			}
+		}
+	}
+}
+
+@media #{$medium-up} {
+	nav#primary {
+		a {
+		}
+		.toggle {
+			display: none;
+		}
+		ul.links {
+			display: inline-block !important;
+		}
+		li {
+			float: left;
+			margin-left: 30px;
+		}
+	}
 }

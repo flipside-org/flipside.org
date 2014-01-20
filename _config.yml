@@ -1,7 +1,22 @@
 safe:       	false
 permalink:  	/notes/:title/
 pygments:   	true
-domain:			http://flipside.org
-name:			Flipside
+domain:				http://flipside.org
+name:					Flipside
 description:	Flipside builds web-based tools for civil society organisations.
 exclude:    	['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md', 'bower.json']
+
+# Image presets
+# For more info: https://github.com/robwierzbowski/jekyll-image-tag
+image:
+  source: src/original_images/
+  output: images
+  presets:
+    list:
+      height: 180
+      width: 320
+    team_thumb:
+      attr:
+        class: user-thumb
+      height: 50
+      width: 50

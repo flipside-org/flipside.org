@@ -17,7 +17,7 @@
 
     <header>
       <a href="{{ url }}">
-        <img class="thumbnail" src="/images/notes/{{ include.note.image }}" />
+        {% image list notes/{{ include.note.image }} %}
         <h3>
           {{ include.note.title }}
         </h3>

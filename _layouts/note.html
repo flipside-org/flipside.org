@@ -40,7 +40,7 @@ contact: true
       <dl>
         <dt>Author:</dt>
         <dd>
-          <img src="/images/{{ site.data.team[page.user].photo }}" class="user-thumb" />
+          {% image team_thumb {{ site.data.team[page.user].photo }} %}
           {{ site.data.team[page.user].name }}<br/>
           <a href="http://twitter.com/{{ site.data.team[page.user].twitter }}"><i class="icon-twitter"></i>@{{ site.data.team[page.user].twitter }}</a>
         </dd>

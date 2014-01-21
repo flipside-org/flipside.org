@@ -36,7 +36,7 @@ $base-font-size: 100%;
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
+$body-font-color: #222;
 
 $body-font-family: 'Lato', sans-serif;
 // $body-font-weight: normal;
@@ -1001,3 +1001,5 @@ $dark-grey: #262626;
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 
 $header-font-family: $body-font-family;
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: $body-font-color;

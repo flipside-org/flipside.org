@@ -40,9 +40,11 @@ contact: true
       <dl>
         <dt>Author:</dt>
         <dd>
-          <img src="/images/{{ site.data.team[page.user].photo }}" class="user-thumb" />
-          {{ site.data.team[page.user].name }}<br/>
-          <a href="http://twitter.com/{{ site.data.team[page.user].twitter }}"><i class="icon-twitter"></i>@{{ site.data.team[page.user].twitter }}</a>
+          <a href="/about#team">
+            <img src="/images/{{ site.data.team[page.user].photo }}" class="user-thumb" />
+            {{ site.data.team[page.user].name }}<br/>
+            {{ site.data.team[page.user].function }}
+          </a>
         </dd>
         {% if page.date %}
           <dt>Date:</dt>

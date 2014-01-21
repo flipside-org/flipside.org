@@ -41,7 +41,7 @@ contact: true
         <dt>Author:</dt>
         <dd>
           <a href="/about#team">
-            <img src="/images/{{ site.data.team[page.user].photo }}" class="user-thumb" />
+            {% image team_thumb {{ site.data.team[page.user].photo }} %}
             {{ site.data.team[page.user].name }}<br/>
             {{ site.data.team[page.user].function }}
           </a>

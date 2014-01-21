@@ -6,6 +6,8 @@ To set up the development environment for this website, you'll need to install t
 - Grunt ( $ npm install -g grunt-cli )
 - Bower ($ npm install -g bower)
 - jekyll ( $ gem install jekyll )
+- imagemagick ( $ aptitude install imagemagick )
+- mini_magick ( $ gem install mini_magick )
 
 
 After these basic requirements are met, run the following commands in the website's folder:

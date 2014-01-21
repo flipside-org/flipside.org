@@ -13,8 +13,8 @@ image:
   output: images
   presets:
     list:
-      height: 180
-      width: 320
+      height: 240
+      width: 260
     team_thumb:
       attr:
         class: user-thumb

@@ -1,63 +1,107 @@
 /* ==========================================================================
-   Navigation
+   Navs + dropdown
    ========================================================================== */
 
-/**
- * Contains the styling of the navigation items
- */
+/* Generic dropdown styling */
+
+.dropdown {
+  text-align: left;
+	a {
+		color: #fff;
+		display: block;
+	}
+	ul.links {
+		background-color: rgba(0,0,0,0.5);	
+		@include border-radius(5px);
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+  	text-align: left;
+    z-index: 9999;
+	}
+}
+
+/* Primary nav styling */
 
 nav#primary {
 	text-align: right;
 	a {
-		color: #fff;
-		display: block;
 		height: 60px;
 		line-height: 60px;
 	}
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;	
-		//text-align: right;
-	}
-}
-
-@media #{$small-only} {
-	nav#primary {
-		ul {
-			background-color: rgba(0,0,0,0.5);
+	@media #{$small-only} {
+		.links {
 			margin: 0 10px;
-			padding: 0;
-			position: absolute;
-	    right: 0;
-	    text-align: left;
-			width: 120px;
+    	right: 0;
 			a {
 				height: auto;
 				line-height: 2em;
 				padding: 0 5px;
 			}
-			a:hover,
-			li.active a {
-				background-color: rgba(0,0,0,0.8);
-			}
 		}
 	}
-}
-
-@media #{$medium-up} {
-	nav#primary {
-		a {
-		}
+	@media #{$medium-up} {
 		.toggle {
 			display: none;
 		}
 		ul.links {
+			background-color: transparent;
 			display: inline-block !important;
+			position: relative;
 		}
 		li {
 			float: left;
 			margin-left: 30px;
+		}
+	}
+}
+
+/* Filter + Social share  styling */
+
+li#social-share,
+li#filters {
+	ul.links {
+		margin-top: 15px;
+		padding: 15px;
+		width: 150px;
+	}
+	/* implementation of top arrow */
+	ul.links:before {
+		content: ' ';
+		height: 0;
+		position: absolute;
+		width: 0;
+		border: 10px solid transparent;
+		border-bottom-color: rgba(0,0,0,0.5); 
+		top: -20px;
+		left: 65px; /* (width ul.links / 2) + (width border / 2) */
+		z-index: 2;
+	}
+}
+
+li#filters {
+	a.toggle {
+		padding: 0 15px;
+		width: 150px;
+	}
+}
+
+li#social-share {
+	position: relative;
+	ul {
+		left: -60px; /* Center the dropdown: -(width a.toggle / 2) - (width i / 2) */
+		li {
+			margin-bottom: 5px;
+		}
+		li:last-child {
+			margin-bottom: 0;
+		}
+		i {
+			background-color: rgba(0,0,0,0.5);
+			@include border-radius(15px);
+			margin-right: 5px;
 		}
 	}
 }

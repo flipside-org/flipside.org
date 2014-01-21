@@ -32,6 +32,11 @@ body {
 
 main {
   background-color: #fff;
+  .content {
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .contact {

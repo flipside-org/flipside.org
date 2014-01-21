@@ -1,14 +1,16 @@
-<li class="social-share">
-  <i class="icon-export"></i><span class="visually-hidden">Social share</span>
-  <ul class="level-one">
+<li id="social-share" class="dropdown">
+  <a class="toggle">
+    <i class="icon-export"></i><span class="visually-hidden">Social share</span>
+  </a>
+  <ul class="links">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain }}{{ page.url }}" target="_blank">Facebook</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain }}{{ page.url }}" target="_blank"><i class="icon-export"></i>Facebook</a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/share?url={{ site.domain }}{{ page.url }}" target="_blank">Twitter</a>
+      <a href="https://twitter.com/share?url={{ site.domain }}{{ page.url }}" target="_blank"><i class="icon-twitter"></i>Twitter</a>
     </li>
     <li class="google-plus">
-      <a href="https://plus.google.com/share?url={{ site.domain }}{{ page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;">Google+</a>
+      <a href="https://plus.google.com/share?url={{ site.domain }}{{ page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;"><i class="icon-twitter"></i>Google+</a>
     </li>
   </ul>
 </li>

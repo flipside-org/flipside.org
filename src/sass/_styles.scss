@@ -33,17 +33,25 @@ body {
 .banner {
   .actions {
     ul {
-      float: right;
       list-style: none;
       margin: 0;
+      text-align: center;
+      @media #{$medium-up} {
+        float: right;
+        text-align: left;
+      }
     }
     &>ul>li {
       background-color: rgba($primary-color-dark,0.6);
       @include border-radius(1.375rem);
-      float: left;
+      display: inline-block;
+      float: none;
       margin-right: 0.25rem;
       &:last-child {
         margin-right: 0;
+      }
+      @media #{$medium-up} {
+        float: left;
       }
     }
     i {
@@ -63,6 +71,7 @@ body {
     }
   }
 }
+
 
 main {
   background-color: #fff;
@@ -118,6 +127,12 @@ main {
 }
 
 /* Generic styles */
+
+a,
+a:active,
+a:focus {
+  outline: none;
+}
 
 dl {
   margin: 0;

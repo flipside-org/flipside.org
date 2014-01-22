@@ -8,11 +8,7 @@
     
     {% assign filter_list = '' %}
     {% for filter in include.note.filters %}
-      {% capture filter_list %}{{filter_list}}{{ filter | capitalize }}{% endcapture %}
-      
-      {% unless forloop.last %}
-        {% capture filter_list %}{{filter_list}}, {% endcapture %}
-      {% endunless %}
+      {% capture filter_list %}{{filter_list}}<span class="category">{{ filter | capitalize }}</span>{% endcapture %}
     {% endfor %}
 
     <header>
@@ -23,7 +19,7 @@
         </h3>
       </a>
     </header>
-    <p class="metadata">{{ include.note.date | date: "%d %b. %Y" }}<span class="category">{{ filter_list }}</span></p>
+    <p class="metadata">{{ include.note.date | date: "%d %b. %Y" }}{{ filter_list }}</p>
     <p class="intro">
       {{ include.note.excerpt | strip_html | truncatewords: 40 }}
     </p>

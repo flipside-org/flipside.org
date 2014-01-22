@@ -2,31 +2,10 @@
    Navs + dropdown
    ========================================================================== */
 
-/* Generic dropdown styling */
-
-.dropdown {
-  text-align: left;
-	a {
-		color: #fff;
-		display: block;
-	}
-	ul.links {
-		background-color: rgba(0,0,0,0.5);	
-		@include border-radius(5px);
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-  	text-align: left;
-    z-index: 9999;
-	}
-}
-
 /* Primary nav styling */
 
 nav#primary {
-	text-align: right;
+	@extend .dropdown;
 	a {
 		height: 60px;
 		line-height: 60px;
@@ -48,12 +27,13 @@ nav#primary {
 		}
 		ul.links {
 			background-color: transparent;
-			display: inline-block !important;
+			display: block !important;	
+			float: right;
 			position: relative;
 		}
 		li {
 			float: left;
-			margin-left: 30px;
+			margin-left: 2rem;
 		}
 	}
 }
@@ -62,27 +42,18 @@ nav#primary {
 
 li#social-share,
 li#filters {
+	@extend .dropdown;
+	@extend .dropdown-arrow;
 	ul.links {
-		margin-top: 15px;
-		padding: 15px;
-		width: 150px;
-	}
-	/* implementation of top arrow */
-	ul.links:before {
-		content: ' ';
-		height: 0;
-		position: absolute;
-		width: 0;
-		border: 10px solid transparent;
-		border-bottom-color: rgba(0,0,0,0.5); 
-		top: -20px;
-		left: 65px; /* (width ul.links / 2) + (width border / 2) */
-		z-index: 2;
+		margin-top: 1rem;
+		padding: 1rem;
 	}
 }
 
 li#filters {
 	a.toggle {
+		font-size: 1.25rem;
+		line-height: 2.75rem;
 		padding: 0 15px;
 		width: 150px;
 	}
@@ -91,16 +62,6 @@ li#filters {
 li#social-share {
 	position: relative;
 	ul {
-		left: -60px; /* Center the dropdown: -(width a.toggle / 2) - (width i / 2) */
-		li {
-			margin-bottom: 5px;
-		}
-		li:last-child {
-			margin-bottom: 0;
-		}
-		i {
-			@extend .link-button;
-			margin-right: 5px;
-		}
+		left: -53px; /* Center the dropdown: -(width a.toggle / 2) - (width i / 2) */
 	}
 }

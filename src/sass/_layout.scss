@@ -42,32 +42,26 @@
 
 .banner {
 	padding-top: 400px;
+	padding-bottom: 1.5rem;
 	margin-top: -400px;
-	
+
+	.row {
+		padding-top: 1.5rem;
+	}
+	.title {
+		margin: 0;
+	}
+	.section-title {
+		position: absolute;
+		top: -1.5rem;
+	}
 	.heading,
 	.actions {
 		@include grid-column(12);
 	}
 	.actions {
-		ul {
-			display: inline-block;
-			list-style: none;
-			margin: 0;
-			text-align: right;
-		}
-		&>ul>li {
-			background-color: rgba(0,0,0,0.3);
-	    @include border-radius(15px);
-			float: left;
-	    margin-right: 5px;
-		}
-		i {
-	    display: inline-block;
-	    height: 30px;
-	    line-height: 30px;
-	    text-align: center;
-	    width: 30px;
-		}
+		padding-bottom: 0.25rem;
+		padding-top: 0.25rem;
 	}
 	@media #{$medium-up} {
 		.heading,
@@ -76,7 +70,6 @@
 		}
 		.actions {
 			@include grid-column(3);
-    		text-align: right;
 		}
 	}
 }

@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Extends - re-usabe CSS
+   ========================================================================== */
+
+.link-button {
+  background-color: rgba($primary-color-dark,0.6);
+  @include border-radius(15px);
+}
+
+/* Generic dropdown styling */
+.dropdown {
+	a {
+		color: #fff;
+		display: block;
+	}
+	ul.links {
+		background-color: rgba(0,0,0,0.5);	
+		@include border-radius(5px);
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+  	text-align: left;
+    z-index: 9999;
+		li {
+			margin-bottom: 0.25rem;
+		}
+		li:last-child {
+			margin-bottom: 0;
+		}
+		i {
+    	display: inline;
+			@extend .link-button;
+			margin-right: 0.25rem;
+    }
+	}
+}
+
+/* Dropdown with top-arrow */
+.dropdown-arrow {
+	ul {
+		margin-top: 1rem;
+		padding: 1rem;
+		width: 150px;
+	}
+	/* implementation of top arrow */
+	ul:before {
+		content: ' ';
+		height: 0;
+		position: absolute;
+		width: 0;
+		border: 10px solid transparent;
+		border-bottom-color: rgba(0,0,0,0.5); 
+		top: -20px;
+		left: 65px; /* (width ul.links / 2) + (width border / 2) */
+		z-index: 2;
+	}
+}

@@ -2,13 +2,6 @@
    Styles - generic styles
    ========================================================================== */
 
-/* Extends */
-
-.link-button {
-  background-color: rgba(0,0,0,0.5);
-  @include border-radius(15px);
-}
-
 /* Page styles */
 
 body {
@@ -19,11 +12,10 @@ body {
 .banner,
 .featured {
   background-color: $primary-color;
-  color: $light-grey;
+  color: #fff;
+  margin-bottom: 40px;
   a,
-  .title,
-  i,
-  .summary {
+  .title {
     color: #fff;
   }
   a.read-more {
@@ -38,8 +30,44 @@ body {
   }
 }
 
+.banner {
+  .actions {
+    ul {
+      float: right;
+      list-style: none;
+      margin: 0;
+    }
+    &>ul>li {
+      background-color: rgba($primary-color-dark,0.6);
+      @include border-radius(1.375rem);
+      float: left;
+      margin-right: 0.25rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    i {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 2.75rem;
+      text-align: center;
+      width: 2.75rem;
+    }
+    ul.links i {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+    a.active-cat i {
+      float: right;
+      text-align: left;
+    }
+  }
+}
+
 main {
   background-color: #fff;
+  padding-bottom: 40px;
+  .front,
   .content {
     a {
       text-decoration: underline;
@@ -52,6 +80,7 @@ main {
       border-radius: 10px;
       display: block;
       float: right;
+      margin-left: 5px;
       padding: 0 10px;
     }
   }
@@ -66,6 +95,9 @@ main {
   li,
   a {
     color: #fff;
+  }
+  i {
+    @extend .link-button;
   }
 }
 

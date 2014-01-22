@@ -50,8 +50,9 @@
 @import "flexsliders_overrides";
 
 // Custom styles:
+@import "extends";
 @import "code";
 @import "layout";
-@import "nav";
 @import "styles";
+@import "nav"; // After styles, otherwise issues with menu
 @import "type";

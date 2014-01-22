@@ -1,5 +1,5 @@
-<li id="filters" class="dropdown">
-	<a href="#" class="toggle">
+<li id="filters">
+	<a href="#" class="toggle active-cat">
 		{% if include.active_filter %}
 			{% for filter in site.categories.filter %}
 				{% if filter.filter_name == include.active_filter %}
@@ -9,6 +9,7 @@
 		{% else %}
   		All
 		{% endif %}
+		<i class="icon-twitter"></i>
 	</a>
 	<ul class="links">
 	{% if include.active_filter %}

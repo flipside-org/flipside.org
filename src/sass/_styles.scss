@@ -2,16 +2,23 @@
    Styles - generic styles
    ========================================================================== */
 
+/* Extends */
+
+.link-button {
+  background-color: rgba(0,0,0,0.5);
+  @include border-radius(15px);
+}
+
 /* Page styles */
 
 body {
-  background-color: $dark-grey;
+  background-color: $primary-color;
   line-height: $base-line-height;
 }
 
 .banner,
 .featured {
-  background-color: $primary-blue;
+  background-color: $primary-color;
   color: $light-grey;
   a,
   .title,
@@ -19,8 +26,9 @@ body {
   .summary {
     color: #fff;
   }
-  .title,
-  .section-title {
+  a.read-more {
+    @extend .link-button;
+    padding: 5px 15px;
   }
   .section-title {
     color: $light-grey;
@@ -40,26 +48,28 @@ main {
 }
 
 .contact {
-  background-color: $mid-grey;
+  background-color: $secondary-color;
   color: $light-grey;
+  padding: 30px 0;
 
   h3,
   li,
   a {
     color: #fff;
   }
-  li {
-    a,
-    i {
-      display: inline;
-    }
-  }
 }
 
 #site-ftr,
 #site-ftr a {
   color: $light-grey;
+}
 
+#site-ftr {
+  padding-top: 20px;
+  a,
+  .fs {
+    font-weight: bold;
+  }
   .fs {
     color: #ffffff;
   }

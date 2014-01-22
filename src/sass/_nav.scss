@@ -99,8 +99,7 @@ li#social-share {
 			margin-bottom: 0;
 		}
 		i {
-			background-color: rgba(0,0,0,0.5);
-			@include border-radius(15px);
+			@extend .link-button;
 			margin-right: 5px;
 		}
 	}

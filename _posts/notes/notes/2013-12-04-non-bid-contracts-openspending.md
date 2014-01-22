@@ -5,7 +5,7 @@ filters: guide
 
 title: Processing data for Open Spending
 category: note
-image: open-spending-log.png
+image: openspending.png
 tags: open-data spending
 
 user: danielfdsilva

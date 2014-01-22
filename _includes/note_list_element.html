@@ -23,9 +23,10 @@
         </h3>
       </a>
     </header>
-    <p class="metadata">{{ filter_list }} - {{ include.note.date | date: "%B %d, %Y" }}</p>
+    <p class="metadata">{{ include.note.date | date: "%d %b. %Y" }}<span class="category">{{ filter_list }}</span></p>
     <p class="intro">
       {{ include.note.excerpt | strip_html | truncatewords: 40 }}
     </p>
+    <p><a href="{{ url }}">Read more<i class="icon-twitter"></i></a></p>
   </article>
 </li>

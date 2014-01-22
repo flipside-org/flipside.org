@@ -45,6 +45,16 @@ main {
       text-decoration: underline;
     }
   }
+  .grid-list article {
+    border-bottom: 2px $light-grey solid;
+    .category {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      display: block;
+      float: right;
+      padding: 0 10px;
+    }
+  }
 }
 
 .contact {

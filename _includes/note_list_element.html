@@ -14,9 +14,9 @@
     <header>
       <a href="{{ url }}">
         {% image list notes/{{ include.note.image }} %}
-        <h3>
+        <h1>
           {{ include.note.title }}
-        </h3>
+        </h1>
       </a>
     </header>
     <p class="metadata">{{ include.note.date | date: "%d %b. %Y" }}{{ filter_list }}</p>

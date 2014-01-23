@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Generic styles */
-
+  
 a,
 a:active,
 a:focus {
@@ -114,6 +114,10 @@ main {
   }
   .grid-list article {
     border-bottom: 2px $light-grey solid;
+    h1 {
+      @extend .h5;
+      background-color: #fff;
+    }
     .category {
       background-color: rgba(0, 0, 0, 0.1);
       border-radius: 10px;

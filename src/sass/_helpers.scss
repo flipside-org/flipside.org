@@ -1,6 +1,39 @@
 /* ==========================================================================
-   Extends - re-usabe CSS
+   Helpers - extends + custom vars
    ========================================================================== */
+
+/* Custom variables */
+
+$header-font-family: $body-font-family;
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: $body-font-color;
+
+/* Extends - re-usabe CSS */
+
+.h1 {
+	font-size: rem-calc(44);
+	line-height: 1.182;
+}
+.h2 {
+	font-size: rem-calc(36);
+	line-height: 1.222;
+}
+.h3 {
+	font-size: rem-calc(32);
+	line-height: 1.25;
+}
+.h4 {
+	font-size: rem-calc(28);
+	line-height: 1.286;
+}
+.h5 {
+	font-size: rem-calc(24);
+	line-height: 1.333;
+}
+.h6 {
+	font-size: rem-calc(20);
+	line-height: 1.4;
+}
 
 .link-button {
   background-color: rgba($primary-color-dark,0.6);
@@ -23,12 +56,6 @@
 		position: absolute;
   	text-align: left;
     z-index: 9999;
-		li {
-			margin-bottom: 0.25rem;
-		}
-		li:last-child {
-			margin-bottom: 0;
-		}
 		i {
     	display: inline;
 			@extend .link-button;

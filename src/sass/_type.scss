@@ -2,9 +2,22 @@
    Type - basic styling of the typography
    ========================================================================== */
 
-h1 {
-  line-height: 1.182;
-}
+$header-font-family: $body-font-family;
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: $body-font-color;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(36);
+$h3-font-size: rem-calc(32);
+$h4-font-size: rem-calc(28);
+$h5-font-size: rem-calc(24);
+$h6-font-size: rem-calc(20);
+
+h1 { font-size: $h1-font-size; line-height: 1.182; }
+h2 { font-size: $h2-font-size; line-height: 1.222; }
+h3 { font-size: $h3-font-size; line-height: 1.25; }
+h4 { font-size: $h4-font-size; line-height: 1.286; }
+h5 { font-size: $h5-font-size; line-height: 1.333; }
+h6 { font-size: $h6-font-size; line-height: 1.4; }
 
 /* Icon font generated with Fontello */
 

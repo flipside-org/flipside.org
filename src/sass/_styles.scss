@@ -40,10 +40,13 @@ body {
   .title {
     color: #fff;
   }
-  a.read-more {
-    @extend .link-button;
-    padding: 0.25rem 1rem;
-  }
+  .read-more {
+  	margin-bottom: 4rem;
+  	a {
+    	@extend .link-button;
+    	padding: 0.25rem 1rem;
+  	}
+	}
 	.title {
 		margin: 0;
 	}

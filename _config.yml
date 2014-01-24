@@ -12,6 +12,9 @@ image:
   source: src/original_images/
   output: images
   presets:
+    article:
+      height: 400
+      width: 600
     list:
       height: 320
       width: 480

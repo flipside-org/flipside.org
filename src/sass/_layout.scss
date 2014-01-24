@@ -81,9 +81,32 @@ main {
 	ul.grid-list {
 		list-style: none;
 	}
+	.content {
+		.media-wrapper {
+			margin: 20px 0;
+			figure {
+				background-color: $light-grey;
+				padding: 5px;
+				text-align: center;
+			}
+		}
+	}
 	@media #{$medium-up} {
 		.content {
 			@include grid-column(8,$push:3);
+			.media-wrapper {
+				float: right;
+				margin-left: 3%;
+				margin-top: 0;
+				overflow: visible;
+				width: 47%;
+				figure {
+					width: 160%;
+				}
+				img {
+					width: auto;
+				}
+			}
 		}
 		aside {
 			@include grid-column(3,$pull:8);
@@ -106,13 +129,6 @@ main {
 					padding-right: 10px;
 					position: absolute;
 				}
-			}
-		}
-		&.project .image {
-			float: right;
-			width: 50%;
-			img {
-				max-width: 130%;
 			}
 		}
 	}

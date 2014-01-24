@@ -19,9 +19,6 @@ For a recent Drupal project, we used [Field Collection](https://drupal.org/proje
 
 The setup seems pretty straight-forward, but when we started searching we noticed that text fields in the field collection were not being indexed while everything else was. The fix for this issue, though simple, was not that obvious.
 
-<div class="image-with-caption eleven columns alpha omega">
-  <img src="/images/notes/search-index-view-mode.png" class="nine columns offset-by-one inset-by-one border alpha omega" alt="Search index view mode" />
-  <span>Search Index view mode</span>
-</div>
+{% include content_img.html path="notes/search-index-view-mode.png" caption="Search index view mode" %}
 
 The Search Index display mode, which you can enable per content type, allows you to define which fields should be rendered as part of the node's content. Once these fields are defined you just need to re-index the content to be able to search for values in the field collection.

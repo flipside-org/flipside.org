@@ -10,9 +10,9 @@
       <li style="overflow: hidden;">
       {% endif %}
         <article class="row">
-          <div class="intro">
-            <h2 class="section-title">{{ post.category | capitalize }}</h2>
+          <div class="prose">
             <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title }}</a></h1>
+            <h2 class="section-title">{{ post.category | capitalize }}</h2>
             <p class="summary">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
             <p><a href="{{ site.domain }}{{ post.url }}" class="read-more">Read more...</a></p>
           </div>

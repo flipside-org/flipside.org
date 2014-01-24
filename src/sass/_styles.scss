@@ -1,67 +1,91 @@
 /* ==========================================================================
-   Styles - generic styles
+   Styles - contains the global styles of the site
    ========================================================================== */
-
-/* Generic styles */
-  
-a,
-a:active,
-a:focus {
-  outline: none;
-}
-
-dl {
-  margin: 0;
-}
-
-.user-thumb {
-  @include border-radius(200px);
-  float: left;
-  margin-right: 10px;
-  width: 50px;
-}
-
-.visually-hidden {
-  border: 0 none;
-  clip: rect(0px, 0px, 0px, 0px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/* Page styles */
 
 body {
   background-color: $primary-color;
   line-height: $base-line-height;
 }
 
+/* Site header */
+
+#site-hdr {
+  position: relative;
+  z-index: 99;
+  
+	#site-title {
+		@include grid-column(10);
+		margin: 0;
+	}
+	nav#primary {
+		@include grid-column(2);
+	}
+	@media #{$medium-up} {
+		#site-title {
+			@include grid-column(4);
+		}
+		nav#primary {
+			@include grid-column(8);
+		}
+	}
+}
+
+/* Banner and feature section */
+
 .banner,
 .featured {
   background-color: $primary-color;
   color: #fff;
-  margin-bottom: 40px;
   a,
   .title {
     color: #fff;
   }
   a.read-more {
     @extend .link-button;
-    padding: 5px 15px;
+    padding: 0.25rem 1rem;
   }
+	.title {
+		margin: 0;
+	}
   .section-title {
     color: $light-grey;
     font-size: 1rem;
     font-weight: normal;
     margin: 0;
+		position: absolute;
+		top: -1rem;
   }
+	.row {
+		padding-top: 2rem;
+	}
+}
+
+.featured {
+	.prose,
+	.media {
+		@include grid-column(12);
+	}
+	@media #{$medium-up} {
+		.prose,
+		.media {
+			@include grid-column(6);
+		}
+	}
 }
 
 .banner {
-  .actions {
+	padding-top: 400px;
+	padding-bottom: 2rem;
+	margin-top: -400px;
+	margin-bottom: 2rem;
+
+	.heading,
+	.actions {
+		@include grid-column(12);
+	}
+	.actions {
+		margin-top: 2rem;
+
     ul {
       list-style: none;
       margin: 0;
@@ -99,41 +123,164 @@ body {
       float: right;
       text-align: left;
     }
+    a.inactive {
+    	color: $light-grey;
+    }
   }
+
+	@media #{$medium-up} {
+	margin-bottom: 4rem;
+		.heading,
+		.actions {
+			@include grid-column(9);
+		}
+		.actions {
+			@include grid-column(3);
+			margin-top: 0;
+			padding-bottom: 0.25rem;
+			padding-top: 0.25rem;
+		}
+	}
 }
 
+/* Main content area */
 
 main {
   background-color: #fff;
-  padding-bottom: 40px;
+	padding-bottom: 2rem;
+
+	.content,
+	aside {
+		@include grid-column(12);
+	}
   .front,
   .content {
     a {
       text-decoration: underline;
     }
   }
-  .grid-list article {
-    border-bottom: 2px $light-grey solid;
-    h1 {
-      @extend .h5;
-      background-color: #fff;
-    }
-    .category {
-      background-color: rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      display: block;
-      float: right;
-      margin-left: 5px;
-      padding: 0 10px;
-    }
-  }
+	.content {
+		.media-wrapper {
+			margin: 1.25rem 0;
+			figure {
+				background-color: $light-grey;
+				padding: 0.25rem;
+				text-align: center;
+			}
+		}
+	}
+	@media #{$medium-up} {
+		padding-bottom: 4rem;
+		.content {
+			@include grid-column(8,$push:3);
+			.media-wrapper {
+				float: right;
+				margin-left: 3%;
+				margin-top: 0;
+				overflow: visible;
+				width: 47%;
+				figure {
+					width: 160%;
+				}
+				img {
+					width: auto;
+				}
+			}
+		}
+		aside {
+			@include grid-column(3,$pull:8);
+		}
+	}
+	
+	.front {
+		section {
+			text-align: center;
+			@include grid-column(12);
+		
+			ul {
+				@include grid-row();
+				list-style: none;
+				margin: 0;
+				
+				li {
+					@include grid-column(12);
+					float: left;
+				}
+			}
+		}
+		@media #{$medium-up} {
+			section ul li {
+				@include grid-column(3);
+			}
+		}
+	}
 }
+
+/* The note and project hubs */
+
+ul.hub {
+	list-style: none;
+
+	li {
+		@include grid-column(12);
+	}
+	article {
+	  border-bottom: 2px $light-grey solid;
+	  h1 {
+	    @extend .h5;
+	    background-color: #fff;
+	  }
+	  .category {
+	    background-color: rgba(0, 0, 0, 0.1);
+	    border-radius: 10px;
+	    display: block;
+	    float: right;
+	    margin-left: 5px;
+	    padding: 0 10px;
+	  }
+	}
+
+  @media #{$medium-up} {
+		li {
+			@include grid-column(4);
+
+			&:nth-child(3n+1) {
+				clear: left;
+			}
+			header {
+				a {
+					display: block;
+					position: relative;
+				}
+				h1 {
+					bottom: 0;
+					margin: 0;
+					max-width: 85%;
+					padding-right: 10px;
+					position: absolute;
+				}
+			}
+		}
+	}
+}
+
+/* Content section */
 
 .contact {
   background-color: $secondary-color;
   color: $light-grey;
-  padding: 30px 0;
-
+  .contact-us {
+  	margin-bottom: 2rem;
+  }
+	.follow-us,
+	.contact-us {
+		@include grid-column(12);
+		margin-top: 2rem;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+	}
   h3,
   li,
   a {
@@ -141,7 +288,25 @@ main {
   }
   i {
     @extend .link-button;
+    margin-right: 0.5rem;
   }
+	@media #{$medium-up} {
+		.follow-us,
+		.contact-us {
+			@include grid-column(6);
+			text-align: center;
+		}
+		ul {
+			display: inline-block;
+			li {
+				float: left;
+				margin-left: 0.5rem;
+			}
+			li:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 #site-ftr,
@@ -151,6 +316,14 @@ main {
 
 #site-ftr {
   padding-top: 20px;
+
+	.built-by,
+	.technology {
+		@include grid-column(6);
+	}
+	.technology {
+		text-align: right;
+	}
   a,
   .fs {
     font-weight: bold;
@@ -158,4 +331,18 @@ main {
   .fs {
     color: #ffffff;
   }
+}
+
+
+/* Generic styles */
+
+dl {
+  margin: 0;
+}
+
+.user-thumb {
+  @include border-radius(200px);
+  float: left;
+  margin-right: 10px;
+  width: 50px;
 }

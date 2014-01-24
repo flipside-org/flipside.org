@@ -1,7 +1,7 @@
 ---
 layout: note
 notes_active : true
-filter: guide
+filters: guide
 
 title: Apache Solr Field Collection and text fields
 category: note

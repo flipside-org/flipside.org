@@ -5,7 +5,7 @@ filters: project
 
 title: Text to Change's commitment to open data
 category: note
-image: ttclogo.png
+image: ttc-mobilephones.jpg
 tags: open-data
 
 user: olafveerman

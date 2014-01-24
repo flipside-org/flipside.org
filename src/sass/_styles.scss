@@ -223,6 +223,7 @@ ul.hub {
 
 	li {
 		@include grid-column(12);
+		margin-bottom: 2rem;
 	}
 	article {
 	  border-bottom: 2px $light-grey solid;
@@ -230,6 +231,22 @@ ul.hub {
 	    @extend .h5;
 	    background-color: #fff;
 	  }
+		header {
+			a {
+				display: block;
+				position: relative;
+			}
+			h1 {
+				bottom: 0;
+				margin: 0;
+				max-width: 85%;
+				padding-right: 10px;
+				position: absolute;
+			}
+		}
+		.metadata {
+			margin-top: 1.25rem;
+		}
 	  .category {
 	    background-color: rgba(0, 0, 0, 0.1);
 	    border-radius: 10px;
@@ -246,19 +263,6 @@ ul.hub {
 
 			&:nth-child(3n+1) {
 				clear: left;
-			}
-			header {
-				a {
-					display: block;
-					position: relative;
-				}
-				h1 {
-					bottom: 0;
-					margin: 0;
-					max-width: 85%;
-					padding-right: 10px;
-					position: absolute;
-				}
 			}
 		}
 	}

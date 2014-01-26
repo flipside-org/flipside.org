@@ -8,6 +8,7 @@ category: note
 image: jekyll.png
 tags: jekyll FA7
 featured: true
+related_post: jekyll
 
 user: danielfdsilva
 ---

@@ -7,6 +7,7 @@ title: Scripted Tilemill exports
 category: note
 image: scripted-export.png
 tags: tilemill bash mapbox
+related_post: maps
 
 user: olafveerman
 ---

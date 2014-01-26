@@ -7,6 +7,7 @@ title: Incendios 0.2 - more and improved data
 category: note
 image: incendios-pt.png
 tags: open-data incendios
+related_post: incendios
 
 user: olafveerman
 ---

@@ -8,6 +8,7 @@ title: Lisbon Open Data Maker Night - II
 category: note
 image: odmn1.jpg
 tags: open-data meetup
+related_post: open-data
 
 user: olafveerman
 ---

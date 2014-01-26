@@ -52,16 +52,20 @@ contact: true
       <div class="actions">
         <ul>
           {% include social-share.html %}
+          <li>
           {% if previous_project %}
-          <li>
             <a href="{{ previous_project.url }}"><i class="icon-left-open"></i><span class="visually-hidden">previous</span></a>
-          </li>
+          {% else %}
+            <a href="#" class="inactive"><i class="icon-left-open"></i><span class="visually-hidden">previous</span></a>
           {% endif %}
-          {% if next_project %}
+          </li>
           <li>
+          {% if next_project %}
             <a href="{{ next_project.url }}"><i class="icon-right-open"></i><span class="visually-hidden">next</span></a>
-          </li>
+          {% else %}
+            <a href="#" class="inactive"><i class="icon-right-open"></i><span class="visually-hidden">next</span></a>
           {% endif %}
+          </li>
         </ul>
       </div>
     </div>
@@ -70,8 +74,10 @@ contact: true
   <div class="row">
     <div class="content">  
       {% if page.image %}
-      <div class="image">  
-        <img src="/images/projects/{{ page.image }}" />
+      <div class="media-wrapper">
+        <figure>
+          {% image article projects/{{ page.image }} %}
+        </figure>
       </div>
       {% endif %}
       {{ content }}

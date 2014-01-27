@@ -19,9 +19,6 @@ body {
 	}
 	nav#primary {
 		@include grid-column(2);
-		a.toggle {
-			text-align: right;
-		}
 	}
 	@media #{$medium-up} {
 		#site-title {

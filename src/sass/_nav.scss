@@ -13,9 +13,13 @@ nav#primary {
 	.active a {
 		color: $light-grey;
 	}
+	a.toggle {
+		font-size: 1.25rem;
+		text-align: right;
+	}
 	@media #{$small-only} {
-		.links {
-			margin: 0 10px;
+		ul.links {
+			margin-right: ($column-gutter / 2);
     	right: 0;
 			a {
 				height: auto;

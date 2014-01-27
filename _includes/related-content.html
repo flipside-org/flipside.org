@@ -1,12 +1,31 @@
+{% assign related_notes_code = '' %}
+{% assign related_projects_code = '' %}
+
+{% for post in site.posts %}
+  {% if post.related_post == page.related_post %}
+    {% unless post.url == page.url %}
+    
+      {% if post.category == 'note' %}      
+        {% capture related_notes_code %}{{related_notes_code}}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endcapture %}
+      {% elsif post.category == 'project' %}
+        {% capture related_projects_code %}{{related_projects_code}}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endcapture %}
+      {% endif %}
+    
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+
+{% unless related_notes == '' AND related_projects == '' %}
       <section class="related-content">
         <h1>Related content</h1>
         <ul>
-        {% for post in site.posts %}
-          {% if post.related_post == page.related_post %}
-            {% unless post.url == page.url %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
+          {{ related_notes_code }}
+          {{related_projects_code}}
         </ul>
       </section>
+{% endunless %}

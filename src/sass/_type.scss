@@ -9,60 +9,135 @@ h4 { @extend .h4; }
 h5 { @extend .h5; }
 h6 { @extend .h6; }
 
-/* Icon font generated with Fontello */
+/* Custom icon font generated with Icomoon */
 
 @font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello/fontello.eot?67961295');
-  src: url('../font/fontello/fontello.eot?67961295#iefix') format('embedded-opentype'),
-       url('../font/fontello/fontello.woff?67961295') format('woff'),
-       url('../font/fontello/fontello.ttf?67961295') format('truetype'),
-       url('../font/fontello/fontello.svg?67961295#fontello') format('svg');
+  font-family: 'flipside-icons';
+  src:url('/font/flipside-icons/flipside-icons.eot');
+  src:url('/font/flipside-icons/flipside-icons.eot?#iefix') format('embedded-opentype'),
+    url('/font/flipside-icons/flipside-icons.woff') format('woff'),
+    url('/font/flipside-icons/flipside-icons.ttf') format('truetype'),
+    url('/font/flipside-icons/flipside-icons.svg#flipside-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?67961295#fontello') format('svg');
-  }
-}
-*/
-
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'flipside-icons';
   speak: none;
- 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
+  font-style: normal;
+  font-weight: normal;
   font-variant: normal;
   text-transform: none;
-     
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
- 
-.icon-mail:before { content: '\e804'; } /* '' */
-.icon-export:before { content: '\e801'; } /* '' */
-.icon-rss:before { content: '\e808'; } /* '' */
-.icon-phone:before { content: '\e807'; } /* '' */
-.icon-left-open:before { content: '\e805'; } /* '' */
-.icon-right-open:before { content: '\e806'; } /* '' */
-.icon-github:before { content: '\e800'; } /* '' */
-.icon-flickr:before { content: '\e802'; } /* '' */
-.icon-twitter:before { content: '\e803'; } /* '' */
+
+.icon-clock:before {
+  content: "\e600";
+}
+.icon-s-triangle-right:before {
+  content: "\e601";
+}
+.icon-s-tick:before {
+  content: "\e602";
+}
+.icon-map-marker:before {
+  content: "\e603";
+}
+.icon-s-triangle-left:before {
+  content: "\e604";
+}
+.icon-arr-tail-left:before {
+  content: "\e605";
+}
+.icon-mobile:before {
+  content: "\e606";
+}
+.icon-s-arr-right:before {
+  content: "\e607";
+}
+.icon-arr-tail-right:before {
+  content: "\e608";
+}
+.icon-twitter:before {
+  content: "\e609";
+}
+.icon-s-arr-left:before {
+  content: "\e60a";
+}
+.icon-arr-tail-up:before {
+  content: "\e60b";
+}
+.icon-arr-tail-down:before {
+  content: "\e60c";
+}
+.icon-s-arr-up:before {
+  content: "\e60d";
+}
+.icon-flickr:before {
+  content: "\e60e";
+}
+.icon-google-plus:before {
+  content: "\e60f";
+}
+.icon-s-arr-down:before {
+  content: "\e610";
+}
+.icon-download:before {
+  content: "\e611";
+}
+.icon-feed:before {
+  content: "\e612";
+}
+.icon-arr-down:before {
+  content: "\e613";
+}
+.icon-github:before {
+  content: "\e614";
+}
+.icon-facebook:before {
+  content: "\e615";
+}
+.icon-arr-left:before {
+  content: "\e616";
+}
+.icon-share:before {
+  content: "\e617";
+}
+.icon-s-add:before {
+  content: "\e618";
+}
+.icon-arr-right:before {
+  content: "\e619";
+}
+.icon-menu:before {
+  content: "\e61a";
+}
+.icon-arr-up:before {
+  content: "\e61b";
+}
+.icon-email:before {
+  content: "\e61c";
+}
+.icon-s-cancel:before {
+  content: "\e61e";
+}
+.icon-add:before {
+  content: "\e61f";
+}
+.icon-s-triangle-down:before {
+  content: "\e620";
+}
+.icon-tick:before {
+  content: "\e621";
+}
+.icon-s-triangle-up:before {
+  content: "\e622";
+}
+.icon-cancel:before {
+  content: "\e623";
+}

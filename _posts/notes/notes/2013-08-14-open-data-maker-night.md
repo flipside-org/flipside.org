@@ -7,6 +7,9 @@ title: Lisbon Open Data Maker Night - 1
 category: note
 image: okfn.png
 tags: open-data meetup
+related_post:
+  - open-data
+  - incendios
 
 user: olafveerman
 ---

@@ -7,6 +7,7 @@ title: Data collection with Airwolf
 category: note
 image: aw-ccdashboard.png
 tags: airwolf drupal mongodb
+related_post: airwolf
 
 user: olafveerman
 ---

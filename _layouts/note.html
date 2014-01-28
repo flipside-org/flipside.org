@@ -51,6 +51,9 @@ contact: true
           <dd>{{ page.date | date: "%d %B %Y" }}</dd>
         {% endif %}
       </dl>
+      {% if page.related_post %}
+        {% include related-content.html %}
+      {% endif %}
     </aside>
   </div>
 

@@ -7,6 +7,7 @@ title: Map interaction and zoom levels
 category: note
 image: incendios-pt-administrative-areas.png
 tags: incendios.pt mapbox
+related_post: incendios
 
 user: danielfdsilva
 ---

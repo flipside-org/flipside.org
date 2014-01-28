@@ -30,11 +30,11 @@
 {% endfor %}
 
 
-{% unless related_notes == '' AND related_projects == '' %}
+{% unless related_notes_code == '' AND related_projects_code == '' %}
       <section class="related-content">
         <h1>Related content</h1>
         <ul>
-          {{ related_notes_code }}
+          {{related_notes_code}}
           {{related_projects_code}}
         </ul>
       </section>

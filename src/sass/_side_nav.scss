@@ -1,0 +1,21 @@
+body {
+  //overflow-x: hidden;
+}
+
+.next-post, .previous-post {
+  position: absolute;
+  min-width: 100%;
+}
+
+.next-post {
+  left: 100%;
+}
+
+.previous-post {
+  right: 100%;
+}
+
+#site-body > article:first-child {
+  position: relative;
+}
+

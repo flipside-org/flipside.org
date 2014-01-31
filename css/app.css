@@ -4034,8 +4034,8 @@ a:hover {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000361}}
-.link-button, .dropdown ul.links i, nav#primary ul.links i, li#social-share ul.links i,
-li#filters ul.links i, .banner .read-more a,
+.link-button, .dropdown ul.links i, .actions li#social-share ul.links i,
+.actions li#filters ul.links i, nav#primary ul.links i, .banner .read-more a,
 .featured .read-more a, .contact li:before {
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-border-radius: 15px;
@@ -4048,14 +4048,13 @@ li#filters ul.links i, .banner .read-more a,
 /* Generic dropdown styling */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000368}}
 .dropdown a, .actions li#social-share a,
-.actions li#filters a, nav#primary a, li#social-share a,
-li#filters a {
+.actions li#filters a, nav#primary a {
   color: #fff;
   display: block;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000372}}
-.dropdown ul.links, nav#primary ul.links, li#social-share ul.links,
-li#filters ul.links {
+.dropdown ul.links, .actions li#social-share ul.links,
+.actions li#filters ul.links, nav#primary ul.links {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -4071,8 +4070,8 @@ li#filters ul.links {
   z-index: 9999;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000382}}
-.dropdown ul.links i, nav#primary ul.links i, li#social-share ul.links i,
-li#filters ul.links i {
+.dropdown ul.links i, .actions li#social-share ul.links i,
+.actions li#filters ul.links i, nav#primary ul.links i {
   display: inline;
   margin-right: 0.25rem;
 }
@@ -4080,21 +4079,19 @@ li#filters ul.links i {
 /* Dropdown with top-arrow */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000391}}
 .dropdown-arrow, .actions li#social-share,
-.actions li#filters, li#social-share,
-li#filters {
+.actions li#filters {
   /* implementation of top arrow */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000392}}
 .dropdown-arrow ul, .actions li#social-share ul,
-.actions li#filters ul, li#social-share ul,
-li#filters ul {
+.actions li#filters ul {
   margin-top: 1rem;
   padding: 1rem;
   width: 150px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000398}}
-.dropdown-arrow ul:before, li#social-share ul:before,
-li#filters ul:before {
+.dropdown-arrow ul:before, .actions li#social-share ul:before,
+.actions li#filters ul:before {
   content: ' ';
   height: 0;
   position: absolute;
@@ -5063,43 +5060,6 @@ nav#primary a.toggle:before {
     float: left;
     margin-left: 2rem;
   }
-}
-
-/* Filter + Social share  styling */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000357}}
-li#social-share ul.links,
-li#filters ul.links {
-  margin-top: 1rem;
-  padding: 1rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000361}}
-li#social-share li,
-li#filters li {
-  margin-bottom: 0.25rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000364}}
-li#social-share li:last-child,
-li#filters li:last-child {
-  margin-bottom: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000370}}
-li#filters a.toggle {
-  font-size: 1.25rem;
-  line-height: 2.75rem;
-  padding: 0 15px;
-  text-align: left;
-  width: 150px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000379}}
-li#social-share {
-  position: relative;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_nav\.scss}line{font-family:\0000381}}
-li#social-share ul {
-  left: -53px;
-  /* Center the dropdown: -(width a.toggle / 2) - (width i / 2) */
 }
 
 /* ==========================================================================

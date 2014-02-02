@@ -70,7 +70,6 @@ $(document).ready(function() {
       _load_post('previous');      
       
       var $current_post = $('#site-body > article:first-child');
-      var $prev_post = $('article.prev-post');
       
       $next_link.click(function(e) {
         e.preventDefault();
@@ -81,73 +80,29 @@ $(document).ready(function() {
         }
         
         var $next_post = $('article.next-post');
-        var $current_banner = $current_post.find('.banner');
-        var $next_banner = $next_post.find('.banner');
+        animate_post_transition($current_post, $next_post, 'left', $self.attr('href'));
         
-        var current_banner_height = $current_banner.outerHeight();
-        var next_banner_height = $next_banner.outerHeight();
+      });
+      
+      $prev_link.click(function(e) {
+        e.preventDefault();
+        var $self = $(this);
         
-        if (current_banner_height < next_banner_height) {
-          
-          $current_banner.animate({
-            height: next_banner_height
-          }, 250, function(){
-            
-            $next_post.animate({
-              left : '0%'
-            }, 750, function(){
-              window.location = $self.attr('href');
-            });
-            
-            $current_post.animate({
-              left : '-100%'
-            }, 750);
-            
-          });
+        if ($self.hasClass('inactive')) {
+          return;
         }
-        else if (next_banner_height < current_banner_height) {
-          // The magic number is used to calculate the height of the post banner..
-          // It comes from the sum of the paddings applied to the banner.
-          // Only needed when setting the value directly, not when animating.
-          var magic_number = 432;
-          // Off stage. Doesn't need animation
-          $next_post.find('.banner').height(current_banner_height - magic_number);
-            
-          $next_post.animate({
-            left : '0%'
-          }, 750, function(){
-            
-            $next_banner.animate({
-              height: next_banner_height
-            }, 250, function(){
-              window.location = $self.attr('href');
-            });
-          });
-          
-          $current_post.animate({
-            left : '-100%'
-          }, 750);
-          
-        }
-        else {
-          $next_post.animate({
-            left : '0%'
-          }, 750, function(){
-            window.location = $self.attr('href');
-          });
-          
-          $current_post.animate({
-            left : '-100%'
-          }, 750);
-        }
+        
+        var $prev_post = $('article.previous-post');
+        animate_post_transition($current_post, $prev_post, 'right', $self.attr('href'));
+        
       });
       
     });
   }
   
   function _load_post(type) {
-    console.log($notes_nav);
     var post_url = $notes_nav.find('.' + type).attr('href');
+    if (post_url == '#') { return; }
     console.log('Ajaxing ' + type + ': ' + post_url);
     
     $.ajax({
@@ -166,6 +121,100 @@ $(document).ready(function() {
       // Add to body.
       $('#site-body').append($post_article);
     });
+  }
+  
+  function animate_post_transition($current_post, $sliding_post, direction, location) {
+    var options = {
+      banner_speed : 250,
+      sliding_speed : 750
+    };
+      var animation_properties = {};
+    
+      var $current_banner = $current_post.find('.banner');
+      var $sliding_banner = $sliding_post.find('.banner');
+    
+      var current_banner_height = $current_banner.outerHeight();
+      var sliding_banner_height = $sliding_banner.outerHeight();
+      
+      var animate_sliding_post_article_size = function(){
+        // If the sliding article is smaller then the current one
+        // We need to animate the size before changing page,
+        if ($sliding_post.height() < $current_post.height()) {
+          $current_post.css('position', 'absolute');
+          
+          var original_height = $sliding_post.outerHeight();
+          $('#site-body').height($current_post.outerHeight());
+          
+          $('#site-body').animate({
+            // 62 is the nav menu height
+            height : original_height + 62
+          }, options.banner_speed, function() {
+            window.location = location;
+          });
+        }
+        else {
+          window.location = location;
+        }
+      };
+      
+      var slide_post = function(direction, after_callback) {
+        // Properties can not be dynamically set on JSON objects.
+        animation_properties = {};
+        animation_properties[direction] = '0%';
+        $sliding_post.animate(animation_properties, options.sliding_speed, function(){
+          after_callback();
+        });
+        
+        // Properties can not be dynamically set on JSON objects.
+        animation_properties = {};
+        animation_properties[direction] = '-100%';
+        $current_post.animate(animation_properties, options.sliding_speed);
+      };
+      
+      var animation = function() {
+        if (current_banner_height < sliding_banner_height) {
+          // First animate the banner and then the post body.
+          $current_banner.animate({
+            height: sliding_banner_height
+          }, options.banner_speed, function(){
+            slide_post(direction, animate_sliding_post_article_size);
+          });
+        }
+        else if (sliding_banner_height < current_banner_height) {
+          // The magic number is used to calculate the height of the post banner..
+          // It comes from the sum of the paddings applied to the banner.
+          // Only needed when setting the value directly, not when animating.
+          var magic_number = 432;
+          // Off stage. Doesn't need animation
+          $sliding_banner.height(current_banner_height - magic_number);
+          
+          slide_post(direction, function() {
+            // Revert banner size to normal.
+            $sliding_banner.animate({
+              height: sliding_banner_height
+            }, options.banner_speed, function(){
+              animate_sliding_post_article_size();
+            });
+          });
+        }
+        else {
+          // Banner size are equal.
+          slide_post(direction, animate_sliding_post_article_size);
+        }
+     };
+     
+      // Animate article size.
+      if ($current_post.height() < $sliding_post.height()) {
+        $current_post.animate({
+          height : $sliding_post.outerHeight()
+        }, options.banner_speed, function() {
+          animation();
+        });
+      }
+      else {
+        animation();
+      }
+      
   }
 
 });

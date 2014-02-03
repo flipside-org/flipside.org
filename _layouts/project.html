@@ -54,16 +54,16 @@ contact: true
           {% include social-share.html %}
           <li>
           {% if previous_project %}
-            <a href="{{ previous_project.url }}"><i class="icon-arr-tail-left"></i><span class="visually-hidden">previous</span></a>
+            <a href="{{ previous_project.url }}" class="previous"><span class="visually-hidden">previous</span></a>
           {% else %}
-            <a href="#" class="inactive"><i class="icon-arr-tail-left"></i><span class="visually-hidden">previous</span></a>
+            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
           {% endif %}
           </li>
           <li>
           {% if next_project %}
-            <a href="{{ next_project.url }}"><i class="icon-arr-tail-right"></i><span class="visually-hidden">next</span></a>
+            <a href="{{ next_project.url }}" class="next"><span class="visually-hidden">next</span></a>
           {% else %}
-            <a href="#" class="inactive"><i class="icon-arr-tail-right"></i><span class="visually-hidden">next</span></a>
+            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
           {% endif %}
           </li>
         </ul>

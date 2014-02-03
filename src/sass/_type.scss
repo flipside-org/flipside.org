@@ -10,7 +10,6 @@ h5 { @extend .h5; }
 h6 { @extend .h6; }
 
 /* Custom icon font generated with Icomoon */
-
 @font-face {
   font-family: 'flipside-icons';
   src:url('/font/flipside-icons/flipside-icons.eot');
@@ -22,122 +21,158 @@ h6 { @extend .h6; }
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+.icon, [class^="icon-"], [class*=" icon-"] {
   font-family: 'flipside-icons';
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  //line-height: 1;
+  vertical-align: middle;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-clock:before {
+.icon-clock {
+  @extend .icon;
   content: "\e600";
 }
-.icon-s-triangle-right:before {
+.icon-s-triangle-right {
+  @extend .icon;
   content: "\e601";
 }
-.icon-s-tick:before {
+.icon-s-tick {
+  @extend .icon;
   content: "\e602";
 }
-.icon-map-marker:before {
+.icon-map-marker {
+  @extend .icon;
   content: "\e603";
 }
-.icon-s-triangle-left:before {
+.icon-s-triangle-left {
+  @extend .icon;
   content: "\e604";
 }
-.icon-arr-tail-left:before {
+.icon-arr-tail-left {
+  @extend .icon;
   content: "\e605";
 }
-.icon-mobile:before {
+.icon-mobile {
+  @extend .icon;
   content: "\e606";
 }
-.icon-s-arr-right:before {
+.icon-s-arr-right {
+  @extend .icon;
   content: "\e607";
 }
-.icon-arr-tail-right:before {
+.icon-arr-tail-right {
+  @extend .icon;
   content: "\e608";
 }
-.icon-twitter:before {
+.icon-twitter {
+  @extend .icon;
   content: "\e609";
 }
-.icon-s-arr-left:before {
+.icon-s-arr-left {
+  @extend .icon;
   content: "\e60a";
 }
-.icon-arr-tail-up:before {
+.icon-arr-tail-up {
+  @extend .icon;
   content: "\e60b";
 }
-.icon-arr-tail-down:before {
+.icon-arr-tail-down {
+  @extend .icon;
   content: "\e60c";
 }
-.icon-s-arr-up:before {
+.icon-s-arr-up {
+  @extend .icon;
   content: "\e60d";
 }
-.icon-flickr:before {
+.icon-flickr {
+  @extend .icon;
   content: "\e60e";
 }
-.icon-google-plus:before {
+.icon-google-plus {
+  @extend .icon;
   content: "\e60f";
 }
-.icon-s-arr-down:before {
+.icon-s-arr-down {
+  @extend .icon;
   content: "\e610";
 }
-.icon-download:before {
+.icon-download {
+  @extend .icon;
   content: "\e611";
 }
-.icon-feed:before {
+.icon-feed {
+  @extend .icon;
   content: "\e612";
 }
-.icon-arr-down:before {
+.icon-arr-down {
+  @extend .icon;
   content: "\e613";
 }
-.icon-github:before {
+.icon-github {
+  @extend .icon;
   content: "\e614";
 }
-.icon-facebook:before {
+.icon-facebook {
+  @extend .icon;
   content: "\e615";
 }
-.icon-arr-left:before {
+.icon-arr-left {
+  @extend .icon;
   content: "\e616";
 }
-.icon-share:before {
+.icon-share {
+  @extend .icon;
   content: "\e617";
 }
-.icon-s-add:before {
+.icon-s-add {
+  @extend .icon;
   content: "\e618";
 }
-.icon-arr-right:before {
+.icon-arr-right {
+  @extend .icon;
   content: "\e619";
 }
-.icon-menu:before {
+.icon-menu {
+  @extend .icon;
   content: "\e61a";
 }
-.icon-arr-up:before {
+.icon-arr-up {
+  @extend .icon;
   content: "\e61b";
 }
-.icon-email:before {
+.icon-email {
+  @extend .icon;
   content: "\e61c";
 }
-.icon-s-cancel:before {
+.icon-s-cancel {
+  @extend .icon;
   content: "\e61e";
 }
-.icon-add:before {
+.icon-add {
+  @extend .icon;
   content: "\e61f";
 }
-.icon-s-triangle-down:before {
+.icon-s-triangle-down {
+  @extend .icon;
   content: "\e620";
 }
-.icon-tick:before {
+.icon-tick {
+  @extend .icon;
   content: "\e621";
 }
-.icon-s-triangle-up:before {
+.icon-s-triangle-up {
+  @extend .icon;
   content: "\e622";
 }
-.icon-cancel:before {
+.icon-cancel {
+  @extend .icon;
   content: "\e623";
 }

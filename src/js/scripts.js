@@ -205,11 +205,20 @@ $(document).ready(function() {
      
       // Animate article size.
       if ($current_post.height() < $sliding_post.height()) {
-        $current_post.animate({
-          height : $sliding_post.outerHeight()
+        $current_post.css('position', 'absolute');
+        $current_post.css('width', '100%');
+          
+        var original_height = $sliding_post.outerHeight();
+        $('#site-body').height($current_post.outerHeight());
+        
+        $('#site-body').animate({
+          // 62 is the nav menu height
+          height : original_height + 62
         }, options.banner_speed, function() {
           animation();
         });
+        
+        
       }
       else {
         animation();

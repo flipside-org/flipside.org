@@ -18,8 +18,8 @@ image:
     list:
       height: 320
       width: 480
-    team_thumb:
+    thumb:
       attr:
-        class: user-thumb
+        class: thumb
       height: 50
       width: 50

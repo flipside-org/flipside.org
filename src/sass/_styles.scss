@@ -8,13 +8,6 @@ dl {
   margin: 0;
 }
 
-.user-thumb {
-  @include border-radius(200px);
-  float: left;
-  margin-right: 10px;
-  width: 50px;
-}
-
 .twitter:before { @extend .icon-twitter; }
 .facebook:before { @extend .icon-facebook; }
 .google-plus:before { @extend .icon-google-plus; }
@@ -246,6 +239,18 @@ main {
 			}
 		}
 	}
+	aside {
+		h1 {
+			@extend .h5;
+		}
+		.thumb {
+  		@include border-radius(200px);
+		  float: left;
+		  margin-right: 10px;
+		  width: 50px;
+		}
+	}
+
 	@media #{$medium-up} {
 		padding-bottom: 4rem;
 		.content {
@@ -268,27 +273,46 @@ main {
 			@include grid-column(3,$pull:8);
 		}
 	}
+}
+
+/* Frontpage */
+
+.front {
+	section {
+		text-align: center;
+		@include grid-column(12);
 	
-	.front {
-		section {
-			text-align: center;
-			@include grid-column(12);
-		
-			ul {
-				@include grid-row();
-				list-style: none;
-				margin: 0;
-				
-				li {
-					@include grid-column(12);
-					float: left;
-				}
+		ul {
+			@include grid-row();
+			list-style: none;
+			margin: 0;
+			
+			li {
+				@include grid-column(12);
+				float: left;
 			}
 		}
-		@media #{$medium-up} {
-			section ul li {
-				@include grid-column(3);
-			}
+		&.what-we-do h1 {
+			@extend .h5;
+		}
+	}
+	.about-us {
+		@extend .link-button;
+		padding: 0.25rem 1rem;
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		& a:after {
+			@extend .icon-arr-tail-right;
+		}
+	}
+	@media #{$medium-up} {
+		section.tag-line {
+			@include grid-column(6,$offset:3);
+		}
+		section ul li {
+			@include grid-column(3);
 		}
 	}
 }
@@ -356,12 +380,15 @@ ul.hub {
 /* Related content */
 
 .related-content {
-	h1 {
-		font-size: 1rem;
-		font-weight: bold;
+	border-top: 2px #e6e6e6 solid;
+	margin-top: 1rem;
+	padding-top: 1rem;
+	ul {
+		list-style: none;
+		margin: 0;
 	}
 	a {
-		text-decoration: underline;
+		font-weight: bold;
 	}
 }
 

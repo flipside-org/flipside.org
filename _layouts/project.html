@@ -84,25 +84,26 @@ contact: true
     </div>
     {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
     <aside>
+      <h1>Details</h1>
       <dl>
         {% if page.meta %}
-          <dt>Type:</dt>
+          <dt>Type</dt>
           <dd>{{ page.meta }}</dd>
         {% endif %}
         {% if page.client %}
-          <dt>Client:</dt>
+          <dt>Client</dt>
           <dd>{{ page.client }}</dd>
         {% endif %}
         {% if page.technology %}
-          <dt>Technology:</dt>
+          <dt>Technology</dt>
           <dd>{{ page.technology }}</dd>
         {% endif %}
         {% if page.keywords %}
-          <dt>Keywords:</dt>
+          <dt>Keywords</dt>
           <dd>{{ page.keywords }}</dd>
         {% endif %}
         {% if page.project_link.href %}
-          <dt>URL:</dt>
+          <dt>URL</dt>
           <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
         {% endif %}
       </dl>

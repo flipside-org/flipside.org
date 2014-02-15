@@ -37,20 +37,24 @@ contact: true
       {{ content }}
     </div>
     <aside>
-      <dl>
-        <dt>Author:</dt>
-        <dd>
-          <a href="/about#team">
-            {% image team_thumb {{ site.data.team[page.user].photo }} %}
-            {{ site.data.team[page.user].name }}<br/>
-            {{ site.data.team[page.user].function }}
-          </a>
-        </dd>
-        {% if page.date %}
-          <dt>Date:</dt>
-          <dd>{{ page.date | date: "%d %B %Y" }}</dd>
-        {% endif %}
-      </dl>
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dd>
+            <a href="/about#team">
+              {% image thumb {{ site.data.team[page.user].photo }} %}
+              <strong>{{ site.data.team[page.user].name }}</strong><br/>
+              {{ site.data.team[page.user].function }}
+            </a>
+          </dd>
+          {% if page.date %}
+            <dt>Date</dt>
+            <dd>{{ page.date | date: "%d %b. %Y" }}</dd>
+            <dt>Category</dt>
+            <dd>{{ page.filters | capitalize }}</dd>
+          {% endif %}
+        </dl>
+      </section>
       {% if page.related_post %}
         {% include related-content.html %}
       {% endif %}

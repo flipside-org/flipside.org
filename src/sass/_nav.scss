@@ -11,7 +11,7 @@ nav#primary {
 		line-height: 60px;
 	}
 	.active a {
-		color: $light-grey;
+		opacity: 0.5;
 	}
 	a.toggle {
 		text-align: right;

@@ -3899,7 +3899,7 @@ th.hide-for-touch {
 }
 
 /* Direction Nav */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000329}}
 .flex-direction-nav a {
   text-decoration: none;
   display: block;
@@ -3919,52 +3919,39 @@ th.hide-for-touch {
   transition: all .3s ease;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000349}}
 .flex-direction-nav .flex-prev {
   left: -50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000352}}
 .flex-direction-nav .flex-next {
   right: -50px;
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000355}}
 .flexslider:hover .flex-prev {
   opacity: 0.7;
   left: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000358}}
 .flexslider:hover .flex-next {
   opacity: 0.7;
   right: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000361}}
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
   opacity: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000364}}
 .flex-direction-nav .flex-disabled {
   opacity: 0 !important;
   filter: alpha(opacity=0);
   cursor: default;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000349}}
-.flex-direction-nav a:before {
-  font-family: "flexslider-icon";
-  font-size: 40px;
-  display: inline-block;
-  content: '\f001';
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000350}}
-.flex-direction-nav a.flex-next:before {
-  content: '\f002';
 }
 
 /* ==========================================================================
@@ -5100,7 +5087,7 @@ nav#primary a.toggle:before {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000324}}
-.icon, .icon-twitter, .twitter:before, .icon-tick, .icon-feed, .actions a.feed:before, .icon-s-triangle-up, .icon-flickr, .flickr:before, .icon-facebook, .facebook:before, .icon-s-triangle-right, .icon-email, .email:before, .icon-download, .icon-s-triangle-down, .icon-s-triangle-left, .icon-clock, ul.hub article .metadata .date:before, .icon-cancel, .icon-s-tick, .actions li#filters li.active:before, .icon-share, .actions a.share:before, .icon-briefcase, .icon-arr-up, .icon-s-cancel, .icon-s-arr-up, .icon-arr-tail-up, .icon-s-arr-right, .icon-arr-tail-right, .actions a.next:before, .front .about-us a:after, ul.hub article p.read-more a:after, .icon-s-arr-left, .icon-arr-tail-left, .actions a.previous:before, .icon-s-arr-down, .actions a.filter:before, .icon-arr-tail-down, .icon-mobile, .phone:before, .icon-menu, nav#primary a.toggle:before, .icon-arr-left, .icon-arr-right, .icon-s-add, .icon-add, .icon-map-marker, .icon-arr-down, .icon-google-plus, .google-plus:before, .icon-github, .github:before, [class^="icon-"], [class*=" icon-"] {
+.icon, .icon-twitter, .twitter:before, .icon-tick, .icon-feed, .actions a.feed:before, .icon-s-triangle-up, .icon-flickr, .flickr:before, .icon-facebook, .facebook:before, .icon-s-triangle-right, .icon-email, .email:before, .icon-download, .icon-s-triangle-down, .icon-s-triangle-left, .icon-clock, ul.hub article .metadata .date:before, .icon-cancel, .icon-s-tick, .actions li#filters li.active:before, .icon-share, .actions a.share:before, .icon-briefcase, .icon-arr-up, .icon-s-cancel, .icon-s-arr-up, .icon-arr-tail-up, .icon-s-arr-right, .icon-arr-tail-right, .actions a.next:before, .front .about-us a:after, ul.hub article p.read-more a:after, .icon-s-arr-left, .icon-arr-tail-left, .actions a.previous:before, .icon-s-arr-down, .actions a.filter:before, .icon-arr-tail-down, .icon-mobile, .phone:before, .icon-menu, nav#primary a.toggle:before, .icon-arr-left, .flex-direction-nav a.flex-prev:before, .icon-arr-right, .flex-direction-nav a.flex-next:before, .icon-s-add, .icon-add, .icon-map-marker, .icon-arr-down, .icon-google-plus, .google-plus:before, .icon-github, .github:before, [class^="icon-"], [class*=" icon-"] {
   font-family: 'flipside-icons';
   speak: none;
   font-style: normal;
@@ -5254,12 +5241,12 @@ nav#primary a.toggle:before {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\00003152}}
-.icon-arr-left {
+.icon-arr-left, .flex-direction-nav a.flex-prev:before {
   content: "\e61c";
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\00003156}}
-.icon-arr-right {
+.icon-arr-right, .flex-direction-nav a.flex-next:before {
   content: "\e61d";
 }
 

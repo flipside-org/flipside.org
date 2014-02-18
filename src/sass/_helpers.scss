@@ -72,28 +72,19 @@ $anchor-font-color-hover: $body-font-color;
 		background-color: rgba($dark-color,0.9);	
 		@include border-radius(5px);
 		display: none;
+		left: 50%;
 		list-style: none;
-		margin: 0;
-		padding: 0;
+		margin: 1rem 0 0 -100px;
+		padding: 1rem;
 		position: absolute;
   	text-align: left;
+  	width: 200px;
     z-index: 9999;
-		i {
-    	display: inline;
-			@extend .link-button;
-			margin-right: 0.25rem;
-    }
 	}
 }
 
 /* Dropdown with top-arrow */
 .dropdown-arrow {
-	ul {
-		margin-top: 1rem;
-		padding: 1rem;
-		width: 150px;
-	}
-	/* implementation of top arrow */
 	ul:before {
 		content: ' ';
 		height: 0;
@@ -102,7 +93,8 @@ $anchor-font-color-hover: $body-font-color;
 		border: 10px solid transparent;
 		border-bottom-color: rgba($dark-color,0.9); 
 		top: -20px;
-		left: 65px; /* (width ul.links / 2) + (width border / 2) */
+		left: 50%;
+		margin-left: -10px; /* equal to border-width */
 		z-index: 2;
 	}
 }

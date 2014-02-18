@@ -7,8 +7,10 @@
 nav#primary {
 	@extend .dropdown;
 	a {
-		height: 60px;
-		line-height: 60px;
+		display: block;
+		font-size: 1.25rem;
+		font-weight: $body-font-bold;
+		line-height: 40px;
 	}
 	.active a {
 		opacity: 0.5;
@@ -39,7 +41,11 @@ nav#primary {
 			background-color: transparent;
 			display: block !important;	
 			float: right;
+			left: 0;
+			margin: 0;
+			padding: 0;
 			position: relative;
+			width: auto;
 		}
 		li {
 			float: left;

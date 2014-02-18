@@ -36,123 +36,128 @@ h6 { @extend .h6; }
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-clock {
+
+.icon-twitter {
   @extend .icon;
   content: "\e600";
 }
-.icon-s-triangle-right {
+.icon-tick {
   @extend .icon;
   content: "\e601";
 }
-.icon-s-tick {
+.icon-feed {
   @extend .icon;
   content: "\e602";
 }
-.icon-map-marker {
+.icon-s-triangle-up {
   @extend .icon;
   content: "\e603";
 }
-.icon-s-triangle-left {
+.icon-flickr {
   @extend .icon;
   content: "\e604";
 }
-.icon-arr-tail-left {
+.icon-facebook {
   @extend .icon;
   content: "\e605";
 }
-.icon-mobile {
+.icon-s-triangle-right {
   @extend .icon;
   content: "\e606";
 }
-.icon-s-arr-right {
+.icon-email {
   @extend .icon;
   content: "\e607";
 }
-.icon-arr-tail-right {
+.icon-download {
   @extend .icon;
   content: "\e608";
 }
-.icon-twitter {
+.icon-s-triangle-down {
   @extend .icon;
   content: "\e609";
 }
-.icon-s-arr-left {
+.icon-s-triangle-left {
   @extend .icon;
   content: "\e60a";
 }
-.icon-arr-tail-up {
+.icon-clock {
   @extend .icon;
   content: "\e60b";
 }
-.icon-arr-tail-down {
+.icon-cancel {
   @extend .icon;
   content: "\e60c";
 }
-.icon-s-arr-up {
+.icon-s-tick {
   @extend .icon;
   content: "\e60d";
 }
-.icon-flickr {
+.icon-share {
   @extend .icon;
   content: "\e60e";
 }
-.icon-google-plus {
+.icon-briefcase {
   @extend .icon;
   content: "\e60f";
 }
-.icon-s-arr-down {
+.icon-arr-up {
   @extend .icon;
   content: "\e610";
 }
-.icon-download {
+.icon-s-cancel {
   @extend .icon;
   content: "\e611";
 }
-.icon-feed {
+.icon-s-arr-up {
   @extend .icon;
   content: "\e612";
 }
-.icon-arr-down {
+.icon-arr-tail-up {
   @extend .icon;
   content: "\e613";
 }
-.icon-github {
+.icon-s-arr-right {
   @extend .icon;
   content: "\e614";
 }
-.icon-facebook {
+.icon-arr-tail-right {
   @extend .icon;
   content: "\e615";
 }
-.icon-arr-left {
+.icon-s-arr-left {
   @extend .icon;
   content: "\e616";
 }
-.icon-share {
+.icon-arr-tail-left {
   @extend .icon;
   content: "\e617";
 }
-.icon-s-add {
+.icon-s-arr-down {
   @extend .icon;
   content: "\e618";
 }
-.icon-arr-right {
+.icon-arr-tail-down {
   @extend .icon;
   content: "\e619";
 }
-.icon-menu {
+.icon-mobile {
   @extend .icon;
   content: "\e61a";
 }
-.icon-arr-up {
+.icon-menu {
   @extend .icon;
   content: "\e61b";
 }
-.icon-email {
+.icon-arr-left {
   @extend .icon;
   content: "\e61c";
 }
-.icon-s-cancel {
+.icon-arr-right {
+  @extend .icon;
+  content: "\e61d";
+}
+.icon-s-add {
   @extend .icon;
   content: "\e61e";
 }
@@ -160,19 +165,19 @@ h6 { @extend .h6; }
   @extend .icon;
   content: "\e61f";
 }
-.icon-s-triangle-down {
+.icon-map-marker {
   @extend .icon;
   content: "\e620";
 }
-.icon-tick {
+.icon-arr-down {
   @extend .icon;
   content: "\e621";
 }
-.icon-s-triangle-up {
+.icon-google-plus {
   @extend .icon;
   content: "\e622";
 }
-.icon-cancel {
+.icon-github {
   @extend .icon;
   content: "\e623";
 }

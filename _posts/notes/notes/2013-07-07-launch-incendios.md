@@ -1,17 +1,17 @@
 ---
 layout: note
 notes_active : true
-filters: project
+category: note
+
+background_color: c45b3e
 
 title: Incendios.pt - eleven years of fire data
-category: note
+user: olafveerman
+
+filters: project
 image: incendios-pt_map.png
-background_color: c45b3e
 related_post: incendios
 
-tags: data visualization
-
-user: olafveerman
 ---
 Large areas of forest and agricultural land burn down each year in Portugal, especially during the hot summer months. Between 2001 and 2011, fires destroyed 416 hectares on average per day, an area equal to 671 football pitches.
 

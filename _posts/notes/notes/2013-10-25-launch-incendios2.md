@@ -1,17 +1,17 @@
 ---
 layout: note
 notes_active : true
-filters: project
+category: note
 
 title: Incendios 0.2 - more and improved data
-category: note
+user: olafveerman
+
+filters: project
 image: incendios-pt.png
-tags: open-data incendios
 related_post:
   - incendios
   - open-data
 
-user: olafveerman
 ---
 
 This week we launched a new version of [incendios.pt](http://incendios.pt) with the most recent data published by ICNF (2012) and easy access to the raw data that powers the site.

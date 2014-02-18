@@ -1,14 +1,13 @@
 ---
 layout: note
 notes_active : true
-filters: guide
+category: note
 
 title: Managing Relations with JQuery sortable
-category: note
-image: rearrange.png
-tags: drupal relation
-
 user: danielfdsilva
+
+filters: guide
+image: rearrange.png
 ---
 For Drupal 7 there are several contributed modules like References and Entityreference, that allow you to relate entities. Though these are stable and mature modules, we've have been using the [Relation](http://www.drupal.org/relation) module for a couple of projects with great success.  
 Relations are separate entities, fieldable out of the box and allow you to build pretty complex relations. While it provides several ways for the end user to create these relations, it is mainly an API module and the provided methods might not always fit the use case for a particular project. This blog post explains how we use JQuery Sortable to allow users to relate Questions to a Survey through an intuitive drag and drop interface.

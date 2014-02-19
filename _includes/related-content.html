@@ -16,8 +16,10 @@
                 <li>
                   <article>
                     <a href="{{ post.url }}">
-                      {% image thumb notes/{{ post.image }} %}
-                      <div>
+                      <div class="media">
+                        {% image thumb notes/{{ post.image }} %}
+                      </div>
+                      <div class="teaser">
                         <h1>{{ post.title }}</h1>
                         <p class="meta"><em>Under</em> Notes</p>
                       </div>
@@ -30,8 +32,10 @@
                 <li>
                   <article>
                     <a href="{{ post.url }}">
-                    {% image thumb projects/{{ post.image }} %}
-                      <div>
+                      <div class="media">
+                        {% image thumb projects/{{ post.image }} %}
+                      </div>
+                      <div class="teaser">
                         <h1>{{ post.title }}</h1>
                         <p class="meta"><em>Under</em> Projects</p>
                       </div>

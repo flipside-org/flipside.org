@@ -261,11 +261,26 @@ main {
 		h1 {
 			@extend .h5;
 		}
-		.thumb {
-  		@include border-radius(200px);
+		a {
+			font-weight: $body-font-bold;
+		}
+		.media {
 		  float: left;
-		  margin-right: 10px;
-		  width: 50px;
+		  margin-right: 0.75rem;
+			width: 3.5rem;
+  		img {
+  			@include border-radius(2rem);
+  		}
+		}
+		.teaser {
+			display: table-cell;
+			h1 {
+				font-size: 1rem;
+				margin: 0;
+			}
+			p.meta {
+				font-weight: normal;
+			}
 		}
 	}
 
@@ -404,18 +419,6 @@ ul.hub {
 	ul {
 		list-style: none;
 		margin: 0;
-	}
-	article {
-		h1 {
-			font-size: 1rem;
-			margin: 0;
-		}
-		a {
-			font-weight: $body-font-bold;
-		}
-		p.meta {
-			font-weight: normal;
-		}
 	}
 }
 

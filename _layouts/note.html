@@ -42,9 +42,13 @@ contact: true
         <dl>
           <dd>
             <a href="/about#team">
-              {% image thumb {{ site.data.team[page.user].photo }} %}
-              <strong>{{ site.data.team[page.user].name }}</strong><br/>
-              {{ site.data.team[page.user].function }}
+              <div class="media">
+                {% image thumb {{ site.data.team[page.user].photo }} %}
+              </div>
+              <div class="teaser">
+                <h1>{{ site.data.team[page.user].name }}</h1>
+                <p class="meta">{{ site.data.team[page.user].function }}</p>
+              </div>
             </a>
           </dd>
           {% if page.date %}

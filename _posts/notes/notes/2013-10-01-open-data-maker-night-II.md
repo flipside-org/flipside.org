@@ -1,16 +1,17 @@
 ---
 layout: note
 notes_active : true
-filters: event
+category: note
+
 featured_image: odmn1.jpg
 
 title: Lisbon Open Data Maker Night - II
-category: note
+user: olafveerman
+
+filters: event
 image: odmn1.jpg
-tags: open-data meetup
 related_post: open-data
 
-user: olafveerman
 ---
 
 On Thursday October 17, we'll be hosting another Open Data Maker Night. These nights are focused on making stuff with Open Data. Everybody is welcome, you don't need to be a skilled developer, data scientist or designer to make things happen.

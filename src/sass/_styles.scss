@@ -262,6 +262,7 @@ main {
 			@extend .h5;
 		}
 		a {
+		  display: block;
 			font-weight: $body-font-bold;
 		}
 		.media {
@@ -270,10 +271,12 @@ main {
 			width: 3.5rem;
   		img {
   			@include border-radius(2rem);
+  			display: block;
   		}
 		}
 		.teaser {
 			display: table-cell;
+			width: 100%;
 			h1 {
 				font-size: 1rem;
 				margin: 0;

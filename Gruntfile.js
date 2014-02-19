@@ -26,6 +26,40 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    // https://github.com/gruntjs/grunt-contrib-concat
+    concat : {
+      dev : {
+        src: [
+          'src/js/libs/flexslider/flexslider.css',
+          // Compass result is the last one.
+          'css/app.css'
+        ],
+        dest: 'css/app.css',
+      }
+    },
+    
+    // https://github.com/gruntjs/grunt-contrib-cssmin
+    /*cssmin: {
+      dev : {
+        combine: {
+          files: {
+            'css/flexslider.css': ['src/js/libs/flexslider/flexslider.css']
+          }
+        }
+      },
+      prod : {
+        combine: {
+          files: {
+            'css/app.css': [
+              'src/js/libs/flexslider/flexslider.css',
+              // Compass result is the last one.
+              'css/app.css'
+            ]
+          }
+        }
+      }
+    },*/
         
     // https://github.com/gruntjs/grunt-contrib-jshint
     jshint: {
@@ -48,19 +82,24 @@ module.exports = function(grunt) {
     uglify: {
       prod: {
         files: {
-          'scripts/flipside.min.js': ['src/js/*.js'],
-          'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
+          'scripts/flipside.min.js': [
+            'src/js/libs/keypress/keypress-1.0.9.min.js',
+            'src/js/libs/async/async.js',
+            'src/js/libs/flexslider/jquery.flexslider.js',
+            'src/js/*.js'
+          ],
+          //'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
           
           'scripts/foundation.min.js': [
             'src/vendor/jquery/jquery.js',
             
+            'src/vendor/foundation/js/foundation/foundation.js',
             //'src/vendor/foundation/js/foundation/foundation.abide.js',
             //'src/vendor/foundation/js/foundation/foundation.accordion.js',
             'src/vendor/foundation/js/foundation/foundation.clearing.js',
             'src/vendor/foundation/js/foundation/foundation.dropdown.js',
             'src/vendor/foundation/js/foundation/foundation.interchange.js',
             //'src/vendor/foundation/js/foundation/foundation.joyride.js',
-            'src/vendor/foundation/js/foundation/foundation.js',
             //'src/vendor/foundation/js/foundation/foundation.magellan.js',
             //'src/vendor/foundation/js/foundation/foundation.offcanvas.js',
             //'src/vendor/foundation/js/foundation/foundation.orbit.js',
@@ -108,6 +147,8 @@ module.exports = function(grunt) {
 
   // Load tasks.
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -116,8 +157,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   
   // Register tasks.
-  grunt.registerTask('default', ['compass:dev', 'jshint:dev', 'uglify', 'jekyll:generate']);
+  grunt.registerTask('default', ['compass:dev', 'concat:dev', 'jshint:dev', 'uglify', 'jekyll:generate']);
   
-  grunt.registerTask('prod', ['clean', 'compass:prod', 'jshint:prod', 'uglify']);
+  grunt.registerTask('prod', ['clean', 'compass:prod', 'concat:dev', 'jshint:prod', 'uglify']);
+  
+  grunt.registerTask('jk', ['jekyll:server']);
 
 };

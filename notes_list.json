@@ -23,9 +23,9 @@ permalink: json/notes_filter.json
 {% for filter in site.categories.filter %}
   {% assign one_note_filtered = false %}
   
-  "{{ filter.name }}" : [  
+  "{{ filter.filter_name }}" : [  
     {% for note in site.categories.note %}
-      {% if note.filters contains filter.name %}
+      {% if note.filters contains filter.filter_name %}
         {% if one_note_filtered %}
           ,
         {% else %}

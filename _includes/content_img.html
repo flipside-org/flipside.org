@@ -1,0 +1,8 @@
+<div class="media-wrapper">
+	<figure>
+		{% image article {{ include.path }} %}
+		{% if include.caption %}
+			<figcaption>{{ include.caption }}</figcaption>
+		{% endif %}
+	</figure>
+</div>

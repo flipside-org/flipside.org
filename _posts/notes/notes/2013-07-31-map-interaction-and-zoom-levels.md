@@ -1,25 +1,22 @@
 ---
 layout: note
 notes_active : true
-filters: guide
+category: note
 
 title: Map interaction and zoom levels
-category: note
-image: incendios-pt-administrative-areas.png
-tags: incendios.pt mapbox
-
 user: danielfdsilva
+
+filters: guide
+image: incendios-pt-administrative-areas.png
+related_post: incendios
+
 ---
 
 An important feature of [incendios.pt](http://incendios.pt) are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between regions, we allow click events on the map to browse the site. Every time a user clicks on a specific administrative area type, like District, Municipality, or Parish, its page is shown. This improves the speed of the exploration since the users don't need to drill down using the hierarchical selectors.
 
 The visibility of the different types of administrative areas changes according to the zoom level. Up to zoom level 9 the Districts are visible, from 10 to 12 the Municipalities are visible and from 13 onwards Parishes can be viewed. The click behaviour we implemented follows the same logic. 
 
-<div class="image-with-caption eleven columns alpha omega">
-  <img src="/images/notes/incendios-pt-administrative-areas.png" class="nine columns offset-by-one inset-by-one border alpha omega" alt="Explore data by location" />
-  <span>District (Lisboa) zoom until 10, Municipality (Cascais) zoom 10-12 and Parish (Estoril) from zoom 13 onwards</span>
-</div>
-
+{% include content_img.html path="notes/incendios-pt-administrative-areas.png" caption="District (Lisboa) zoom until 10, Municipality (Cascais) zoom 10-12 and Parish (Estoril) from zoom 13 onwards" %}
 Even though [Tilemill](http://www.tilemill.com) allows to set a location when a user clicks on a point, polygon or line, it does not allow to differentiate based on zoom level. This note explains briefly how we built a different link based on zoom level of the maps.
 
 ###Structure of links

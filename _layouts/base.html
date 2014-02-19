@@ -14,48 +14,41 @@
   <title>Flipside - {{ page.title }}</title>
   
   <link rel="stylesheet" href="/css/app.css">
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
-  <script src="/scripts/modernizr.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.domain }}/feed.xml">
 </head>
 <body>
-  <header class="page" role="banner">
-    <div class="row">
-      <h1 class="branding">
-        <a href="http://flipside.org" title="Home"><img src="/images/logo-flipside.png" alt="Logo Flipside" title="Flipside" /></a>
-      </h1>
-      {% include menu.html %}
-      <ul class="social-nav">
-        <li><a href="mailto:info@flipside.org"><i class="icon-mail"></i><span class="screen-reader-text">mail</span></a></li>
-        <li><a href="http://github.org/flipside-org"><i class="icon-github"></i><span class="screen-reader-text">github</span></a></li>
-        <li><a href="http://twitter.com/flipside_org"><i class="icon-twitter"></i><span class="screen-reader-text">twitter</span></a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main role="main">
-    {{ content }}
-  </main>
-
-  <div class="cta">
-    <div class="row">
-      <p class="invitation">
-        Whether you want to talk about a project or have a question or suggestion, we'd love to hear from you.
-      </p>
-      <a href="mailto:info@flipside.org" class="button contact">info@flipside.org</a>
-    </div>
-  </div>
-
-  <footer class="page" role="contentinfo">
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
       <div class="row">
-        <p class="credit">
-          2013 Flipside - Built with Jekyll
-        </p>
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        {% include menu.html %}
       </div>
-    </div>
-  </footer>
+    </header>
 
+    <main id="site-body" role="main">
+      {{ content }}
+    </main>
+
+    {% if page.contact %}
+      {% include contact.html %}
+    {% endif %}
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <p class="built-by">
+            <span class="fs">Flipside</span> - 2013
+          </p>
+          <p class="technology">
+            Built with <a href="http://jekyllrb.com/">Jekyll</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="/scripts/foundation.min.js"></script>
   <script src="/scripts/flipside.min.js"></script>
 </body>
 </html>
-

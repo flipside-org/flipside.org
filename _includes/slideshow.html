@@ -1,0 +1,31 @@
+<section class="featured">
+	<h1 style="display: none">Featured</h1>
+	<div class="flexslider" style="overflow: hidden">
+  	<ul class="slides">
+      {% for post in site.posts %}
+      {% if post.featured == true %}
+      {% if post.background_color %}
+      <li style="background-color: #{{ post.background_color }}; overflow: hidden;">
+      {% else %}
+      <li style="overflow: hidden;">
+      {% endif %}
+        <article class="row">
+          <div class="prose">
+            <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title }}</a></h1>
+            <h2 class="section-title"><em>Under</em> {{ post.category | capitalize }}</h2>
+            <p class="summary">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <p class="read-more"><a href="{{ site.domain }}{{ post.url }}">Read more</a></p>
+          </div>
+          <div class="media">
+            <div style="max-width: 160%; width: 160%;">
+              <img src="images/projects/macgyver-med.png" alt="Incendios" style="width: auto;" />
+              <img src="images/projects/incendios-thumb.png" alt="Incendios" style="width: 30%; margin-top: -200px"/>
+            </div>
+          </div>
+        </article>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>

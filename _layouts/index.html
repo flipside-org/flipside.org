@@ -1,6 +1,7 @@
 ---
 layout: base
 title : Flipside
+contact: true
 ---
 {% comment %}
   This layout contains the code for the index page.
@@ -10,76 +11,36 @@ title : Flipside
   or a /dev/null if you prefer. :)
 {% endcomment %}
 
-<div class="banner">
-	<div class="row">
-    	PRE-CONTENT
-    </div>
-</div>
-<div class="main-content front">
-	<div class="row">
-		<section class="tag-line">
-			<h2>We develop <strong>web-based tools</strong> using <strong>Open Source</strong> technology for <strong>Civil Society Organisations</strong>.</h2>
-		</section>
-		<section class="areas-work">
-			<h3>we focus on</h3>
-			<ul>
-				<li>
-					<p>
-						Open source<br/>
-						Being a strong driver of innovation, our projects are based on proven <strong>Open Source</strong> technologies.
-					</p>
-				</li>
-				<li>
-					<p>
-						Social impact<br/>
-						We build web-based tools that help our clients create social and economic impact.
-					</p>
-				</li>
-				<li>
-					<p>
-						Open data<br/>
-						Or maybe something else we focus on? Think about this one.
-					</p>
-				</li>
-			</ul>
-		</section>
-		<section class="what-we-do">
-			<h3>what we can do for you</h3>
-			<ul>
-				<li>
-					<p>image websites</p>
-				</li>
-				<li>
-					<p>image data visualizations</p>
-				</li>
-				<li>
-					<p>image data collection</p>
-				</li>
-				<li>
-					<p>image management systems</p>
-				</li>
-			</ul>
-		</section>
-		<section class="clients">
-			<h3>our clients include</h3>
-			<ul>
-				<li>
-					<p>image client</p>
-				</li>
-				<li>
-					<p>image client</p>
-				</li>
-				<li>
-					<p>image client</p>
-				</li>
-				<li>
-					<p>image client</p>
-				</li>
-				<li>
-					<p>image client</p>
-				</li>
-			</ul>
-		</section>
-	</div>
-</div>
+{% include slideshow.html %}
 
+<div class="front row">
+	<section class="tag-line">
+		<h2>We are Flipside</h2>
+		<p>Using open source technology, we build web-based tools that help organisations create social impact.</p>
+	</section>
+	<section class="what-we-do">
+		<ul>
+			<li>
+				<img src="images/illu-disc-website.svg" />
+				<h1>Websites</h1>
+				<p>Build standards compliant websites that help organisations engage with society.</p>
+			</li>
+			<li>
+				<img src="images/illu-disc-collection.svg" />
+				<h1>Data collection tools</h1>
+				<p>Use modern technology to allow organisations to conduct surveys and manage their data.</p>
+			</li>
+			<li>
+				<img src="images/illu-disc-visualization.svg" />
+				<h1>Data visualizations</h1>
+				<p>Make complex issues easier to understand and explore, using open source technology.</p>
+			</li>
+			<li>
+				<img src="images/illu-disc-collaboration.svg" />
+				<h1>Collaborative tools</h1>
+				<p>Help disperse teams to coordinate their work and manage their projects.</p>
+			</li>
+		</ul>
+		<span class="about-us"><a href="/about">Learn about us</a></span>
+	</section>
+</div>

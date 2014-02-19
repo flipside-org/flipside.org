@@ -1,18 +1,56 @@
 /* ==========================================================================
-   Navigation
+   Navs + dropdown
    ========================================================================== */
 
-/**
- * Contains the styling of the navigation items
- */
+/* Primary nav styling */
 
-nav.primary {
-	text-align: center;
+nav#primary {
+	@extend .dropdown;
+	a {
+		display: block;
+		font-size: 1.25rem;
+		font-weight: $body-font-bold;
+		line-height: 40px;
+	}
+	.active a {
+		opacity: 0.5;
+	}
+	a.toggle {
+		text-align: right;
+		&:before {
+			@extend .icon-menu;
+			font-size: 1.25rem;
+		}
+	}
+	@media #{$small-only} {
+		ul.links {
+			margin-right: ($column-gutter / 2);
+    	right: 0;
+			a {
+				height: auto;
+				line-height: 2em;
+				padding: 0 5px;
+			}
+		}
+	}
+	@media #{$medium-up} {
+		.toggle {
+			display: none;
+		}
+		ul.links {
+			background-color: transparent;
+			display: block !important;	
+			float: right;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: auto;
+		}
+		li {
+			float: left;
+			margin-left: 2rem;
+		}
+	}
 }
 
-nav.primary ul,
-ul.social-nav,
-.filters ul {
-  	@include inline-list;
-	display: inline-block;
-}

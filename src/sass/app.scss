@@ -1,5 +1,6 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
+@import "compass";
 
 // Custom settings
 @import "settings";
@@ -9,13 +10,13 @@
 
 // Behold, here are all the Foundation components.
 @import
-  "foundation/functions",
+  //"foundation/functions",
   //"foundation/components/accordion",
   //"foundation/components/alert-boxes",
   //"foundation/components/block-grid",
   //"foundation/components/breadcrumbs",
   //"foundation/components/button-groups",
-  "foundation/components/buttons",
+  //"foundation/components/buttons",
   "foundation/components/clearing",
   //"foundation/components/dropdown",
   //"foundation/components/dropdown-buttons",
@@ -45,9 +46,15 @@
   //"foundation/components/offcanvas",
   "foundation/components/visibility";
 
+
+
+@import "flexsliders_overrides";
+
 // Custom styles:
+@import "helpers";
 @import "code";
-@import "layout";
-@import "nav";
 @import "styles";
+@import "nav"; // After styles, otherwise issues with menu
 @import "type";
+
+@import "side_nav";

@@ -1,15 +1,26 @@
 ---
 layout: base
-active_menu : notes
+active_menu: notes
+contact: true
 ---
-<div class="banner">
+<header class="banner">
   <div class="row">
-    <h2>Notes from the field</h2>
-    {% include filters.html active_filter=page.filter_name %}
+    <div class="heading">
+      <h1 class="title">Notes</h1>
+      <h2 class="section-title">Writings and stuff</h2>
     </div>
-</div>
-<div class="main-content notes">
-  <div class="row">
-    {{ content }}
+    <div class="actions">
+      <ul>
+        {% include filters.html active_filter=page.filter_name %}
+        <li>
+          <a href="{{ site.domain }}/feed.xml" class="feed"><span class="visually-hidden">RSS</span></a>
+        </li>
+      </ul>
+    </div>
   </div>
+</header>
+<div class="main-content notes">
+  <ul class="row hub">
+    {{ content }}
+  </ul>
 </div>

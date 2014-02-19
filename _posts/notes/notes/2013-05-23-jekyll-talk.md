@@ -1,14 +1,17 @@
 ---
 layout: note
 notes_active : true
-filters: event
+category: note
+
+featured: true
 
 title: Jekyll Talk
-category: note
-image: jekyll.png
-tags: jekyll FA7
-
 user: danielfdsilva
+
+filters: event
+image: jekyll.png
+related_post: jekyll
+
 ---
 Tonight we'll be at [Florida After Seven](http://floridaafterseven.com) again, Lisbon's monthly meetup for people interested in everything related to the web. It's a great place to meet like-minded people in the city and keep up to date with the latest projects and tech. This edition, I'll be hosting a talk on Jekyll, the static site generator we've been using in some of our projects, including this website.
 

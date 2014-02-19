@@ -3,28 +3,66 @@ layout: base
 active_menu : notes
 twitter_card: true
 facebook_og: true
+contact: true
 ---
-<a href="#" class="notes-nav-link previous">Previous post</a><br />
-<a href="#" class="notes-nav-link next">Next post</a>
-{% if page.featured_image %}
-<div class="banner">
-	<div class="row">
-    	<h1>{{ page.title }}</h1>
-    	<img src="/images/notes/{{ page.featured_image }}" class="featured" />
+
+<article>
+
+  {% if page.background_color %}
+  <header class="banner" style="background-color: #{{ page.background_color }};">
+  {% else %}
+  <header class="banner">
+  {% endif %}
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="section-title">Note</h2>
+      </div>
+    	<div class="actions">
+        <ul class="notes-navigation">
+          {% include social-share.html %}
+          <li>
+            <a href="#" class="notes-nav-link previous"><span class="visually-hidden">previous</span></a>
+          </li>
+          <li>
+            <a href="#" class="notes-nav-link next"> <span class="visually-hidden">next</span></a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
-<div class="main-content">
-	<div class="row">
-		<article class="main">
-			{{ content }}
-		</article>
-{% else %}
-<div class="main-content">
-	<div class="row">
-		<article class="main">
-			<h1>{{ page.title }}</h1>
-			{{ content }}
-		</article>
-{% endif %}
-	</div>
-</div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      {{ content }}
+    </div>
+    <aside>
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dd>
+            <a href="/about#team">
+              <div class="media">
+                {% image thumb {{ site.data.team[page.user].photo }} %}
+              </div>
+              <div class="teaser">
+                <h1>{{ site.data.team[page.user].name }}</h1>
+                <p class="meta">{{ site.data.team[page.user].function }}</p>
+              </div>
+            </a>
+          </dd>
+          {% if page.date %}
+            <dt>Date</dt>
+            <dd>{{ page.date | date: "%d %b. %Y" }}</dd>
+            <dt>Category</dt>
+            <dd>{{ page.filters | capitalize }}</dd>
+          {% endif %}
+        </dl>
+      </section>
+      {% if page.related_post %}
+        {% include related-content.html %}
+      {% endif %}
+    </aside>
+  </div>
+
+</article>

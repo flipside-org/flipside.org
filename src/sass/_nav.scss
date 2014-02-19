@@ -7,15 +7,20 @@
 nav#primary {
 	@extend .dropdown;
 	a {
-		height: 60px;
-		line-height: 60px;
+		display: block;
+		font-size: 1.25rem;
+		font-weight: $body-font-bold;
+		line-height: 40px;
 	}
 	.active a {
-		color: $light-grey;
+		opacity: 0.5;
 	}
 	a.toggle {
-		font-size: 1.25rem;
 		text-align: right;
+		&:before {
+			@extend .icon-menu;
+			font-size: 1.25rem;
+		}
 	}
 	@media #{$small-only} {
 		ul.links {
@@ -36,7 +41,11 @@ nav#primary {
 			background-color: transparent;
 			display: block !important;	
 			float: right;
+			left: 0;
+			margin: 0;
+			padding: 0;
 			position: relative;
+			width: auto;
 		}
 		li {
 			float: left;
@@ -45,36 +54,3 @@ nav#primary {
 	}
 }
 
-/* Filter + Social share  styling */
-
-li#social-share,
-li#filters {
-	@extend .dropdown;
-	@extend .dropdown-arrow;
-	ul.links {
-		margin-top: 1rem;
-		padding: 1rem;
-	}
-	li {
-		margin-bottom: 0.25rem;
-	}
-	li:last-child {
-		margin-bottom: 0;
-	}
-}
-
-li#filters {
-	a.toggle {
-		font-size: 1.25rem;
-		line-height: 2.75rem;
-		padding: 0 15px;
-		width: 150px;
-	}
-}
-
-li#social-share {
-	position: relative;
-	ul {
-		left: -53px; /* Center the dropdown: -(width a.toggle / 2) - (width i / 2) */
-	}
-}

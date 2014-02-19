@@ -12,11 +12,23 @@
         
           {% if post.category == 'note' %}      
             {% capture related_notes_code %}{{related_notes_code}}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              <li>
+                <a href="{{ post.url }}">
+                  {% image thumb notes/{{ post.image }} %}
+                  {{ post.title }}<br/>
+                </a>
+                <em>Under</em> Notes
+              </li>
             {% endcapture %}
           {% elsif post.category == 'project' %}
             {% capture related_projects_code %}{{related_projects_code}}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              <li>
+                <a href="{{ post.url }}">
+                  {% image thumb projects/{{ post.image }} %}
+                  {{ post.title }}<br/>
+                </a>
+                <em>Under</em> Projects
+              </li>
             {% endcapture %}
           {% endif %}
         

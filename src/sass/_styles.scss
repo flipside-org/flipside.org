@@ -4,6 +4,11 @@
 
 /* Generic styles */
 
+dt {
+	color: $primary-color;
+	font-weight: $body-font-bold;
+}
+
 dl {
   margin: 0;
 }
@@ -70,6 +75,7 @@ body {
   	}
 	}
 	.title {
+		word-wrap: break-word;
 		margin: 0;
 	}
   .section-title {
@@ -244,9 +250,10 @@ main {
 		.media-wrapper {
 			margin: 1.25rem 0;
 			figure {
-				background-color: $light-grey;	
-				padding: 0.25rem;
+				background-color: lighten($primary-color, 65%);
+				@include border-radius(0.25rem);
 				text-align: center;
+				padding: 0.25rem;
 			}
 		}
 	}
@@ -391,15 +398,24 @@ ul.hub {
 /* Related content */
 
 .related-content {
-	border-top: 2px #e6e6e6 solid;
+	border-top: 4px lighten($primary-color,65%) solid;
 	margin-top: 1rem;
 	padding-top: 1rem;
 	ul {
 		list-style: none;
 		margin: 0;
 	}
-	a {
-		font-weight: bold;
+	article {
+		h1 {
+			font-size: 1rem;
+			margin: 0;
+		}
+		a {
+			font-weight: $body-font-bold;
+		}
+		p.meta {
+			font-weight: normal;
+		}
 	}
 }
 

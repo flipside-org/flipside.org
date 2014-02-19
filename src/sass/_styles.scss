@@ -68,11 +68,9 @@ body {
     color: #fff;
   }
   .read-more {
+  	@extend .cta-button;
+  	background-color: rgba($dark-color,0.9);
   	margin-bottom: 4rem;
-  	a {
-    	@extend .link-button;
-    	padding: 0.25rem 1rem;
-  	}
 	}
 	.title {
 		word-wrap: break-word;
@@ -377,7 +375,7 @@ ul.hub {
 		margin-bottom: 2rem;
 	}
 	article {
-	  border-bottom: 2px $light-grey solid;
+		@extend .divider-bottom;
 	  h1 {
 	    @extend .h5;
 	    background-color: #fff;
@@ -403,7 +401,7 @@ ul.hub {
 			}
 		}
 	  .category {
-	    background-color: rgba(0, 0, 0, 0.1);
+	    background-color: lighten($primary-color,65%);
 	    border-radius: 10px;
 	    display: block;
 	    float: right;
@@ -412,6 +410,7 @@ ul.hub {
 	  }
 	  p.read-more {
 	  	@extend .cta-inline;
+	  	margin-bottom: 0;
 		}
 	}
 
@@ -429,9 +428,8 @@ ul.hub {
 /* Related content */
 
 .related-content {
-	border-top: 4px lighten($primary-color,65%) solid;
+	@extend .divider-top;
 	margin-top: 1rem;
-	padding-top: 1rem;
 	ul {
 		list-style: none;
 		margin: 0;

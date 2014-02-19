@@ -1,5 +1,6 @@
-body {
-  //overflow-x: hidden;
+#site-canvas {
+  overflow: hidden;
+  position: relative;
 }
 
 .next-post, .previous-post {
@@ -18,4 +19,3 @@ body {
 #site-body > article:first-child {
   position: relative;
 }
-

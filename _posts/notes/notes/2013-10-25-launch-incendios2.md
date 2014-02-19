@@ -6,7 +6,7 @@ category: note
 title: Incendios 0.2 - more and improved data
 user: olafveerman
 
-filters: project
+filters: work
 image: incendios-pt.png
 related_post:
   - incendios

@@ -1,12 +1,12 @@
 ---
 layout: note
 notes_active : true
-filters: guide
+category: note
 
 title: Processing data for Open Spending
 user: danielfdsilva
 
-category: note
+filters: guide
 image: openspending.png
 related-post: open-data
 

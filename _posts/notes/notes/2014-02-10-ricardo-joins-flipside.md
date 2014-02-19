@@ -6,7 +6,7 @@ category: note
 title: Ricardo Mestre joins Flipside
 user: olafveerman
 
-filters: flipside
+filters: misc
 image: note-rm-avatar.png
 
 ---

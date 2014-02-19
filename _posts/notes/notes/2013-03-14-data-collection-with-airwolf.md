@@ -6,7 +6,7 @@ category: note
 title: Data collection with Airwolf
 user: olafveerman
 
-filters: project
+filters: work
 image: aw-ccdashboard.png
 related_post: airwolf data-collection
 

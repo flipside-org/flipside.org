@@ -6,7 +6,7 @@ category: note
 title: Text to Change's commitment to open data
 user: olafveerman
 
-filters: project
+filters: work
 image: ttc-mobilephones.jpg
 
 ---

@@ -8,7 +8,7 @@ background_color: c45b3e
 title: Incendios.pt - eleven years of fire data
 user: olafveerman
 
-filters: project
+filters: work
 image: incendios-pt_map.png
 related_post: incendios
 

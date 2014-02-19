@@ -14,21 +14,33 @@
             {% if post.category == 'note' %}      
               {% capture related_notes_code %}{{related_notes_code}}
                 <li>
-                  <a href="{{ post.url }}">
-                    {% image thumb notes/{{ post.image }} %}
-                    {{ post.title }}<br/>
-                  </a>
-                  <em>Under</em> Notes
+                  <article>
+                    <a href="{{ post.url }}">
+                      <div class="media">
+                        {% image thumb notes/{{ post.image }} %}
+                      </div>
+                      <div class="teaser">
+                        <h1>{{ post.title }}</h1>
+                        <p class="meta"><em>Under</em> Notes</p>
+                      </div>
+                    </a>
+                  </article>
                 </li>
               {% endcapture %}
             {% elsif post.category == 'project' %}
               {% capture related_projects_code %}{{related_projects_code}}
                 <li>
-                  <a href="{{ post.url }}">
-                    {% image thumb projects/{{ post.image }} %}
-                    {{ post.title }}<br/>
-                  </a>
-                  <em>Under</em> Projects
+                  <article>
+                    <a href="{{ post.url }}">
+                      <div class="media">
+                        {% image thumb projects/{{ post.image }} %}
+                      </div>
+                      <div class="teaser">
+                        <h1>{{ post.title }}</h1>
+                        <p class="meta"><em>Under</em> Projects</p>
+                      </div>
+                    </a>
+                  </article>
                 </li>
               {% endcapture %}
             {% endif %}

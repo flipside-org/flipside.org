@@ -4,6 +4,11 @@
 
 /* Generic styles */
 
+dt {
+	color: $primary-color;
+	font-weight: $body-font-bold;
+}
+
 dl {
   margin: 0;
 }
@@ -70,6 +75,7 @@ body {
   	}
 	}
 	.title {
+		word-wrap: break-word;
 		margin: 0;
 	}
   .section-title {
@@ -257,9 +263,10 @@ main {
 		.media-wrapper {
 			margin: 1.25rem 0;
 			figure {
-				background-color: $light-grey;	
-				padding: 0.25rem;
+				background-color: lighten($primary-color, 65%);
+				@include border-radius(0.25rem);
 				text-align: center;
+				padding: 0.25rem;
 			}
 		}
 	}
@@ -267,11 +274,29 @@ main {
 		h1 {
 			@extend .h5;
 		}
-		.thumb {
-  		@include border-radius(200px);
+		a {
+		  display: block;
+			font-weight: $body-font-bold;
+		}
+		.media {
 		  float: left;
-		  margin-right: 10px;
-		  width: 50px;
+		  margin-right: 0.75rem;
+			width: 3.5rem;
+  		img {
+  			@include border-radius(2rem);
+  			display: block;
+  		}
+		}
+		.teaser {
+			display: table-cell;
+			width: 100%;
+			h1 {
+				font-size: 1rem;
+				margin: 0;
+			}
+			p.meta {
+				font-weight: normal;
+			}
 		}
 	}
 
@@ -404,15 +429,12 @@ ul.hub {
 /* Related content */
 
 .related-content {
-	border-top: 2px #e6e6e6 solid;
+	border-top: 4px lighten($primary-color,65%) solid;
 	margin-top: 1rem;
 	padding-top: 1rem;
 	ul {
 		list-style: none;
 		margin: 0;
-	}
-	a {
-		font-weight: bold;
 	}
 }
 

@@ -103,13 +103,21 @@ $(document).ready(function() {
    * @param {Object} $next_link
    */
   function _init($prev_link, $next_link) {
-    _load_post('next');
-    _load_post('previous');      
+    
+    // The animation shouldn't run on mobile. Since the posts are not going
+    // to load the link will behave as a normal one.
+    // Use the font size technique.
+    // 0px we are on mobile (small)
+    // 1px we are over mobile (medium and up)
+    if ($('#site-title img').css('font-size') != '0px') {
+      _load_post('next');
+      _load_post('previous');
+    } 
     
     var $current_post = $('#site-body > article:first-child');
     
-    $next_link.click(function(e) {      
-     var $self = $(this);      
+    $next_link.click(function(e) {
+      var $self = $(this);      
       if ($self.hasClass('inactive')) {
         e.preventDefault();
         return;
@@ -126,7 +134,7 @@ $(document).ready(function() {
     });
     
     $prev_link.click(function(e) {
-      var $self = $(this);      
+      var $self = $(this);
       if ($self.hasClass('inactive')) {
         e.preventDefault();
         return;

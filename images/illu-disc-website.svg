@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" enable-background="new 0 0 200 200"><circle fill="#025A74" cx="100" cy="100" r="100"/><path fill="#fff" d="M152 52h-104c-2.2 0-4 1.8-4 4v88c0 2.2 1.8 4 4 4h104c2.2 0 4-1.8 4-4v-88c0-2.2-1.8-4-4-4zm-86 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm98 86h-104v-76h104v76z"/><path fill="#418397" d="M56 80h36v24h-36z"/><path fill="#80ACB9" d="M100 80h44v8h-44zm0 16h44v8h-44zm-44 16h88v8h-88zm0 16h88v8h-88z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<circle fill="#025A74" cx="100" cy="100" r="100"/>
+<path fill="#FFFFFF" d="M152,52H48c-2.2,0-4,1.8-4,4v88c0,2.2,1.8,4,4,4h104c2.2,0,4-1.8,4-4V56C156,53.8,154.2,52,152,52z M66,58
+	c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2s-2-0.9-2-2C64,58.9,64.9,58,66,58z M60,58c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2s-2-0.9-2-2
+	C58,58.9,58.9,58,60,58z M54,58c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2s-2-0.9-2-2C52,58.9,52.9,58,54,58z M152,144H48V68h104V144z"/>
+<g>
+	<rect x="56" y="80" fill="#418397" width="36" height="24"/>
+	<rect x="100" y="80" fill="#80ACB9" width="44" height="8"/>
+	<rect x="100" y="96" fill="#80ACB9" width="44" height="8"/>
+	<rect x="56" y="112" fill="#80ACB9" width="88" height="8"/>
+	<rect x="56" y="128" fill="#80ACB9" width="88" height="8"/>
+</g>
+</svg>

@@ -62,6 +62,31 @@ $anchor-font-color-hover: $body-font-color;
   @include border-radius(1rem);
 }
 
+.cta-style {
+	font-size: 1.25rem;
+	font-weight: $body-font-bold;
+	line-height: 2.75rem;
+	text-decoration: none !important;
+	&:after {
+		@extend .icon-arr-tail-right;
+		margin-left: 0.5rem;
+	}
+}
+
+.cta-button {
+	@extend .cta-style;
+	@include border-radius(22px);
+	background-color: $primary-color;
+	display: inline-block;
+	padding: 0 1.25rem;
+	color: #fff;
+}
+
+.cta-inline {
+	@extend .cta-style;
+	color: $primary-color;
+}
+
 /* Generic dropdown styling */
 .dropdown {
 	a {

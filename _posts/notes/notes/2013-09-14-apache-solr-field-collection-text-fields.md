@@ -1,17 +1,13 @@
 ---
 layout: note
 notes_active : true
-filters: guide
+category: note
 
 title: Apache Solr Field Collection and text fields
-category: note
-image: search-index-view-mode.png
-tags: 
-  - drupal
-  - solr
-  - field collection
-
 user: danielfdsilva
+
+filters: guide
+image: search-index-view-mode.png
 
 ---
 

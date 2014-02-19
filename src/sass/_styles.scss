@@ -79,7 +79,7 @@ body {
 		margin: 0;
 	}
   .section-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: normal;
     margin: 0;
     opacity: 0.5;
@@ -108,6 +108,19 @@ body {
 		.prose,
 		.media {
 			@include grid-column(6);
+		}
+		.prose {
+			padding-top: 3rem;
+			.title {
+				margin-bottom: 1rem;
+			}
+			.section-title {
+				top: 1.75rem; // padding-top of prose - line-height of section-title
+			}
+			.summary {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
 		}
 	}
 }
@@ -314,6 +327,7 @@ main {
 /* Frontpage */
 
 .front {
+	padding-top: 2rem;
 	section {
 		text-align: center;
 		@include grid-column(12);
@@ -328,22 +342,22 @@ main {
 				float: left;
 			}
 		}
-		&.what-we-do h1 {
-			@extend .h5;
+		&.what-we-do {
+			h1 {
+				@extend .h5;
+			}
+			img {
+				margin: 0 auto;
+				max-width: 200px;
+			}
+
 		}
 	}
-	.about-us {
-		@extend .link-button;
-		padding: 0.25rem 1rem;
-		a {
-			color: #fff;
-			text-decoration: none;
-		}
-		& a:after {
-			@extend .icon-arr-tail-right;
-		}
+	.about-us a {
+		@extend .cta-button;
 	}
 	@media #{$medium-up} {
+		padding-top: 4rem;
 		section.tag-line {
 			@include grid-column(6,$offset:3);
 		}
@@ -396,9 +410,8 @@ ul.hub {
 	    margin-left: 5px;
 	    padding: 0 10px;
 	  }
-	  p.read-more a:after {
-	  	@extend .icon-arr-tail-right;
-	  	margin-left: 0.5rem;
+	  p.read-more {
+	  	@extend .cta-inline;
 		}
 	}
 

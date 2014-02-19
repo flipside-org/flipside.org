@@ -1,7 +1,27 @@
 $(document).ready(function() {
   
-  var $post_nav = $(".notes-navigation");
-  if ($post_nav.length >= 1) {
+  /**
+   * Navigation div.
+   */
+  var $post_nav;
+  
+  /**
+   * Stores the status of the post loading.
+   * When the user clicks the next/previous, if the post is not loaded
+   * the animation will not happen and the link will work normally.
+   */
+  var load_status = {
+    previous : false,
+    next : false,
+  };
+  
+  /**
+   * Variable to control whether the animation is running.
+   */
+  var animating = false;
+  
+  if ($(".notes-navigation").length >= 1) {
+    $post_nav = $(".notes-navigation");
     // We're on the notes page. Proceed.
     
     // Ajax power activate!
@@ -69,13 +89,60 @@ $(document).ready(function() {
     });
   }
   
-  $post_nav = $(".project-navigation");
-  if ($post_nav.length >= 1) {
+  if ($(".project-navigation").length >= 1) {
+    $post_nav = $(".project-navigation");
     // Project page.
     var $prev_link = $post_nav.find('.previous');
     var $next_link = $post_nav.find('.next');
     _init($prev_link, $next_link);
   }
+  
+  /**
+   * Sets up the click listeners.
+   * @param {Object} $prev_link
+   * @param {Object} $next_link
+   */
+  function _init($prev_link, $next_link) {
+    _load_post('next');
+    _load_post('previous');      
+    
+    var $current_post = $('#site-body > article:first-child');
+    
+    $next_link.click(function(e) {      
+     var $self = $(this);      
+      if ($self.hasClass('inactive')) {
+        e.preventDefault();
+        return;
+      }
+      // If the post is not loaded, work as normal link.
+      if (!load_status.next) {
+        return true;
+      }
+      
+      e.preventDefault();
+      var $next_post = $('article.next-post');
+      _animate_post_transition($current_post, $next_post, 'left', $self.attr('href'));
+      
+    });
+    
+    $prev_link.click(function(e) {
+      var $self = $(this);      
+      if ($self.hasClass('inactive')) {
+        e.preventDefault();
+        return;
+      }
+      // If the post is not loaded, work as normal link.
+      if (!load_status.previous) {
+        return true;
+      }
+      
+      e.preventDefault();
+      var $prev_post = $('article.previous-post');
+      _animate_post_transition($current_post, $prev_post, 'right', $self.attr('href'));
+      
+    });
+    
+  } 
   
   /**
    * Loads a post and adds it to the body.
@@ -91,66 +158,18 @@ $(document).ready(function() {
     $.ajax({
       url: post_url
     }).done(function(post_data){
-      // The posts need position absolute and a top distance equals to
-      // the header height.
-      var header_height = $('#site-hdr').height();
-      
+      load_status[type] = true;
       // Prepare post.
       var $temp = $('<div>').html(post_data);
       var $post_article = $temp.find('#site-body > article');
       $post_article.addClass(type + '-post')
-        .css('top', header_height);
+        .css('top', 0);
         
       // Add to body.
       $('#site-body').append($post_article);
     });
   }
   
-  /**
-   * Sets up the click listeners.
-   * @param {Object} $prev_link
-   * @param {Object} $next_link
-   */
-  function _init($prev_link, $next_link) {
-    _load_post('next');
-    _load_post('previous');      
-    
-    var $current_post = $('#site-body > article:first-child');
-    
-    $next_link.click(function(e) {
-      e.preventDefault();
-      var $self = $(this);
-      
-      if ($self.hasClass('inactive')) {
-        return;
-      }
-      
-      var $next_post = $('article.next-post');
-      _animate_post_transition($current_post, $next_post, 'left', $self.attr('href'));
-      
-    });
-    
-    $prev_link.click(function(e) {
-      e.preventDefault();
-      var $self = $(this);
-      
-      if ($self.hasClass('inactive')) {
-        return;
-      }
-      
-      var $prev_post = $('article.previous-post');
-      _animate_post_transition($current_post, $prev_post, 'right', $self.attr('href'));
-      
-    });
-    
-    keypress.sequence_combo('shift right', function() { $next_link.click(); });
-    keypress.sequence_combo('shift left', function() { $prev_link.click(); });
-  } 
-  
-  /**
-   * Variable to control whether the animation is running.
-   */
-  var animating = false;
   /**
    * Animate the post.
    */
@@ -170,16 +189,27 @@ $(document).ready(function() {
     var $current_banner = $current_post.find('.banner');
     var $sliding_banner = $sliding_post.find('.banner');
   
+    // NOTE:
+    // We are using box-sizing: border-box so when setting the height
+    // without animation, we need to use the actual height without
+    // padding or borders.
+    // However when animating, it's the css property that gets animated
+    // and thanks to the box-sizing we need the outerHeight, that includes
+    // borders and paddings.
     var current_banner_height = $current_banner.outerHeight();
     var sliding_banner_height = $sliding_banner.outerHeight();
     
     var sliding_body_height = $sliding_post.outerHeight();
     
+    // Sizes of paddings and borders
+    var site_body_extra = $('#site-body').outerHeight() - $('#site-body').height();
+    
     async.auto({
+      
       animate_banner : function(callback) {
-        
         if (current_banner_height < sliding_banner_height) {
           console.log('animate_banner : current banner smaller');
+          // Check NOTE.
           $current_banner.animate({
             height: sliding_banner_height
           }, options.banner_speed, function(){
@@ -188,12 +218,9 @@ $(document).ready(function() {
         }
         else if (sliding_banner_height < current_banner_height) {
           console.log('animate_banner : sliding banner smaller');
-          // The magic number is used to calculate the height of the post banner..
-          // It comes from the sum of the paddings applied to the banner.
-          // Only needed when setting the value directly, not when animating.
-          var magic_number = 432;
-          // Off stage. Doesn't need animation
-          $sliding_banner.height(current_banner_height - magic_number);
+          // Off stage. Doesn't need animation.
+          // Check NOTE.
+          $sliding_banner.height($current_banner.height());
           callback(null);
         }
         else {
@@ -201,20 +228,17 @@ $(document).ready(function() {
           // Banner size are equal.
           callback(null);
         }
-        
       },
+      
       animate_body : function(callback) {
-        // -400 because it has a negative margin that is interfering.
-        if ($current_post.height() - 400 < $sliding_post.height()) {
+        if ($current_post.height() < $sliding_post.height()) {
           console.log('animate_body : current body smaller');
-          $current_post.css('position', 'absolute');
-          $current_post.css('width', '100%');
             
-          $('#site-body').height($current_post.outerHeight());
-          
+          $('#site-body').height($current_post.height());          
           $('#site-body').animate({
-            // 62 is the nav menu height
-            height : sliding_body_height + 62
+            // Due to the box-sizing when animating the height we need to
+            // include the padding.
+            height : sliding_body_height + site_body_extra
           }, options.banner_speed, function() {
             callback(null);
           });
@@ -223,11 +247,9 @@ $(document).ready(function() {
           console.log('animate_body : sliding body equal or smaller');
           callback(null);
         }
-        
       },
       
       slide : ['animate_banner', 'animate_body', function(callback) {
-        
         // Properties can not be dynamically set on JSON objects.
         var animation_properties = {};
         animation_properties[direction] = '0%';
@@ -239,16 +261,15 @@ $(document).ready(function() {
         animation_properties = {};
         animation_properties[direction] = '-100%';
         $current_post.animate(animation_properties, options.sliding_speed);
-        
       }],
       
       animate_banner_original : ['slide', function(callback) {
-        
         // sliding_banner_height will hold the banner height measured before
         // all the animations started. So it's the original height.
-        // Only animate backl if it changed.
-        if ($sliding_banner.outerHeight() != sliding_banner_height) {
-          console.log('animate_banner_original : animating');
+        // Only animate back if it changed.
+        if ($sliding_banner.height() != sliding_banner_height) {
+          console.log('animate_banner_original : animating');          
+          // Check NOTE.
           $sliding_banner.animate({
             height: sliding_banner_height
           }, options.banner_speed, function(){
@@ -259,18 +280,14 @@ $(document).ready(function() {
           console.log('animate_banner_original : same size');
           callback(null);
         }
-        
       }],
+      
       animate_body_original : ['slide', function(callback) {
-        
         if ($sliding_post.height() < $current_post.height()) {
-          $current_post.css('position', 'absolute');
-            
-          $('#site-body').height($current_post.outerHeight());
-          
           $('#site-body').animate({
-            // 62 is the nav menu height
-            height : sliding_body_height + 62
+            // Due to the box-sizing when animating the height we need to
+            // include the padding.
+            height : sliding_body_height + site_body_extra
           }, options.banner_speed, function() {
             callback(null);
           });
@@ -287,5 +304,4 @@ $(document).ready(function() {
     });
     
   }
-
 });

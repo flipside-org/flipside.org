@@ -19,3 +19,7 @@
 #site-body > article:first-child {
   position: relative;
 }
+
+#site-body > article {
+  overflow: hidden;
+}

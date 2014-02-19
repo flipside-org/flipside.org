@@ -27,6 +27,7 @@ body {
 	padding-top: 2rem;
   position: relative;
   z-index: 99;
+  margin-bottom: -72px;
   
 	#site-title {
 		@include grid-column(10);
@@ -108,9 +109,8 @@ body {
 
 /* Banner */
 .banner {
-	padding-top: 400px;
+	padding-top: 72px;
 	padding-bottom: 2rem;
-	margin-top: -400px;
 	margin-bottom: 2rem;
 
 	.heading,

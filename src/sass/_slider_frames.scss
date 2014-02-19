@@ -1,0 +1,72 @@
+.stripe {
+	background: orange;
+	padding: 20px 20px 0 20px;
+	overflow: hidden;
+}
+
+.media {
+	display: table-cell;
+	vertical-align: bottom;
+	// margin: 0 auto;
+	// width: 60%;
+	font-size: 0;
+	// @extend .clearfix;
+}
+
+.wrapper {
+	display: inline-block;
+	width: auto;
+}
+
+.wrapper.desktop {
+	width: 640px;
+}
+
+.wrapper.mobile {
+	position: relative;
+	z-index: 10;
+	width: 184px;
+	margin-right: -128px;
+}
+
+.wrapper.polaroid {
+	width: 444px;
+	position: relative;
+	z-index: 10;
+	bottom: -48px;
+	margin-top: -48px;
+}
+
+.wrapper img {
+	display: block;
+	background: transparent left top no-repeat;
+	background-size: cover;
+	height: auto;
+	width: 100%;
+	box-shadow: -8px 8px rgba(19,22,25,.2);
+}
+
+.desktop img {
+	padding-top: 5%; /* (32*100)/640 */
+	background-image: url('../images/frame-desktop.svg');
+	border-radius: 0.625% 0.625% 0 0 / 1% 1% 0 0; /* (4*100)/640 / (4*100)/400 */
+}
+
+.mobile img {
+	padding-top: 26.087%; /* (48*100)/184 */
+	padding-left: 6.522%; /* (12*100)/184 */
+	padding-right: 6.522%; /* (12*100)/184 */
+	background-image: url('../images/frame-mobile.svg');
+	border-radius: 17.5% 17.5% 0 0 / 11.667% 11.667% 0 0; /* (28*100)/160 / (28*100)/240 */
+}
+
+.polaroid img {
+	padding-top: 7.207%; /* (32*100)/444 */
+	padding-bottom: 21.622%; /* (96*100)/444 */
+	padding-left: 7.207%; /* (32*100)/444 */
+	padding-right: 7.207%; /* (32*100)/444 */
+	background-image: url('../images/frame-polaroid.svg');
+	border-radius: 1.053% / 1.176%; /* (4*100)/380 / (4*100)/340 */
+	-webkit-transform: rotate(4deg);
+	-webkit-backface-visibility: hidden;
+}

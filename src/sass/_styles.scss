@@ -105,9 +105,13 @@ body {
 		@include grid-column(12);
 	}
 	@media #{$medium-up} {
-		.prose,
-		.media {
+		.prose {
 			@include grid-column(6);
+			float: none !important;
+		}
+		.media {
+			@include grid-column($columns:5, $offset:1);
+			float: none !important;
 		}
 		.prose {
 			padding-top: 3rem;

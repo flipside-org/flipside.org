@@ -1,0 +1,12 @@
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.data.flipside.twitter }}">
+<meta name="twitter:creator" content="@{{ site.data.team[page.user].twitter }}">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+{% if page.category == "note" %}
+	{% assign image_path = "/images/notes/" %}
+{% endif %}
+{% if page.category == "project" %}
+	{% assign image_path = "/images/projects/" %}
+{% endif %}
+<meta name="twitter:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}">

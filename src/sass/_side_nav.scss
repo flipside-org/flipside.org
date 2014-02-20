@@ -1,0 +1,37 @@
+#site-canvas {
+  overflow: hidden;
+  position: relative;
+}
+
+.next-post, .previous-post {
+  position: absolute;
+  min-width: 100%;
+}
+
+.next-post {
+  left: 100%;
+}
+
+.previous-post {
+  right: 100%;
+}
+
+#site-body > article {
+  overflow: hidden;
+  
+  &:first-child {
+    position: relative;
+  }
+}
+
+// Font size technique to handle media queries in javascript.
+#site-title img {
+  font-size: 1px;
+}
+
+@media #{$small-only} {
+  #site-title img {
+    font-size: 0px;
+  }
+}
+

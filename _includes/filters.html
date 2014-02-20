@@ -1,0 +1,35 @@
+<li id="filters">
+	<a href="#" class="toggle filter active">
+		{% if include.active_filter %}
+			{% for filter in site.categories.filter %}
+				{% if filter.filter_name == include.active_filter %}
+	  			{{ filter.title }}
+	  		{% endif %}
+	  	{% endfor %}
+		{% else %}
+  		All
+		{% endif %}
+	</a>
+	<ul class="links">
+	{% if include.active_filter %}
+	  <li>
+	  	<a href="/notes">All</a>
+	  </li>
+	{% else %}
+		<li class="active">
+			All
+		</li>
+	{% endif %}	
+	{% for filter in site.categories.filter %}
+	  {% if filter.filter_name == include.active_filter %}
+	  <li class="active">
+	  	{{ filter.title }}
+	  </li>
+	  {% else %}
+	  <li>
+	  	<a href="{{ filter.url }}">{{ filter.title }}</a>
+	  </li>
+	  {% endif %}
+	{% endfor %}
+	</ul>
+</li>

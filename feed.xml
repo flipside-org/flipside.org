@@ -1,0 +1,21 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+        <channel>
+                <title>{{ site.name | xml_escape }} - Notes</title>
+                <description>Writings from the notes section of flipside.org</description>
+                <link>{{ site.domain }}</link>
+                <atom:link href="{{site.domain }}/feed.xml" rel="self" type="application/rss+xml" />
+                {% for note in site.categories.note limit:10 %}
+                        <item>
+                                <title>{{ note.title | xml_escape }}</title>
+                                <description>{{ note.content | xml_escape }}</description>
+                                <pubDate>{{ note.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+                                <link>{{ site.domain }}/{{ note.url }}</link>
+                                <guid isPermaLink="true">{{ site.domain }}/{{ note.url }}</guid>
+                        </item>
+                {% endfor %}
+        </channel>
+</rss>

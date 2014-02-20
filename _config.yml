@@ -1,41 +1,25 @@
-safe:       false
-permalink:  /notes/:title/
-pygments:   true
+safe:       	false
+permalink:  	/notes/:title/
+pygments:   	true
+domain:				http://flipside.org
+name:					Flipside
+description:	Flipside builds web-based tools for civil society organisations.
+exclude:    	['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md', 'bower.json']
 
-
-# Users listing
-users :
-  danielfdsilva :
-    name: Daniel Silva
-    function: Developer
-    photo: team/daniel-thumb.jpg
-    
-    bio: |
-      Daniel joined Flipside in the summer of 2012 and is an all-round web developer with a special knack for frontend development.
-    twitter: danielfdsilva
-    github: danielfdsilva
-    email: daniel.silva@flipside.org
-
-    
-  olafveerman :
-    name: Olaf Veerman
-    function: Founder and Project Lead
-    photo: team/olaf-thumb.jpg
-    
-    bio: |
-      Olaf is the founder of Flipside, project lead and responsible for the day-to-day operations.
-    twitter: oBirdman
-    github: olafveerman
-    email: olaf.veerman@flipside.org
-
-
-  nunoveloso :
-    name: Nuno Veloso
-    function: Developer
-    photo: team/nuno-thumb.jpg
-    
-    bio: | 
-      Nuno is an experienced web-developer that mostly applies his skills to the back-end side of our projects.
-    twitter: nunoveloso
-    github: nunoveloso
-    email: nuno@flipside.org
+# Image presets
+# For more info: https://github.com/robwierzbowski/jekyll-image-tag
+image:
+  source: src/original_images/
+  output: images
+  presets:
+    article:
+      height: 400
+      width: 600
+    list:
+      height: 320
+      width: 480
+    thumb:
+      attr:
+        class: thumb
+      height: 112
+      width: 112

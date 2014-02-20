@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Helpers - extends + custom vars
+   ========================================================================== */
+
+/* Generic styles */
+  
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+.visually-hidden {
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Custom variables */
+
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: $body-font-color;
+
+/* Extends - re-usabe CSS */
+
+.h1 {
+	font-size: rem-calc(44);
+	line-height: 1.182;
+}
+.h2 {
+	font-size: rem-calc(36);
+	line-height: 1.222;
+}
+.h3 {
+	font-size: rem-calc(32);
+	line-height: 1.25;
+}
+.h4 {
+	font-size: rem-calc(28);
+	line-height: 1.286;
+}
+.h5 {
+	font-size: rem-calc(24);
+	line-height: 1.333;
+}
+.h6 {
+	font-size: rem-calc(20);
+	line-height: 1.4;
+}
+
+.link-button {
+  background-color: rgba($primary-color-dark,0.6);
+  @include border-radius(1rem);
+}
+
+/* Inline Call to Action and buttons */
+
+.cta-style {
+	font-size: 1.25rem;
+	font-weight: $body-font-bold;
+	line-height: 2.75rem;
+	text-decoration: none !important;
+	&:after {
+		@extend .icon-arr-tail-right;
+		margin-left: 0.5rem;
+	}
+}
+
+.cta-button {
+	@extend .cta-style;
+	@include border-radius(22px);
+	background-color: $primary-color;
+	display: inline-block;
+	padding: 0 1.25rem;
+	color: #fff;
+}
+
+.cta-inline {
+	@extend .cta-style;
+	color: $primary-color;
+}
+
+/* Divider */
+
+.divider-top {
+	border-top: 0.25rem lighten($primary-color, 65%) solid;
+	padding-top: 1rem;
+}
+
+.divider-bottom {
+	border-bottom: 0.25rem lighten($primary-color, 65%) solid;
+	padding-bottom: 1rem;
+}
+
+/* Generic dropdown styling */
+.dropdown {
+	a {
+		color: #fff;
+		display: block;
+	}
+	ul.links {
+		background-color: rgba($dark-color,0.9);	
+		@include border-radius(5px);
+		display: none;
+		left: 50%;
+		list-style: none;
+		margin: 1rem 0 0 -100px;
+		padding: 1rem;
+		position: absolute;
+  	text-align: left;
+  	width: 200px;
+    z-index: 9999;
+	}
+}
+
+/* Dropdown with top-arrow */
+.dropdown-arrow {
+	ul:before {
+		content: ' ';
+		height: 0;
+		position: absolute;
+		width: 0;
+		border: 10px solid transparent;
+		border-bottom-color: rgba($dark-color,0.9); 
+		top: -20px;
+		left: 50%;
+		margin-left: -10px; /* equal to border-width */
+		z-index: 2;
+	}
+}

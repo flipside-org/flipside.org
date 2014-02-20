@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  {% if page.twitter_card %}
+  	{% include twitter_card.html %}
+  {% endif %}
+  {% if page.facebook_og %}
+  	{% include facebook_og.html %}
+  {% endif %}
+  <title>Flipside - {{ page.title }}</title>
+  
+  <link rel="stylesheet" href="/css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.domain }}/feed.xml">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33134074-1', 'flipside.org');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        {% include menu.html %}
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      {{ content }}
+    </main>
+
+    {% if page.contact %}
+      {% include contact.html %}
+    {% endif %}
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <p class="built-by">
+            <span class="fs">Flipside</span> - 2014
+          </p>
+          <p class="technology">
+            Built with <a href="http://jekyllrb.com/">Jekyll</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="/scripts/foundation.min.js"></script>
+  <script src="/scripts/flipside.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+---
+layout: base
+active_menu : projects
+twitter_card: true
+facebook_og: true
+contact: true
+---
+{% comment %}
+  Navigation links for projects can be rendered differently from notes
+  since they don't need filters.
+  To render these links we just loop through the posts array and find the
+  project before and after.
+{% endcomment %}
+
+{% assign break_cycle = false %}
+
+{% assign previous_project = false %}
+{% assign next_project = false %}
+{% assign current_found = false %}
+
+{% for post in site.categories.project %}
+  {% unless break_cycle %}
+    {% if current_found %}
+    
+      {% assign next_project = post %}
+      {% assign break_cycle = true %}
+      
+    {% else %}
+    
+      {% if page.url == post.url %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign previous_project = post %}
+      {% endif %}
+      
+    {% endif %}  
+  {% endunless%}
+{% endfor%}
+
+<article>
+
+  {% if page.background_color %}
+  <header class="banner" style="background-color: #{{ page.background_color }};">
+  {% else %}
+  <header class="banner">
+  {% endif %}
+    <div class="row">
+      <div class="heading">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="section-title">Project</h2>
+      </div>
+      <div class="actions">
+        <ul class="project-navigation">
+          {% include social-share.html %}
+          <li>
+          {% if previous_project %}
+            <a href="{{ previous_project.url }}" class="project-nav-link previous"><span class="visually-hidden">previous</span></a>
+          {% else %}
+            <a href="#" class="inactive project-nav-link previous"><span class="visually-hidden">previous</span></a>
+          {% endif %}
+          </li>
+          <li>
+          {% if next_project %}
+            <a href="{{ next_project.url }}" class="project-nav-link next"><span class="visually-hidden">next</span></a>
+          {% else %}
+            <a href="#" class="inactive project-nav-link next"><span class="visually-hidden">next</span></a>
+          {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="content">  
+      {% if page.image %}
+      <div class="media-wrapper">
+        <figure>
+          {% image article projects/{{ page.image }} %}
+        </figure>
+      </div>
+      {% endif %}
+      {{ content }}
+    </div>
+    {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
+    <aside>
+      <h1>Details</h1>
+      <dl>
+        {% if page.meta %}
+          <dt>Type</dt>
+          <dd>{{ page.meta }}</dd>
+        {% endif %}
+        {% if page.client %}
+          <dt>Client</dt>
+          <dd>{{ page.client }}</dd>
+        {% endif %}
+        {% if page.technology %}
+          <dt>Technology</dt>
+          <dd>{{ page.technology }}</dd>
+        {% endif %}
+        {% if page.keywords %}
+          <dt>Keywords</dt>
+          <dd>{{ page.keywords }}</dd>
+        {% endif %}
+        {% if page.project_link.href %}
+          <dt>URL</dt>
+          <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
+        {% endif %}
+      </dl>
+    </aside>
+    {% endif %}
+  </div>
+</article>

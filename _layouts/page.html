@@ -1,0 +1,29 @@
+---
+layout: base
+twitter_card: true
+facebook_og: true
+---
+<article class="{{ page.classes }}">
+  {% if page.background_color %}
+  <header class="banner" style="background-color: #{{ page.background_color }};">
+  {% else %}
+  <header class="banner">
+  {% endif %}
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="section-title">{{ page.section_title }}</h2>
+      </div>
+    	<div class="actions">
+        <ul>
+          {% include social-share.html %}
+        </ul>
+      </div>
+    </div>
+  </header>
+ 	<div class="row">
+		<div class="content">
+      {{ content }}
+    </div>
+  </div>
+</article>

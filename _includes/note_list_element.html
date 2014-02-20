@@ -1,0 +1,28 @@
+<li>
+  <article>
+    {% if include.active_filter %}
+      {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
+    {% else %}
+      {% capture url %}{{ include.note.url }}{% endcapture %} 
+    {% endif %}
+    
+    {% assign filter_list = '' %}
+    {% for filter in include.note.filters %}
+      {% capture filter_list %}{{filter_list}}<span class="category">{{ filter | capitalize }}</span>{% endcapture %}
+    {% endfor %}
+
+    <header>
+      <a href="{{ url }}">
+        {% image list notes/{{ include.note.image }} %}
+        <h1>
+          {{ include.note.title }}
+        </h1>
+      </a>
+    </header>
+    <p class="metadata"><span class="date">{{ include.note.date | date: "%d %b. %Y" }}</span>{{ filter_list }}</p>
+    <p class="intro">
+      {{ include.note.excerpt | strip_html | truncatewords: 40 }}
+    </p>
+    <p class="read-more"><a href="{{ url }}">Read more</a></p>
+  </article>
+</li>

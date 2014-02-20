@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Type - basic styling of the typography
+   ========================================================================== */
+
+h1 { @extend .h1; }
+h2 { @extend .h2; }
+h3 { @extend .h3; }
+h4 { @extend .h4; }
+h5 { @extend .h5; }
+h6 { @extend .h6; }
+
+/* Custom icon font generated with Icomoon */
+@font-face {
+  font-family: 'flipside-icons';
+  src:url('/font/flipside-icons/flipside-icons.eot');
+  src:url('/font/flipside-icons/flipside-icons.eot?#iefix') format('embedded-opentype'),
+    url('/font/flipside-icons/flipside-icons.woff') format('woff'),
+    url('/font/flipside-icons/flipside-icons.ttf') format('truetype'),
+    url('/font/flipside-icons/flipside-icons.svg#flipside-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon, [class^="icon-"], [class*=" icon-"] {
+  font-family: 'flipside-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  //line-height: 1;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mobile {
+  @extend .icon;
+  content: "\e600";
+}
+.icon-clock {
+  @extend .icon;
+  content: "\e601";
+}
+.icon-add {
+  @extend .icon;
+  content: "\e602";
+}
+.icon-tick {
+  @extend .icon;
+  content: "\e603";
+}
+.icon-cancel {
+  @extend .icon;
+  content: "\e604";
+}
+.icon-map-marker {
+  @extend .icon;
+  content: "\e605";
+}
+.icon-s-tick {
+  @extend .icon;
+  content: "\e606";
+}
+.icon-github {
+  @extend .icon;
+  content: "\e607";
+}
+.icon-twitter {
+  @extend .icon;
+  content: "\e608";
+}
+.icon-arr-tail-left {
+  @extend .icon;
+  content: "\e609";
+}
+.icon-arr-tail-right {
+  @extend .icon;
+  content: "\e60a";
+}
+.icon-flickr {
+  @extend .icon;
+  content: "\e60b";
+}
+.icon-google-plus {
+  @extend .icon;
+  content: "\e60c";
+}
+.icon-arr-tail-up {
+  @extend .icon;
+  content: "\e60d";
+}
+.icon-facebook {
+  @extend .icon;
+  content: "\e60e";
+}
+.icon-menu {
+  @extend .icon;
+  content: "\e60f";
+}
+.icon-arr-tail-down {
+  @extend .icon;
+  content: "\e610";
+}
+.icon-download {
+  @extend .icon;
+  content: "\e611";
+}
+.icon-email {
+  @extend .icon;
+  content: "\e612";
+}
+.icon-share {
+  @extend .icon;
+  content: "\e613";
+}
+.icon-s-cancel {
+  @extend .icon;
+  content: "\e614";
+}
+.icon-s-add {
+  @extend .icon;
+  content: "\e615";
+}
+.icon-feed {
+  @extend .icon;
+  content: "\e616";
+}
+.icon-s-triangle-down {
+  @extend .icon;
+  content: "\e617";
+}
+.icon-s-triangle-up {
+  @extend .icon;
+  content: "\e618";
+}
+.icon-s-triangle-right {
+  @extend .icon;
+  content: "\e619";
+}
+.icon-arr-right {
+  @extend .icon;
+  content: "\e61a";
+}
+.icon-arr-left {
+  @extend .icon;
+  content: "\e61b";
+}
+.icon-s-triangle-left {
+  @extend .icon;
+  content: "\e61c";
+}
+.icon-arr-down {
+  @extend .icon;
+  content: "\e61d";
+}
+.icon-s-arr-right {
+  @extend .icon;
+  content: "\e61e";
+}
+.icon-arr-up {
+  @extend .icon;
+  content: "\e61f";
+}
+.icon-s-arr-left {
+  @extend .icon;
+  content: "\e620";
+}
+.icon-briefcase {
+  @extend .icon;
+  content: "\e621";
+}
+.icon-s-arr-up {
+  @extend .icon;
+  content: "\e622";
+}
+.icon-s-arr-down {
+  @extend .icon;
+  content: "\e623";
+}

@@ -1,0 +1,46 @@
+---
+permalink: json/notes_filter.json
+---
+{% comment %}
+  To print a note json object we can't use the if with forloop.last
+  because it may be the last note with the filter we want but not the
+  last of the for.
+  Instead we print the comma before the actual note object given that
+  is not the first note to be printed.
+{% endcomment %}
+
+{
+"all" : [
+  {% for note in site.categories.note %}
+    {
+      "id": "{{note.id}}",
+      "title": "{{note.title}}",
+      "url": "{{note.url}}"
+    }
+    {% unless forloop.last %} , {% endunless %}
+  {% endfor %}
+],
+{% for filter in site.categories.filter %}
+  {% assign one_note_filtered = false %}
+  
+  "{{ filter.filter_name }}" : [  
+    {% for note in site.categories.note %}
+      {% if note.filters contains filter.filter_name %}
+        {% if one_note_filtered %}
+          ,
+        {% else %}
+          {% assign one_note_filtered = true %}
+        {% endif %}
+      
+        {
+          "id": "{{note.id}}",
+          "title": "{{note.title}}",
+          "url": "{{note.url}}"
+        }
+        
+      {% endif %}
+    {% endfor %}
+  ]
+  {% unless forloop.last %} , {% endunless %}
+{% endfor %}
+}

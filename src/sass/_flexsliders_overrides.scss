@@ -9,12 +9,12 @@
     margin-top: -200px;
     
     .slides li {
-      max-height: 3000px;
+      max-height: 1000px;
       padding-top: 200px;
     }
     
     .flex-control-paging li a {
-      background-color: rgba($dark-color,0.9);
+      background-color: rgba($dark-color,0.3);
       &.flex-active {
         background: #FFF;
       }
@@ -27,7 +27,7 @@
 
 /* Direction Nav */
 .flex-direction-nav a  {
-  background-color: rgba($dark-color,0.9);
+  background-color: rgba($dark-color,0.3);
   @include border-radius(25px);
   color: #fff;
   display: block;

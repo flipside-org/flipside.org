@@ -3882,12 +3882,12 @@ th.hide-for-touch {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000311}}
 .flexslider .slides li {
-  max-height: 3000px;
+  max-height: 1000px;
   padding-top: 200px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000316}}
 .flexslider .flex-control-paging li a {
-  background-color: rgba(22, 25, 28, 0.9);
+  background-color: rgba(22, 25, 28, 0.3);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000318}}
 .flexslider .flex-control-paging li a.flex-active {
@@ -3901,7 +3901,7 @@ th.hide-for-touch {
 /* Direction Nav */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_flexsliders_overrides\.scss}line{font-family:\0000329}}
 .flex-direction-nav a {
-  background-color: rgba(22, 25, 28, 0.9);
+  background-color: rgba(22, 25, 28, 0.3);
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
@@ -4044,22 +4044,22 @@ a:hover {
 
 /* Inline Call to Action and buttons */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000367}}
-.cta-style, .cta-button, .banner .read-more,
-.featured .read-more, .front .about-us a, .cta-inline, ul.hub article p.read-more {
+.cta-style, .cta-button, .banner .read-more a,
+.featured .read-more a, .front .about-us a, .cta-inline, ul.hub article p.read-more {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2.75rem;
   text-decoration: none !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000372}}
-.cta-style:after, .cta-button:after, .banner .read-more:after,
-.featured .read-more:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after {
+.cta-style:after, .cta-button:after, .banner .read-more a:after,
+.featured .read-more a:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after {
   margin-left: 0.5rem;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_helpers\.scss}line{font-family:\0000378}}
-.cta-button, .banner .read-more,
-.featured .read-more, .front .about-us a {
+.cta-button, .banner .read-more a,
+.featured .read-more a, .front .about-us a {
   -webkit-border-radius: 22px;
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
@@ -4469,8 +4469,9 @@ body {
   padding-top: 2rem;
   position: relative;
   z-index: 99;
+  margin-bottom: -72px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000337}}
 #site-hdr #site-title {
   position: relative;
   padding-left: 1rem;
@@ -4479,16 +4480,16 @@ body {
   float: left;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000340}}
 #site-hdr #site-title a {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000342}}
 #site-hdr #site-title a img {
   display: block;
   max-width: 170px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000348}}
 #site-hdr nav#primary {
   position: relative;
   padding-left: 1rem;
@@ -4497,7 +4498,7 @@ body {
   float: left;
 }
 @media only screen and (min-width: 40.063em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000352}}
   #site-hdr #site-title {
     position: relative;
     padding-left: 1rem;
@@ -4505,7 +4506,7 @@ body {
     width: 33.33333%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000355}}
   #site-hdr nav#primary {
     position: relative;
     padding-left: 1rem;
@@ -4516,13 +4517,13 @@ body {
 }
 
 /* Banner and feature section */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000363}}
 .banner,
 .featured {
   background-color: #373f47;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000368}}
 .banner a,
 .banner .title,
 .banner .section-title,
@@ -4531,19 +4532,19 @@ body {
 .featured .section-title {
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000370}}
-.banner .read-more,
-.featured .read-more {
-  background-color: rgba(22, 25, 28, 0.9);
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000371}}
+.banner .read-more a,
+.featured .read-more a {
+  background-color: rgba(22, 25, 28, 0.3);
   margin-bottom: 4rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000376}}
 .banner .title,
 .featured .title {
   word-wrap: break-word;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000380}}
 .banner .section-title,
 .featured .section-title {
   font-size: 1.25rem;
@@ -4551,15 +4552,15 @@ body {
   margin: 0;
   opacity: 0.5;
   position: absolute;
-  top: -1rem;
+  top: -1.75rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000388}}
 .banner .row,
 .featured .row {
   padding-top: 3rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\0000394}}
 .featured ul.slides li,
 .banner {
   background-image: url(../images/illu-stripe-lg.svg);
@@ -4568,7 +4569,7 @@ body {
 }
 
 /* Featured section */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003103}}
 .featured .prose,
 .featured .media {
   position: relative;
@@ -4578,7 +4579,7 @@ body {
   float: left;
 }
 @media only screen and (min-width: 40.063em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003108}}
   .featured .prose,
   .featured .media {
     position: relative;
@@ -4587,19 +4588,19 @@ body {
     width: 50%;
     float: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003111}}
   .featured .prose {
-    padding-top: 3rem;
+    padding-top: 4.75rem;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003113}}
   .featured .prose .title {
     margin-bottom: 1rem;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003116}}
   .featured .prose .section-title {
-    top: 1.75rem;
+    top: 3rem;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003119}}
   .featured .prose .summary {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -4607,11 +4608,10 @@ body {
 }
 
 /* Banner */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003128}}
 .banner {
-  padding-top: 400px;
+  padding-top: 72px;
   padding-bottom: 2rem;
-  margin-top: -400px;
   margin-bottom: 2rem;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003134}}
@@ -4628,7 +4628,7 @@ body {
   margin-top: 2rem;
 }
 @media only screen and (min-width: 40.063em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_styles\.scss}line{font-family:\00003128}}
   .banner {
     margin-bottom: 4rem;
   }
@@ -5189,8 +5189,8 @@ nav#primary a.toggle:before {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000324}}
-.icon, .icon-mobile, .phone:before, .icon-clock, ul.hub article .metadata .date:before, .icon-add, .icon-tick, .icon-cancel, .icon-map-marker, .icon-s-tick, .actions li#filters li.active:before, .icon-github, .github:before, .icon-twitter, .twitter:before, .icon-arr-tail-left, .actions a.previous:before, .icon-arr-tail-right, .cta-style:after, .cta-button:after, .banner .read-more:after,
-.featured .read-more:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after, .actions a.next:before, .icon-flickr, .flickr:before, .icon-google-plus, .google-plus:before, .icon-arr-tail-up, .icon-facebook, .facebook:before, .icon-menu, nav#primary a.toggle:before, .icon-arr-tail-down, .icon-download, .icon-email, .email:before, .icon-share, .actions a.share:before, .icon-s-cancel, .icon-s-add, .icon-feed, .actions a.feed:before, .icon-s-triangle-down, .icon-s-triangle-up, .icon-s-triangle-right, .icon-arr-right, .flex-direction-nav a.flex-next:before, .icon-arr-left, .flex-direction-nav a.flex-prev:before, .icon-s-triangle-left, .icon-arr-down, .icon-s-arr-right, .icon-arr-up, .icon-s-arr-left, .icon-briefcase, .icon-s-arr-up, .icon-s-arr-down, .actions a.filter:before, [class^="icon-"], [class*=" icon-"] {
+.icon, .icon-mobile, .phone:before, .icon-clock, ul.hub article .metadata .date:before, .icon-add, .icon-tick, .icon-cancel, .icon-map-marker, .icon-s-tick, .actions li#filters li.active:before, .icon-github, .github:before, .icon-twitter, .twitter:before, .icon-arr-tail-left, .actions a.previous:before, .icon-arr-tail-right, .cta-style:after, .cta-button:after, .banner .read-more a:after,
+.featured .read-more a:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after, .actions a.next:before, .icon-flickr, .flickr:before, .icon-google-plus, .google-plus:before, .icon-arr-tail-up, .icon-facebook, .facebook:before, .icon-menu, nav#primary a.toggle:before, .icon-arr-tail-down, .icon-download, .icon-email, .email:before, .icon-share, .actions a.share:before, .icon-s-cancel, .icon-s-add, .icon-feed, .actions a.feed:before, .icon-s-triangle-down, .icon-s-triangle-up, .icon-s-triangle-right, .icon-arr-right, .flex-direction-nav a.flex-next:before, .icon-arr-left, .flex-direction-nav a.flex-prev:before, .icon-s-triangle-left, .icon-arr-down, .icon-s-arr-right, .icon-arr-up, .icon-s-arr-left, .icon-briefcase, .icon-s-arr-up, .icon-s-arr-down, .actions a.filter:before, [class^="icon-"], [class*=" icon-"] {
   font-family: 'flipside-icons';
   speak: none;
   font-style: normal;
@@ -5254,8 +5254,8 @@ nav#primary a.toggle:before {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\0000379}}
-.icon-arr-tail-right, .cta-style:after, .cta-button:after, .banner .read-more:after,
-.featured .read-more:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after, .actions a.next:before {
+.icon-arr-tail-right, .cta-style:after, .cta-button:after, .banner .read-more a:after,
+.featured .read-more a:after, .front .about-us a:after, .cta-inline:after, ul.hub article p.read-more:after, .actions a.next:before {
   content: "\e60a";
 }
 
@@ -5382,4 +5382,47 @@ nav#primary a.toggle:before {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_type\.scss}line{font-family:\00003179}}
 .icon-s-arr-down, .actions a.filter:before {
   content: "\e623";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\000031}}
+#site-canvas {
+  overflow: hidden;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\000036}}
+.next-post, .previous-post {
+  position: absolute;
+  min-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000311}}
+.next-post {
+  left: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000315}}
+.previous-post {
+  right: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000319}}
+#site-body > article {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000322}}
+#site-body > article:first-child {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000328}}
+#site-title img {
+  font-size: 1px;
+}
+
+@media only screen and (max-width: 40em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/olaf\/projects\/flipside-org\.github\.com\/src\/sass\/_side_nav\.scss}line{font-family:\0000333}}
+  #site-title img {
+    font-size: 0px;
+  }
 }

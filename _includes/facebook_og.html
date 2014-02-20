@@ -1,11 +1,12 @@
-<meta name="og:type" content="article">
-<meta name="og:title" content="{{ page.title }}">
-<meta name="og:url" content="{{ site.domain }}{{ page.url }}">
-<meta name="og:description" content="{{ page.description }}">
+<meta property="og:site_name" content="Flipside" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:url" content="{{ site.domain }}{{ page.url }}" />
+<meta property="og:description" content="{{ page.description }}" />
 {% if page.category == "note" %}
 	{% assign image_path = "/images/notes/" %}
 {% endif %}
 {% if page.category == "project" %}
 	{% assign image_path = "/images/projects/" %}
 {% endif %}
-<meta name="og:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}">
+<meta property="og:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}" />

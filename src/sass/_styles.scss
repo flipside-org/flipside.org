@@ -319,6 +319,9 @@ main {
 		aside {
 			@include grid-column(3,$pull:8);
 		}
+		article.no-sidebar .content {
+			@include grid-column(8,$push:2);
+		}
 	}
 }
 
@@ -348,7 +351,6 @@ main {
 				margin: 0 auto;
 				max-width: 200px;
 			}
-
 		}
 	}
 	.about-us a {
@@ -363,6 +365,21 @@ main {
 			@include grid-column(3);
 		}
 	}
+}
+
+/* About page */
+
+.about .content img {
+	float: right;
+	margin-left: 2rem;
+	@media #{$medium-up} {
+		margin-left: 4rem;
+	}
+}
+.about .content h2:not(:first-child) {
+	@extend .divider-top;
+	margin-top: 2rem;
+	padding-top: 2rem;
 }
 
 /* The note and project hubs */

@@ -1,8 +1,23 @@
-/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
-/* zurb.com */
-/* humanstxt.org */
+/* TEAM */
+
+Developer: Daniel da Silva
+Site: http://flipside.org
+Twitter: @danielfdsilva
+Location: Lisbon, Portugal
+
+Developer: Olaf Veerman
+Site: http://flipside.org
+Twitter: @oBirdman
+Location: Lisbon, Portugal
+
+UI Designer: Ricardo Mestre
+Site: http://flipside.org
+Twitter: @ricardoduplos
+Location: Lisbon, Portugal
 
 /* SITE */
-  Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
-  Software: Coda, Textmate, Git
+
+Last update: 2014/02/20
+Standards: HTML5, CSS3, RWD
+Software: Adobe Illustrator, Aptana Studio 3, Sublime Text 3, Chocolat, Git, Grunt
+Frameworks & Extensions: Sass, Compass, Foundation, Jekyll, ImageMagick, FlexSlider

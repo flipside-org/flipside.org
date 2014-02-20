@@ -1,10 +1,10 @@
-safe:       	false
-permalink:  	/notes/:title/
-pygments:   	true
-domain:				http://flipside.org
-name:					Flipside
-description:	Flipside builds web-based tools for civil society organisations.
-exclude:    	['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md', 'bower.json']
+safe:           false
+permalink:      /notes/:title/
+pygments:       true
+domain:	        http://flipside.org
+name:           Flipside
+description:    Flipside builds web-based tools for civil society organisations.
+exclude:        ['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.md', 'bower.json']
 
 # Image presets
 # For more info: https://github.com/robwierzbowski/jekyll-image-tag

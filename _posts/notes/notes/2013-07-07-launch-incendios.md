@@ -27,6 +27,7 @@ Every administrative area in Portugal (district, municipality and parish) has it
 The original dataset is very detailed and contains a lot of information about each occurrence, including start and end dates, causes and type of area burnt. Since it doesn't always make sense to show the data aggregated by administrative area, we've added _story_ pages that contain analysis on specific topics.
 
 {% include content_img.html path="notes/incendios-pt_explore-topic.png" caption="Image showing the topic 'Big Fires'." %}
+
 In the coming weeks we will add more pages with analysis on a certain topic. If you would like to contribute with your own analysis, we'd love to hear from you.
 
 ##Technology

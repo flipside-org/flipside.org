@@ -1,35 +1,38 @@
-.stripe {
-	background: orange;
-	padding: 20px 20px 0 20px;
-	overflow: hidden;
+.featured .media {
+    display: none;
+  @media #{$medium-up} {
+    display: block;
+  }
 }
 
-.media {
+.img-set {
 	display: table-cell;
 	vertical-align: bottom;
-	// margin: 0 auto;
-	// width: 60%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 400%;
 	font-size: 0;
-	// @extend .clearfix;
 }
 
-.wrapper {
+.img-wrapper {
 	display: inline-block;
 	width: auto;
 }
 
-.wrapper.desktop {
+.img-wrapper.desktop {
 	width: 640px;
 }
 
-.wrapper.mobile {
+.img-wrapper.mobile {
 	position: relative;
 	z-index: 10;
 	width: 184px;
 	margin-right: -128px;
 }
 
-.wrapper.polaroid {
+.img-wrapper.polaroid {
 	width: 444px;
 	position: relative;
 	z-index: 10;
@@ -37,7 +40,7 @@
 	margin-top: -48px;
 }
 
-.wrapper img {
+.img-wrapper img {
 	display: block;
 	background: transparent left top no-repeat;
 	background-size: cover;
@@ -67,6 +70,6 @@
 	padding-right: 7.207%; /* (32*100)/444 */
 	background-image: url('../images/frame-polaroid.svg');
 	border-radius: 1.053% / 1.176%; /* (4*100)/380 / (4*100)/340 */
-	-webkit-transform: rotate(4deg);
+	@include transform(rotate(4deg));
 	-webkit-backface-visibility: hidden;
 }

@@ -3,7 +3,9 @@ layout: note
 notes_active : true
 category: note
 
-featured: true
+featured: false
+featured_image:
+  polaroid: img-ftd-placeholder-polaroid.png
 
 title: Jekyll Talk
 user: danielfdsilva

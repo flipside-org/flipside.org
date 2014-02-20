@@ -5,9 +5,11 @@ layout: project
 
 title: Incêndios.pt
 
-featured_image: incendios-l.png
-background_color: c45b3e
 featured: true
+featured_image:
+  mobile: img_ftd_incendios_mobile.jpg
+  desktop: img_ftd_incendios_desktop.jpg
+background_color: BF503E
 
 image: incendios-med.png
 meta: Design + Concept + Development

@@ -13,18 +13,27 @@
           <div class="prose">
             <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title }}</a></h1>
             <h2 class="section-title"><em>Under</em> {{ post.category | capitalize }}</h2>
-            <p class="summary">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <p class="summary">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
             <p class="read-more"><a href="{{ site.domain }}{{ post.url }}">Read more...</a></p>
           </div>
           <div class="media">
-            <!-- <figure style="max-width: 160%; width: 160%;"> -->
-              <div class="wrapper mobile">
-                  <img src="images/img-ftd-placeholder-mobile.png" width="640" height="960" />
-              </div>
-              <div class="wrapper desktop">
-                  <img src="images/img-ftd-placeholder-desktop.png" width="1440" height="900" />
-              </div>
-            <!-- </figure> -->
+            <figure class="img-set"> 
+              {% if post.featured_image.mobile %}
+                <div class="img-wrapper mobile">
+                    <img src="images/{{post.featured_image.mobile}}" width="640" height="960" />
+                </div>
+              {% endif %}
+              {% if post.featured_image.desktop %}
+                <div class="img-wrapper desktop">
+                    <img src="images/{{post.featured_image.desktop}}" width="1440" height="900" />
+                </div>
+              {% endif %}
+              {% if post.featured_image.polaroid %}
+                <div class="img-wrapper polaroid">
+                    <img src="images/{{post.featured_image.polaroid}}" width="760" height="680" />
+                </div>
+              {% endif %}
+            </figure>
           </div>
         </article>
       </li>

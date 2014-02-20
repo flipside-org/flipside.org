@@ -62,6 +62,8 @@ $anchor-font-color-hover: $body-font-color;
   @include border-radius(1rem);
 }
 
+/* Inline Call to Action and buttons */
+
 .cta-style {
 	font-size: 1.25rem;
 	font-weight: $body-font-bold;
@@ -85,6 +87,18 @@ $anchor-font-color-hover: $body-font-color;
 .cta-inline {
 	@extend .cta-style;
 	color: $primary-color;
+}
+
+/* Divider */
+
+.divider-top {
+	border-top: 0.25rem lighten($primary-color, 65%) solid;
+	padding-top: 1rem;
+}
+
+.divider-bottom {
+	border-bottom: 0.25rem lighten($primary-color, 65%) solid;
+	padding-bottom: 1rem;
 }
 
 /* Generic dropdown styling */

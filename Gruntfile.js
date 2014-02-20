@@ -84,6 +84,7 @@ module.exports = function(grunt) {
         files: {
           'scripts/flipside.min.js': [
             'src/js/libs/keypress/keypress-1.0.9.min.js',
+            'src/js/libs/async/async.js',
             'src/js/libs/flexslider/jquery.flexslider.js',
             'src/js/*.js'
           ],

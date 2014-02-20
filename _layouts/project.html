@@ -50,20 +50,20 @@ contact: true
         <h2 class="section-title">Project</h2>
       </div>
       <div class="actions">
-        <ul>
+        <ul class="project-navigation">
           {% include social-share.html %}
           <li>
           {% if previous_project %}
-            <a href="{{ previous_project.url }}" class="previous"><span class="visually-hidden">previous</span></a>
+            <a href="{{ previous_project.url }}" class="project-nav-link previous"><span class="visually-hidden">previous</span></a>
           {% else %}
-            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
+            <a href="#" class="inactive project-nav-link previous"><span class="visually-hidden">previous</span></a>
           {% endif %}
           </li>
           <li>
           {% if next_project %}
-            <a href="{{ next_project.url }}" class="next"><span class="visually-hidden">next</span></a>
+            <a href="{{ next_project.url }}" class="project-nav-link next"><span class="visually-hidden">next</span></a>
           {% else %}
-            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
+            <a href="#" class="inactive project-nav-link next"><span class="visually-hidden">next</span></a>
           {% endif %}
           </li>
         </ul>

@@ -4,31 +4,30 @@
 {% for post in site.posts %}
   {% assign loop_breaker = false %}
   {% for PAGE_related_keyword in page.related_post %}
-    {% for POST_related_keyword in post.related_post %}
-      {% unless loop_breaker %}
-      
-        {% if PAGE_related_keyword == POST_related_keyword %}
-          {% assign loop_breaker = true %}
-          {% unless post.url == page.url %}
-          
-            {% if post.category == 'note' %}      
-              {% capture related_notes_code %}{{related_notes_code}}
-                <li>
-                  <article>
-                    <a href="{{ post.url }}">
-                      <div class="media">
-                        {% image thumb notes/{{ post.image }} %}
-                      </div>
-                      <div class="teaser">
-                        <h1>{{ post.title }}</h1>
-                        <p class="meta"><em>Under</em> Notes</p>
-                      </div>
-                    </a>
-                  </article>
-                </li>
-              {% endcapture %}
-            {% elsif post.category == 'project' %}
-              {% capture related_projects_code %}{{related_projects_code}}
+    {% unless loop_breaker %}
+    
+      {% if post.related_post contains PAGE_related_keyword %}
+        {% assign loop_breaker = true %}
+        {% unless post.url == page.url %}
+        
+          {% if post.category == 'note' %}      
+            {% capture related_notes_code %}{{related_notes_code}}
+              <li>
+                <article>
+                  <a href="{{ post.url }}">
+                    <div class="media">
+                      {% image thumb notes/{{ post.image }} %}
+                    </div>
+                    <div class="teaser">
+                      <h1>{{ post.title }}</h1>
+                      <p class="meta"><em>Under</em> Notes</p>
+                    </div>
+                  </a>
+                </article>
+              </li>
+            {% endcapture %}
+          {% elsif post.category == 'project' %}
+            {% capture related_projects_code %}{{related_projects_code}}
                 <li>
                   <article>
                     <a href="{{ post.url }}">
@@ -42,14 +41,12 @@
                     </a>
                   </article>
                 </li>
-              {% endcapture %}
-            {% endif %}
-          
-          {% endunless %}
-        {% endif %}
-        
-      {% endunless %}
-    {% endfor %}
+            {% endcapture %}
+          {% endif %}        
+        {% endunless %}
+      {% endif %}
+      
+    {% endunless %}
   {% endfor %}
 {% endfor %}
 

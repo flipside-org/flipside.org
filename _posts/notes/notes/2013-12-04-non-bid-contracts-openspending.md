@@ -3,6 +3,8 @@ layout: note
 notes_active : true
 category: note
 
+background_color: 1f8b3f
+
 title: Processing data for Open Spending
 user: danielfdsilva
 

@@ -3,6 +3,8 @@ layout: note
 notes_active : true
 category: note
 
+background_color: 3f86be
+
 title: Twitter Streams
 user: danielfdsilva
 

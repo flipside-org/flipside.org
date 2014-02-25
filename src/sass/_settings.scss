@@ -35,20 +35,14 @@ $column-gutter: rem-calc(32);
 // $total-columns: 12;
 
 // We use these as default colors throughout
-$primary-color: #373F47;
-$dark-color: darken($primary-color,15%);
-
-$primary-color-dark: #000;
-
-$secondary-color: #4c535a;
-$primary-blue: #314879;
-$light-grey: #b2b2b2;
-$mid-grey: #333333;
-$dark-grey: #262626;
+$primary-color: #373f47;
+$dark-color: darken($primary-color, 15%);
+$semi-light-color: tint($primary-color, 20%);
+$light-color: tint($primary-color, 40%);
 
 // We use these to control various global styles
 // $body-bg: #fff;
-$body-font-color: lighten($primary-color,15%);
+$body-font-color: tint($primary-color, 20%);
 $body-font-family: 'Lato', sans-serif;
 
 $body-font-bold: 700;
@@ -61,8 +55,11 @@ $header-font-color: $primary-color;
 $header-font-family: $body-font-family;
 $header-font-weight: 700;
 
-// Paragraph styles
+// Paragraph + link styles
 $paragraph-line-height: $base-line-height;
+
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: $primary-color;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;

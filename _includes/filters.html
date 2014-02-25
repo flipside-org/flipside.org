@@ -7,29 +7,27 @@
 	  		{% endif %}
 	  	{% endfor %}
 		{% else %}
-  		All
+  		All notes
 		{% endif %}
 	</a>
 	<ul class="links">
+    <li>
 	{% if include.active_filter %}
-	  <li>
-	  	<a href="/notes">All</a>
-	  </li>
+	  	<a href="/notes">All notes</a>
 	{% else %}
-		<li class="active">
-			All
-		</li>
+    <a href="/notes" class="active">All notes</a>
 	{% endif %}	
+    </li>
 	{% for filter in site.categories.filter %}
+  <li>
 	  {% if filter.filter_name == include.active_filter %}
-	  <li class="active">
-	  	{{ filter.title }}
-	  </li>
+	  
+	  	<a href="{{ filter.url }}" class="active">{{ filter.title }}</a>
 	  {% else %}
-	  <li>
 	  	<a href="{{ filter.url }}">{{ filter.title }}</a>
-	  </li>
+	  
 	  {% endif %}
+	  </li>
 	{% endfor %}
 	</ul>
 </li>

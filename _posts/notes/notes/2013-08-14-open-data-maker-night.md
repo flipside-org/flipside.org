@@ -1,16 +1,23 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Lisbon Open Data Maker Night - 1
+image: odmn.jpg
 user: olafveerman
 
 filters: event
-image: odmn.jpg
+
+background_color:
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
 related_post:
   - open-data
-
 ---
 On Thursday August 29, we'll be hosting the first Lisbon Open Data Maker Night. It will be an informal gathering focused on making stuff with Open Data. 
 

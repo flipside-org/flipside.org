@@ -1,3 +1,6 @@
+---
+layout: none
+---
 /* TEAM */
 
 Developer: Daniel da Silva
@@ -17,7 +20,7 @@ Location: Lisbon, Portugal
 
 /* SITE */
 
-Last update: 2014/02/20
+Last update: {{ site.time | date: "%Y/%m/%d"}}
 Standards: HTML5, CSS3, RWD
 Software: Adobe Illustrator, Aptana Studio 3, Sublime Text 3, Chocolat, Git, Grunt
 Frameworks & Extensions: Sass, Compass, Foundation, Jekyll, ImageMagick, FlexSlider

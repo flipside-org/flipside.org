@@ -1,15 +1,23 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Scripted Tilemill exports
+image: scripted-export.png
 user: olafveerman
 
 filters: guide
-image: scripted-export.png
-related_post: maps
 
+background_color:
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
+  - maps
 ---
 A pretty handy feature that is not well documented in [TileMill](http://mapbox.com/tilemill/), is the possibility to call the export command from the command line. This is useful, for example, when you have to export a project repeatedly with almost the same settings.
 

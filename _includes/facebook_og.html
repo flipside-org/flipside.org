@@ -2,11 +2,15 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:url" content="{{ site.domain }}{{ page.url }}" />
-<meta property="og:description" content="{{ page.description }}" />
+{% if page.description %}
+  <meta property="og:description" content="{{ page.description }}" />
+{% else %}
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 40 }}" >
+{% endif %}
 {% if page.category == "note" %}
-	{% assign image_path = "/images/notes/" %}
+  <meta property="og:image" content="{{ site.domain }}/images/notes/{{ page.image }}" />
+{% elsif page.category == "project" %}
+  <meta property="og:image" content="{{ site.domain }}/images/projects/{{ page.image }}" />
+{% else %}
+  <meta property="og:image" content="{{ site.domain }}/meta/og-image.png" />  
 {% endif %}
-{% if page.category == "project" %}
-	{% assign image_path = "/images/projects/" %}
-{% endif %}
-<meta property="og:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}" />

@@ -2,11 +2,15 @@
 <meta name="twitter:site" content="@{{ site.data.flipside.twitter }}">
 <meta name="twitter:creator" content="@{{ site.data.team[page.user].twitter }}">
 <meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
+{% if page.description %}
+  <meta property="twitter:description" content="{{ page.description }}" />
+{% else %}
+  <meta property="twitter:description" content="{{ page.excerpt | strip_html | truncate: 200 }}" >
+{% endif %}
 {% if page.category == "note" %}
-	{% assign image_path = "/images/notes/" %}
+  <meta property="twitter:image" content="{{ site.domain }}/images/notes/{{ page.image }}" />
+{% elsif page.category == "project" %}
+  <meta property="twitter:image" content="{{ site.domain }}/images/projects/{{ page.image }}" />
+{% else %}
+  <meta property="twitter:image" content="{{ site.domain }}/meta/og-image.png" />  
 {% endif %}
-{% if page.category == "project" %}
-	{% assign image_path = "/images/projects/" %}
-{% endif %}
-<meta name="twitter:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}">

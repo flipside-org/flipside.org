@@ -128,6 +128,7 @@ $(document).ready(function() {
       }
       
       e.preventDefault();
+      $self.addClass('loading');
       var $next_post = $('article.next-post');
       _animate_post_transition($current_post, $next_post, 'left', $self.attr('href'));
       
@@ -145,6 +146,7 @@ $(document).ready(function() {
       }
       
       e.preventDefault();
+      $self.addClass('loading');
       var $prev_post = $('article.previous-post');
       _animate_post_transition($current_post, $prev_post, 'right', $self.attr('href'));
       

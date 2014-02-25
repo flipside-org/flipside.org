@@ -3,7 +3,7 @@ $(document).ready(function() {
   /**
    * Navigation div.
    */
-  var $post_nav;
+  var $post_nav = [];
   
   /**
    * Stores the status of the post loading.
@@ -20,82 +20,14 @@ $(document).ready(function() {
    */
   var animating = false;
   
-  if ($(".notes-navigation").length >= 1) {
-    $post_nav = $(".notes-navigation");
-    // We're on the notes page. Proceed.
-    
-    // Ajax power activate!
-    $.ajax({
-     url: "/json/notes_filter.json" 
-    }).done(function(data) {
-      // Let's build the navigation
-      var nav = {
-        // Will either be false or an object with data.
-        prev : null,
-        // Will either be false or an object with data.
-        next : null,
-        // Will store the hash to append.
-        // We don't want to append #all so it will only be used when filtering.
-        append_hash : ""
-      };
-      
-      // Are we filtering by something?
-      var hash = window.location.hash.replace("#", "");
-      nav.append_hash = "#" + hash;
-      if (hash === "" || data[hash] === null) {
-        // Either the hash is not set or someone's been messin' with ma' hash.
-        // Teach 'em a lesson and give 'em the default.
-        hash = 'all';
-        // Filtering by all. Clean the nav.append_hash so we don't
-        // have a useless # in the url.
-        nav.append_hash = "";
-      }
-      console.log("Filtering: " + hash);
-      
-      // Let's use the url for comparison, but remove
-      // the index.html if it exists.
-      var location = window.location.pathname.replace("index.html", "");
-      // Search the current page and extract the previous and next.
-      for (var i = 0; i < data[hash].length; i++) {        
-        if (data[hash][i].url == location) {
-          console.log("Found it. Index: " + i);
-          nav.prev = i - 1 < 0 ? false : data[hash][i - 1];
-          nav.next = i + 1 > data[hash].length - 1 ? false : data[hash][i + 1];
-        }
-      }
-      
-      // Everything is ready. Create the prev and next links.
-      var $prev_link = $post_nav.find('.previous');
-      if (nav.prev) {
-        $prev_link.attr('href', nav.prev.url + nav.append_hash);
-      }
-      else {
-        $prev_link.addClass('inactive');
-      }
-      
-      var $next_link = $post_nav.find('.next');
-      if (nav.next) {
-        $next_link.attr('href', nav.next.url + nav.append_hash); 
-      }
-      else {
-        $next_link.addClass('inactive');
-      }      
-    
-    
-      // Now that the navigation is all ready prepare the content.
-      // The next and previous posts need to be dynamically loaded
-      // because we could be filtering.
-      _init($prev_link, $next_link);
-    });
-  }
+  $post_nav = $(".notes-navigation").length > 0 ? $(".notes-navigation") : $post_nav;
+  $post_nav = $(".projects-navigation").length > 0 ? $(".projects-navigation") : $post_nav;
   
-  if ($(".project-navigation").length >= 1) {
-    $post_nav = $(".project-navigation");
-    // Project page.
+  if ($post_nav.length >= 1) {       
     var $prev_link = $post_nav.find('.previous');
     var $next_link = $post_nav.find('.next');
     _init($prev_link, $next_link);
-  }
+  }  
   
   /**
    * Sets up the click listeners.

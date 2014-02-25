@@ -6,8 +6,6 @@ facebook_og: true
 contact: true
 ---
 {% comment %}
-  Navigation links for projects can be rendered differently from notes
-  since they don't need filters.
   To render these links we just loop through the posts array and find the
   project before and after.
 {% endcomment %}
@@ -50,7 +48,7 @@ contact: true
         <h2 class="section-title">Project</h2>
       </div>
       <div class="actions">
-        <ul class="project-navigation">
+        <ul class="projects-navigation">
           {% include social-share.html %}
           <li>
           {% if previous_project %}

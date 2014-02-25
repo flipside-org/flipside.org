@@ -82,29 +82,26 @@ contact: true
       {% endif %}
       {{ content }}
     </div>
-    {% if page.meta or page.client or page.technology or page.keywords or page.project_link.href %}
+    {% assign details = page.meta %}
+    {% if details.type or details.client or details.technology or details.project_link.href %}
     <aside>
       <h1>Details</h1>
       <dl>
-        {% if page.meta %}
+        {% if details.type %}
           <dt>Type</dt>
-          <dd>{{ page.meta }}</dd>
+          <dd>{{ details.type }}</dd>
         {% endif %}
-        {% if page.client %}
+        {% if details.client %}
           <dt>Client</dt>
-          <dd>{{ page.client }}</dd>
+          <dd>{{ details.client }}</dd>
         {% endif %}
-        {% if page.technology %}
+        {% if details.technology %}
           <dt>Technology</dt>
-          <dd>{{ page.technology }}</dd>
+          <dd>{{ details.technology }}</dd>
         {% endif %}
-        {% if page.keywords %}
-          <dt>Keywords</dt>
-          <dd>{{ page.keywords }}</dd>
-        {% endif %}
-        {% if page.project_link.href %}
+        {% if details.project_link.href %}
           <dt>URL</dt>
-          <dd><a href="{{ page.project_link.href }}">{{ page.project_link.href }}</a></dd>
+          <dd><a href="{{ details.project_link.href }}">{{ details.project_link.href }}</a></dd>
         {% endif %}
       </dl>
     </aside>

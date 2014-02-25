@@ -1,25 +1,29 @@
 ---
-permalink: /projects/incendios/
-category: project
 layout: project
-
+category: project
+permalink: projects/incendios
+  
 title: Incêndios.pt
-
-featured: true
-featured_image:
-  mobile: img_ftd_incendios_mobile.jpg
-  desktop: img_ftd_incendios_desktop.jpg
+image: incendios-med.png
+  
 background_color: BF503E
 
-image: incendios-med.png
-meta: Design + Concept + Development
-technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 
-project_link:
-  href: http://www.incendios.pt
-  text: Incendios.pt
+featured: true
+featured_image: 
+  mobile: img_ftd_incendios_mobile.jpg
+  desktop: img_ftd_incendios_desktop.jpg
+  polaroid:
 
-related_post: incendios
-
+meta: 
+  type: Design + Concept + Development
+  client:
+  technology: Express (node), Mongo, Mapbox, Leaflet, Morris & more 
+  project_link:
+    text: Incendios.pt
+    href: http://www.incendios.pt
+  
+related_post:
+  - incendios
 ---
 Every year, fires consume vast amounts of forest and agricultural land in Portugal. In the end of 2012, the [ICNF](http://www.icnf.pt) published detailed fire data for the period 2001 - 2011. Based on this dataset of over 360.000 occurrences, we built [incendios.pt](http://www.incendios.pt), a site to explore the data by topic and location.
 

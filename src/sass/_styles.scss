@@ -689,7 +689,6 @@ ul.hub {
 
 .contact {
   background-color: tint($primary-color, 10%);
-  color: tint($primary-color, 60%);
   .contact-us {
     margin-bottom: 2rem;
   }
@@ -706,10 +705,18 @@ ul.hub {
       margin: 0 0 0.5rem 0;
     }
   }
-  h3,
+  h1,
   li,
   a {
     color: #fff;
+  }
+  h1 {
+    @extend .h3;
+  }
+  p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: tint($primary-color, 60%);
   }
 	@media #{$medium-up} {
 		.follow-us,

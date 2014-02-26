@@ -318,6 +318,7 @@ body {
     opacity: 0.5;
 		position: absolute;
 		top: -1.75rem;
+		line-height: 1.75rem;
   }
 	.row {
 		padding-top: 4rem;
@@ -441,6 +442,14 @@ body {
         margin-bottom: 0;
       }
     }
+  }
+  #social-share {
+    float: right;
+    margin-left: 0.25rem;
+    @media #{$medium-up} {
+      float: left;
+      margin-left: 0;
+    } 
   }
 
   #filters {

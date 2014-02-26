@@ -69,14 +69,22 @@
 
 /* Generic styles */
 
-a,
-a:active,
-a:focus {
-  outline: none;
+a:link,
+a:visited {
+  @include transition(all .2s ease);
+  @include transform(translateZ(0));
+  cursor: pointer;
 }
 
-a:hover {
-  opacity: 0.8;
+a:hover,
+a:focus {
+  outline: none;
+  opacity: 0.7;
+}
+
+a:active {
+  position: relative;
+  top: 2px;
 }
 
 .cta-bttn {

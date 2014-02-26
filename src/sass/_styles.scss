@@ -481,17 +481,27 @@ main {
       text-decoration: underline;
     }
   }
-	.content {
-		.media-wrapper {
-			margin: 1.25rem 0;
-			figure {
-				background-color: lighten($primary-color, 65%);
-				@include border-radius(0.25rem);
-				text-align: center;
-				padding: 0.25rem;
-			}
-		}
-	}
+  .content {
+    .media-wrapper {
+      margin: 1.25rem 0;
+      figure {
+        background: #FFF;
+        border: 4px solid tint($primary-color, 90%);
+        border-radius: 0.25rem;
+        text-align: center;
+        padding: 1rem;
+        img {
+          display: block;
+        }
+      }
+      figcaption {
+        background: tint($primary-color, 90%);
+        padding: 1rem;
+        margin: 1rem -1rem -1rem -1rem;
+        color: $light-color;
+      }
+    }
+  }
 	aside {
 		h1 {
 			@extend .h5;

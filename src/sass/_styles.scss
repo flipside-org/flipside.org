@@ -566,10 +566,21 @@ main {
 		&.what-we-do {
 			h1 {
 				@extend .h5;
+				margin-top: 0;
+				margin-bottom: 1rem;
 			}
+			
+      .img-wrapper {
+        margin: 0 auto 1.75rem;
+        max-width: 200px;
+      }
 			img {
-				margin: 0 auto;
-				max-width: 200px;
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			ul {
+  			margin-bottom: 2rem;
 			}
 		}
 	}

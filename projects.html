@@ -29,6 +29,7 @@ contact: true
             </h1>
           </a>
         </header>
+        <p class="metadata"><span class="work">{{ post.meta }}</span></p>
         <p class="intro">
           {{ post.excerpt | strip_html | truncatewords: 20 }}
         </p>

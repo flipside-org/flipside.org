@@ -338,6 +338,16 @@ body {
 	.media {
 		@include grid-column(12);
 	}
+	.prose {
+    	padding-bottom: 2rem;
+    	.title {
+    	  margin-bottom: 1.75rem;
+    	}
+    	.summary {
+    	  font-size: 1.5rem;
+    	  margin-bottom: 1.75rem;
+    	}
+	}
 	@media #{$medium-up} {
 		.prose {
 			@include grid-column(6);
@@ -348,16 +358,11 @@ body {
 		}
 		.prose {
 			padding-top: 4.75rem;
-			.title {
-				margin-bottom: 1.75rem;
-			}
+	
 			.section-title {
 				top: 3rem; // padding-top of prose - line-height of section-title
 			}
-			.summary {
-				font-size: 1.5rem;
-				margin-bottom: 1.75rem;
-			}
+			
 		}
 	}
 }
@@ -563,6 +568,7 @@ main {
 				float: left;
 			}
 		}
+		
 		&.what-we-do {
 			h1 {
 				@extend .h5;

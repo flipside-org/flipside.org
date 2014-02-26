@@ -277,7 +277,7 @@ body {
 		@include grid-column(10);
 		margin: 0;
 		a {
-			display: block;
+		  float: left;
 			img {
 				display: block;
 				max-width: 170px;

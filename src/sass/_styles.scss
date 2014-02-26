@@ -489,15 +489,16 @@ main {
         border: 4px solid tint($primary-color, 90%);
         border-radius: 0.25rem;
         text-align: center;
-        padding: 1rem;
+        padding: 0.5rem;
         img {
+          border-radius: 0.125rem 0.125rem 0 0;
           display: block;
         }
       }
       figcaption {
         background: tint($primary-color, 90%);
         padding: 1rem;
-        margin: 1rem -1rem -1rem -1rem;
+        margin: 0.5rem -0.5rem -0.5rem -0.5rem;
         color: $light-color;
       }
     }

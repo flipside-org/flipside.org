@@ -180,3 +180,11 @@ h6 { @extend .h6; }
   @extend .icon;
   content: "\e623";
 }
+.icon-spinner {
+  @extend .icon;
+  content: "\e624";
+}
+.icon-refresh {
+  @extend .icon;
+  content: "\e625";
+}

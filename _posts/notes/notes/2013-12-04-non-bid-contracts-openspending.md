@@ -1,14 +1,14 @@
 ---
 layout: note
 category: note
-  
+
 title: Processing data for Open Spending
 image: openspending.png
 user: danielfdsilva
 
 filters: guide
 
-background_color:
+background_color: 1f8b3f
 
 featured: false
 featured_image: 

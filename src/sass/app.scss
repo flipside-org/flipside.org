@@ -51,10 +51,10 @@
 @import "flexsliders_overrides";
 
 // Custom styles:
-@import "helpers";
+@import "type";
 @import "code";
 @import "styles";
 @import "nav"; // After styles, otherwise issues with menu
-@import "type";
 @import "slider_frames";
 @import "side_nav";
+@import "helpers";

@@ -13,14 +13,25 @@ nav#primary {
 		line-height: 40px;
 	}
 	.active a {
-		opacity: 0.5;
+		opacity: 0.6;
 	}
 	a.toggle {
-		text-align: right;
+		margin-top: -0.25rem;
+		height: 2,5rem;
+		width: 2,5rem;
+		float: right;
 		&:before {
+			display: block;
+			text-align: center;
+			height: 2,5rem;
+			width: 2,5rem;
+			line-height: 2,5rem;
 			@extend .icon-menu;
-			font-size: 1.25rem;
+			font-size: 2rem;
 		}
+	}
+	ul.links {
+		margin-top: 3rem;
 	}
 	@media #{$small-only} {
 		ul.links {

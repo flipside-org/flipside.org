@@ -49,16 +49,16 @@ contact: true
           {% include social-share.html %}
           <li>
           {% if previous_note %}
-            <a href="{{ previous_note.url }}" class="notes-nav-link previous"><span class="visually-hidden">previous</span></a>
+            <a href="{{ previous_note.url }}" class="previous"><span class="visually-hidden">previous</span></a>
           {% else %}
-            <a href="#" class="inactive notes-nav-link previous"><span class="visually-hidden">previous</span></a>
+            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
           {% endif %}
           </li>
           <li>
           {% if next_note %}
-            <a href="{{ next_note.url }}" class="notes-nav-link next"><span class="visually-hidden">next</span></a>
+            <a href="{{ next_note.url }}" class="next"><span class="visually-hidden">next</span></a>
           {% else %}
-            <a href="#" class="inactive notes-nav-link next"><span class="visually-hidden">next</span></a>
+            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
           {% endif %}
           </li>
         </ul>

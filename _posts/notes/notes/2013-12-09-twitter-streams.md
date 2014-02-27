@@ -1,14 +1,14 @@
 ---
 layout: note
 category: note
-  
+
 title: Twitter Streams
 image: twitter.jpg
 user: danielfdsilva
 
 filters: guide
 
-background_color:
+background_color: 3f86be
 
 featured: false
 featured_image: 

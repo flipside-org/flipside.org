@@ -1,17 +1,24 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Incendios 0.2 - more and improved data
+image: incendios-pt.png
 user: olafveerman
 
 filters: work
-image: incendios-pt.png
+
+background_color:
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
 related_post:
   - incendios
   - open-data
-
 ---
 
 <p class="lead">This week we launched a new version of <a href="http://incendios.pt" target="_blank" title="Visit Incêndios website">incendios.pt</a> with the most recent data published by ICNF (2012) and easy access to the raw data that powers the site.</p>

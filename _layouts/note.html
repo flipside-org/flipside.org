@@ -1,11 +1,37 @@
 ---
 layout: base
 active_menu : notes
-twitter_card: true
-facebook_og: true
 contact: true
 ---
+{% comment %}
+  To render these links we just loop through the posts array and find the
+  bote before and after.
+{% endcomment %}
 
+{% assign break_cycle = false %}
+
+{% assign previous_note = false %}
+{% assign next_note = false %}
+{% assign current_found = false %}
+
+{% for post in site.categories.note %}
+  {% unless break_cycle %}
+    {% if current_found %}
+    
+      {% assign next_note = post %}
+      {% assign break_cycle = true %}
+      
+    {% else %}
+    
+      {% if page.url == post.url %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign previous_note = post %}
+      {% endif %}
+      
+    {% endif %}  
+  {% endunless%}
+{% endfor%}
 <article>
 
   {% if page.background_color %}
@@ -22,10 +48,18 @@ contact: true
         <ul class="notes-navigation">
           {% include social-share.html %}
           <li>
-            <a href="#" class="previous"><span>previous</span></a>
+          {% if previous_note %}
+            <a href="{{ previous_note.url }}" class="previous"><span class="visually-hidden">previous</span></a>
+          {% else %}
+            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
+          {% endif %}
           </li>
           <li>
-            <a href="#" class="next"><span>next</span></a>
+          {% if next_note %}
+            <a href="{{ next_note.url }}" class="next"><span class="visually-hidden">next</span></a>
+          {% else %}
+            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
+          {% endif %}
           </li>
         </ul>
       </div>

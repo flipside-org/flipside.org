@@ -1,17 +1,23 @@
 ---
 layout: note
-notes_active : true
 category: note
 
-background_color: 1f8b3f
-
 title: Processing data for Open Spending
+image: openspending.png
 user: danielfdsilva
 
 filters: guide
-image: openspending.png
-related-post: open-data
 
+background_color: 1f8b3f
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
+  - open-data
 ---
 
 [Open Spending](https://openspending.org/) is a project from the Open Knowledge Foundation that aims to map financial transactions from governments around the world. This post describes how we added over [380.000](https://openspending.org/pt_ajustes-diretos/) non-bid contracts from the Portuguese government to openspending.

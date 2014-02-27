@@ -1,16 +1,22 @@
 ---
 layout: note
-notes_active : true
 category: note
 
-background_color: 3f86be
-
 title: Twitter Streams
+image: twitter.jpg
 user: danielfdsilva
 
 filters: guide
-image: twitter.jpg
 
+background_color: 3f86be
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
 ---
 For one of our projects, we needed to track particular hashtags on Twitter and show the last status update and a total count. This post gives a quick overview of how we used the [Twitter Stream Api](https://dev.twitter.com/docs/streaming-apis/streams/public) to implement this.
 

@@ -3,6 +3,7 @@ layout: base
 permalink: projects/index.html
 active_menu : projects
 title: Projects
+description: The Project hub contains a sample of Flipside's work.
 contact: true
 ---
 <section>
@@ -29,7 +30,7 @@ contact: true
             </h1>
           </a>
         </header>
-        <p class="metadata"><span class="work">{{ post.meta }}</span></p>
+        <p class="metadata"><span class="work">{{ post.meta.type }}</span></p>
         <p class="intro">
           {{ post.excerpt | strip_html | truncatewords: 20 }}
         </p>

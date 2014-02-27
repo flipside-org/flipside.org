@@ -1,14 +1,22 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Apache Solr Field Collection and text fields
+image: search-index-view-mode.png
 user: danielfdsilva
 
 filters: guide
-image: search-index-view-mode.png
 
+background_color:
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
 ---
 
 For a recent Drupal project, we used [Field Collection](https://drupal.org/project/field_collection), a nifty little module that makes fields fieldable, and Apache Solr to power the site's search. To make the two play together nicely, the [Apache Solr Field Collection](https://drupal.org/project/apachesolr_field_collection) module makes sure that all the fields in the field collection are indexed for the search.

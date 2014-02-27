@@ -1,18 +1,12 @@
 <li>
-  <article>
-    {% if include.active_filter %}
-      {% capture url %}{{ include.note.url }}#{{ include.active_filter }}{% endcapture %}
-    {% else %}
-      {% capture url %}{{ include.note.url }}{% endcapture %} 
-    {% endif %}
-    
+  <article>  
     {% assign filter_list = '' %}
     {% for filter in include.note.filters %}
       {% capture filter_list %}{{filter_list}}<span class="category">{{ filter | capitalize }}</span>{% endcapture %}
     {% endfor %}
 
     <header>
-      <a href="{{ url }}">
+      <a href="{{ include.note.url }}">
         {% image list notes/{{ include.note.image }} %}
         <h1>
           {{ include.note.title }}

@@ -569,14 +569,15 @@ main {
 
 .front {
 	padding-top: 2rem;
+  text-align: center;
   .tag-line,
-  .what-we-do {
+  ul {
     @include grid-row();
     text-align: center;
   }
   .tag-line {
-    padding-bottom: 2rem;
-    h2,
+    margin-bottom: 2rem;
+    h1,
     p {
       @include grid-column(12);
     }
@@ -592,13 +593,13 @@ main {
     li {
       @include grid-column(12);
       margin-bottom: 2rem;
-      h1 {
+      h2 {
         @extend .h5;
         margin-top: 0;
         margin-bottom: 1rem;
       }
       .img-wrapper {
-        margin: 0 auto 1.75rem;
+        margin: 0 auto 1.75rem; 
         max-width: 200px;
       }
       img {
@@ -610,7 +611,7 @@ main {
   }
   @media #{$small-up} {
     .tag-line {
-      h2,
+      h1,
       p {
         @include grid-column(8,$offset:2,$last-column:true);
       }
@@ -621,17 +622,17 @@ main {
   }
   @media #{$medium-up} {
     .tag-line {
-      h2,
+      h1,
       p {
         @include grid-column(6,$offset:3);
       }
     }
+  }
+  @media #{$large-up} {
+    padding-top: 4rem;
     ul li {
       @include grid-column(3);
     }
-  }
-  @media #{$large-up} {
-		padding-top: 4rem;
   }
 }
 

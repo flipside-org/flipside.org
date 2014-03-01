@@ -334,6 +334,7 @@ body {
 
 /* Featured section */
 .featured {
+  margin-bottom: 2rem;
 	.prose,
 	.media {
 		@include grid-column(12);
@@ -364,6 +365,9 @@ body {
 			
 		}
 	}
+  @media #{$large-up} {
+    margin-bottom: 4rem;
+  }
 }
 
 /* Banner */
@@ -565,63 +569,75 @@ main {
 	}
 }
 
-/* Frontpage */
-
-.front {
-	padding-top: 2rem;
-	section {
-		text-align: center;
-		@include grid-column(12);
-	
-		ul {
-			@include grid-row();
-			list-style: none;
-			margin: 0;
-			
-			li {
-				@include grid-column(12);
-				float: left;
-			}
-		}
-		
-		&.what-we-do {
-			h1 {
-				@extend .h5;
-				margin-top: 0;
-				margin-bottom: 1rem;
-			}
-			
-      .img-wrapper {
-        margin: 0 auto 1.75rem;
-        max-width: 200px;
-      }
-			img {
-				width: 100%;
-				height: auto;
-				display: block;
-			}
-			ul {
-  			margin-bottom: 2rem;
-			}
-		}
-	}
-  .tag-line {
+/* Mod */
+.mod {
+  @include grid-row();
+  .mod-prime-title {
+    @extend h2;
+  }
+  .mod-tagline {
     margin-bottom: 2rem;
-    p {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      color: $light-color;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: $light-color;
+    @media #{$medium-up} {
+      margin-bottom: 3rem;
     }
   }
-	@media #{$medium-up} {
-		padding-top: 4rem;
-		.tag-line {
-			@include grid-column(6,$offset:3);
-		}
-		section ul li {
-			@include grid-column(3);
-		}
-	}
+}
+
+/* Frontpage */
+
+.about-us {
+  text-align: center;
+  .mod-prime-title,
+  .mod-tagline {
+    @include grid-column(12);
+  }
+  ul {
+    clear: both;
+    @include grid-row();
+    overflow: hidden;
+    list-style: none;
+    li {
+      @include grid-column(12);
+      margin-bottom: 2rem;
+      h2 {
+        @extend .h5;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .img-wrapper {
+        margin: 0 auto 1.75rem; 
+        max-width: 200px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+  @media #{$small-up} {
+    .mod-prime-title,
+    .mod-tagline {
+      @include grid-column(8,$offset:2,$last-column:true);
+    }
+    ul li {
+      @include grid-column(6);
+    }
+  }
+  @media #{$medium-up} {
+    .mod-prime-title,
+    .mod-tagline {
+      @include grid-column(6,$offset:3);
+    }
+  }
+  @media #{$large-up} {
+    ul li {
+      @include grid-column(3);
+    }
+  }
 }
 
 /* About page */

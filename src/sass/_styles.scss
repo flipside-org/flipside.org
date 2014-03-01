@@ -334,6 +334,7 @@ body {
 
 /* Featured section */
 .featured {
+  margin-bottom: 2rem;
 	.prose,
 	.media {
 		@include grid-column(12);
@@ -364,6 +365,9 @@ body {
 			
 		}
 	}
+  @media #{$large-up} {
+    margin-bottom: 4rem;
+  }
 }
 
 /* Banner */
@@ -565,30 +569,35 @@ main {
 	}
 }
 
+/* Mod */
+.mod {
+  @include grid-row();
+  .mod-prime-title {
+    @extend h2;
+  }
+  .mod-tagline {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: $light-color;
+    @media #{$medium-up} {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 /* Frontpage */
 
-.front {
-	padding-top: 2rem;
+.about-us {
   text-align: center;
-  .tag-line,
+  .mod-prime-title,
+  .mod-tagline {
+    @include grid-column(12);
+  }
   ul {
+    clear: both;
     @include grid-row();
-    text-align: center;
-  }
-  .tag-line {
-    margin-bottom: 2rem;
-    h1,
-    p {
-      @include grid-column(12);
-    }
-    p {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      color: $light-color;
-    }
-  }
-  ul {
-    @include clearfix();
+    overflow: hidden;
     list-style: none;
     li {
       @include grid-column(12);
@@ -610,26 +619,21 @@ main {
     }
   }
   @media #{$small-up} {
-    .tag-line {
-      h1,
-      p {
-        @include grid-column(8,$offset:2,$last-column:true);
-      }
+    .mod-prime-title,
+    .mod-tagline {
+      @include grid-column(8,$offset:2,$last-column:true);
     }
     ul li {
       @include grid-column(6);
     }
   }
   @media #{$medium-up} {
-    .tag-line {
-      h1,
-      p {
-        @include grid-column(6,$offset:3);
-      }
+    .mod-prime-title,
+    .mod-tagline {
+      @include grid-column(6,$offset:3);
     }
   }
   @media #{$large-up} {
-    padding-top: 4rem;
     ul li {
       @include grid-column(3);
     }

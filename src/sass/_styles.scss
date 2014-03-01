@@ -227,7 +227,7 @@ dl {
     color: #fff;
     display: block;
   }
-  ul.links {
+  .links {
     background-color: rgba($dark-color,0.9);	
     @include border-radius(5px);
     display: none;
@@ -239,7 +239,6 @@ dl {
     text-align: left;
     width: 200px;
     z-index: 9999;
-    
     &.visible {
       display: block;
     }
@@ -447,11 +446,48 @@ body {
   #filters {
     position: relative;
     @extend .dropdown;
-    @extend .dropdown-arrow;
-    li {
-      margin-bottom: 0.5rem;
-      &:last-child {
-        margin-bottom: 0;
+    .links {
+      display: block !important;
+      overflow: hidden;
+      max-height: 0;
+      @include transition(max-height 0.2s linear);
+      padding: 0;
+      &:before {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        @extend .icon-s-triangle-up;
+        font-size: 2rem;
+        color: rgba($dark-color,0.9);
+        margin-left: -1rem;
+        @include transition(opacity 0.3s linear, top 0.2s ease);
+        opacity: 0;
+      }
+      &.visible {
+        overflow: visible;
+        max-height: 500px;
+        li {
+          opacity: 1;
+        }
+        &:before {
+          top: -1.75rem;
+          opacity: 1;
+        }
+      }
+      li {
+        @include transition(opacity 0.2s linear);
+        opacity: 0;
+        margin: 0 1.25rem 0.5rem;
+        &:first-child {
+          margin-top: 1.25rem;
+        }
+        &:last-child {
+          margin-bottom: 1.25rem;
+        }
       }
     }
   }

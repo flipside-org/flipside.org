@@ -239,6 +239,10 @@ dl {
     text-align: left;
     width: 200px;
     z-index: 9999;
+    
+    &.visible {
+      display: block;
+    }
   }
 }
 

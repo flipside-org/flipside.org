@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: event
 
-background_color:
+background_color: 6F482A
 
 featured: false
 featured_image: 

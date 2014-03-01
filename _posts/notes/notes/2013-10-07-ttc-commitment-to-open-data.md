@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: work
 
-background_color:
+background_color: A01E22
 
 featured: false
 featured_image: 

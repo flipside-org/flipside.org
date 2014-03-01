@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: work
 
-background_color: c45b3e
+background_color: BF503E
 
 featured: false
 featured_image: 

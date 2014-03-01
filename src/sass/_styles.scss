@@ -233,12 +233,14 @@ dl {
     display: none;
     left: 50%;
     list-style: none;
-    margin: 1rem 0 0 -100px;
+    margin-top: 1rem;
+    margin-left: -100px;
     padding: 1.25rem;
     position: absolute;
     text-align: left;
     width: 200px;
-    z-index: 9999;
+    z-index: 100;
+    // top: 3.75rem;
     &.visible {
       display: block;
     }
@@ -259,6 +261,11 @@ dl {
     margin-left: -10px; /* equal to border-width */
     z-index: 2;
   }
+}
+
+.toggle {
+  position: relative;
+  z-index: 120;
 }
 
 /* Structure + pages */
@@ -452,46 +459,34 @@ body {
     position: relative;
     @extend .dropdown;
     .links {
-      display: block !important;
-      overflow: hidden;
-      max-height: 0;
-      @include transition(max-height 0.2s linear);
-      padding: 0;
+      display: block;
+      margin-top: 0;
+      opacity: 0;
+      visibility: hidden;
+      top: 2.75rem;
+      @include transition(opacity 0.1s ease 0, top 0.1s ease 0, visibility 0 linear 0.1s);
       &:before {
         display: block;
         height: 2rem;
         width: 2rem;
         position: absolute;
-        top: 0;
+        top: -1.75rem;
         left: 50%;
         z-index: 1;
         @extend .icon-s-triangle-up;
         font-size: 2rem;
         color: rgba($dark-color,0.9);
         margin-left: -1rem;
-        @include transition(opacity 0.3s linear, top 0.2s ease);
-        opacity: 0;
       }
       &.visible {
-        overflow: visible;
-        max-height: 500px;
-        li {
-          opacity: 1;
-        }
-        &:before {
-          top: -1.75rem;
-          opacity: 1;
-        }
+        opacity: 1;
+        visibility: visible;
+        top: 3.75rem;
+        @include transition(opacity 0.1s ease 0.1s, top 0.1s ease 0.1s, visibility 0 linear 0);
       }
       li {
-        @include transition(opacity 0.2s linear);
-        opacity: 0;
-        margin: 0 1.25rem 0.5rem;
-        &:first-child {
-          margin-top: 1.25rem;
-        }
         &:last-child {
-          margin-bottom: 1.25rem;
+          margin-bottom: 0;
         }
       }
     }

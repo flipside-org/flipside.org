@@ -430,6 +430,22 @@ body {
   .feed:before { @extend .icon-feed; }
   .previous:before { @extend .icon-arr-tail-left; }
   .next:before { @extend .icon-arr-tail-right; }
+  .loading {
+    @include transform(translateZ(0));
+    &:before {
+      @extend .icon-spinner;
+    }
+    &.next {
+      @include animation(spin-c 1s linear infinite);
+    }
+    &.previous {
+      @include animation(spin-cc 1s linear infinite);
+      &:before {
+        @include transform(scaleX(-1));
+      }
+    }
+  }
+  
   ul {
     list-style: none;
     margin: 0;
@@ -877,6 +893,18 @@ ul.hub {
     color: #ffffff;
   }
 }
+
+/* Keyframes animations */
+
+@include keyframes(spin-c) {
+  100% { @include transform(rotate(360deg)) }
+}
+
+@include keyframes(spin-cc) {
+  100% { @include transform(rotate(-360deg)) }
+}
+
+/* IE<9 */
 
 .lt-ie9 {
   body {

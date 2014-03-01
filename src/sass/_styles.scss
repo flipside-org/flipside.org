@@ -673,10 +673,6 @@ ul.hub {
 		> :last-child {
   		  margin-bottom: 0;
 		}
-	  h1 {
-	    @extend .h5;
-	    background-color: #fff;
-	  }
 		header {
       margin-bottom: 0.75rem;
 			a {
@@ -684,11 +680,13 @@ ul.hub {
 				position: relative;
 			}
 			h1 {
+        @extend .h5;
+        background-color: #fff;
         border-radius: 0 4px 0 0;
         left: 0;
         z-index: 10;
         bottom: 0;
-        margin: 0;
+        margin: 0 0 -0.25rem 0;
         max-width: 85%;
         padding: 0.5rem 1rem 0 0;
         position: absolute;

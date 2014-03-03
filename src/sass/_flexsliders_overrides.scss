@@ -53,10 +53,6 @@
   @extend %link-primary;
   text-shadow: none;
   top: 0;
-  @include transition(opacity, top, left, right);
-  @include transition-duration(0.2s, 0.1s, 0.2s, 0.2s);
-  @include transition-timing-function(ease, ease, ease, ease);
-  @include transition-delay(0, 0, 0, 0);
   &:active {
     position: absolute;
   }
@@ -68,11 +64,11 @@
   @extend .icon-arr-right;
 }
 .flex-direction-nav .flex-prev { 
-  left: -50px;
+  left: -4rem;
   text-align: center;
 }
 .flex-direction-nav .flex-next { 
-  right: -50px;
+  right: -4px;
   text-align: center; 
 }
 .flexslider:hover .flex-prev { 
@@ -88,6 +84,5 @@
 }
 .flex-direction-nav .flex-disabled { 
   opacity: 0 !important;
-  filter:alpha(opacity=0);
   cursor: default; 
 }

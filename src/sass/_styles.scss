@@ -72,10 +72,10 @@
 a:link,
 a:visited {
   @include transform(translate3d(0, 0, 0));
-  @include transition-property(opacity, top);
-  @include transition-duration(0.2s, 0.1s);
-  @include transition-timing-function(ease, ease);
-  @include transition-delay(0, 0);
+  @include transition-property(opacity, top, left, right);
+  @include transition-duration(0.2s, 0.1s, 0.2s, 0.2s);
+  @include transition-timing-function(ease, ease, ease, ease);
+  @include transition-delay(0, 0, 0, 0);
   cursor: pointer;
 }
 
@@ -436,9 +436,6 @@ body {
   .feed:before { @extend .icon-feed; }
   .previous:before { @extend .icon-arr-tail-left; }
   .next:before { @extend .icon-arr-tail-right; }
-  .next, .previous {
-    position: relative;
-  }
   .loading {    
     &:before {
       @extend .icon-spinner;

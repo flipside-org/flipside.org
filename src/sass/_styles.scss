@@ -71,8 +71,11 @@
 
 a:link,
 a:visited {
-  @include transition(all .2s ease);
-  @include transform(translateZ(0));
+  @include transform(translate3d(0, 0, 0));
+  @include transition-property(opacity, top);
+  @include transition-duration(0.2s, 0.1s);
+  @include transition-timing-function(ease, ease);
+  @include transition-delay(0, 0);
   cursor: pointer;
 }
 
@@ -433,16 +436,18 @@ body {
   .feed:before { @extend .icon-feed; }
   .previous:before { @extend .icon-arr-tail-left; }
   .next:before { @extend .icon-arr-tail-right; }
-  .loading {
-    @include transform(translateZ(0));
+  .next, .previous {
+    position: relative;
+  }
+  .loading {    
     &:before {
       @extend .icon-spinner;
     }
     &.next {
-      @include animation(spin-c 1s linear infinite);
+      @include animation(spin-c 1s linear 0s infinite);
     }
     &.previous {
-      @include animation(spin-cc 1s linear infinite);
+      @include animation(spin-cc 1s linear 0s infinite);
       &:before {
         @include transform(scaleX(-1));
       }
@@ -903,11 +908,13 @@ ul.hub {
 /* Keyframes animations */
 
 @include keyframes(spin-c) {
-  100% { @include transform(rotate(360deg)) }
+  from { @include transform(rotate(0deg)); }
+    to { @include transform(rotate(360deg)); }
 }
 
 @include keyframes(spin-cc) {
-  100% { @include transform(rotate(-360deg)) }
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(-360deg)); }
 }
 
 /* IE<9 */

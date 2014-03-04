@@ -31,3 +31,14 @@ nunoveloso :
   twitter: nunoveloso
   github: nunoveloso
   email: nuno@flipside.org
+
+ricardomestre :
+  name: Ricardo Mestre
+  function: UI Designer
+  photo: team/ricardo.jpg
+  
+  bio: |
+    Ricardo is a UI designer at Flipside.
+  twitter: ricardoduplos
+  github: ricardomestre
+  email: ricardo@flipside.org

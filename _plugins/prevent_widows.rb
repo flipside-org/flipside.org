@@ -16,13 +16,11 @@
 
 require 'liquid'
 
-module Jekyll
-  module PreventWidow
-    # Example:
-    def widont(text)
-      text.gsub(/([^\s])\s+([^\s]+)$/, '\1&nbsp;\2')
-    end
+module PreventWidow
+  # Example:
+  def widont(text)
+    text.gsub(/&nbsp;([^\s]+)$/, ' \1').gsub(/\s([^\s]+)\s*$/, '&nbsp;\1')
   end
 end
 
-Liquid::Template.register_filter(Jekyll::PreventWidow)
+Liquid::Template.register_filter(PreventWidow)

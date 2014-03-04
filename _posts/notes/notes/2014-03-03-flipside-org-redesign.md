@@ -4,7 +4,7 @@ category: note
   
 title: Flipside.org redesign
 image: note-rm-avatar.png
-user: olafveerman
+user: ricardomestre
 
 filters: misc
 
@@ -18,12 +18,23 @@ featured_image:
   
 related_post:
 ---
-As some of you might have noticed, this website has been the subject of a thorough redesign, after the previous iteration had remained mostly unchanged since we started the company in 2011. Over the past years Flipside has seen a lot of changes: we worked on great projects with our partners and our team has slowly, but organically, grown. To accompany these changes, we felt a need to redesign our website and have a better place to share our work and notes with everybody.
+Last week we launched a thoroughly redesigned version of flipside.org. The previous iteration had remained almost unchanged ever since Flipside was started and we felt the need to update the site and make it a good reflection of where we are right now.
 
-## Simple tech
-Happy as we were with [Jekyll](http://jekyllrb.com) for our previous website, we decided not to switch the underlying architecture. This has allowed us to focus on design and content and put our effort into ensuring a pleasant and consistent experience across all devices.  
-Another advantage of keeping the tech stack simple, is that the whole team was able to contribute very directly to almost any aspect of the final result. Blurring the lines between the more traditional roles of developers / designers and backend / frontend has been a great experience and a win for the team. The development process was a true team effort and we're very proud of the end result.
+Happy as we were with [Jekyll](http://jekyllrb.com) for our previous website, we decided to stick with the underlying architecture. This has allowed us to focus on design and content and put our effort into ensuring a pleasant and consistent experience across all modern devices.
+
+All the structural images on this site are SVG's and the only bitmaps you'll find are content images included in our notes and projects. 
+
+The basic color palette is .... and we're using big splashes of color and transparent motives that change depending on the context. For every project and note on our site, the author is at liberty to assign a background-color that gives the page its own feeling, while maintaining the overall identity.
+
+navigation method (Flipside)
 
 Over the next couple of weeks, we will be sharing some more insights on how we implemented certain things. Keep an eye on our notes section or subscribe to our [RSS feed](http://flipside.org/feed.xml) if you want to know more.
 
 In the meantime, it would be great to hear your opinion about the redesign, so feel free to reach out.
+
+
+## Should it stay or should it go
+
+Keeping the tech stack simple has also allowed the whole team to contribute very directly to almost any aspect of the final result. 
+
+Blurring the lines between the more traditional roles and domains in a team is a 

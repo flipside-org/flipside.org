@@ -37,13 +37,13 @@
 %bttn-disc {
   width: 2.75rem;
   text-align: center;
+  line-height: 2.75rem;
   * {
     @extend .visually-hidden;
   }
   &:before {
     display: block;
     height: 2.75rem;
-    line-height: 2.75rem;
     font-size: 1.5rem;
   }
 }
@@ -109,6 +109,7 @@ a:active {
   @extend %truncated;
   padding: 0 2.75rem 0 1.25rem;
   width: 200px;
+  line-height: 2.75rem;
   &:after {
     position: absolute;
     z-index: 1;
@@ -117,7 +118,6 @@ a:active {
     @extend .icon-arr-down;
     display: block;
     height: 2.75rem;
-    line-height: 2.75rem;
     font-size: 1rem;
     vertical-align: middle;
   }
@@ -127,6 +127,7 @@ a:active {
   position: relative;
   @extend %link-primary;
   padding-left: 2.5rem;
+  line-height: 2rem;
   &:before {
     @extend %rounded;
     background-color: $primary-color;
@@ -138,7 +139,6 @@ a:active {
     margin-top: -1rem;
     height: 2rem;
     width: 2rem;
-    line-height: 2rem;
     font-size: 1rem;
     text-align: center;
     display: block;
@@ -751,7 +751,6 @@ ul.hub {
           left: 0;
           z-index: 1;
           height: 1.75rem;
-          line-height: 1.75rem;
         }
       }
       .date:before { @extend .icon-clock; }

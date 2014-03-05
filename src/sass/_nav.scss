@@ -4,59 +4,73 @@
 
 /* Primary nav styling */
 
-nav#primary {
+#primary {
 	@extend .dropdown;
-	a {
-		display: block;
-		font-size: 1.25rem;
-		font-weight: $body-font-bold;
-		line-height: 40px;
-	}
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	z-index: 130;
 	.active a {
 		opacity: 0.6;
 	}
-	a.toggle {
+	.toggle {
 		margin-top: -0.25rem;
-		height: 2,5rem;
-		width: 2,5rem;
+		height: 2.5rem;
+		width: 2.5rem;
 		float: right;
+		text-align: center;
+		z-index: 40;
 		&:before {
 			display: block;
 			text-align: center;
-			height: 2,5rem;
-			width: 2,5rem;
-			line-height: 2,5rem;
+			height: 2.5rem;
+			width: 2.5rem;
+			line-height: 2.5rem;
 			@extend .icon-menu;
 			font-size: 2rem;
 		}
 	}
-	ul.links {
-		margin-top: 3rem;
-	}
+  .links {
+    margin: -0.5rem 1rem 0 0;
+    @extend %link-primary;
+    left: auto;
+    right: 0;
+    z-index: 30;
+    &:before {
+      left: auto;
+      right: 0.25rem;
+    }
+  }
 	@media #{$small-only} {
-		ul.links {
+		.links {
 			margin-right: ($column-gutter / 2);
-    	right: 0;
-			a {
-				height: auto;
-				line-height: 2em;
-				padding: 0 5px;
-			}
+    		right: 0;
 		}
 	}
 	@media #{$medium-up} {
 		.toggle {
 			display: none;
 		}
-		ul.links {
+		a {
+			line-height: 40px;
+		}
+		.links {
 			background-color: transparent;
-			display: block !important;	
 			float: right;
-			left: 0;
+			top: auto;
+			left: auto;
 			margin: 0;
 			padding: 0;
 			position: relative;
 			width: auto;
+			opacity: 1;
+			visibility: visible;
+			@include transition(all 0.2s ease);
+			&:before {
+				display: none;
+			}
+			&.visible {
+				top: auto;
+			}
 		}
 		li {
 			float: left;

@@ -234,44 +234,53 @@ dl {
     display: block;
   }
   .links {
-    background-color: rgba($dark-color,0.9);	
-    @include border-radius(5px);
-    display: none;
+    position: absolute;
+    top: 2.75rem;
     left: 50%;
+    z-index: 20;
     list-style: none;
-    margin-top: 1rem;
-    margin-left: -100px;
-    padding: 1.25rem;
-    position: absolute;
-    text-align: left;
     width: 200px;
-    z-index: 100;
-    // top: 3.75rem;
-    &.visible {
+    margin-left: -100px;
+    background-color: rgba($dark-color,0.9);	
+    @include border-radius(0.25rem);
+    padding: 1.25rem; 
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-property(opacity, top, visibility);
+    @include transition-duration(0.1s, 0.1s, 0.1s);
+    @include transition-timing-function(ease, ease, linear);
+    @include transition-delay(0, 0, 0);
+    &:before {
       display: block;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      top: -1.75rem;
+      left: 50%;
+      z-index: 1;
+      @extend .icon-s-triangle-up;
+      font-size: 2rem;
+      color: rgba($dark-color,0.9);
+      margin-left: -1rem;
     }
-  }
-}
-
-/* Dropdown with top-arrow */
-.dropdown-arrow {
-  ul:before {
-    content: ' ';
-    height: 0;
-    position: absolute;
-    width: 0;
-    border: 10px solid transparent;
-    border-bottom-color: rgba($dark-color,0.9); 
-    top: -20px;
-    left: 50%;
-    margin-left: -10px; /* equal to border-width */
-    z-index: 2;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      top: 3.75rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
 .toggle {
   position: relative;
-  z-index: 120;
+  z-index: 30;
 }
 
 /* Structure + pages */
@@ -479,41 +488,6 @@ body {
   #filters {
     position: relative;
     @extend .dropdown;
-    .links {
-      display: block;
-      margin-top: 0;
-      opacity: 0;
-      visibility: hidden;
-      top: 2.75rem;
-      @include transition-property(opacity, top, visibility);
-      @include transition-duration(0.1s, 0.1s, 0.1s);
-      @include transition-timing-function(ease, ease, linear);
-      @include transition-delay(0, 0, 0);
-      &:before {
-        display: block;
-        height: 2rem;
-        width: 2rem;
-        position: absolute;
-        top: -1.75rem;
-        left: 50%;
-        z-index: 1;
-        @extend .icon-s-triangle-up;
-        font-size: 2rem;
-        color: rgba($dark-color,0.9);
-        margin-left: -1rem;
-      }
-      &.visible {
-        opacity: 1;
-        visibility: visible;
-        top: 3.75rem;
-      }
-      li {
-        margin-bottom: 0.5rem;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
   }
   #social-share {
     float: right;

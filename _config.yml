@@ -16,10 +16,16 @@ image:
       height: 400
       width: 600
     list:
-      height: 320
-      width: 480
+      height: 640
+      width: 960
     thumb:
       attr:
         class: thumb
       height: 112
       width: 112
+    polaroid:
+      attr:
+        height: 340
+        width: 380
+      height: 680
+      width: 760  

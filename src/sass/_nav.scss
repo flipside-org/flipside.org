@@ -64,11 +64,11 @@
 			width: auto;
 			opacity: 1;
 			visibility: visible;
-			@include transition(all 0.2s ease);
 			&:before {
 				display: none;
 			}
 			&.visible {
+			  @include transition(none);
 				top: auto;
 			}
 		}

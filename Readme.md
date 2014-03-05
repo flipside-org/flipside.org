@@ -2,7 +2,8 @@
 To set up the development environment for this website, you'll need to install the following on your system:
 
 - Npm
-- compass & sass
+- sass
+- Compass (An alpha version is needed: ```$ gem install compass -v 0.13.alpha.10 --pre```)
 - Grunt ( $ npm install -g grunt-cli )
 - Bower ($ npm install -g bower)
 - jekyll ( $ gem install jekyll )

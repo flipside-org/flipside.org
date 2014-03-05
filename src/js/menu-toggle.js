@@ -1,12 +1,15 @@
 $(document).ready(function() {
-	$('.toggle').click(function(event) {
-		event.stopPropagation();
-		event.preventDefault();
+  $('.toggle').click(function(event) {
+    event.stopPropagation();
+    event.preventDefault();
 
-		$(this).siblings('ul.links').toggleClass('visible');
-	});
+    var $links_siblings = $(this).siblings('.links');
 
-	$(document).click(function() {
-		$('ul.links').removeClass('visible');
-	});
+    $('.links').not($links_siblings).removeClass('visible');
+    $links_siblings.toggleClass('visible');
+  });
+
+  $(document).click(function() {
+    $('.links').removeClass('visible');
+  });
 });

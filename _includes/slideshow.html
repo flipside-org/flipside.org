@@ -30,7 +30,7 @@
               {% endif %}
               {% if post.featured_image.polaroid %}
                 <div class="img-wrapper polaroid">
-                    <img src="images/{{post.featured_image.polaroid}}" width="760" height="680" />
+                    {% image polaroid notes/{{ post.featured_image.polaroid }} %}
                 </div>
               {% endif %}
             </figure>

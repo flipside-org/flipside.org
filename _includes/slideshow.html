@@ -14,7 +14,7 @@
             <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title }}</a></h1>
             <h2 class="section-title"><em>Featured</em> {{ post.category | capitalize }}</h2>
             <p class="summary">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
-            <p><a href="{{ site.domain }}{{ post.url }}" class="cta-bttn">Read more</a></p>
+            <p><a href="{{ post.url }}" class="cta-bttn">Read more</a></p>
           </div>
           <div class="media">
             <figure class="img-set"> 

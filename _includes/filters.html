@@ -1,5 +1,5 @@
 <li id="filters">
-	<a href="#" class="toggle filter active">
+	<a href="#filters-links" class="toggle filter active">
 		{% if include.active_filter %}
 			{% for filter in site.categories.filter %}
 				{% if filter.filter_name == include.active_filter %}
@@ -10,7 +10,7 @@
   		All notes
 		{% endif %}
 	</a>
-	<ul class="links">
+	<ul class="links" id="filters-links">
     <li>
 	{% if include.active_filter %}
 	  	<a href="/notes">All notes</a>

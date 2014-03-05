@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: misc
 
-background_color:
+background_color: 025A78
 
 featured: false
 featured_image: 

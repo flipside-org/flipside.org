@@ -2,13 +2,13 @@
 layout: note
 category: note
   
-title: Lisbon Open Data Maker Night - 1
+title: Lisbon Open Data Maker Night - I
 image: odmn.jpg
 user: olafveerman
 
 filters: event
 
-background_color:
+background_color: 6F482A
 
 featured: false
 featured_image: 

@@ -8,7 +8,7 @@ user: danielfdsilva
 
 filters: guide
 
-background_color:
+background_color: BF503E
 
 featured: false
 featured_image: 

@@ -37,13 +37,13 @@
 %bttn-disc {
   width: 2.75rem;
   text-align: center;
+  line-height: 2.75rem;
   * {
     @extend .visually-hidden;
   }
   &:before {
     display: block;
     height: 2.75rem;
-    line-height: 2.75rem;
     font-size: 1.5rem;
   }
 }
@@ -71,8 +71,11 @@
 
 a:link,
 a:visited {
-  @include transition(all .2s ease);
-  @include transform(translateZ(0));
+  @include transform(translate3d(0, 0, 0));
+  @include transition-property(opacity, top, left, right);
+  @include transition-duration(0.2s, 0.1s, 0.2s, 0.2s);
+  @include transition-timing-function(ease, ease, ease, ease);
+  @include transition-delay(0, 0, 0, 0);
   cursor: pointer;
 }
 
@@ -106,6 +109,7 @@ a:active {
   @extend %truncated;
   padding: 0 2.75rem 0 1.25rem;
   width: 200px;
+  line-height: 2.75rem;
   &:after {
     position: absolute;
     z-index: 1;
@@ -114,8 +118,8 @@ a:active {
     @extend .icon-arr-down;
     display: block;
     height: 2.75rem;
-    line-height: 2.75rem;
     font-size: 1rem;
+    vertical-align: middle;
   }
 }
 
@@ -123,6 +127,7 @@ a:active {
   position: relative;
   @extend %link-primary;
   padding-left: 2.5rem;
+  line-height: 2rem;
   &:before {
     @extend %rounded;
     background-color: $primary-color;
@@ -134,7 +139,6 @@ a:active {
     margin-top: -1rem;
     height: 2rem;
     width: 2rem;
-    line-height: 2rem;
     font-size: 1rem;
     text-align: center;
     display: block;
@@ -153,11 +157,13 @@ a:active {
       position: absolute;
       z-index: 1;
       right: 0;
-      top: 50%;
-      margin-top: -0.5rem;
+      top: 0;
       @extend .icon-tick;
       display: block;
       font-size: 1rem;
+      height: 1.75rem;
+      width: 1.75rem;
+      text-align: right;
     }
   }
 }
@@ -198,7 +204,7 @@ dl {
 
 .social,
 .contact-us,
-.share-links {
+#share-links {
   a {
     @extend .link-disc;
   }
@@ -227,39 +233,54 @@ dl {
     color: #fff;
     display: block;
   }
-  ul.links {
-    background-color: rgba($dark-color,0.9);	
-    @include border-radius(5px);
-    display: none;
-    left: 50%;
-    list-style: none;
-    margin: 1rem 0 0 -100px;
-    padding: 1.25rem;
+  .links {
     position: absolute;
-    text-align: left;
+    top: 2.75rem;
+    left: 50%;
+    z-index: 20;
+    list-style: none;
     width: 200px;
-    z-index: 9999;
-    
-    &.visible {
+    margin-left: -100px;
+    background-color: rgba($dark-color,0.9);	
+    @include border-radius(0.25rem);
+    padding: 1.25rem; 
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-property(opacity, top, visibility);
+    @include transition-duration(0.1s, 0.1s, 0.1s);
+    @include transition-timing-function(ease, ease, linear);
+    @include transition-delay(0, 0, 0);
+    &:before {
       display: block;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      top: -1.75rem;
+      left: 50%;
+      z-index: 1;
+      @extend .icon-s-triangle-up;
+      font-size: 2rem;
+      color: rgba($dark-color,0.9);
+      margin-left: -1rem;
+    }
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      top: 3.75rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
-/* Dropdown with top-arrow */
-.dropdown-arrow {
-  ul:before {
-    content: ' ';
-    height: 0;
-    position: absolute;
-    width: 0;
-    border: 10px solid transparent;
-    border-bottom-color: rgba($dark-color,0.9); 
-    top: -20px;
-    left: 50%;
-    margin-left: -10px; /* equal to border-width */
-    z-index: 2;
-  }
+.toggle {
+  position: relative;
+  z-index: 30;
 }
 
 /* Structure + pages */
@@ -388,16 +409,21 @@ body {
 		margin-top: 2rem;
   }
   @media #{$medium-up} {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
     .heading,
     .actions {
-      @include grid-column(9);
+      @include grid-column(7);
     }
     .actions {
-      @include grid-column(3);
+      @include grid-column(5);
       margin-top: 0;
       padding-bottom: 0.25rem;
       padding-top: 0.25rem;
+    }
+  }
+  @media #{$large-up} {
+    .actions {
+      @include grid-column(4, $offset: 1);
     }
   }
 }
@@ -419,6 +445,21 @@ body {
   .feed:before { @extend .icon-feed; }
   .previous:before { @extend .icon-arr-tail-left; }
   .next:before { @extend .icon-arr-tail-right; }
+  .loading {    
+    &:before {
+      @extend .icon-spinner;
+    }
+    &.next {
+      @include animation(spin-c 1s linear 0s infinite);
+    }
+    &.previous {
+      @include animation(spin-cc 1s linear 0s infinite);
+      &:before {
+        @include transform(scaleX(-1));
+      }
+    }
+  }
+  
   ul {
     list-style: none;
     margin: 0;
@@ -447,13 +488,6 @@ body {
   #filters {
     position: relative;
     @extend .dropdown;
-    @extend .dropdown-arrow;
-    li {
-      margin-bottom: 0.5rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
   }
   #social-share {
     float: right;
@@ -673,10 +707,6 @@ ul.hub {
 		> :last-child {
   		  margin-bottom: 0;
 		}
-	  h1 {
-	    @extend .h5;
-	    background-color: #fff;
-	  }
 		header {
       margin-bottom: 0.75rem;
 			a {
@@ -684,11 +714,13 @@ ul.hub {
 				position: relative;
 			}
 			h1 {
+        @extend .h5;
+        background-color: #fff;
         border-radius: 0 4px 0 0;
         left: 0;
         z-index: 10;
         bottom: 0;
-        margin: 0;
+        margin: 0 0 -0.25rem 0;
         max-width: 85%;
         padding: 0.5rem 1rem 0 0;
         position: absolute;
@@ -719,7 +751,6 @@ ul.hub {
           left: 0;
           z-index: 1;
           height: 1.75rem;
-          line-height: 1.75rem;
         }
       }
       .date:before { @extend .icon-clock; }
@@ -739,15 +770,25 @@ ul.hub {
 	  }
 	}
 
-  @media #{$medium-up} {
-		li {
-			@include grid-column(4);
-
-			&:nth-child(3n+1) {
-				clear: left;
-			}
-		}
-	}
+  @media #{$small-up} {
+    li {
+      @include grid-column(6);
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+    }
+  }
+  @media #{$large-up} {
+    li {
+      @include grid-column(4);
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+  }
 }
 
 /* Related content */
@@ -833,6 +874,20 @@ ul.hub {
     color: #ffffff;
   }
 }
+
+/* Keyframes animations */
+
+@include keyframes(spin-c) {
+  from { @include transform(rotate(0deg)); }
+    to { @include transform(rotate(360deg)); }
+}
+
+@include keyframes(spin-cc) {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(-360deg)); }
+}
+
+/* IE<9 */
 
 .lt-ie9 {
   body {

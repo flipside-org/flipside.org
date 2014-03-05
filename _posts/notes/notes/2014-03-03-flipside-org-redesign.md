@@ -4,7 +4,7 @@ category: note
   
 title: Flipside.org redesign
 image: note-flipside-redesign-process.png
-user: olafveerman
+user: ricardomestre
 
 filters: misc
 

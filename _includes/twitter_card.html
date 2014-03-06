@@ -9,7 +9,7 @@
 {% elsif page.excerpt %}
   <meta property="twitter:description" content="{{ page.excerpt | strip_html | truncate: 200 }}" >
 {% else %}
-  <meta property="og:description" content="{{ site.data.flipside.description }}" >
+  <meta property="twitter:description" content="{{ site.data.flipside.description }}" >
 {% endif %}
 {% if page.image %}
   {% if page.category == "note" %}
@@ -18,5 +18,5 @@
     <meta property="twitter:image" content="{{ site.domain }}/images/projects/{{ page.image }}" />
   {% endif %}
 {% else %}
-  <meta property="twitter:image" content="{{ site.domain }}/meta/og-image.png" />  
+  <meta property="twitter:image" content="{{ site.domain }}/images/meta/og-image.png" />  
 {% endif %}

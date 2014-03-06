@@ -9,7 +9,7 @@ exclude:        ['node_modules', 'src', 'Gruntfile.js', 'package.json', 'Readme.
 # Image presets
 # For more info: https://github.com/robwierzbowski/jekyll-image-tag
 image:
-  source: src/original_images/
+  source: images
   output: images
   presets:
     article:

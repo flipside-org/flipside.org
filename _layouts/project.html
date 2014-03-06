@@ -81,25 +81,27 @@ contact: true
     {% assign details = page.meta %}
     {% if details.type or details.client or details.technology or details.project_link.href %}
     <aside role="complementary">
-      <h1>Details</h1>
-      <dl>
-        {% if details.type %}
-          <dt>Type</dt>
-          <dd>{{ details.type }}</dd>
-        {% endif %}
-        {% if details.client %}
-          <dt>Client</dt>
-          <dd>{{ details.client }}</dd>
-        {% endif %}
-        {% if details.technology %}
-          <dt>Technology</dt>
-          <dd>{{ details.technology }}</dd>
-        {% endif %}
-        {% if details.project_link.href %}
-          <dt>URL</dt>
-          <dd><a href="{{ details.project_link.href }}">{{ details.project_link.href }}</a></dd>
-        {% endif %}
-      </dl>
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          {% if details.type %}
+            <dt>Type</dt>
+            <dd>{{ details.type }}</dd>
+          {% endif %}
+          {% if details.client %}
+            <dt>Client</dt>
+            <dd>{{ details.client }}</dd>
+          {% endif %}
+          {% if details.technology %}
+            <dt>Technology</dt>
+            <dd>{{ details.technology }}</dd>
+          {% endif %}
+          {% if details.project_link.href %}
+            <dt>URL</dt>
+            <dd><a href="{{ details.project_link.href }}">{{ details.project_link.href }}</a></dd>
+          {% endif %}
+        </dl>
+      </section>
     </aside>
     {% endif %}
   </div>

@@ -11,10 +11,10 @@
       {% endif %}
         <article class="row">
           <div class="prose">
-            <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title }}</a></h1>
-            <h2 class="section-title"><em>Under</em> {{ post.category | capitalize }}</h2>
+            <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title | widont }}</a></h1>
+            <h2 class="section-title"><em>Featured</em> {{ post.category | capitalize }}</h2>
             <p class="summary">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
-            <p class="read-more"><a href="{{ site.domain }}{{ post.url }}">Read more</a></p>
+            <p><a href="{{ post.url }}" class="cta-bttn">Read more</a></p>
           </div>
           <div class="media">
             <figure class="img-set"> 
@@ -30,7 +30,7 @@
               {% endif %}
               {% if post.featured_image.polaroid %}
                 <div class="img-wrapper polaroid">
-                    <img src="images/{{post.featured_image.polaroid}}" width="760" height="680" />
+                    {% image polaroid notes/{{ post.featured_image.polaroid }} %}
                 </div>
               {% endif %}
             </figure>

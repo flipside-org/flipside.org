@@ -1,15 +1,23 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Map interaction and zoom levels
+image: incendios-pt-administrative-areas.png
 user: danielfdsilva
 
 filters: guide
-image: incendios-pt-administrative-areas.png
-related_post: incendios
 
+background_color: BF503E
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
+  - incendios
 ---
 
 An important feature of [incendios.pt](http://incendios.pt) are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between regions, we allow click events on the map to browse the site. Every time a user clicks on a specific administrative area type, like District, Municipality, or Parish, its page is shown. This improves the speed of the exploration since the users don't need to drill down using the hierarchical selectors.

@@ -28,7 +28,7 @@ h6 { @extend .h6; }
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  //line-height: 1;
+  // line-height: 1;
   vertical-align: middle;
 
   /* Better Font Rendering =========== */
@@ -179,4 +179,12 @@ h6 { @extend .h6; }
 .icon-s-arr-down {
   @extend .icon;
   content: "\e623";
+}
+.icon-spinner {
+  @extend .icon;
+  content: "\e624";
+}
+.icon-refresh {
+  @extend .icon;
+  content: "\e625";
 }

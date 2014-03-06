@@ -1,15 +1,24 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Data collection with Airwolf
+image: aw-ccdashboard.png
 user: olafveerman
 
 filters: work
-image: aw-ccdashboard.png
-related_post: airwolf data-collection
 
+background_color:
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
+  - airwolf
+  - data-collection
 ---
 Recently we've been working with [Research Africa](http://www.researchafrica.com) on Airwolf, a platform that provides them and [Text to Change](http://www.texttochange.com) with a tool to manage their data collection process: from survey definition to final visualization. Both organizations go through exciting phases of growth and the need to manage their data with the long term in mind was getting bigger.
 

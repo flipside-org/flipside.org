@@ -1,20 +1,27 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Incendios 0.2 - more and improved data
+image: incendios-pt.png
 user: olafveerman
 
 filters: work
-image: incendios-pt.png
+
+background_color: BF503E
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
 related_post:
   - incendios
   - open-data
-
 ---
 
-This week we launched a new version of [incendios.pt](http://incendios.pt) with the most recent data published by ICNF (2012) and easy access to the raw data that powers the site.
+<p class="lead">This week we launched a new version of <a href="http://incendios.pt" target="_blank" title="Visit Incêndios website">incendios.pt</a> with the most recent data published by ICNF (2012) and easy access to the raw data that powers the site.</p>
 
 ## Download the data
 Ever since we launched the site a couple of months ago, we frequently receive requests for the raw data that we use on the site. The complete dataset with detailed information about each of the 400.000 fires was already available for download on [Github](https://github.com/flipside-org/incendios-dataset), but in the new release we went a step further and added a download button to each administrative area.

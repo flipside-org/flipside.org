@@ -83,7 +83,7 @@ module.exports = function(grunt) {
       prod: {
         files: {
           'scripts/flipside.min.js': [
-            'src/js/libs/keypress/keypress-1.0.9.min.js',
+            'src/js/libs/keypress/keypress-2.0.1.min.js',
             'src/js/libs/async/async.js',
             'src/js/libs/flexslider/jquery.flexslider.js',
             'src/js/*.js'
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
           //'scripts/modernizr.min.js': ['src/vendor/modernizr/modernizr.js'],
           
           'scripts/foundation.min.js': [
-            'src/vendor/jquery/jquery.js',
+            'src/vendor/foundation/js/vendor/jquery.js',
             
             'src/vendor/foundation/js/foundation/foundation.js',
             //'src/vendor/foundation/js/foundation/foundation.abide.js',

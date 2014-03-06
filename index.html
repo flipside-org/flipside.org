@@ -1,8 +1,44 @@
 ---
-layout: index
+layout: base
+active_menu : home
+title : Home
+description: Using open source technology, Flipside builds web-based tools that help organisations create social impact.
+contact: true
 ---
-{% comment %}
-  Don't do absolutely nothing here.
-  Any changes to the index page should be done in the
-  _layouts/index.html file.
-{% endcomment %}
+{% include slideshow.html %}
+
+<section class="mod about-us">
+  <h1 class="mod-prime-title">We are Flipside</h1>
+  <p class="mod-tagline">Using open source technology, we build web-based tools that help organisations create social impact.</p>
+  <ul>
+    <li>
+      <div class="img-wrapper">
+        <img src="images/illu-disc-website.svg" />
+      </div>
+      <h2>Websites</h2>
+      <p>Build standards compliant websites that help organisations engage with society.</p>
+    </li>
+    <li>
+      <div class="img-wrapper">
+        <img src="images/illu-disc-collection.svg" />
+      </div>
+      <h2>Data collection tools</h2>
+      <p>Use modern technology to allow organisations to conduct surveys and manage their data.</p>
+    </li>
+    <li>
+      <div class="img-wrapper">
+        <img src="images/illu-disc-visualization.svg" />
+      </div>
+      <h2>Data visualizations</h2>
+      <p>Make complex issues easier to understand and explore, using open source technology.</p>
+    </li>
+    <li>
+      <div class="img-wrapper">
+        <img src="images/illu-disc-collaboration.svg" />
+      </div>
+      <h2>Collaborative tools</h2>
+      <p>Help disperse teams to coordinate their work and manage their projects.</p>
+    </li>
+  </ul>
+  <p><a href="/about" class="cta-bttn">Learn about us</a></p>
+</section>

@@ -1,15 +1,13 @@
 <li id="social-share">
-  <a class="toggle share">
-    <span class="visually-hidden">Social share</span>
-  </a>
-  <ul class="links">
-    <li>
+  <a class="toggle share" href="#share-links"><span>Social share</span></a>
+  <ul class="links" id="share-links">
+    <li class="facebook">
       <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain }}{{ page.url }}" target="_blank" class="facebook">Facebook</a>
     </li>
-    <li>
+    <li class="twitter">
       <a href="https://twitter.com/share?url={{ site.domain }}{{ page.url }}" target="_blank" class="twitter">Twitter</a>
     </li>
-    <li>
+    <li class="google-plus">
       <a href="https://plus.google.com/share?url={{ site.domain }}{{ page.url }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" class="google-plus">Google+</a>
     </li>
   </ul>

@@ -1,12 +1,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@{{ site.data.flipside.twitter }}">
-<meta name="twitter:creator" content="@{{ site.data.team[page.user].twitter }}">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
 {% if page.category == "note" %}
-	{% assign image_path = "/images/notes/" %}
+  <meta name="twitter:creator" content="@{{ site.data.team[page.user].twitter }}">
 {% endif %}
-{% if page.category == "project" %}
-	{% assign image_path = "/images/projects/" %}
+<meta name="twitter:title" content="{{ page.title }} - Flipside">
+{% if page.description %}
+  <meta property="twitter:description" content="{{ page.description }}" />
+{% elsif page.excerpt %}
+  <meta property="twitter:description" content="{{ page.excerpt | strip_html | truncate: 200 }}" >
+{% else %}
+  <meta property="og:description" content="{{ site.data.flipside.description }}" >
 {% endif %}
-<meta name="twitter:image" content="{{ site.domain }}{{ image_path }}{{ page.image }}">
+{% if page.image %}
+  {% if page.category == "note" %}
+    <meta property="twitter:image" content="{{ site.domain }}/images/notes/{{ page.image }}" />
+  {% elsif page.category == "project" %}
+    <meta property="twitter:image" content="{{ site.domain }}/images/projects/{{ page.image }}" />
+  {% endif %}
+{% else %}
+  <meta property="twitter:image" content="{{ site.domain }}/meta/og-image.png" />  
+{% endif %}

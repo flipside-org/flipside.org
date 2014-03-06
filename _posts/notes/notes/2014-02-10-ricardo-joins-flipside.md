@@ -1,14 +1,22 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Ricardo Mestre joins Flipside
+image: note-rm-avatar.png
 user: olafveerman
 
 filters: misc
-image: note-rm-avatar.png
 
+background_color: 025A78
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
 ---
 We're excited to announce that Ricardo Mestre has joined Flipside. Ricardo is a talented designer and front-end developer that has been pushing the envelope on using modern technologies to craft usable and engaging websites. Whether it's as a [designer and coder](http://duplos.org), as a [musician](http://soundcloud.com/ricardomestre), or as an illustrator of [book covers](http://indexebooks.com/o-corredor-de-fundo.html), his work shows great thought and purpose. 
 

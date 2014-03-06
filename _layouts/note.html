@@ -1,11 +1,37 @@
 ---
 layout: base
 active_menu : notes
-twitter_card: true
-facebook_og: true
 contact: true
 ---
+{% comment %}
+  To render these links we just loop through the posts array and find the
+  bote before and after.
+{% endcomment %}
 
+{% assign break_cycle = false %}
+
+{% assign previous_note = false %}
+{% assign next_note = false %}
+{% assign current_found = false %}
+
+{% for post in site.categories.note %}
+  {% unless break_cycle %}
+    {% if current_found %}
+    
+      {% assign next_note = post %}
+      {% assign break_cycle = true %}
+      
+    {% else %}
+    
+      {% if page.url == post.url %}
+        {% assign current_found = true %}
+      {% else %}
+        {% assign previous_note = post %}
+      {% endif %}
+      
+    {% endif %}  
+  {% endunless%}
+{% endfor%}
 <article>
 
   {% if page.background_color %}
@@ -15,17 +41,25 @@ contact: true
   {% endif %}
   	<div class="row">
     	<div class="heading">
-        <h1 class="title">{{ page.title }}</h1>
-        <h2 class="section-title">Note</h2>
+        <h1 class="title">{{ page.title | widont }}</h1>
+        <h2 class="section-title"><em>Under</em> Notes</h2>
       </div>
     	<div class="actions">
         <ul class="notes-navigation">
           {% include social-share.html %}
           <li>
-            <a href="#" class="notes-nav-link previous"><span class="visually-hidden">previous</span></a>
+          {% if previous_note %}
+            <a href="{{ previous_note.url }}" class="previous"><span class="visually-hidden">previous</span></a>
+          {% else %}
+            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
+          {% endif %}
           </li>
           <li>
-            <a href="#" class="notes-nav-link next"> <span class="visually-hidden">next</span></a>
+          {% if next_note %}
+            <a href="{{ next_note.url }}" class="next"><span class="visually-hidden">next</span></a>
+          {% else %}
+            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
+          {% endif %}
           </li>
         </ul>
       </div>
@@ -36,7 +70,7 @@ contact: true
 		<div class="content">
       {{ content }}
     </div>
-    <aside>
+    <aside role="complementary">
       <section class="details">
         <h1>Details</h1>
         <dl>

@@ -1,14 +1,22 @@
 ---
 layout: note
-notes_active : true
 category: note
-
+  
 title: Text to Change's commitment to open data
+image: ttc-mobilephones.jpg
 user: olafveerman
 
 filters: work
-image: ttc-mobilephones.jpg
 
+background_color: A01E22
+
+featured: false
+featured_image: 
+  mobile: 
+  desktop: 
+  polaroid:
+  
+related_post:
 ---
 
 _This is a slightly adapted version of a blog post that was originally published on the [Text to Change blog](http://www.texttochange.org/blog/our-commitment-open-data). As technology partners, we_ _are supporting them to open up the datasets that are valuable to other people and organisations._

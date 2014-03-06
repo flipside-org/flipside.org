@@ -26,12 +26,11 @@
 
 // Font size technique to handle media queries in javascript.
 #site-title img {
-  font-size: 1px;
+  font-size: 0px;
 }
 
-@media #{$small-only} {
+@media #{$medium-up} {
   #site-title img {
-    font-size: 0px;
+    font-size: 1px;
   }
 }
-

@@ -317,6 +317,8 @@ body {
 		}
 	}
   .section-title {
+    left: 0;
+    width: 100%;
     font-size: 1.25rem;
     font-weight: normal;
     margin: 0;
@@ -324,6 +326,7 @@ body {
 		position: absolute;
 		top: -1.75rem;
 		line-height: 1.75rem;
+		padding: 0 1rem;
   }
 	.row {
 		padding-top: 4rem;
@@ -345,6 +348,7 @@ body {
 		@include grid-column(12);
 	}
 	.prose {
+    position: relative;
     	padding-bottom: 2rem;
     	.title {
     	  margin-bottom: 1.75rem;
@@ -383,7 +387,9 @@ body {
 	padding-top: 72px;
 	padding-bottom: 3rem;
 	margin-bottom: 2rem;
-
+  .heading {
+    position: relative;
+  }
 	.heading,
 	.actions {
 		@include grid-column(12);

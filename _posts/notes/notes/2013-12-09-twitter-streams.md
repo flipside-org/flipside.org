@@ -34,7 +34,50 @@ On the index file we extend ```TwitterStream``` and implement the abstract metho
 The ```__constructor``` is used to setup credentials and keywords and every time a matching tweet is found it is sent to ```processTweet()```.
 However we found that sometimes a ```disconnect``` response is returned so we check if the actual tweet text is present thus validating the data.  
 
-{% gist 7888253 index.php %}
+{% highlight php %}
+<?php
+require 'TwitterStream.php';
+ 
+/**
+* Class that extends TwitterStream and implements
+* the processTweet function.
+*/
+class Tweets extends TwitterStream {
+  
+  function __construct(){
+    parent::__construct();
+
+    // Set credentials.
+    $this->login(TW_CONSUMER_KEY, TW_CONSUMER_SECRET, TW_OAUTH_ACCESS_TOKEN, TW_OAUTH_ACCESS_TOKEN_SECRET)
+    
+    // Keywords to track. Tweets with 'fun' and 'play' will be returned.
+    ->setKeywords(array('fun', 'play'))
+    ->start();
+  }
+
+  public function processTweet($data) {
+    // The return object could be an invalid tweet.
+    // Could be something like:
+    // stdClass Object
+    // (
+    // [disconnect] => stdClass Object
+    // (
+    // [code] => 7
+    // [stream_name] => flipside_org-statuses87289
+    // [reason] => admin logout
+    // )
+    // )
+    if (isset($data->text)) {
+      // Handle the tweet
+    }
+  }
+}
+ 
+// Initialize.
+new Tweets();
+?>
+{% endhighlight %}
+
 
 ### Streaming API and accents
 Note that when you want to track accented keywords, it might be a good idea to include all the different variations. In our case, we needed to check for the Spanish hashtag 'quécambiarias'. Since users are not always accurate in their spelling (even less when it comes to hashtags), it is important to account for variations: 'quecambiarias', 'quecambiarías', 'quécambiarias', 'quécambiarías'.

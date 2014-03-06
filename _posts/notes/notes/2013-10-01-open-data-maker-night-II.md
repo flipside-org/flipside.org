@@ -2,7 +2,7 @@
 layout: note
 category: note
   
-title: Lisbon Open Data Maker Night - II
+title: Lisbon Open Data Maker Night II
 image: odmn1.jpg
 user: olafveerman
 

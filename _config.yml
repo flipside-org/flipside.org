@@ -13,8 +13,8 @@ image:
   output: images
   presets:
     article:
-      height: 400
-      width: 600
+      height: 720
+      width: 1080
     list:
       height: 640
       width: 960

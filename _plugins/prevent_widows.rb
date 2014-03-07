@@ -17,9 +17,12 @@
 require 'liquid'
 
 module PreventWidow
-  # Example:
   def widont(text)
-    text.gsub(/&nbsp;([^\s]+)$/, ' \1').gsub(/\s([^\s]+)\s*$/, '&nbsp;\1')
+    if text.split.size > 3
+      text.gsub(/&nbsp;([^\s]+)$/, ' \1').gsub(/\s([^\s]+)\s*$/, '&nbsp;\1')
+    else
+      return text
+    end
   end
 end
 

@@ -28,10 +28,11 @@ In this edition we will reserve space for two brief talks about an Open Data rel
 ### What we'll be working on
 Everybody is free to suggest a topic to work on, but there are already a couple of ideas under development:
 
-- **Farm subsidies**  
-During past editions we already worked on opening up [spending data](/notes/non-bid-contracts-openspending). This time, some of us will process data on Farm Subsidies and add them to Open Spending.
-- **Visualizing diversity**  
-Over the past years, a lot of attention was given to the exodus of Portuguese, but little to people coming in. During the night we'll take a look at the diversity of nationalities in Lisbon.
+Farm subsidies
+: During past editions we already worked on opening up [spending data](/notes/non-bid-contracts-openspending). This time, some of us will process data on Farm Subsidies and add them to Open Spending.
+
+Visualizing diversity
+: Over the past years, a lot of attention was given to the exodus of Portuguese, but little to people coming in. During the night we'll take a look at the diversity of nationalities in Lisbon.
 
 If you want to add anything to this list, please [drop us a line](mailto:olaf@flipside.org).
 

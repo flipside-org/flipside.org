@@ -1,5 +1,6 @@
 .featured .media {
 	display: none;
+
 	@media #{$medium-up} {
 		display: block;
 	}
@@ -15,8 +16,9 @@
 	}
 	
 	.img-wrapper {
-		display: inline-block;
-		width: auto;
+    position: relative;
+    display: inline-block;
+    width: auto;
 	}
 	
 	.img-wrapper.desktop {
@@ -32,7 +34,6 @@
 	
 	.img-wrapper.polaroid {
 		width: 444px;
-		position: relative;
 		z-index: 10;
 		bottom: -72px;
 		margin-top: -72px;
@@ -68,8 +69,15 @@
 		padding-right: 7.207%; /* (32*100)/444 */
 		background-image: url('../images/frame-polaroid.svg');
 		border-radius: 1.053% / 1.176%; /* (4*100)/380 / (4*100)/340 */
-		@include transform(rotate(4deg));
 		-webkit-backface-visibility: hidden;
 	}
 
+}
+
+.slides li:nth-child(odd) .polaroid img {
+  @include transform(rotate(4deg));
+}
+
+.slides li:nth-child(even) .polaroid img {
+  @include transform(rotate(-4deg));
 }

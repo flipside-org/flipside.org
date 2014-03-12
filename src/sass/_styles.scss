@@ -349,7 +349,7 @@ body {
 	}
 	.prose {
     position: relative;
-    	padding-bottom: 2rem;
+    	padding-bottom: 4rem;
     	.title {
     	  margin-bottom: 1.75rem;
     	}
@@ -539,6 +539,13 @@ main {
       line-height: 1.75rem;
       color: $light-color;
     }
+    hr {
+      margin: 1rem 0;
+      border: 2px tint($primary-color, 90%) dashed;
+    }
+    dl dt {
+      margin-bottom: 0;
+    }
   }
   aside {
 		h1 {
@@ -609,7 +616,7 @@ main {
 			@include grid-column(4,$pull:8);
 		}
 		article.no-sidebar .content {
-			@include grid-column(8,$push:0,$offset:2);
+			@include grid-column(10,$push:0,$offset:1);
 		}
 	}
 	@media #{$large-up} {
@@ -618,6 +625,9 @@ main {
     }
     aside {
       @include grid-column(3,$pull:8);
+    }
+    article.no-sidebar .content {
+      @include grid-column(8,$push:0,$offset:2);
     }
 	}
 }
@@ -661,7 +671,7 @@ main {
         margin-bottom: 1rem;
       }
       .img-wrapper {
-        margin: 0 auto 1.75rem; 
+        margin: 0 auto 1rem; 
         max-width: 200px;
       }
       img {

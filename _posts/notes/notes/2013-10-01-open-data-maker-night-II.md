@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: event
 
-background_color: 6F482A
+background_color: 3a4d80
 
 featured: false
 featured_image: 
@@ -36,7 +36,7 @@ The Open Data Census tracks the status of government open data on the national l
 - **Visualizing diversity**  
 Over the past years, a lot of attention was given to the exodus of Portuguese, but little to people coming in. During the night we'll take a look at the diversity of nationalities in Lisbon.
 
-If you want to add anything to this list, please [drop us](mailto:olaf@flipside.org) a line.
+If you want to add anything to this list, please [drop us a line](mailto:olaf@flipside.org).
 
 ###RSVP
 The event will be held at [Liberdade 229](http://www.liberdade229.com), conveniently located in the center of Lisbon.
@@ -45,7 +45,7 @@ __Date__: Thursday October 17, 2013
 __Time__: 18:30 - 22:30  
 __Location__: Avenida de Liberdade 229, Lisboa
 
-We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. For us to have a better grasp on how many people are joining, we ask you to sign up at the event's [meetup.com](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1017322/) page.
+We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. For us to have a better grasp on how many people are joining, we ask you to [sign up at the event's meetup.com page](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1017322/).
 
 ###Open Knowledge Foundation
 The Open Data Maker Nights is a concept coined and promoted by the Open Knowledge Foundation. Over the past months, several Maker Nights have been organized around the world. For more info, see the OKFN [website](http://okfnlabs.org/events/open-data-maker/).

@@ -8,7 +8,7 @@ user: olafveerman
 
 filters: event
 
-background_color: 6F482A
+background_color: 3a4d80
 
 featured: false
 featured_image: 
@@ -21,6 +21,8 @@ related_post:
 ---
 On Thursday August 29, we'll be hosting the first Lisbon Open Data Maker Night. It will be an informal gathering focused on making stuff with Open Data. 
 
+{% include content_img.html path="notes/odmn.jpg" caption="Open Data Maker Night in action" %}
+
 ###For who
 Everybody is welcome, you don't need to be a skilled developer, data scientist or designer to make things happen. We'll prepare a list of potential things people can work on, trying to cover different skill-sets and interests. If these are your first steps in making things with data we'll pair you up with somebody that can get you started.  
 During the evening, everybody will have the opportunity to suggest tasks and themes to work on instead.
@@ -32,7 +34,7 @@ __Date__: August 29, 2013
 __Time__: 18:30 - 22:30  
 __Location__: Avenida de Liberdade 229, Lisboa
 
-We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. For us to have a better grasp on how many people are joining, you can sign up at the event's [meetup.com](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1005172/) page.
+We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. For us to have a better grasp on how many people are joining, you can [sign up at the event's meetup.com page](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1005172/).
 
 ###Open Knowledge Foundation
-The Open Data Maker Nights is a concept coined and promoted by the Open Knowledge Foundation. Over the past months, several Maker Nights have been organized around the world. For more info, see the OKFN [website](http://okfnlabs.org/events/open-data-maker/).
+The Open Data Maker Nights is a concept coined and promoted by the Open Knowledge Foundation. Over the past months, several Maker Nights have been organized around the world. For more info, [see the OKFN website](http://okfnlabs.org/events/open-data-maker/).

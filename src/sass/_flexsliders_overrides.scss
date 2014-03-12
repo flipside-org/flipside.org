@@ -35,6 +35,7 @@
 
 /* Direction Nav */
 .flex-direction-nav {
+  display: none;
   li {
     position: absolute;
     top: 50%;
@@ -45,7 +46,9 @@
       left: auto;
     }
   }
-  
+  @media #{$medium-up} {
+    display: block;
+  }
 }
 .flex-direction-nav a  {
   @extend %bttn;

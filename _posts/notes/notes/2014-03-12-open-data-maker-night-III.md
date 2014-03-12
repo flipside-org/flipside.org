@@ -3,18 +3,18 @@ layout: note
 category: note
   
 title: Lisbon Open Data Maker Night III
-image: odmn1.jpg
+image: odmn-in-action.jpg
 user: olafveerman
 
 filters: event
 
-background_color: 6F482A
+background_color: 313D6D
 
 featured: true
 featured_image: 
   mobile: 
   desktop: 
-  polaroid: odmn1.jpg
+  polaroid: odmn-in-action.jpg
   
 related_post:
   - open-data
@@ -23,7 +23,7 @@ If you're in Lisbon on March 27 and interested in making stuff with Open Data, b
 
 In this edition we will reserve space for two brief talks about an Open Data related topic. If you think you have something interesting to share with the other participants, please get in touch so we can put you on the agenda. The goal of the evening, however, remains unchanged: make stuff with Open Data.
 
-{% include content_img.html path="notes/odmn1.jpg" caption="Open Data Maker Night in action" %}
+{% include content_img.html path="notes/odmn-in-action.jpg" caption="Open Data Maker Night in action" %}
 
 ### What we'll be working on
 Everybody is free to suggest a topic to work on, but there are already a couple of ideas under development:
@@ -40,7 +40,7 @@ The event will be held at [Liberdade 229](http://www.liberdade229.com), convenie
 
 __Date__: Thursday March 27, 2013  
 __Time__: 18:30 - 22:30  
-__Location__: Avenida da Liberdade 229, Lisboa
+__Location__: Avenida da Liberdade, 229, 2º - Lisboa
 
 We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. To have a better grasp on how many people are joining, we ask you to sign up at the event's [meetup.com](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1120442/) page.
 

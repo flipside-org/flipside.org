@@ -38,11 +38,17 @@ If you want to add anything to this list, please [drop us a line](mailto:olaf@fl
 ###RSVP
 The event will be held at [Liberdade 229](http://www.liberdade229.com), conveniently located in the center of Lisbon.
 
-__Date__: Thursday March 27, 2013  
-__Time__: 18:30 - 22:30  
-__Location__: Avenida da Liberdade, 229, 2º - Lisboa
+When
+: Thursday, March 27, 2014 - from 18:30 to 22:30
 
-We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. To have a better grasp on how many people are joining, we ask you to [sign up at the event's meetup.com page](http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1120442/).
+Where
+: Avenida da Liberdade, 229, 2º (Lisboa, Portugal)
+
+We'll take care of the drinks, dinner and Wifi. If you have any dietary restrictions, please let us know. To have a better grasp on how many people are joining, we ask you to sign up at the event's meetup.com page:
+
+<a href="http://www.meetup.com/OpenKnowledgeFoundation/Lisbon-PT/1120442/" class="cta-inline" title="Sign up now">Sign up now</a>
+
+***
 
 ###Open Knowledge Foundation
 The Open Data Maker Nights is a concept coined and promoted by the Open Knowledge Foundation. Over the past months, several Maker Nights have been organized around the world. For more info, [see the OKFN website](http://okfnlabs.org/events/open-data-maker/).

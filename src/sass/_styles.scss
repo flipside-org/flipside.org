@@ -539,6 +539,13 @@ main {
       line-height: 1.75rem;
       color: $light-color;
     }
+    hr {
+      margin: 1rem 0;
+      border: 2px tint($primary-color, 90%) dashed;
+    }
+    dl dt {
+      margin-bottom: 0;
+    }
   }
   aside {
 		h1 {

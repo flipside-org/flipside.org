@@ -609,7 +609,7 @@ main {
 			@include grid-column(4,$pull:8);
 		}
 		article.no-sidebar .content {
-			@include grid-column(8,$push:0,$offset:2);
+			@include grid-column(10,$push:0,$offset:1);
 		}
 	}
 	@media #{$large-up} {
@@ -618,6 +618,9 @@ main {
     }
     aside {
       @include grid-column(3,$pull:8);
+    }
+    article.no-sidebar .content {
+      @include grid-column(8,$push:0,$offset:2);
     }
 	}
 }

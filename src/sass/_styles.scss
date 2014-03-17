@@ -557,17 +557,22 @@ main {
       margin-bottom: 0;
 		}
 		a {
-		  display: block;
-			font-weight: $body-font-bold;
+		  text-decoration: underline;
+		}
+		.bfc-objects {
+  		  a {
+    		  text-decoration: none;
+    		  display: block;
+  		  }
 		}
 		.media {
 		  float: left;
 		  margin-right: 0.75rem;
 			width: 3.5rem;
-  		img {
-  			@include border-radius(2rem);
-  			display: block;
-  		}
+      img {
+        @include border-radius(2rem);
+        display: block;
+      }
 		}
 		.teaser {
 			display: table-cell;

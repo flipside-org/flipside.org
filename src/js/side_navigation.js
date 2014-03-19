@@ -84,6 +84,15 @@ $(document).ready(function() {
       
     });
     
+    // Keyboard side nav
+    var listener = new window.keypress.Listener();
+    listener.simple_combo('right', function(){
+      $next_link.click();
+    });
+    listener.simple_combo('left', function(){
+      $prev_link.click();
+    });
+    
   } 
   
   /**
@@ -148,6 +157,14 @@ $(document).ready(function() {
     
     async.auto({
       
+      slide_to_top : function(callback) {
+        $("html, body").animate({
+          scrollTop: 0
+        }, options.banner_speed, function(){
+          callback(null);
+        });
+      },
+      
       animate_banner : function(callback) {
         if (current_banner_height < sliding_banner_height) {
           console.log('animate_banner : current banner smaller');
@@ -191,7 +208,7 @@ $(document).ready(function() {
         }
       },
       
-      slide : ['animate_banner', 'animate_body', function(callback) {
+      slide : ['slide_to_top', 'animate_banner', 'animate_body', function(callback) {
         // Properties can not be dynamically set on JSON objects.
         var animation_properties = {};
         animation_properties[direction] = '0%';
@@ -244,6 +261,5 @@ $(document).ready(function() {
         window.location = location;
       }]
     });
-    
   }
 });

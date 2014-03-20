@@ -194,12 +194,12 @@ dl {
 
 .divider-top {
   border-top: 0.25rem lighten($primary-color, 65%) solid;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .divider-bottom {
   border-bottom: 0.25rem lighten($primary-color, 65%) solid;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* Generic dropdown styling */
@@ -349,7 +349,7 @@ body {
 	}
 	.prose {
     position: relative;
-    	padding-bottom: 2rem;
+    	padding-bottom: 4rem;
     	.title {
     	  margin-bottom: 1.75rem;
     	}
@@ -539,6 +539,13 @@ main {
       line-height: 1.75rem;
       color: $light-color;
     }
+    hr {
+      margin: 2rem 0;
+      border: 2px tint($primary-color, 90%) dashed;
+    }
+    dl dt {
+      margin-bottom: 0;
+    }
   }
   aside {
 		h1 {
@@ -550,17 +557,22 @@ main {
       margin-bottom: 0;
 		}
 		a {
-		  display: block;
-			font-weight: $body-font-bold;
+		  text-decoration: underline;
+		}
+		.bfc-objects {
+  		  a {
+    		  text-decoration: none;
+    		  display: block;
+  		  }
 		}
 		.media {
 		  float: left;
 		  margin-right: 0.75rem;
 			width: 3.5rem;
-  		img {
-  			@include border-radius(2rem);
-  			display: block;
-  		}
+      img {
+        @include border-radius(2rem);
+        display: block;
+      }
 		}
 		.teaser {
 			display: table-cell;
@@ -580,9 +592,11 @@ main {
 		}
 		.details {
   		  @extend .divider-top;
+  		  margin-top: 1rem;
   		  @media #{$medium-up} {
     		  padding-top: 0;
     		  border-top: none;
+    		  margin-top: 0;
   		  }
 		}
 	}
@@ -609,7 +623,7 @@ main {
 			@include grid-column(4,$pull:8);
 		}
 		article.no-sidebar .content {
-			@include grid-column(8,$push:0,$offset:2);
+			@include grid-column(10,$push:0,$offset:1);
 		}
 	}
 	@media #{$large-up} {
@@ -618,6 +632,9 @@ main {
     }
     aside {
       @include grid-column(3,$pull:8);
+    }
+    article.no-sidebar .content {
+      @include grid-column(8,$push:0,$offset:2);
     }
 	}
 }
@@ -661,7 +678,7 @@ main {
         margin-bottom: 1rem;
       }
       .img-wrapper {
-        margin: 0 auto 1.75rem; 
+        margin: 0 auto 1rem; 
         max-width: 200px;
       }
       img {
@@ -810,7 +827,7 @@ ul.hub {
 
 .related-content {
 	@extend .divider-top;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	ul {
 		list-style: none;
 		margin: 0;

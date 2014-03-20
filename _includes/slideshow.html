@@ -11,28 +11,30 @@
       {% endif %}
         <article class="row">
           <div class="prose">
-            <h1 class="title"><a href="{{ site.domain }}{{ post.url }}">{{ post.title | widont }}</a></h1>
+            <h1 class="title"><a href="{{ site.domain }}{{ post.url }}" title="Read more">{{ post.title | widont }}</a></h1>
             <h2 class="section-title"><em>Featured</em> {{ post.category | capitalize }}</h2>
             <p class="summary">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
-            <p><a href="{{ post.url }}" class="cta-bttn">Read more</a></p>
+            <p><a href="{{ post.url }}" class="cta-bttn" title="Read more">Read more</a></p>
           </div>
           <div class="media">
             <figure class="img-set"> 
-              {% if post.featured_image.mobile %}
-                <div class="img-wrapper mobile">
-                    <img src="images/{{post.featured_image.mobile}}" width="640" height="960" />
-                </div>
-              {% endif %}
-              {% if post.featured_image.desktop %}
-                <div class="img-wrapper desktop">
-                    <img src="images/{{post.featured_image.desktop}}" width="1440" height="900" />
-                </div>
-              {% endif %}
-              {% if post.featured_image.polaroid %}
-                <div class="img-wrapper polaroid">
-                    {% image polaroid notes/{{ post.featured_image.polaroid }} %}
-                </div>
-              {% endif %}
+              <a href="{{ post.url }}" title="Read more">
+                {% if post.featured_image.mobile %}
+                  <div class="img-wrapper mobile">
+                      <img src="images/{{post.featured_image.mobile}}" width="640" height="960" />
+                  </div>
+                {% endif %}
+                {% if post.featured_image.desktop %}
+                  <div class="img-wrapper desktop">
+                      <img src="images/{{post.featured_image.desktop}}" width="1440" height="900" />
+                  </div>
+                {% endif %}
+                {% if post.featured_image.polaroid %}
+                  <div class="img-wrapper polaroid">
+                      {% image polaroid notes/{{ post.featured_image.polaroid }} %}
+                  </div>
+                {% endif %}
+              </a>
             </figure>
           </div>
         </article>

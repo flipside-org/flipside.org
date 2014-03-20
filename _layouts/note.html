@@ -75,7 +75,7 @@ contact: true
         <h1>Details</h1>
         <dl>
           <dt class="visually-hidden">Author</dt>
-          <dd>
+          <dd class="bfc-objects">
             <a href="/about#team">
               <div class="media">
                 {% image thumb {{ site.data.team[page.user].photo }} %}
@@ -87,10 +87,19 @@ contact: true
             </a>
           </dd>
           {% if page.date %}
-            <dt>Date</dt>
-            <dd>{{ page.date | date: "%d %b. %Y" }}</dd>
-            <dt>Category</dt>
-            <dd>{{ page.filters | capitalize }}</dd>
+          
+            {% assign break_cycle = false %}
+            {% for filter in site.categories.filter %}
+              {% unless break_cycle %}
+                {% if page.filters == filter.filter_name %}
+                  {% assign break_cycle = true %}
+                  {% assign page_filter = filter %}
+                {% endif %}  
+              {% endunless%}
+            {% endfor%}
+            
+            <dt>Published</dt>
+            <dd>{{ page.date | date: "%d %b. %Y" }} <em>in</em> <a href="{{ page_filter.url }}" title="{{ page_filter.filter_name | capitalize }}">{{ page_filter.filter_name | capitalize }}</a></dd>
           {% endif %}
         </dl>
       </section>

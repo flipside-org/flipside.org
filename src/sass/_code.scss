@@ -4,23 +4,31 @@
 
 
 code {
-  background-color: #eeefff;
+  background-color: tint($primary-color, 95%);
   font-weight: normal;
+  font-size: 0.90rem;
+  padding: 0 0.5rem;
 }
 
 .highlight pre {
-  background-color: #eeefff;
-  font-size: 0.875em;
-  padding: 10px;
+  background-color: tint($primary-color, 95%);
+  border-radius: 4px;
+  padding: 1rem;
+  code {
+    padding: 0;
+  }
 }
 
 
 /* We use Pygments for code highlighting. Below is the default style */
 
 .highlight {
+  background-color: tint($primary-color, 95%);
+  margin-bottom: 1rem;
+  border-radius: 4px;
   .hll {
-    background-color: #ffffcc; }
-  background: #f8f8f8;
+    background-color: #ffffcc;
+  }
   .c {
     color: #408080;
     font-style: italic; }

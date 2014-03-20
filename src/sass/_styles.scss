@@ -194,12 +194,12 @@ dl {
 
 .divider-top {
   border-top: 0.25rem lighten($primary-color, 65%) solid;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .divider-bottom {
   border-bottom: 0.25rem lighten($primary-color, 65%) solid;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* Generic dropdown styling */
@@ -540,7 +540,7 @@ main {
       color: $light-color;
     }
     hr {
-      margin: 1rem 0;
+      margin: 2rem 0;
       border: 2px tint($primary-color, 90%) dashed;
     }
     dl dt {
@@ -557,17 +557,22 @@ main {
       margin-bottom: 0;
 		}
 		a {
-		  display: block;
-			font-weight: $body-font-bold;
+		  text-decoration: underline;
+		}
+		.bfc-objects {
+  		  a {
+    		  text-decoration: none;
+    		  display: block;
+  		  }
 		}
 		.media {
 		  float: left;
 		  margin-right: 0.75rem;
 			width: 3.5rem;
-  		img {
-  			@include border-radius(2rem);
-  			display: block;
-  		}
+      img {
+        @include border-radius(2rem);
+        display: block;
+      }
 		}
 		.teaser {
 			display: table-cell;
@@ -587,9 +592,11 @@ main {
 		}
 		.details {
   		  @extend .divider-top;
+  		  margin-top: 1rem;
   		  @media #{$medium-up} {
     		  padding-top: 0;
     		  border-top: none;
+    		  margin-top: 0;
   		  }
 		}
 	}
@@ -820,7 +827,7 @@ ul.hub {
 
 .related-content {
 	@extend .divider-top;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	ul {
 		list-style: none;
 		margin: 0;

@@ -190,6 +190,7 @@ dl {
   .flickr a:before { @extend .icon-flickr; }
   .phone a:before { @extend .icon-mobile; }
   .email a:before { @extend .icon-email; }
+  .address a:before { @extend .icon-map-marker; }
 }
 
 .divider-top {
@@ -818,6 +819,37 @@ ul.hub {
       }
       &:nth-child(3n+1) {
         clear: left;
+      }
+    }
+  }
+}
+
+/* Contact page */
+
+main article.contact-us {
+  .content {
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+    .contacts,
+    .social {
+      @include grid-column(12);
+    }
+    ul {
+      margin: 0;
+      h1 {
+        @extend .h4;
+      }
+      li {
+        list-style: none;
+      }
+    }
+    @media #{$medium-up} {
+      .contacts {
+        @include grid-column(5,$offset:1);
+      }
+      .social {
+        @include grid-column(5);
       }
     }
   }

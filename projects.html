@@ -7,16 +7,15 @@ description: The Project hub contains a sample of Flipside's work.
 contact: true
 ---
 <section>
-<header class="banner">
-  <div class="row">
-    <div class="heading">
-      <h1 class="title">Projects</h1>
-      <h2 class="section-title">Samples of our work</h2>
+  <header class="banner">
+    <div class="row">
+      <div class="heading">
+        <h1 class="title">Projects</h1>
+        <h2 class="section-title">Samples of our work</h2>
+      </div>
     </div>
-  </div>
-</header>
-<div class="main-content">
-  <ul class="row hub">
+  </header>
+  <ul class="row cards projects">
     {% for post in site.categories.project %}
     <li>
       <article>
@@ -37,5 +36,4 @@ contact: true
     </li>
     {% endfor %}
   </ul>
-</div>
 </section>

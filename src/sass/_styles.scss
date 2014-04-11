@@ -179,7 +179,8 @@ dl {
 
 .social,
 .contact-us,
-#share-links {
+#share-links,
+.contact-page {
   a {
     @extend .link-disc;
   }
@@ -190,6 +191,7 @@ dl {
   .flickr a:before { @extend .icon-flickr; }
   .phone a:before { @extend .icon-mobile; }
   .email a:before { @extend .icon-email; }
+  .address a:before { @extend .icon-map-marker; }
 }
 
 .divider-top {
@@ -496,16 +498,107 @@ body {
   
 }
 
-/* Main content area */
+/* Layout main content area */
+
+// The main content area mainly has 4 layouts.
+// 1. 'has-sidebar': content + sidebar
+// 2. 'diet': content
+// 3. 'diptych': 2 column layout
+// 4. 'cards': a list with cards
+
+main {
+  
+  // 'Sidebar'
+  .has-sidebar {
+    .content,
+    aside {
+      @include grid-column(12);
+    }
+    @media #{$medium-up} {
+      .content {
+        @include grid-column(8,$push:4);
+      }
+      aside {
+        @include grid-column(4,$pull:8);
+      }
+    }
+    @media #{$large-up} {
+      .content {
+        @include grid-column(8,$push:3);
+      }
+      aside {
+        @include grid-column(3,$pull:8);
+      }
+    }
+  }
+  
+  // 'Diet'
+  .diet {
+    .content {
+      @include grid-column(12);
+      @media #{$medium-up} {
+        @include grid-column(10,$push:0,$offset:1);
+      }
+      @media #{$large-up} {
+        @include grid-column(8,$push:0,$offset:2);
+      }
+    }
+  }
+
+  // 'Diptych'
+  .diptych {
+    .panel {
+      @include grid-column(12);
+    }
+    @media #{$medium-up} {
+      .panel {
+        @include grid-column(6);
+      }
+    }
+    @media #{$large-up} {
+      .panel {
+        @include grid-column(5);
+      }
+      .panel:first-child {
+        @include grid-column(5,$offset:1);
+      }
+    }
+  }
+
+  // 'Cards'
+  .cards {
+    li {
+      @include grid-column(12);
+    }
+    @media #{$small-up} {
+      li {
+        @include grid-column(6);
+        &:nth-child(2n+1) {
+          clear: left;
+        }
+      }
+    }
+    @media #{$large-up} {
+      li {
+        @include grid-column(4);
+        &:nth-child(2n+1) {
+          clear: none;
+        }
+        &:nth-child(3n+1) {
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+
+/* Styling of main content area */
 
 main {
   background-color: #fff;
 	padding-bottom: 2rem;
 
-	.content,
-  aside {
-    @include grid-column(12);
-  }
   .front,
   .content {
     a {
@@ -604,7 +697,6 @@ main {
 	@media #{$medium-up} {
 		padding-bottom: 4rem;
 		.content {
-			@include grid-column(8,$push:4);
 			.media-wrapper {
 				float: right;
 				margin-left: 3%;
@@ -619,23 +711,6 @@ main {
 				}
 			}
 		}
-		aside {
-			@include grid-column(4,$pull:8);
-		}
-		article.no-sidebar .content {
-			@include grid-column(10,$push:0,$offset:1);
-		}
-	}
-	@media #{$large-up} {
-    .content {
-      @include grid-column(8,$push:3);
-    }
-    aside {
-      @include grid-column(3,$pull:8);
-    }
-    article.no-sidebar .content {
-      @include grid-column(8,$push:0,$offset:2);
-    }
 	}
 }
 
@@ -727,11 +802,10 @@ main {
 
 /* The note and project hubs */
 
-ul.hub {
+ul.cards {
 	list-style: none;
 
 	li {
-		@include grid-column(12);
 		margin-bottom: 2rem;
 	}
 	article {
@@ -801,23 +875,45 @@ ul.hub {
       margin-bottom: 0.75rem;
 	  }
 	}
+}
 
-  @media #{$small-up} {
-    li {
-      @include grid-column(6);
-      &:nth-child(2n+1) {
-        clear: left;
-      }
+/* Contact page */
+
+main .contact-page {
+  .content {
+    ul {
+      margin: 2rem 0;
     }
-  }
-  @media #{$large-up} {
+    h3 {
+      @extend .h6;
+      margin: 0;
+    }
+    .social h2 {
+      @extend .divider-top;
+    }
     li {
-      @include grid-column(4);
-      &:nth-child(2n+1) {
-        clear: none;
-      }
-      &:nth-child(3n+1) {
-        clear: left;
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+    a {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.5;
+      padding-left: 4rem;
+    }
+    a:before {
+      font-size: 1.5rem;
+      height: 3rem;
+      line-height: 3rem;
+      margin-left: 0;
+      margin-top: 0;
+      top: 0;
+      width: 3rem;
+    }
+    @media #{$medium-up} {
+      .social h2 {
+        border-top: none;
+        padding-top: 0;
       }
     }
   }
@@ -837,7 +933,7 @@ ul.hub {
 	}
 }
 
-/* Content section */
+/* Contact section */
 
 .contact {
   background-color: tint($primary-color, 10%);

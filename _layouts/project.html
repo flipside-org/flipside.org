@@ -50,16 +50,16 @@ contact: true
           {% include social-share.html %}
           <li>
           {% if previous_project %}
-            <a href="{{ previous_project.url }}" class="previous"><span>previous</span></a>
+            <a href="{{ previous_project.url }}" title="Previous project" class="previous"><span>previous</span></a>
           {% else %}
-            <a href="#" class="inactive previous"><span>previous</span></a>
+            <a href="#" class="inactive previous" title="No previous project" ><span>previous</span></a>
           {% endif %}
           </li>
           <li>
           {% if next_project %}
-            <a href="{{ next_project.url }}" class="next"><span>next</span></a>
+            <a href="{{ next_project.url }}" title="Next project" class="next"><span>next</span></a>
           {% else %}
-            <a href="#" class="inactive next"><span>next</span></a>
+            <a href="#" title="No next project" class="inactive next"><span>next</span></a>
           {% endif %}
           </li>
         </ul>
@@ -98,7 +98,7 @@ contact: true
           {% endif %}
           {% if details.project_link.href %}
             <dt>URL</dt>
-            <dd><a href="{{ details.project_link.href }}">{{ details.project_link.href }}</a></dd>
+            <dd><a href="{{ details.project_link.href }}" title="The project website" target="_blank">{{ details.project_link.href }}</a></dd>
           {% endif %}
         </dl>
       </section>

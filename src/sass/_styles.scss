@@ -177,7 +177,6 @@ dl {
   margin: 0;
 }
 
-.social,
 .contact-us,
 #share-links,
 .contact-page {
@@ -936,50 +935,59 @@ main .contact-page {
 /* Contact section */
 
 .contact {
-  background-color: tint($primary-color, 10%);
-  .contact-us {
-    margin-bottom: 2rem;
-  }
-	.follow-us,
-	.contact-us {
+  background-color: tint($primary-color, 90%);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  .intro,
+  .more {
     @include grid-column(12);
-    margin-top: 2rem;
-	}
-	ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0 0 0.5rem 0;
+    text-align: center;
+    .email a:after {
+      @extend .icon;
+      content: "\e612";
+      vertical-align: bottom; // tmp override until refactored on the cta-bttn
+    }
+    .about a:after {
+      vertical-align: bottom; // tmp override until refactored on the cta-bttn
     }
   }
-  h1,
-  li,
-  a {
-    color: #fff;
-  }
-  h1 {
-    @extend .h3;
-  }
-  p {
-    font-size: 1.25rem;
+  .intro p {
     line-height: 1.75rem;
-    color: tint($primary-color, 60%);
+    color: $light-color;
+    font-size: 1.25rem;
   }
-	@media #{$medium-up} {
-		.follow-us,
-		.contact-us {
-			@include grid-column(6);
-			text-align: center;
-		}
-		ul {
-			display: inline-block;
-			li {
-				float: left;
-				margin: 0 1rem 0.5rem 1rem;
-			}
-		}
-	}
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: rem-calc(6 0);
+    li {
+      margin: 1rem 0.5rem;
+    }
+  }
+  @media #{$small-up} {
+    .intro {
+      @include grid-column(10,$offset:1);
+    }
+    .more {
+      li {
+        float: left;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+  @media #{$large-up} {
+    .intro {
+      @include grid-column(5);
+      text-align: left;
+      p {
+        margin-bottom: 0;
+      }
+    } 
+    .more {
+      @include grid-column(6);
+    }    
+  }
 }
 
 #site-ftr,
@@ -988,21 +996,68 @@ main .contact-page {
 }
 
 #site-ftr {
-  padding-top: 20px;
-
-	.built-by,
-	.technology {
-		@include grid-column(6);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+	.social,
+	.about {
+    @include grid-column(12);
+    margin-bottom: 1.25rem;
 	}
-	.technology {
-		text-align: right;
-	}
-  a,
-  .fs {
-    font-weight: bold;
+  .social {
+    text-align: center;
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        margin-right: 0.5rem;
+      }
+      .twitter a:before { @extend .icon-twitter; }
+      .github a:before { @extend .icon-github; }
+      .flickr a:before { @extend .icon-flickr; }
+      a:before {
+        @include border-radius(2rem);
+        background-color: $semi-light-color;
+        color: #fff;
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        width: 2rem;
+      }
+    }
   }
-  .fs {
-    color: #ffffff;
+	.about {
+		text-align: center;
+    a {
+      font-size: 1rem;
+      font-weight: bold;
+      &:after {
+        vertical-align: middle;
+      }
+    }
+    .fs {
+      font-weight: bold;
+      color: #ffffff;
+      &:after {
+        content: "\00b7";
+        margin: 0 0.25rem;
+      }
+    }
+  }
+  @media #{$small-up} {
+    .social,
+    .about {
+      @include grid-column(6);
+    }
+    .social {
+      text-align: left;
+    }
+    .about {
+      text-align: right;
+    }
   }
 }
 

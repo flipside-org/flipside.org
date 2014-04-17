@@ -13,18 +13,18 @@
 	<ul class="links" id="filters-links">
     <li>
 	{% if include.active_filter %}
-	  	<a href="/notes">All notes</a>
+	  	<a href="/notes" title="Show all notes">All notes</a>
 	{% else %}
-    <a href="/notes" class="active">All notes</a>
+    <a href="/notes" class="active" title="Show all notes">All notes</a>
 	{% endif %}	
     </li>
 	{% for filter in site.categories.filter %}
   <li>
 	  {% if filter.filter_name == include.active_filter %}
 	  
-	  	<a href="{{ filter.url }}" class="active">{{ filter.title }}</a>
+	  	<a href="{{ filter.url }}" class="active" title="Filter by {{ filter.title }} category">{{ filter.title }}</a>
 	  {% else %}
-	  	<a href="{{ filter.url }}">{{ filter.title }}</a>
+	  	<a href="{{ filter.url }}" title="Filter by {{ filter.title }} category">{{ filter.title }}</a>
 	  
 	  {% endif %}
 	  </li>

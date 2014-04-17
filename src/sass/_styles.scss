@@ -951,13 +951,16 @@ main .contact-page {
       vertical-align: bottom; // tmp override until refactored on the cta-bttn
     }
   }
-  .intro {
+  .intro p {
+    line-height: 1.75rem;
+    color: $light-color;
     font-size: 1.25rem;
   }
   ul {
     display: inline-block;
     list-style: none;
     margin: 0;
+    padding: rem-calc(6 0);
     li {
       margin: 1rem 0.5rem;
     }

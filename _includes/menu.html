@@ -6,28 +6,35 @@
     {% else %}
     <li>
     {% endif %}
-			<a href="/">Home</a>
+			<a href="/" title="Go home">Home</a>
 		</li>
 		{% if page.active_menu == 'projects' %}
     <li class="active">
     {% else %}
     <li>
     {% endif %}
-			<a href="/projects/">Projects</a>
+			<a href="/projects/" title="Project hub">Projects</a>
 		</li>
 		{% if page.active_menu == 'notes' %}
 		<li class="active">
 		{% else %}
 		<li>
 		{% endif %}
-			<a href="/notes/">Notes</a>
+			<a href="/notes/" title="Notes hub">Notes</a>
 		</li>
 		{% if page.active_menu == 'about' %}
     <li class="active">
     {% else %}
     <li>
     {% endif %}
-			<a href="/about/">About</a>
+			<a href="/about/" title="About Flipside">About</a>
+		</li>
+		{% if page.active_menu == 'contact' %}
+    <li class="active">
+    {% else %}
+    <li>
+    {% endif %}
+			<a href="/contact/" title="Contact page">Contact</a>
 		</li>
 	</ul>
 </nav>

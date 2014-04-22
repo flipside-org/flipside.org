@@ -10,7 +10,7 @@ filters: event
 
 background_color: 3a4d80
 
-featured: true
+featured: false
 featured_image: 
   mobile: 
   desktop: 

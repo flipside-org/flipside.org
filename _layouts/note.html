@@ -32,7 +32,7 @@ contact: true
     {% endif %}  
   {% endunless%}
 {% endfor%}
-<article>
+<article class="has-sidebar">
 
   {% if page.background_color %}
   <header class="banner" style="background-color: #{{ page.background_color }};">
@@ -49,16 +49,16 @@ contact: true
           {% include social-share.html %}
           <li>
           {% if previous_note %}
-            <a href="{{ previous_note.url }}" class="previous"><span class="visually-hidden">previous</span></a>
+            <a href="{{ previous_note.url }}" title="Previous note" class="previous"><span class="visually-hidden">previous</span></a>
           {% else %}
-            <a href="#" class="inactive previous"><span class="visually-hidden">previous</span></a>
+            <a href="#" title="No previous note" class="inactive previous"><span class="visually-hidden">previous</span></a>
           {% endif %}
           </li>
           <li>
           {% if next_note %}
-            <a href="{{ next_note.url }}" class="next"><span class="visually-hidden">next</span></a>
+            <a href="{{ next_note.url }}" title="Next note" class="next"><span class="visually-hidden">next</span></a>
           {% else %}
-            <a href="#" class="inactive next"><span class="visually-hidden">next</span></a>
+            <a href="#" title="No next note" class="inactive next"><span class="visually-hidden">next</span></a>
           {% endif %}
           </li>
         </ul>
@@ -76,7 +76,7 @@ contact: true
         <dl>
           <dt class="visually-hidden">Author</dt>
           <dd class="bfc-objects">
-            <a href="/about#team">
+            <a href="/about#team" title="Team page">
               <div class="media">
                 {% image thumb {{ site.data.team[page.user].photo }} %}
               </div>
@@ -99,7 +99,7 @@ contact: true
             {% endfor%}
             
             <dt>Published</dt>
-            <dd>{{ page.date | date: "%d %b. %Y" }} <em>in</em> <a href="{{ page_filter.url }}" title="{{ page_filter.filter_name | capitalize }}">{{ page_filter.filter_name | capitalize }}</a></dd>
+            <dd>{{ page.date | date: "%d %b. %Y" }} <em>in</em> <a href="{{ page_filter.url }}" title="{{ page_filter.filter_name | capitalize }}" title="More in this category">{{ page_filter.filter_name | capitalize }}</a></dd>
           {% endif %}
         </dl>
       </section>

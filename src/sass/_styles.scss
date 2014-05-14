@@ -891,10 +891,13 @@ main .contact-page {
       @extend .divider-top;
     }
     li {
+      display: block;
       list-style: none;
       margin-bottom: 1rem;
+      overflow: hidden;
     }
     a {
+      float: left;
       font-size: 1rem;
       font-weight: normal;
       line-height: 1.5;

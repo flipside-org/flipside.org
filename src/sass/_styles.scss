@@ -179,7 +179,8 @@ dl {
 
 .contact-us,
 #share-links,
-.contact-page {
+.contact-page,
+#team li {
   a {
     @extend .link-disc;
   }
@@ -592,6 +593,24 @@ main {
 }
 
 
+/* Block formatting context, for example used on the notes page (author info) and the team */
+
+.bfc-objects {
+  .media {
+    float: left;
+    margin-right: 0.75rem;
+    img {
+      display: block;
+    }
+  }
+  .teaser {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+
 /* Styling of main content area */
 
 main {
@@ -652,30 +671,23 @@ main {
 		  text-decoration: underline;
 		}
 		.bfc-objects {
-  		  a {
-    		  text-decoration: none;
-    		  display: block;
-  		  }
+		  a {
+  		  text-decoration: none;
+  		  display: block;
+		  }
 		}
-		.media {
-		  float: left;
-		  margin-right: 0.75rem;
-			width: 3.5rem;
+    .media {
+      width: 3.5rem;
       img {
         @include border-radius(2rem);
-        display: block;
       }
-		}
+    }
 		.teaser {
-			display: table-cell;
-			width: 100%;
-			vertical-align: middle;
-			height: 3.5rem;
-			// margin-bottom: 1.25rem;
 			h1 {
 				font-size: 1rem;
-				line-height: 150%;
-				margin: 0;
+        height: 3.5rem;
+        line-height: 150%;
+        margin: 0;
 			}
 			p.meta {
 				font-weight: normal;
@@ -786,18 +798,67 @@ main {
 
 /* About page */
 
-.about .content img {
-	float: right;
-	margin-left: 2rem;
-	@media #{$medium-up} {
-		margin-left: 4rem;
-	}
-}
-.about .content h2:not(:first-child) {
+.about .content section:not(:first-child) {
 	@extend .divider-top;
 	margin-top: 2rem;
 	padding-top: 2rem;
 }
+
+#how-we-work img {
+  float: right;
+  margin-left: 2rem;
+  @media #{$medium-up} {
+    margin-left: 4rem;
+  }
+}
+
+#team {
+  ul {
+    margin: 3rem 0;
+  }
+  li {
+    list-style: none;
+    margin: 3rem 0;
+  }
+  dt,
+  span {
+    @extend .visually-hidden;
+  }
+  h3 {
+    margin: 0;
+  }
+  .media {
+    width: 3.5rem;
+    img {
+      @include border-radius(4rem);
+    }
+  }
+  .teaser {
+    height: 3.5rem;
+  }
+  .role {
+    opacity: 0.6;
+  }
+  .bio {
+    margin-bottom: 2rem;
+  }
+  .email,
+  .twitter,
+  .github {
+    float: left;
+  }
+  @media #{$small-up} {
+    .teaser {
+      height: 7rem;
+    }
+    .media {
+      width: 7rem;
+    }
+  }
+}
+
+
+
 
 /* The note and project hubs */
 

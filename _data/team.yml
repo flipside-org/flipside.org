@@ -4,7 +4,7 @@ olafveerman :
   photo: team/olaf-thumb.jpg
   
   bio: |
-    Olaf is project lead at Flipside and responsible for the day-to-day operations. Before founding Flipside, he worked for several organizations in Latin America.
+    Olaf is project lead at Flipside and responsible for the day-to-day operations. Before founding Flipside, he worked for NGOs in Latin America.
   twitter: oBirdman
   github: olafveerman
   email: olaf.veerman@flipside.org
@@ -26,18 +26,18 @@ ricardomestre :
   photo: team/ricardo.jpg
   
   bio: |
-    Ricardo is a UI designer and frontend developer.
+    Ricardo is a UI designer and HTML and CSS coder. In his spare time, he's also a musician and DJ.
   twitter: ricardoduplos
   github: ricardomestre
   email: ricardo@flipside.org
 
-nunoveloso :
-  name: Nuno Veloso
-  function: Developer
-  photo: team/nuno-thumb.jpg
-  
-  bio: | 
-    Nuno is an experienced web-developer, applying his skills to the back-end side of our projects.
-  twitter: nunoveloso
-  github: nunoveloso
-  email: nuno@flipside.org
+#nunoveloso :
+#  name: Nuno Veloso
+#  function: Developer
+#  photo: team/nuno-thumb.jpg
+#
+#  bio: | 
+#    Nuno is an experienced web-developer, applying his skills to the back-end side of our projects.
+#  twitter: nunoveloso
+#  github: nunoveloso
+#  email: nuno@flipside.org

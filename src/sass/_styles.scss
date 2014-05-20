@@ -683,15 +683,16 @@ main {
       }
     }
 		.teaser {
-			h1 {
-				font-size: 1rem;
-        height: 3.5rem;
+		  height: 3.5rem;
+			h1, h2 {
+        font-size: 1rem;
         line-height: 150%;
         margin: 0;
 			}
 			p.meta {
 				font-weight: normal;
 				margin-bottom: 0;
+				color: $light-color;
 			}
 		}
 		.details {
@@ -838,7 +839,7 @@ main {
     height: 3.5rem;
   }
   .role {
-    opacity: 0.6;
+    color: $light-color;
   }
   .bio {
     margin-bottom: 2rem;

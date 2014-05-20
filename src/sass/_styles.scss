@@ -1027,6 +1027,9 @@ main .contact-page {
     padding: rem-calc(6 0);
     li {
       margin: 1rem 0.5rem;
+      a {
+        min-width: 12.5rem;
+      }
     }
   }
   @media #{$small-up} {

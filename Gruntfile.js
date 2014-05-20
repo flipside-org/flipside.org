@@ -159,7 +159,7 @@ module.exports = function(grunt) {
   // Register tasks.
   grunt.registerTask('default', ['compass:dev', 'concat:dev', 'jshint:dev', 'uglify', 'jekyll:generate']);
   
-  grunt.registerTask('prod', ['clean', 'compass:prod', 'concat:dev', 'jshint:prod', 'uglify']);
+  grunt.registerTask('prod', ['clean', 'compass:prod', 'concat:dev', 'jshint:prod', 'uglify', 'jekyll:generate']);
   
   grunt.registerTask('jk', ['jekyll:server']);
 

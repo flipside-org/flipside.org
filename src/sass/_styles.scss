@@ -692,6 +692,7 @@ main {
 			p.meta {
 				font-weight: normal;
 				margin-bottom: 0;
+				color: $light-color;
 			}
 		}
 		.details {
@@ -838,7 +839,7 @@ main {
     height: 3.5rem;
   }
   .role {
-    opacity: 0.6;
+    color: $light-color;
   }
   .bio {
     margin-bottom: 2rem;

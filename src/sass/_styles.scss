@@ -1035,7 +1035,8 @@ main .contact-page {
       font-size: 1rem;
       font-weight: bold;
       &:after {
-        vertical-align: middle;
+        font-weight: normal;
+        vertical-align: bottom;
       }
     }
     .fs {

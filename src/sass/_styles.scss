@@ -683,9 +683,9 @@ main {
       }
     }
 		.teaser {
-			h1 {
-				font-size: 1rem;
-        height: 3.5rem;
+		  height: 3.5rem;
+			h1, h2 {
+        font-size: 1rem;
         line-height: 150%;
         margin: 0;
 			}

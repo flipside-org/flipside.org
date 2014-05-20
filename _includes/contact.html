@@ -6,7 +6,9 @@
         <div class="more">
           <ul>
             <li class="email"><a href="mailto:info@flipside.org" title="Send an email" target="_blank" class="cta-bttn">Get in touch</a></li>
+            {% unless page.active_menu == 'about' %}
             <li class="about"><a href="/about" title="More about Flipside" class="cta-bttn">Learn about us</a></li>
+            {% endunless %}
           </ul>
         </div>
       </div>

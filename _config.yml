@@ -21,8 +21,8 @@ image:
     thumb:
       attr:
         class: thumb
-      height: 112
-      width: 112
+      height: 224
+      width: 224
     polaroid:
       attr:
         height: 340

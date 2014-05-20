@@ -8,35 +8,66 @@ description: Flipside is a web development agency based in Lisbon. On our about 
 classes: about diet
 contact: true
 ---
-<h2>Who we are</h2>
-<p>Flipside is a web development agency based in Lisbon, building tools for organisations that create social impact. The majority of our clients operate in the international development sector, from small NGOs to big multilateral institutions, and we usually work with them on the full project cycle. Besides web development, we also provide consultancy services.<br/>
-In all our projects, we strive to develop appropriate solutions. Solutions that solve the problem at hand and that suit the context of our clients. 
-</p>
+<section id="who-we-are">
+  <h2>Who we are</h2>
+  <p>Flipside is a web development agency based in Lisbon, building tools for organisations that create social impact. The majority of our clients operate in the international development sector, from small NGOs to big multilateral institutions, and we usually work with them on the full project cycle. Besides web development, we also provide consultancy services.<br/>
+  In all our projects, we strive to develop appropriate solutions. Solutions that solve the problem at hand and that suit the context of our clients. 
+  </p>
+</section>
 
-<h2>How we work</h2>
-<p>We usually work with clients on the full project cycle, from strategy to deployment. Though we don't have one particular work method - we prefer to adapt it to the needs of the client and the project - we do have some generic principles that guide our approach.</p>
+<section id="how-we-work">
+  <h2>How we work</h2>
+  <p>We usually work with clients on the full project cycle, from strategy to deployment. Though we don't have one particular work method - we prefer to adapt it to the needs of the client and the project - we do have some generic principles that guide our approach.</p>
 
-<h3>Release early, release often</h3>
-<img src="/images/illu-duotone-loop.svg" />
-<p>We believe it is impossible to design the perfect solution out of the gate, but that such a solution is shaped throughout the project. Needs and requirements evolve, or simply gain clarity along time. Based on the size and the amount of time a client can commit to the project, we agree on a, usually short, interval to release incremental changes for the client to provide feedback on.</p>
+  <h3>Release early, release often</h3>
+  <img src="/images/illu-duotone-loop.svg" />
+  <p>We believe it is impossible to design the perfect solution out of the gate, but that such a solution is shaped throughout the project. Needs and requirements evolve, or simply gain clarity along time. Based on the size and the amount of time a client can commit to the project, we agree on a, usually short, interval to release incremental changes for the client to provide feedback on.</p>
 
-<h3>Clear communication</h3>
-<img src="/images/illu-duotone-bubbles.svg" />
-<p>Our clients have access to a dedicated project space throughout the project, a convenient and flexible place to ask questions, provide feedback and get a bird's-eye-view of the state of the project. No need to forward dozens of emails when you want to involve somebody else at a later stage.</p>
+  <h3>Clear communication</h3>
+  <img src="/images/illu-duotone-bubbles.svg" />
+  <p>Our clients have access to a dedicated project space throughout the project, a convenient and flexible place to ask questions, provide feedback and get a bird's-eye-view of the state of the project. No need to forward dozens of emails when you want to involve somebody else at a later stage.</p>
 
-<h3>Standards compliant</h3>
-<img src="/images/illu-duotone-code.svg" />
-<p>We develop standards compliant and usable solutions that are easy to maintain and well documented. The code of all our projects is hosted on Github and on project delivery we usually transfer the repository's ownership to the client.</p>
+  <h3>Standards compliant</h3>
+  <img src="/images/illu-duotone-code.svg" />
+  <p>We develop standards compliant and usable solutions that are easy to maintain and well documented. The code of all our projects is hosted on Github and on project delivery we usually transfer the repository's ownership to the client.</p>
 
-<h3>No vendor lock-in</h3>
-<img src="/images/illu-duotone-lock.svg" />
-<p>At Flipside we are proud of the long-term relationships we have built with some of our clients. However, it is our firm belief that a client should never be forced to depend on our support after the final delivery of a project. In our projects we use proven Open Source technologies as one of the ways to avoid a vendor lock-in.</p>
+  <h3>No vendor lock-in</h3>
+  <img src="/images/illu-duotone-lock.svg" />
+  <p>At Flipside we are proud of the long-term relationships we have built with some of our clients. However, it is our firm belief that a client should never be forced to depend on our support after the final delivery of a project. In our projects we use proven Open Source technologies as one of the ways to avoid a vendor lock-in.</p>
+</section>
 
-<h2 id="team">The team</h2>
-<p>We are a small team of engaged people that share one goal: building appropriate and web-based tools for organisations that wish to create social impact. Our team is internationally oriented and between us, we speak English, Portuguese, Spanish, French, Dutch and Italian.</p>
+<section id="team">
+  <h2>The team</h2>
+  <p>We are a small team of engaged people that share one goal: building appropriate and web-based tools for organisations that wish to create social impact. Our team is internationally oriented and between us, we speak English, Portuguese, Spanish, French, Dutch and Italian.</p>
 
-<p>Believing in the positive role of Open Source as a driver for innovation, we contribute to these communities as much as possible. Each one of us does that in their own way, either with code, documentation, or by organizing and sponsoring community events.</p>
+  <p>Believing in the positive role of Open Source as a driver for innovation, we contribute to these communities as much as possible. Each one of us does that in their own way, either with code, documentation, or by organizing and sponsoring community events.</p>
 
-<h2 id="colophon">Colophon</h2>
-<p>This site is proudly generated by <a href="http://jekyllrb.com" title="More about Jekyll" target="_blank">Jekyll</a> and built using <a href="http://foundation.zurb.com/" title="Foundation by Zurb" target="_blank">Foundation 5</a>. Our font of choice is the elegant <a href="http://www.latofonts.com/" title="More about Lato" target="_blank">Lato</a>, hosted by <a href="http://www.google.com/fonts" title="More about Google Fonts" target="_blank">Google Fonts</a>.</p>
-<p>In our development workflow we rely heavily on <a href="http://gruntjs.com/" title="More about Grunt" target="_blank">Grunt</a> for task automation and <a href="http://developer.github.com/webhooks/" title="More about GH webhooks" target="_blank">Github webhooks</a> for painless deployments.</p>
+  <ul>
+  {% for peep in site.data.team %}
+    <li id="{{ peep[0] }}" class="bfc-objects">
+      <div class="media">
+        {% image thumb {{ peep[1].photo }} %}
+      </div>
+      <div class="teaser">
+        <h3>{{ peep[1].name }}</h3>
+        <dl>
+          <dt>Role</dt>
+          <dd class="role">{{ peep[1].function }}</dd>
+          <dt>Bio</dt>
+          <dd class="bio">{{ peep[1].bio }}</dd>
+          <dt>Social</dt>
+          <dd class="email"><a href="mailto:{{ peep[1].email }}" title="Send email" target="_blank"><span>Email</span></a></dd>
+          <dd class="twitter"><a href="http://twitter.com/{{ peep[1].twitter }}" title="Follow on Twitter" target="_blank"><span>Twitter</span></a></dd>
+          <dd class="github"><a href="http://github.com/{{ peep[1].github }}" title="Follow on GitHub" target="_blank"><span>GitHub</span></a></dd>
+        </dl>
+      </div>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section id="colophon">
+  <h2>Colophon</h2>
+  <p>This site is proudly generated by <a href="http://jekyllrb.com" title="More about Jekyll" target="_blank">Jekyll</a> and built using <a href="http://foundation.zurb.com/" title="Foundation by Zurb" target="_blank">Foundation 5</a>. Our font of choice is the elegant <a href="http://www.latofonts.com/" title="More about Lato" target="_blank">Lato</a>, hosted by <a href="http://www.google.com/fonts" title="More about Google Fonts" target="_blank">Google Fonts</a>.</p>
+  <p>In our development workflow we rely heavily on <a href="http://gruntjs.com/" title="More about Grunt" target="_blank">Grunt</a> for task automation and <a href="http://developer.github.com/webhooks/" title="More about GH webhooks" target="_blank">Github webhooks</a> for painless deployments.</p>
+</section>

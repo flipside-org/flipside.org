@@ -825,6 +825,7 @@ main {
     @extend .visually-hidden;
   }
   h3 {
+    @extend .h4;
     margin: 0;
   }
   .media {

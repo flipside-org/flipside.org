@@ -17,7 +17,7 @@ featured_image:
   polaroid:
   
 related_post:
-  - open-data
+  - odmn
 ---
 On Thursday August 29, we'll be hosting the first Lisbon Open Data Maker Night. It will be an informal gathering focused on making stuff with Open Data. 
 

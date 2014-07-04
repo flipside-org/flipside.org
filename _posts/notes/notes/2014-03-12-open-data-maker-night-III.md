@@ -17,7 +17,7 @@ featured_image:
   polaroid: odmn-in-action.jpg
   
 related_post:
-  - open-data
+  - odmn
 ---
 If you're in Lisbon on March 27 and interested in making stuff with Open Data, be sure not to miss out on the next Open Data Maker Night. Everybody is welcome to join us, you don't need to be a skilled data scientist to participate in the event.
 

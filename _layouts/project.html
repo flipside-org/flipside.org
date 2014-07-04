@@ -79,7 +79,6 @@ contact: true
       {{ content }}
     </div>
     {% assign details = page.meta %}
-    {% if details.type or details.client or details.technology or details.project_link.href %}
     <aside role="complementary">
       <section class="details">
         <h1>Details</h1>
@@ -102,7 +101,9 @@ contact: true
           {% endif %}
         </dl>
       </section>
+      {% if page.related_post %}
+        {% include related-content.html %}
+      {% endif %}
     </aside>
-    {% endif %}
   </div>
 </article>

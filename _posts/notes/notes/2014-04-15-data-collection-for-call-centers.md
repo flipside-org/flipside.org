@@ -3,21 +3,21 @@ layout: note
 category: note
   
 title: A data collection approach for call centers
-image: aw-survey.png
+image: aw-respondents.png
 user: olafveerman
 
 filters: work
 
 background_color: 057A99
 
-featured: true
+featured: false
 featured_image:
   mobile: 
   desktop: aw-survey-desktop.png
   polaroid: 
   
 related_post:
-  - data-collection
+  - airwolf
 ---
 
 Open source data collection tools have taken a big flight in the past years, in part because of the proliferation of affordable mobile devices. Tools like Open Data Kit allow organizations to switch from paper based surveys to digital versions, thus greatly improving the process (eg. less data entry) and the possibilities (GPS, constraints and skip logic). The surge of mobile devices on the consumer side has allowed organizations like [Text to Change](http://texttochange.com) to pioneer the field of interactive sms programs for a wide range of purposes.
@@ -27,7 +27,7 @@ With all these tools and methods available, it is very important to pick the rig
 Over the past couple of months we have worked with Text to Change to rethink the data collection capabilities of [Airwolf](http://flipside.org/projects/airwolf/) - the application used by their call center - an effort partly funded by [SIDA](http://www.sida.se). This post contains a brief overview of the tool and its key features.
 
 ## Survey definition
-{% include content_img.html path="notes/aw-survey.png" %}
+{% include content_img.html path="notes/aw-respondents.png" %}
 Any data collection effort by TTC starts with the definition of the survey itself. For a smaller learning curve for the staff and to ensure interoperability with other data collection tools, this is done in the XLSForm format OPENROSA. The same file that configures an Airwolf survey, could for example be used to conduct a face-to-face interview using a mobile device equipped with [Open Data Kit](http://opendatakit.org). It's this flexibility that allows TTC to pick the right tool(s) for each survey.
 
 ## Anonymization

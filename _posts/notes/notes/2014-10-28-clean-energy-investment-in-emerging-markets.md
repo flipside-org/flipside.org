@@ -3,25 +3,24 @@ layout: note
 category: note
   
 title: Clean energy investment in emerging markets
-image: note-flipside-berlin.png
+image: note-climatescope.png
 user: olafveerman
 
 filters: work
 
-background_color: 77bc1f
+background_color: 62a60a
 
-featured: false
+featured: true
 featured_image: 
   mobile: 
-  desktop: 
+  desktop: notes/note-climatescope.png
   polaroid:
   
 related_post:
+  - climatescope
 ---
-{% include content_img.html path="notes/note-flipside-berlin.png" %}
+{% include content_img.html path="notes/note-climatescope.png" %}
 The clean energy sector in emerging markets shows great potential to attract investment. Information is key to make good decisions and investors need quality data on issues like a country's legal framework, the availability of financing opportunities, or the presence of local value chains. The [Climatescope 2014](http://global-climatescope.org) - launched today - is both a report and tool that provides investors, entrepreneurs and policy makers with information that guides them in their decision making process. 
-
-[IMAGE]
 
 Originally published by the [Multilateral Investment Fund](http://fomin.org) and [Bloomberg New Energy Finance](http://about.bnef.com), the Climatescope started in 2012 by examining 26 countries in Latin America and the Caribbean. For the 2014 edition, they joined forces with [DfID](http://https://www.gov.uk/government/organisations/department-for-international-development) and [USAID](http://www.usaid.gov/powerafrica) to expand the scope and include another 29 countries from Asia and Africa.
 

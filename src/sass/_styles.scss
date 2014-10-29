@@ -1083,6 +1083,9 @@ main .contact-page {
         float: left;
         margin-right: 0.5rem;
       }
+      a {
+        display: block;
+      }
       .twitter a:before { @extend .icon-twitter; }
       .github a:before { @extend .icon-github; }
       .flickr a:before { @extend .icon-flickr; }

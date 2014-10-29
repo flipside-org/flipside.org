@@ -24,8 +24,7 @@ meta:
 related_post:
   - climatescope
 ---
-The [Climatescope](http://global-climatescope.org) is both a report and tool that provides investors, entrepreneurs and policy makers with information about the clean energy sector in emerging markets.
-
+The [Climatescope](http://global-climatescope.org) is both a report and tool that provides investors, entrepreneurs and policy makers with information about the clean energy sector in emerging markets.  
 Originally published by the [Multilateral Investment Fund](http://fomin.org) and [Bloomberg New Energy Finance](http://about.bnef.com), the Climatescope started in 2012 by examining 26 countries in Latin America and the Caribbean. In collaboration with our friends from [Development Seed](http://developmentseed.org), we partnered with these organizations to build a completely new tool for the 2014 edition and expand its reach to 55 countries around the world.
 
-Given our previous experience building these sites, we chose a simple tech stack that includes Jekyll and Angular, resulting in a static and highly performant site that doesn't compromise on the dynamic feel.
+Given the relatively static nature of the Climatescope's data and content and our experience building CMS-less tools, we went with a simple tech stack including Jekyll and Angular. The result is a static and highly performant site that doesn't compromise on the dynamic feel.  

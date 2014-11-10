@@ -15,7 +15,7 @@ featured_image:
   polaroid:
 
 meta: 
-  type: Design + Development
+  type: Design + Concept + Development
   client: Interamerican Development Bank / Bloomberg New Energy Finance / USAID / DfID
   project_link:
     text: Climatescope

@@ -1,6 +1,6 @@
 safe:           false
 permalink:      /notes/:title/
-pygments:       true
+highlighter:    pygments
 domain:	        http://flipside.org
 name:           Flipside
 description:    Flipside builds web-based tools for civil society organisations.

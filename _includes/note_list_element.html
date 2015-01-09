@@ -7,7 +7,9 @@
 
     <header>
       <a href="{{ include.note.url }}" title="Read the full note">
-        {% image list notes/{{ include.note.image }} %}
+        {% if include.note.image %}
+          {% image list notes/{{ include.note.image }} %}
+        {% endif %}
         <h1>
           {{ include.note.title }}
         </h1>

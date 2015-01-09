@@ -10,7 +10,7 @@ filters: misc
 
 background_color:
 
-featured: true
+featured: false
 featured_image: 
   mobile: 
   desktop: 

@@ -8,7 +8,7 @@ image: incendios-med.png
   
 background_color: BF503E
 
-featured: true
+featured: false
 featured_image: 
   mobile: img_ftd_incendios_mobile.jpg
   desktop: img_ftd_incendios_desktop.jpg

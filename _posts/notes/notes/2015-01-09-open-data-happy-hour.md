@@ -10,11 +10,11 @@ filters: event
 
 background_color:
 
-featured: false
+featured: true
 featured_image: 
   mobile: 
   desktop: 
-  polaroid:
+  polaroid: open_data_hp.jpg
   
 related_post:
 ---

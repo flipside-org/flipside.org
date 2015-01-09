@@ -3,7 +3,7 @@ layout: note
 category: note
   
 title: Open Data Happy Hour
-image: 
+image: open_data_hp.jpg
 user: danielfdsilva
 
 filters: event

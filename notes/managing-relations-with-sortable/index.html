@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Using open source technology, Flipside builds web-based tools that help organisations create social impact." />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta property="og:site_name" content="Flipside" />
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:title" content="Managing Relations with JQuery sortable - Flipside" />
+<meta property="og:url" content="http://flipside.org/notes/managing-relations-with-sortable/" />
+
+  <meta property="og:description" content="For Drupal 7 there are several contributed modules like References and Entityreference, that allow you to relate entities. Though these are stable and mature modules, we’ve have been using the Relation module for a couple of projects with great success...." >
+
+
+  <meta property="og:image" content="http://flipside.org/images/notes/rearrange.png" />
+
+<meta property="og:image" content="http://flipside.org/images/meta/og-image.png" />  
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@flipside_org">
+
+  <meta name="twitter:creator" content="@danielfdsilva">
+
+<meta name="twitter:title" content="Managing Relations with JQuery sortable - Flipside">
+
+  <meta property="twitter:description" content="For Drupal 7 there are several contributed modules like References and Entityreference, that allow you to relate entities. Though these are stable and mature modules, we’ve have been using the Rela..." >
+
+
+  
+    <meta property="twitter:image" content="http://flipside.org/images/notes/rearrange.png" />
+  
+
+  
+  <link rel="shortcut icon" href="http://flipside.org/images/meta/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="http://flipside.org/images/meta/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="http://flipside.org/images/meta/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="http://flipside.org/images/meta/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://flipside.org/images/meta/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="http://flipside.org/images/meta/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://flipside.org/images/meta/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://flipside.org/images/meta/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://flipside.org/images/meta/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="http://flipside.org/images/meta/apple-touch-icon-152x152.png" />
+  
+  <title>Flipside - Managing Relations with JQuery sortable</title>
+  
+  <link type="text/plain" rel="author" href="http://flipside.org/humans.txt" />
+  <link rel="stylesheet" href="/css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Flipside" href="http://flipside.org/feed.xml">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33134074-1', 'flipside.org');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <!--[if lt IE 9]>
+    <div id="nocando">
+      <h1>Your browser is not supported.</h1>
+      <p>To view this website, we recommend using the <strong>latest version</strong> of Chrome, Safari or Firefox.</p>
+      <p>Here: <a href="http://browsehappy.com/" title="Visit Broser happy">upgrade your browser</a>!</p>
+    </div>
+  <![endif]-->
+  
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        <nav id="primary" role="navigation">
+	<a href="#nav-links" class="toggle"><span class="visually-hidden">Menu</span></a>
+	<ul class="links" id="nav-links">
+    
+    <li>
+    
+			<a href="/" title="Go home">Home</a>
+		</li>
+		
+    <li>
+    
+			<a href="/projects/" title="Project hub">Projects</a>
+		</li>
+		
+		<li>
+		
+			<a href="/notes/" title="Notes hub">Notes</a>
+		</li>
+		
+    <li>
+    
+			<a href="/about/" title="About Flipside">About</a>
+		</li>
+		
+    <li>
+    
+			<a href="/contact/" title="Contact page">Contact</a>
+		</li>
+	</ul>
+</nav>
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      
+
+
+
+
+
+
+
+
+<article class="has-sidebar">
+
+  
+  <header class="banner">
+  
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">Managing Relations with JQuery&nbsp;sortable</h1>
+        <h2 class="section-title"><em>Under</em> Notes</h2>
+      </div>
+    	<div class="actions">
+        <ul class="notes-navigation">
+          <li id="social-share">
+  <a class="toggle share" href="#share-links"><span>Social share</span></a>
+  <ul class="links" id="share-links">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://flipside.org/notes/managing-relations-with-sortable/" target="_blank" class="facebook" title="Share this on Facebook">Facebook</a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/share?url=http://flipside.org/notes/managing-relations-with-sortable/" target="_blank" class="twitter" title="Share this on Twitter">Twitter</a>
+    </li>
+    <li class="google-plus">
+      <a href="https://plus.google.com/share?url=http://flipside.org/notes/managing-relations-with-sortable/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" class="google-plus" title="Share this on Google+">Google+</a>
+    </li>
+  </ul>
+</li>
+          <li>
+          
+            <a href="/notes/data-collection-with-airwolf/" title="Previous note" class="previous"><span class="visually-hidden">previous</span></a>
+          
+          </li>
+          <li>
+          
+            <a href="#" title="No next note" class="inactive next"><span class="visually-hidden">next</span></a>
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      <p>For Drupal 7 there are several contributed modules like References and Entityreference, that allow you to relate entities. Though these are stable and mature modules, we’ve have been using the <a href="http://www.drupal.org/relation">Relation</a> module for a couple of projects with great success.<br />
+Relations are separate entities, fieldable out of the box and allow you to build pretty complex relations. While it provides several ways for the end user to create these relations, it is mainly an API module and the provided methods might not always fit the use case for a particular project. This blog post explains how we use JQuery Sortable to allow users to relate Questions to a Survey through an intuitive drag and drop interface.</p>
+
+<p>##Basic setup
+To set up the sorting of questions we need a basic structure, in this case we’ll use two separate Views. One view will show a listing of all the questions already added to the survey (left side of the image) and the other will show all the available questions in our repository (right side). For jQuery sortable to work, it is important that the Format of both views is set to a List.</p>
+
+<div class="media-wrapper">
+	<figure>
+		<img src="/images/notes/rearrange-506x337-c8d547.png" />
+		
+			<figcaption>Managing relations through drag and drop</figcaption>
+		
+	</figure>
+</div>
+<p>The <a href="http://jqueryui.com/sortable/">jQuery Ui sortable plugin</a> will handle the sorting but we need to add some classes to the views to make them visible to it. Each view will need its own unique class and a common class to relate them. In our project we use <code>survey-questions</code> for the survey’s questions listing, <code>available-questions</code> for the question repository and <code>connect-sortable</code> as the common linking class.</p>
+
+<p>When configuring the views, it’s also important to define a ‘No results behaviour’ to make sure that there is always a drop target, even when the view returns no result. In our example we add a Global text field with the following value <code>&lt;li class="empty"&gt;No questions were added to this survey yet.&lt;/li&gt;</code>.</p>
+
+<p>To be able to use the jQuery sortable library, we need to include it in our module. Since the library is already in the Drupal core, we just activate it by adding the following code to our page generator function:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">drupal_add_library(&#39;system&#39;, &#39;ui.sortable&#39;);</span></code></pre></figure>
+
+<p>##Adding and sorting
+With the basic structure set up, we can enable the sortable plugin on both lists. The snippet below show a basic instantiation on the plugin.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;.survey-questions, .available-questions&quot;</span> <span class="p">).</span><span class="nx">sortable</span><span class="p">({</span>
+  <span class="c1">// We only want to allow dragging with a handle so we specify its class.</span>
+  <span class="nx">handle</span> <span class="o">:</span> <span class="s1">&#39;.li-drag&#39;</span><span class="p">,</span>
+  <span class="c1">// Specify which items should be draggable.</span>
+  <span class="c1">// We want all list items except the empty placeholder.</span>
+  <span class="nx">items</span><span class="o">:</span> <span class="s2">&quot;li:not(.empty)&quot;</span><span class="p">,</span>
+  <span class="c1">// This little line is what allows us to drag items from one list to another,</span>
+  <span class="c1">// that&#39;s why this class must be set in both views. Without it we would have</span>
+  <span class="c1">// two useless self reorderable lists. </span>
+  <span class="nx">connectWith</span><span class="o">:</span> <span class="s2">&quot;.connect-sortable&quot;</span></code></pre></figure>
+
+<p>##Saving data
+That’s the basic setup in order to make the lists sortable. Now we need a way to save the changes that can occur in three flavors:</p>
+
+<ol>
+  <li>A question is added to the survey list, i.e., the survey-questions list receives an item.</li>
+  <li>A question is removed from the survey list, i.e., the available-questions list receives an item.</li>
+  <li>The questions are re-ordered in the survey</li>
+</ol>
+
+<p>Using the jQuery sortable event callback we can capture these changes and show a save button.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;.survey-questions, .available-questions&quot;</span> <span class="p">).</span><span class="nx">sortable</span><span class="p">({</span>
+  <span class="c1">// Show the save button when either one of the lists receive a list item.</span>
+  <span class="nx">receive</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;input[name=Save]&quot;</span> <span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="s2">&quot;:hidden&quot;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;input[name=Save]&quot;</span> <span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.message-changes&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;.survey-questions&quot;</span> <span class="p">).</span><span class="nx">sortable</span><span class="p">({</span>
+  <span class="c1">// Show the save button when the survey-questions list is reordered.</span>
+  <span class="nx">update</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;input[name=Save]&quot;</span> <span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="s2">&quot;:hidden&quot;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span> <span class="s2">&quot;input[name=Save]&quot;</span> <span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.message-changes&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>###New questions
+After clicking on the save button, the node id of the survey and a serialized version of the questions (<code>question[]=14&amp;question[]=12&amp;question[]=17</code>) is sent to a page for processing. Through the serialization we know that the question with id 14 is the first, id 12 is the second and so on, allowing us to easily set the order.</p>
+
+<p>###Deal with existing relations
+It is also possible, however, that a user makes changes to a survey with already existing questions. In this case, we add the relation ID in the serialization to ease the update process. It will look something like <code>question[]=nid-rid</code>, where <code>nid</code> is the node ID of the question and <code>rid</code> the relation ID. The final look of the serialization will be something like: <code>question[]=14-50&amp;question[]=12-45&amp;question[]=17</code></p>
+
+<p>###Under the hood
+The first thing we do is find out which relations (of type survey_question) are to be added, which to be updated and which to be removed.</p>
+
+<p>The relations to be updated are the ones with the relation id in the serialization, so those are easy to find out. The remaining questions in the serialization are the ones whose relation needs to be created.<br />
+The tricky part is to find out the relations to be deleted. To accomplish this we load all the existing relations for that survey and match them against the ones in the serialization. Those we don’t find in the serialization are deleted.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// Stores the relations to be created, updated and deleted.</span>
+<span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;insert&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;update&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+<span class="c1">// Parses the form serialization saving it in $temp.</span>
+<span class="nb">parse_str</span><span class="p">(</span><span class="nv">$questionsSerialized</span><span class="p">,</span> <span class="nv">$temp</span><span class="p">);</span>
+<span class="c1">// Stores the questions Ids in an Array</span>
+<span class="nv">$questionsId</span> <span class="o">=</span> <span class="nv">$temp</span><span class="p">[</span><span class="s2">&quot;question&quot;</span><span class="p">];</span>
+
+<span class="c1">// If $questionsId is empty, that means that all the questions where removed.</span>
+<span class="c1">// Remove all the relations related to the survey</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$questionsId</span><span class="p">))</span> <span class="p">{</span>
+  <span class="c1">// Get the ids of the survey_question relations for the given survey.</span>
+  <span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">_aw_utils_question_sortable_get_relation_id</span><span class="p">(</span><span class="nv">$relationType</span><span class="p">,</span> <span class="nv">$node</span><span class="o">-&gt;</span><span class="na">nid</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]))</span> <span class="p">{</span>
+    <span class="nx">relation_delete_multiple</span><span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Loop through all the questions checking which ones are to be deleted and to</span>
+  <span class="c1">// be inserted.</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$questionsId</span> <span class="k">as</span> <span class="nv">$order</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// The $id comes in the format questionId-relationId</span>
+    <span class="c1">// if the question is new the relation won&#39;t exist and the $id will only</span>
+    <span class="c1">// contain the questionId.</span>
+    <span class="c1">// </span>
+    <span class="c1">// Split the id and count the values</span>
+    <span class="c1">// if 1 - the question is new therefore to be inserted</span>
+    <span class="c1">// if 2 - the relation already exists so update</span>
+    <span class="c1">// else throw error</span>
+    <span class="nv">$splitted</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+    <span class="nv">$splittedLength</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$splitted</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$splittedLength</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Question to insert (relation to create)</span>
+      <span class="c1">// When we are inserting the array key is the order</span>
+      <span class="c1">// and the value is the questionId.</span>
+      <span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;insert&quot;</span><span class="p">][</span><span class="nv">$order</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$splitted</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+
+    <span class="p">}</span>
+    <span class="k">elseif</span> <span class="p">(</span><span class="nv">$splittedLength</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Question to update (relation to update)</span>
+      <span class="c1">// When we are updating the array key is the new order</span>
+      <span class="c1">// and the value is the relation id.</span>
+      <span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;update&quot;</span><span class="p">][</span><span class="nv">$order</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$splitted</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// Malformed id.</span>
+      <span class="c1">// Throw error.</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// We already have the relations to update and insert</span>
+  <span class="c1">// now get the existing relations to know which ones to delete</span>
+  <span class="nv">$existingRelations</span> <span class="o">=</span> <span class="nx">_aw_utils_question_sortable_get_relation_id</span><span class="p">(</span><span class="nv">$relationType</span><span class="p">,</span> <span class="nv">$node</span><span class="o">-&gt;</span><span class="na">nid</span><span class="p">);</span>
+
+  <span class="c1">// We can use the $relations[&quot;update&quot;] to check the differences between</span>
+  <span class="c1">// the submitted and existing relations.</span>
+  <span class="c1">// Since all the existing relations are always updated, the ones not present</span>
+  <span class="c1">// in the $relations[&quot;update&quot;] are to be deleted.</span>
+  <span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">array_diff</span><span class="p">(</span><span class="nv">$existingRelations</span><span class="p">,</span> <span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;update&quot;</span><span class="p">]);</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></figure>
+
+<p>Now, using the functions provided by the relation module, relation_load(), relation_create(), relation_save(), relation_delete(), we can handle all the data present in our $relation array.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?</span> <span class="nx">php</span>
+<span class="c1">// OPERATIONS - insert, update, delete</span>
+<span class="c1">// Delete</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nx">relation_delete_multiple</span><span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;delete&quot;</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="c1">// Insert.</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;insert&quot;</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$order</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Specify endpoints.</span>
+  <span class="nv">$endpoints</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="k">array</span><span class="p">(</span>
+      <span class="s1">&#39;entity_type&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entityType</span><span class="p">,</span>
+      <span class="s1">&#39;entity_id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$nid</span>
+    <span class="p">),</span>
+    <span class="k">array</span><span class="p">(</span>
+      <span class="s1">&#39;entity_type&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entityType</span><span class="p">,</span>
+      <span class="s1">&#39;entity_id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span>
+    <span class="p">)</span>
+  <span class="p">);</span>
+
+  <span class="c1">// Creating the relation.</span>
+  <span class="nv">$relation</span> <span class="o">=</span> <span class="nx">relation_create</span><span class="p">(</span><span class="nv">$relationType</span><span class="p">,</span> <span class="nv">$endpoints</span><span class="p">);</span>
+  <span class="nv">$relation</span><span class="o">-&gt;</span><span class="na">field_relation_order</span><span class="p">[</span><span class="nx">LANGUAGE_NONE</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$order</span><span class="p">;</span>
+  <span class="nx">relation_save</span><span class="p">(</span><span class="nv">$relation</span><span class="p">));</span>
+
+<span class="p">}</span><span class="c1">// End foreach insert.</span>
+
+<span class="c1">// Update</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$relations</span><span class="p">[</span><span class="s2">&quot;update&quot;</span><span class="p">]</span> <span class="k">as</span> <span class="nv">$order</span> <span class="o">=&gt;</span> <span class="nv">$rid</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Load the relation.</span>
+  <span class="nv">$relation</span> <span class="o">=</span> <span class="nx">relation_load</span><span class="p">(</span><span class="nv">$rid</span><span class="p">);</span>
+  <span class="nv">$relation</span><span class="o">-&gt;</span><span class="na">field_relation_order</span><span class="p">[</span><span class="nx">LANGUAGE_NONE</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$order</span><span class="p">;</span>
+  <span class="nx">relation_save</span><span class="p">(</span><span class="nv">$relation</span><span class="p">));</span>
+
+<span class="p">}</span><span class="c1">// End foreach update.</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></figure>
+
+<p>In this example we focused on Adding and Sorting the questions. More advanced features such as editing fields of the relations might be part of a future blog post. We leave you with the slides of a presentation made during the Drupal meetup at <a href="http://www.liberdade229.com">Liberdade 229</a>, last February: <a href="https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop">https://speakerdeck.com/danielfdsilva/drupal-relations-with-drag-and-drop</a>.</p>
+
+    </div>
+    <aside role="complementary">
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dt class="visually-hidden">Author</dt>
+          <dd class="bfc-objects">
+            <a href="/about#team" title="Team page">
+              <div class="media">
+                <img src="/images/team/daniel-thumb-224x224-ec4565.jpg" class="thumb" >
+              </div>
+              <div class="teaser">
+                <h2>Daniel Silva</h2>
+                <p class="meta">Developer</p>
+              </div>
+            </a>
+          </dd>
+          
+          
+            
+            
+            
+            <dt>Published</dt>
+            <dd>15 Jan. 2013 <em>in</em> <a href="" title="" title="More in this category"></a></dd>
+          
+        </dl>
+      </section>
+      
+    </aside>
+  </div>
+
+</article>
+    </main>
+
+    
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li class="twitter"><a href="http://twitter.com/flipside_org" title="Flipside on Twitter" target="_blank"><span class="visually-hidden">Twitter</span></a></li>
+              <li class="github"><a href="http://github.com/flipside-org" title="Flipside on Github" target="_blank"><span class="visually-hidden">Github</span></a></li>
+              <li class="flickr"><a href="http://flickr.com/photos/flipside-org" title="Flipside on Flickr" target="_blank"><span class="visually-hidden">Flickr</span></a></li>
+            </ul>
+          </div>
+          <p class="about">
+            <span class="fs">Flipside 2014 </span> 
+            <a href="/about#colophon" class="cta-inline" title="Colophon">Colophon</a>
+          </p>
+        </div>
+    </footer>
+  </div>
+  <script src="/scripts/foundation.min.js"></script>
+  <script src="/scripts/flipside.min.js"></script>
+</body>
+</html>

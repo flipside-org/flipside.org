@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Using open source technology, Flipside builds web-based tools that help organisations create social impact." />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta property="og:site_name" content="Flipside" />
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:title" content="Twitter Streams - Flipside" />
+<meta property="og:url" content="http://flipside.org/notes/twitter-streams/" />
+
+  <meta property="og:description" content="For one of our projects, we needed to track particular hashtags on Twitter and show the last status update and a total count. This post gives a quick overview of how we used the Twitter Stream Api to implement this...." >
+
+
+  <meta property="og:image" content="http://flipside.org/images/notes/twitter.jpg" />
+
+<meta property="og:image" content="http://flipside.org/images/meta/og-image.png" />  
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@flipside_org">
+
+  <meta name="twitter:creator" content="@danielfdsilva">
+
+<meta name="twitter:title" content="Twitter Streams - Flipside">
+
+  <meta property="twitter:description" content="For one of our projects, we needed to track particular hashtags on Twitter and show the last status update and a total count. This post gives a quick overview of how we used the Twitter Stream Api ..." >
+
+
+  
+    <meta property="twitter:image" content="http://flipside.org/images/notes/twitter.jpg" />
+  
+
+  
+  <link rel="shortcut icon" href="http://flipside.org/images/meta/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="http://flipside.org/images/meta/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="http://flipside.org/images/meta/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="http://flipside.org/images/meta/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://flipside.org/images/meta/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="http://flipside.org/images/meta/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://flipside.org/images/meta/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://flipside.org/images/meta/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://flipside.org/images/meta/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="http://flipside.org/images/meta/apple-touch-icon-152x152.png" />
+  
+  <title>Flipside - Twitter Streams</title>
+  
+  <link type="text/plain" rel="author" href="http://flipside.org/humans.txt" />
+  <link rel="stylesheet" href="/css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Flipside" href="http://flipside.org/feed.xml">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33134074-1', 'flipside.org');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <!--[if lt IE 9]>
+    <div id="nocando">
+      <h1>Your browser is not supported.</h1>
+      <p>To view this website, we recommend using the <strong>latest version</strong> of Chrome, Safari or Firefox.</p>
+      <p>Here: <a href="http://browsehappy.com/" title="Visit Broser happy">upgrade your browser</a>!</p>
+    </div>
+  <![endif]-->
+  
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        <nav id="primary" role="navigation">
+	<a href="#nav-links" class="toggle"><span class="visually-hidden">Menu</span></a>
+	<ul class="links" id="nav-links">
+    
+    <li>
+    
+			<a href="/" title="Go home">Home</a>
+		</li>
+		
+    <li>
+    
+			<a href="/projects/" title="Project hub">Projects</a>
+		</li>
+		
+		<li>
+		
+			<a href="/notes/" title="Notes hub">Notes</a>
+		</li>
+		
+    <li>
+    
+			<a href="/about/" title="About Flipside">About</a>
+		</li>
+		
+    <li>
+    
+			<a href="/contact/" title="Contact page">Contact</a>
+		</li>
+	</ul>
+</nav>
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      
+
+
+
+
+
+
+
+
+<article class="has-sidebar">
+
+  
+  <header class="banner" style="background-color: #3f86be;">
+  
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">Twitter Streams</h1>
+        <h2 class="section-title"><em>Under</em> Notes</h2>
+      </div>
+    	<div class="actions">
+        <ul class="notes-navigation">
+          <li id="social-share">
+  <a class="toggle share" href="#share-links"><span>Social share</span></a>
+  <ul class="links" id="share-links">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://flipside.org/notes/twitter-streams/" target="_blank" class="facebook" title="Share this on Facebook">Facebook</a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/share?url=http://flipside.org/notes/twitter-streams/" target="_blank" class="twitter" title="Share this on Twitter">Twitter</a>
+    </li>
+    <li class="google-plus">
+      <a href="https://plus.google.com/share?url=http://flipside.org/notes/twitter-streams/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" class="google-plus" title="Share this on Google+">Google+</a>
+    </li>
+  </ul>
+</li>
+          <li>
+          
+            <a href="/notes/ricardo-joins-flipside/" title="Previous note" class="previous"><span class="visually-hidden">previous</span></a>
+          
+          </li>
+          <li>
+          
+            <a href="/notes/non-bid-contracts-openspending/" title="Next note" class="next"><span class="visually-hidden">next</span></a>
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      <p>For one of our projects, we needed to track particular hashtags on Twitter and show the last status update and a total count. This post gives a quick overview of how we used the <a href="https://dev.twitter.com/docs/streaming-apis/streams/public">Twitter Stream Api</a> to implement this.</p>
+
+<p>Twitter has a couple of API’s in place that allow you to fetch status updates. The Search API allows you to get past tweets, but only a limited amount is returned. The Twitter Firehose is an API that gives access to all of the tweets published, but is only available to a few selected partners that, among other things, proof they can handle to amount of data sent through the firehose.</p>
+
+<p>During the research on how to interact with the Streaming API we found a nice script developed by <a href="http://mikepultz.com/2013/06/mining-twitter-api-v1-1-streams-from-php-with-oauth/">Mike Pultz</a> which was adapted according to suggestions on his website’s comments and according to our needs.</p>
+
+<p>For our project we have the script running on a server with <code>screen</code> and every time a tweet comes back it is stored in a database. Then we created a simple API for our project that returns the total count and the last tweet. As simple as that.</p>
+
+<h2 id="the-script">The Script</h2>
+<p>Since the script is easy and fun to use, we put our own version in a <a href="https://gist.github.com/danielfdsilva/7888253">Gist</a>.</p>
+
+<p>The <code>TwitterStream</code> abstract class was created from the original script with the addition of a few methods. Nothing needs to be done to this class, it just needs to be included in the project. <a href="https://gist.github.com/danielfdsilva/7888253/raw/TwitterStream.php">Download here</a>.<br />
+On the index file we extend <code>TwitterStream</code> and implement the abstract method <code>processTweet()</code>.
+The <code>__constructor</code> is used to setup credentials and keywords and every time a matching tweet is found it is sent to <code>processTweet()</code>.
+However we found that sometimes a <code>disconnect</code> response is returned so we check if the actual tweet text is present thus validating the data.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s1">&#39;TwitterStream.php&#39;</span><span class="p">;</span>
+ 
+<span class="sd">/**</span>
+<span class="sd">* Class that extends TwitterStream and implements</span>
+<span class="sd">* the processTweet function.</span>
+<span class="sd">*/</span>
+<span class="k">class</span> <span class="nc">Tweets</span> <span class="k">extends</span> <span class="nx">TwitterStream</span> <span class="p">{</span>
+  
+  <span class="k">function</span> <span class="nf">__construct</span><span class="p">(){</span>
+    <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+
+    <span class="c1">// Set credentials.</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">(</span><span class="nx">TW_CONSUMER_KEY</span><span class="p">,</span> <span class="nx">TW_CONSUMER_SECRET</span><span class="p">,</span> <span class="nx">TW_OAUTH_ACCESS_TOKEN</span><span class="p">,</span> <span class="nx">TW_OAUTH_ACCESS_TOKEN_SECRET</span><span class="p">)</span>
+    
+    <span class="c1">// Keywords to track. Tweets with &#39;fun&#39; and &#39;play&#39; will be returned.</span>
+    <span class="o">-&gt;</span><span class="na">setKeywords</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;fun&#39;</span><span class="p">,</span> <span class="s1">&#39;play&#39;</span><span class="p">))</span>
+    <span class="o">-&gt;</span><span class="na">start</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">processTweet</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// The return object could be an invalid tweet.</span>
+    <span class="c1">// Could be something like:</span>
+    <span class="c1">// stdClass Object</span>
+    <span class="c1">// (</span>
+    <span class="c1">// [disconnect] =&gt; stdClass Object</span>
+    <span class="c1">// (</span>
+    <span class="c1">// [code] =&gt; 7</span>
+    <span class="c1">// [stream_name] =&gt; flipside_org-statuses87289</span>
+    <span class="c1">// [reason] =&gt; admin logout</span>
+    <span class="c1">// )</span>
+    <span class="c1">// )</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$data</span><span class="o">-&gt;</span><span class="na">text</span><span class="p">))</span> <span class="p">{</span>
+      <span class="c1">// Handle the tweet</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+ 
+<span class="c1">// Initialize.</span>
+<span class="k">new</span> <span class="nx">Tweets</span><span class="p">();</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></figure>
+
+<h3 id="streaming-api-and-accents">Streaming API and accents</h3>
+<p>Note that when you want to track accented keywords, it might be a good idea to include all the different variations. In our case, we needed to check for the Spanish hashtag ‘quécambiarias’. Since users are not always accurate in their spelling (even less when it comes to hashtags), it is important to account for variations: ‘quecambiarias’, ‘quecambiarías’, ‘quécambiarias’, ‘quécambiarías’.</p>
+
+    </div>
+    <aside role="complementary">
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dt class="visually-hidden">Author</dt>
+          <dd class="bfc-objects">
+            <a href="/about#team" title="Team page">
+              <div class="media">
+                <img src="/images/team/daniel-thumb-224x224-ec4565.jpg" class="thumb" >
+              </div>
+              <div class="teaser">
+                <h2>Daniel Silva</h2>
+                <p class="meta">Developer</p>
+              </div>
+            </a>
+          </dd>
+          
+          
+            
+            
+            
+            <dt>Published</dt>
+            <dd>09 Dec. 2013 <em>in</em> <a href="" title="" title="More in this category"></a></dd>
+          
+        </dl>
+      </section>
+      
+    </aside>
+  </div>
+
+</article>
+    </main>
+
+    
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li class="twitter"><a href="http://twitter.com/flipside_org" title="Flipside on Twitter" target="_blank"><span class="visually-hidden">Twitter</span></a></li>
+              <li class="github"><a href="http://github.com/flipside-org" title="Flipside on Github" target="_blank"><span class="visually-hidden">Github</span></a></li>
+              <li class="flickr"><a href="http://flickr.com/photos/flipside-org" title="Flipside on Flickr" target="_blank"><span class="visually-hidden">Flickr</span></a></li>
+            </ul>
+          </div>
+          <p class="about">
+            <span class="fs">Flipside 2014 </span> 
+            <a href="/about#colophon" class="cta-inline" title="Colophon">Colophon</a>
+          </p>
+        </div>
+    </footer>
+  </div>
+  <script src="/scripts/foundation.min.js"></script>
+  <script src="/scripts/flipside.min.js"></script>
+</body>
+</html>

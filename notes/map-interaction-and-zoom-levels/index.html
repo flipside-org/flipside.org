@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Using open source technology, Flipside builds web-based tools that help organisations create social impact." />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta property="og:site_name" content="Flipside" />
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:title" content="Map interaction and zoom levels - Flipside" />
+<meta property="og:url" content="http://flipside.org/notes/map-interaction-and-zoom-levels/" />
+
+  <meta property="og:description" content="An important feature of incendios.pt are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between regions, we allow click events on the map to browse..." >
+
+
+  <meta property="og:image" content="http://flipside.org/images/notes/incendios-pt-administrative-areas.png" />
+
+<meta property="og:image" content="http://flipside.org/images/meta/og-image.png" />  
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@flipside_org">
+
+  <meta name="twitter:creator" content="@danielfdsilva">
+
+<meta name="twitter:title" content="Map interaction and zoom levels - Flipside">
+
+  <meta property="twitter:description" content="An important feature of incendios.pt are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between ..." >
+
+
+  
+    <meta property="twitter:image" content="http://flipside.org/images/notes/incendios-pt-administrative-areas.png" />
+  
+
+  
+  <link rel="shortcut icon" href="http://flipside.org/images/meta/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="http://flipside.org/images/meta/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="http://flipside.org/images/meta/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="http://flipside.org/images/meta/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://flipside.org/images/meta/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="http://flipside.org/images/meta/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://flipside.org/images/meta/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://flipside.org/images/meta/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://flipside.org/images/meta/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="http://flipside.org/images/meta/apple-touch-icon-152x152.png" />
+  
+  <title>Flipside - Map interaction and zoom levels</title>
+  
+  <link type="text/plain" rel="author" href="http://flipside.org/humans.txt" />
+  <link rel="stylesheet" href="/css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Flipside" href="http://flipside.org/feed.xml">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33134074-1', 'flipside.org');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <!--[if lt IE 9]>
+    <div id="nocando">
+      <h1>Your browser is not supported.</h1>
+      <p>To view this website, we recommend using the <strong>latest version</strong> of Chrome, Safari or Firefox.</p>
+      <p>Here: <a href="http://browsehappy.com/" title="Visit Broser happy">upgrade your browser</a>!</p>
+    </div>
+  <![endif]-->
+  
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        <nav id="primary" role="navigation">
+	<a href="#nav-links" class="toggle"><span class="visually-hidden">Menu</span></a>
+	<ul class="links" id="nav-links">
+    
+    <li>
+    
+			<a href="/" title="Go home">Home</a>
+		</li>
+		
+    <li>
+    
+			<a href="/projects/" title="Project hub">Projects</a>
+		</li>
+		
+		<li>
+		
+			<a href="/notes/" title="Notes hub">Notes</a>
+		</li>
+		
+    <li>
+    
+			<a href="/about/" title="About Flipside">About</a>
+		</li>
+		
+    <li>
+    
+			<a href="/contact/" title="Contact page">Contact</a>
+		</li>
+	</ul>
+</nav>
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      
+
+
+
+
+
+
+
+
+<article class="has-sidebar">
+
+  
+  <header class="banner" style="background-color: #BF503E;">
+  
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">Map interaction and zoom&nbsp;levels</h1>
+        <h2 class="section-title"><em>Under</em> Notes</h2>
+      </div>
+    	<div class="actions">
+        <ul class="notes-navigation">
+          <li id="social-share">
+  <a class="toggle share" href="#share-links"><span>Social share</span></a>
+  <ul class="links" id="share-links">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://flipside.org/notes/map-interaction-and-zoom-levels/" target="_blank" class="facebook" title="Share this on Facebook">Facebook</a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/share?url=http://flipside.org/notes/map-interaction-and-zoom-levels/" target="_blank" class="twitter" title="Share this on Twitter">Twitter</a>
+    </li>
+    <li class="google-plus">
+      <a href="https://plus.google.com/share?url=http://flipside.org/notes/map-interaction-and-zoom-levels/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" class="google-plus" title="Share this on Google+">Google+</a>
+    </li>
+  </ul>
+</li>
+          <li>
+          
+            <a href="/notes/open-data-maker-night/" title="Previous note" class="previous"><span class="visually-hidden">previous</span></a>
+          
+          </li>
+          <li>
+          
+            <a href="/notes/launch-incendios/" title="Next note" class="next"><span class="visually-hidden">next</span></a>
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      <p>An important feature of <a href="http://incendios.pt">incendios.pt</a> are the administrative area pages with detailed statistics on fires in that region. To allow users to easily switch between them and compare statistics between regions, we allow click events on the map to browse the site. Every time a user clicks on a specific administrative area type, like District, Municipality, or Parish, its page is shown. This improves the speed of the exploration since the users don’t need to drill down using the hierarchical selectors.</p>
+
+<p>The visibility of the different types of administrative areas changes according to the zoom level. Up to zoom level 9 the Districts are visible, from 10 to 12 the Municipalities are visible and from 13 onwards Parishes can be viewed. The click behaviour we implemented follows the same logic.</p>
+
+<div class="media-wrapper">
+	<figure>
+		<img src="/images/notes/incendios-pt-administrative-areas-480x320-6b5ef9.png" />
+		
+			<figcaption>District (Lisboa) zoom until 10, Municipality (Cascais) zoom 10-12 and Parish (Estoril) from zoom 13 onwards</figcaption>
+		
+	</figure>
+</div>
+<p>Even though <a href="http://www.tilemill.com">Tilemill</a> allows to set a location when a user clicks on a point, polygon or line, it does not allow to differentiate based on zoom level. This note explains briefly how we built a different link based on zoom level of the maps.</p>
+
+<p>###Structure of links
+Every area in Portugal has a unique id which in our project is called AAID. This is a number which can have 2, 4 or 6 digits, depending on the level of the area.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">District</th>
+      <th style="text-align: center">Municipality</th>
+      <th style="text-align: center">Parish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Lisboa</td>
+      <td style="text-align: center">Cascais</td>
+      <td style="text-align: center">Estoril</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">05</td>
+      <td style="text-align: center">04</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The id for Lisboa is 11<br />
+The id for Cascais is 1105<br />
+The id for Estoril is 110504</p>
+
+<p>The links of the pages of incendios.pt are structured using the same id. In the case of our example: http://incendios.pt/en/por/110504.</p>
+
+<p>###Setting up the interactivity
+To add the links to the map, we use a layer containing the polygons of all the parishes, with the AAID as one of the attributes. This layer is completely transparent, since we only use it to implement the navigation.</p>
+
+<p>Tilemill exports this layer to the mbtiles format (set of png’s) and uses the clever <a href="http://www.mapbox.com/developers/utfgrid/">UTFGrid</a> to allow interactivity with certain points or areas of a map.
+Through the use of some javascript we are able to bind events to this layer and handle the click to perform a redirection to the correct page.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Include the map.</span>
+<span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">mapbox</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="s1">&#39;flipside.map-epnw0q4t&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minZoom</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span> <span class="nx">maxZoom</span><span class="o">:</span> <span class="mi">14</span><span class="p">}).</span><span class="nx">setView</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.5</span><span class="p">],</span> <span class="mi">6</span><span class="p">);</span></code></pre></figure>
+
+<p>The map click will always fire on the Parishes because they are the most detailed element in the <code>District &gt; Municipality &gt; Parish</code> stack. When the click event occurs, Mapbox provides all the attributes of the parish that were included in the original layer in Tilemill, including the AAID. This allows us to generate the proper ID based on the zoom level.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// *** Layer. Grid of administrative borders. Used for interactivity.</span>
+<span class="kd">var</span> <span class="nx">grid_layer</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">mapbox</span><span class="p">.</span><span class="nx">gridLayer</span><span class="p">(</span><span class="s1">&#39;flipside.pt-admin-areas&#39;</span><span class="p">);</span>
+
+<span class="c1">// Setup the interactivity.</span>
+<span class="c1">// When the user clicks...</span>
+<span class="nx">grid_layer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Nothing to do here!</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// The data.data object contains all the data about the clicked region.</span>
+  <span class="c1">// The data.data.AAID is the id of our clicked freguesia.</span>
+  <span class="c1">// Now, based on the zoom level we extract the portion of the aaid that interests us.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getZoom</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Distrito.</span>
+    <span class="c1">// Ex: Full id: 110506</span>
+    <span class="kd">var</span> <span class="nx">destination</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">AAID</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+    <span class="c1">// Ex: destination = 11</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getZoom</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="nx">map</span><span class="p">.</span><span class="nx">getZoom</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Concelho.</span>
+    <span class="c1">// Ex: Full id: 110506</span>
+    <span class="kd">var</span> <span class="nx">destination</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">AAID</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+    <span class="c1">// Ex: destination = 1105</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// Freguesia.</span>
+    <span class="c1">// Ex: Full id: 110506</span>
+    <span class="kd">var</span> <span class="nx">destination</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">AAID</span><span class="p">;</span>
+    <span class="c1">// Ex: destination = 110506</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Take the language into account by using Incendios.page_meta.lang</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nx">Incendios</span><span class="p">.</span><span class="nx">page_meta</span><span class="p">.</span><span class="nx">lang</span> <span class="o">+</span> <span class="s1">&#39;/por/&#39;</span> <span class="o">+</span> <span class="nx">destination</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">// Add layer to map.</span>
+<span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">grid_layer</span><span class="p">);</span></code></pre></figure>
+
+<p>For incendios.pt we only needed something simple, but you could apply the same approach to build things like custom legends and popups.</p>
+
+    </div>
+    <aside role="complementary">
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dt class="visually-hidden">Author</dt>
+          <dd class="bfc-objects">
+            <a href="/about#team" title="Team page">
+              <div class="media">
+                <img src="/images/team/daniel-thumb-224x224-ec4565.jpg" class="thumb" >
+              </div>
+              <div class="teaser">
+                <h2>Daniel Silva</h2>
+                <p class="meta">Developer</p>
+              </div>
+            </a>
+          </dd>
+          
+          
+            
+            
+            
+            <dt>Published</dt>
+            <dd>31 Jul. 2013 <em>in</em> <a href="" title="" title="More in this category"></a></dd>
+          
+        </dl>
+      </section>
+      
+        
+
+
+
+
+
+
+      <section class="related-content">
+        <h1>Related content</h1>
+        <ul class="bfc-objects">
+          
+              <li>
+                <article>
+                  <a href="/notes/launch-incendios2/">
+                    <div class="media">
+                      <img src="/images/notes/incendios-pt-224x224-3a9fce.png" class="thumb" >
+                    </div>
+                    <div class="teaser">
+                      <h1>Incendios 0.2 - more and improved data</h1>
+                      <p class="meta"><em>Under</em> Notes</p>
+                    </div>
+                  </a>
+                </article>
+              </li>
+            
+              <li>
+                <article>
+                  <a href="/notes/launch-incendios/">
+                    <div class="media">
+                      <img src="/images/notes/incendios-pt_map-224x224-359e57.png" class="thumb" >
+                    </div>
+                    <div class="teaser">
+                      <h1>Incendios.pt - eleven years of fire data</h1>
+                      <p class="meta"><em>Under</em> Notes</p>
+                    </div>
+                  </a>
+                </article>
+              </li>
+            
+          
+                <li>
+                  <article>
+                    <a href="/projects/incendios">
+                      <div class="media">
+                        <img src="/images/projects/incendios-med-224x224-2187cd.png" class="thumb" >
+                      </div>
+                      <div class="teaser">
+                        <h1>Incêndios.pt</h1>
+                        <p class="meta"><em>Under</em> Projects</p>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+            
+        </ul>
+      </section>
+
+      
+    </aside>
+  </div>
+
+</article>
+    </main>
+
+    
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li class="twitter"><a href="http://twitter.com/flipside_org" title="Flipside on Twitter" target="_blank"><span class="visually-hidden">Twitter</span></a></li>
+              <li class="github"><a href="http://github.com/flipside-org" title="Flipside on Github" target="_blank"><span class="visually-hidden">Github</span></a></li>
+              <li class="flickr"><a href="http://flickr.com/photos/flipside-org" title="Flipside on Flickr" target="_blank"><span class="visually-hidden">Flickr</span></a></li>
+            </ul>
+          </div>
+          <p class="about">
+            <span class="fs">Flipside 2014 </span> 
+            <a href="/about#colophon" class="cta-inline" title="Colophon">Colophon</a>
+          </p>
+        </div>
+    </footer>
+  </div>
+  <script src="/scripts/foundation.min.js"></script>
+  <script src="/scripts/flipside.min.js"></script>
+</body>
+</html>

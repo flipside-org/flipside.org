@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Using open source technology, Flipside builds web-based tools that help organisations create social impact." />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta property="og:site_name" content="Flipside" />
+
+  <meta property="og:type" content="article" />
+
+<meta property="og:title" content="A data collection approach for call centers - Flipside" />
+<meta property="og:url" content="http://flipside.org/notes/data-collection-for-call-centers/" />
+
+  <meta property="og:description" content="Open source data collection tools have taken a big flight in the past years, in part because of the proliferation of affordable mobile devices. Tools like Open Data Kit allow organizations to switch from paper based surveys to digital versions,..." >
+
+
+  <meta property="og:image" content="http://flipside.org/images/notes/aw-respondents.png" />
+
+<meta property="og:image" content="http://flipside.org/images/meta/og-image.png" />  
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@flipside_org">
+
+  <meta name="twitter:creator" content="@oBirdman">
+
+<meta name="twitter:title" content="A data collection approach for call centers - Flipside">
+
+  <meta property="twitter:description" content="Open source data collection tools have taken a big flight in the past years, in part because of the proliferation of affordable mobile devices. Tools like Open Data Kit allow organizations to switc..." >
+
+
+  
+    <meta property="twitter:image" content="http://flipside.org/images/notes/aw-respondents.png" />
+  
+
+  
+  <link rel="shortcut icon" href="http://flipside.org/images/meta/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="http://flipside.org/images/meta/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="http://flipside.org/images/meta/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="http://flipside.org/images/meta/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://flipside.org/images/meta/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="http://flipside.org/images/meta/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://flipside.org/images/meta/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://flipside.org/images/meta/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://flipside.org/images/meta/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="http://flipside.org/images/meta/apple-touch-icon-152x152.png" />
+  
+  <title>Flipside - A data collection approach for call centers</title>
+  
+  <link type="text/plain" rel="author" href="http://flipside.org/humans.txt" />
+  <link rel="stylesheet" href="/css/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="Flipside" href="http://flipside.org/feed.xml">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-33134074-1', 'flipside.org');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <!--[if lt IE 9]>
+    <div id="nocando">
+      <h1>Your browser is not supported.</h1>
+      <p>To view this website, we recommend using the <strong>latest version</strong> of Chrome, Safari or Firefox.</p>
+      <p>Here: <a href="http://browsehappy.com/" title="Visit Broser happy">upgrade your browser</a>!</p>
+    </div>
+  <![endif]-->
+  
+  <div id="site-canvas">
+    <header id="site-hdr" role="banner">
+      <div class="row">
+        <h1 id="site-title">
+          <a href="http://flipside.org" title="Go home"><img src="/images/flipside-logo.svg" alt="Flipside logo" title="Flipside" /><span class="visually-hidden">Flipside</span></a>
+        </h1>
+        <nav id="primary" role="navigation">
+	<a href="#nav-links" class="toggle"><span class="visually-hidden">Menu</span></a>
+	<ul class="links" id="nav-links">
+    
+    <li>
+    
+			<a href="/" title="Go home">Home</a>
+		</li>
+		
+    <li>
+    
+			<a href="/projects/" title="Project hub">Projects</a>
+		</li>
+		
+		<li>
+		
+			<a href="/notes/" title="Notes hub">Notes</a>
+		</li>
+		
+    <li>
+    
+			<a href="/about/" title="About Flipside">About</a>
+		</li>
+		
+    <li>
+    
+			<a href="/contact/" title="Contact page">Contact</a>
+		</li>
+	</ul>
+</nav>
+      </div>
+    </header>
+
+    <main id="site-body" role="main">
+      
+
+
+
+
+
+
+
+
+<article class="has-sidebar">
+
+  
+  <header class="banner" style="background-color: #057A99;">
+  
+  	<div class="row">
+    	<div class="heading">
+        <h1 class="title">A data collection approach for call&nbsp;centers</h1>
+        <h2 class="section-title"><em>Under</em> Notes</h2>
+      </div>
+    	<div class="actions">
+        <ul class="notes-navigation">
+          <li id="social-share">
+  <a class="toggle share" href="#share-links"><span>Social share</span></a>
+  <ul class="links" id="share-links">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://flipside.org/notes/data-collection-for-call-centers/" target="_blank" class="facebook" title="Share this on Facebook">Facebook</a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/share?url=http://flipside.org/notes/data-collection-for-call-centers/" target="_blank" class="twitter" title="Share this on Twitter">Twitter</a>
+    </li>
+    <li class="google-plus">
+      <a href="https://plus.google.com/share?url=http://flipside.org/notes/data-collection-for-call-centers/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" class="google-plus" title="Share this on Google+">Google+</a>
+    </li>
+  </ul>
+</li>
+          <li>
+          
+            <a href="/notes/open-data-maker-night-iv/" title="Previous note" class="previous"><span class="visually-hidden">previous</span></a>
+          
+          </li>
+          <li>
+          
+            <a href="/notes/open-data-maker-night-III/" title="Next note" class="next"><span class="visually-hidden">next</span></a>
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+ 	<div class="row">
+		<div class="content">
+      <p>Open source data collection tools have taken a big flight in the past years, in part because of the proliferation of affordable mobile devices. Tools like Open Data Kit allow organizations to switch from paper based surveys to digital versions, thus greatly improving the process (eg. less data entry) and the possibilities (GPS, constraints and skip logic). The surge of mobile devices on the consumer side has allowed organizations like <a href="http://texttochange.com">Text to Change</a> to pioneer the field of interactive sms programs for a wide range of purposes.</p>
+
+<p>With all these tools and methods available, it is very important to pick the right one for each collection effort. Text to Change understands this very well and they have been building their capacity to reach people in different ways. For more complex surveys, they have set up a small call center in Kampala that can efficiently conduct personal interviews throughout the region.</p>
+
+<p>Over the past couple of months we have worked with Text to Change to rethink the data collection capabilities of <a href="http://flipside.org/projects/airwolf/">Airwolf</a> - the application used by their call center - an effort partly funded by <a href="http://www.sida.se">SIDA</a>. This post contains a brief overview of the tool and its key features.</p>
+
+<h2 id="survey-definition">Survey definition</h2>
+<div class="media-wrapper">
+	<figure>
+		<img src="/images/notes/aw-respondents-1080x720-9dd769.png" />
+		
+	</figure>
+</div>
+<p>Any data collection effort by TTC starts with the definition of the survey itself. For a smaller learning curve for the staff and to ensure interoperability with other data collection tools, this is done in the XLSForm format OPENROSA. The same file that configures an Airwolf survey, could for example be used to conduct a face-to-face interview using a mobile device equipped with <a href="http://opendatakit.org">Open Data Kit</a>. It’s this flexibility that allows TTC to pick the right tool(s) for each survey.</p>
+
+<h2 id="anonymization">Anonymization</h2>
+<p>Since Airwolf is used in a call center context, respondents are a central concept in the application. Moderators can upload lists with phone numbers that will be called and define whether these should be anonymized. This is especially important when dealing with sensitive information. Data of an anonymized survey, is never sent back or stored with the phone number, thus contributing to the anonymity of the responses.</p>
+
+<h2 id="offline-data-collection">Offline data collection</h2>
+<p>One of the advantages of building Airwolf on top of an existing standard such as Openrosa, is the amount of open source tools that can be used. For the actual data collection, Airwolf relies on <a href="http://enketo.org">Enketo</a>, a library that provides elegant and functional webforms that run in any modern browser. After the call center agent confirms the respondents’ consent to participate in the survey, the webform is launched with all the question and logic that were defined in the survey definition.</p>
+
+<p>Once the data is collected, Airwolf will attempt to sent it back to the server. If the internet connection is temporarily down, it will store the results locally in the browser instead. This is extremely important given Kampala’s less than stable internet supply. Since Enketo is already off-line ready, the only limitation for off-line collection in Airwolf is the amount of phone numbers that are reserved locally on the agent’s computer. Once these run out, data collection can only resume when the internet is back up.</p>
+
+<h2 id="further-reading">Further reading</h2>
+<p>In the near future we’ll open up the codebase and set up a public demo to get a better sense of the application. For more information on Openrosa, we recommend you to read the excellent <a href="https://enketo.org/openrosa">introduction on the Enketo website</a>.</p>
+
+    </div>
+    <aside role="complementary">
+      <section class="details">
+        <h1>Details</h1>
+        <dl>
+          <dt class="visually-hidden">Author</dt>
+          <dd class="bfc-objects">
+            <a href="/about#team" title="Team page">
+              <div class="media">
+                <img src="/images/team/olaf-thumb-224x224-d39a62.jpg" class="thumb" >
+              </div>
+              <div class="teaser">
+                <h2>Olaf Veerman</h2>
+                <p class="meta">Founder</p>
+              </div>
+            </a>
+          </dd>
+          
+          
+            
+            
+            
+            <dt>Published</dt>
+            <dd>15 Apr. 2014 <em>in</em> <a href="" title="" title="More in this category"></a></dd>
+          
+        </dl>
+      </section>
+      
+        
+
+
+
+
+
+
+      <section class="related-content">
+        <h1>Related content</h1>
+        <ul class="bfc-objects">
+          
+              <li>
+                <article>
+                  <a href="/notes/data-collection-with-airwolf/">
+                    <div class="media">
+                      <img src="/images/notes/aw-ccdashboard-224x224-5c5759.png" class="thumb" >
+                    </div>
+                    <div class="teaser">
+                      <h1>Data collection with Airwolf</h1>
+                      <p class="meta"><em>Under</em> Notes</p>
+                    </div>
+                  </a>
+                </article>
+              </li>
+            
+          
+                <li>
+                  <article>
+                    <a href="/projects/airwolf">
+                      <div class="media">
+                        <img src="/images/projects/aw-survey-224x224-da52f4.png" class="thumb" >
+                      </div>
+                      <div class="teaser">
+                        <h1>Airwolf</h1>
+                        <p class="meta"><em>Under</em> Projects</p>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+            
+        </ul>
+      </section>
+
+      
+    </aside>
+  </div>
+
+</article>
+    </main>
+
+    
+    
+    <footer id="site-ftr" role="contentinfo">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li class="twitter"><a href="http://twitter.com/flipside_org" title="Flipside on Twitter" target="_blank"><span class="visually-hidden">Twitter</span></a></li>
+              <li class="github"><a href="http://github.com/flipside-org" title="Flipside on Github" target="_blank"><span class="visually-hidden">Github</span></a></li>
+              <li class="flickr"><a href="http://flickr.com/photos/flipside-org" title="Flipside on Flickr" target="_blank"><span class="visually-hidden">Flickr</span></a></li>
+            </ul>
+          </div>
+          <p class="about">
+            <span class="fs">Flipside 2014 </span> 
+            <a href="/about#colophon" class="cta-inline" title="Colophon">Colophon</a>
+          </p>
+        </div>
+    </footer>
+  </div>
+  <script src="/scripts/foundation.min.js"></script>
+  <script src="/scripts/flipside.min.js"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@ filters: work
 
 background_color: 62a60a
 
-featured: true
+featured: false
 featured_image: 
   mobile: 
   desktop: notes/note-climatescope.png
